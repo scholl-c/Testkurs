@@ -27,7 +27,7 @@ hier ein hinweis
 
 `@sample_code`
 ```{r}
-Studis <- read.csv2("https://assets.datacamp.com/production/repositories/3196/datasets/1e5d9ec9fbf68a511b51b513183222dd40447e9a/Studierendenzaehlung.csv",sep=",",skip=1)
+Studis <- read.csv2("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/1e5d9ec9fbf68a511b51b513183222dd40447e9a/Studierendenzaehlung.csv",sep=",",skip=1)
 # this is sample code
 colnames(Studis)
 ```
