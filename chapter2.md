@@ -40,3 +40,39 @@ Bob sieht in jedem Raum nach und zählt die Studierenden. Ein Experiment findet 
 
 
 
+
+
+---
+## Insert exercise title here
+
+```yaml
+type: MultipleChoiceExercise
+
+xp: 50
+
+key: d546b2c206
+
+
+
+```
+
+
+
+`@instructions`
+- c(min(Studis$Anwesend),max(Studis$Anwesend))
+- hi
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+Studis <- read.csv2("https://assets.datacamp.com/production/repositories/3196/datasets/1e5d9ec9fbf68a511b51b513183222dd40447e9a/Studierendenzaehlung.csv",sep="",skip=1)
+```
+
+
+
+
+
+
+
