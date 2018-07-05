@@ -1,6 +1,47 @@
 ---
 title: Template Chapter 1
 description: This is a template chapter.
+
+---
+## bla
+
+```yaml
+type: NormalExercise
+key: b14efe6d9f
+lang: r
+xp: 100
+skills: 1
+```
+
+
+`@instructions`
+hier die instructions
+
+`@hint`
+hier ein hinweis
+
+`@pre_exercise_code`
+```{r}
+
+```
+
+`@sample_code`
+```{r}
+Studis <- read.csv2("https://assets.datacamp.com/production/repositories/3196/datasets/1e5d9ec9fbf68a511b51b513183222dd40447e9a/Studierendenzaehlung.csv",sep=",",skip=1)
+# this is sample code
+colnames(Studis)
+```
+
+`@solution`
+```{r}
+colnames(Studis)
+mean(Studis$Anwesend)
+```
+
+`@sct`
+```{r}
+
+```
 ---
 
 ## An exercise title written in sentence case
