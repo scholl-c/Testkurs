@@ -208,7 +208,7 @@ key: 4ae649f0f7
 
 Die Identifikationsnummer hier im Krankenhaus setzt sich aus der OP-Dauer in Sekunden, dem Vornamen des Patienten und seiner Lieblingsfarbe zusammen. Die OP-Dauer haben wir bereits errechnet und in ``id`` gespeichert. Nun benötigen wir für die Identifikationsnummer noch den Vornamen des Patienten und seine Lieblingsfarbe.
 
-Der Patient heißt laut Personalausweis Günther und seine Lieblingsfarbe ist Blau. Bevor wir diese wichtigen Informationen vergessen, speichern wir sie jeweils in einer Variablen ab!
+Der Patient heißt laut Personalausweis _Günther_ und seine Lieblingsfarbe ist _Blau_. Bevor wir diese wichtigen Informationen vergessen, speichern wir sie jeweils in einer Variablen ab!
   
 Zeichenketten können ebenso in Variablen gespeichert werden wie Zahlen. Im Gegensatz zu Zahlen muss man Zeichenketten mit Anführungszeichen umrahmen. 
 
@@ -223,7 +223,7 @@ Vergiss nicht den Zuweisungspfeil und vergiss nicht, die Anführungszeichen zu s
 `@solution`
 ```{r}
 name <- "Günther"
-farbe <- "blau"
+farbe <- "Blau"
 ```
 `@sct`
 ```{r}
