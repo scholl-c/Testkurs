@@ -60,13 +60,19 @@ key: 6c4623ef65
 
 ```
 
+Die Identifikationsnummer hier im Krankenhaus setzt sich aus der OP-Dauer in Sekunden, 
+  den Vornamen des Patienten und seiner Lieblingsfarbe zusammen. 
+   Wir können Zahlen oder Objekte in einer Variablen speichern. Eine Variable kannst du dir als eine Art Name vorstellen, nur 
+  deutlich flexibler. Im Gegensatz zu dem Namen des Patienten, können wir den Namen immer wieder umbenennen 
+  oder den Inhalt, d.h. die Zahl oder das Objekt, überschreiben. Bei Menschen geht das nicht so leicht ... 
+  Die Vergabe eines Namens bzw. das Speichern in einer Variablen funktioniert mit einem Zuweisungspfeil. Wir 
+  schreiben den Namen, eine spitze Klammer mit Öffnung nach rechts, einen Bindestrich, die Zahl oder das Objekt.
+
 Einfache Zuweisungen funktionieren über einen Pfeil. Beispiel: ``mein_name <- "hans"``
-``mein_name`` ist dabei eine neue Variable, die du dadurch erstellst. Darin speichern tust du hans. Beispieldatensätze von R wie iris. Datensätze kannst du auch Namen geben. Funktioniert auch so.
+``mein_name`` ist dabei eine neue Variable, die du dadurch erstellst. Darin speichern tust du hans. 
 
 `@instructions`
-die R sagt, es soll den Beispiel-Datensatz namens iris mit dem Namen iris in deine Arbeitsumgebung 
-  laden. Lade den Datensatz ``iris`` in die Datenumgebung von R,speichere ihn in einer Variable ``mein_iris_datensatz``
-Mit der Eingabe des Datensatzes``iris`` kannst du dir den Datensatz in der Console anzeigen lassen. Wenn du ``head(iris)`` angibst, zeigt er dir nur die ersten Zeilen des Datensatzes an.
+Die Identifikationsnummer des Patienten soll in der Variablen 'id' gespeichert werden. Dafür müssen wir zunächst die errechnete OP-Dauer in Sekunden speichern.
 
 `@hint`
 Benutze den Zuweisungspfeil wie im Beispiel.
@@ -83,12 +89,12 @@ mein_name
 ```
 `@solution`
 ```{r}
-mein_iris_datensatz <- iris
+id <- 7200
 ```
 `@sct`
 ```{r}
 test_error()
-test_student_typed("mein_iris_datensatz <- iris")
+test_student_typed("id <- 7200")
 success_msg("Toll!")
 ```
 
