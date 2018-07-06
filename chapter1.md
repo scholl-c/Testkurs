@@ -142,7 +142,6 @@ id <- id-1000
 `@sct`
 ```{r}
 test_error()
-test_object("id","6200","No")
 success_msg("Supi!")
 ```
 
