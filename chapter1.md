@@ -150,7 +150,7 @@ id <- id-1000
 ```{r}
 test_error()
 test_object("id",incorrect_msg="Nein, das stimmt leider nicht.")
-test_student_typed("id <- id-1000",not_typed_msg="Nein, das stimmt leider nicht.")
+test_student_typed("id <- id-1000",not_typed_msg="Rechne mit R, nicht im Kopf!")
 success_msg("Supi!")
 ```
 
