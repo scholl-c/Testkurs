@@ -61,12 +61,12 @@ key: 6c4623ef65
 ```
 
 Einfache Zuweisungen funktionieren über einen Pfeil. Beispiel: ``mein_name <- "hans"``
-``mein_name`` ist dabei eine neue Variable, die du dadurch erstellst. Beispieldatensätze von R wie iris
+``mein_name`` ist dabei eine neue Variable, die du dadurch erstellst. Darin speichern tust du hans. Beispieldatensätze von R wie iris
 
 `@instructions`
 die R sagt, es soll den Beispiel-Datensatz namens iris mit dem Namen iris in deine Arbeitsumgebung 
   laden. Lade den Datensatz ``iris`` in die Datenumgebung von R,speichere ihn in einer Variable ``mein_iris_datensatz``
-Mit ``View(iris)`` kannst du dir den Datensatz anzeigen lassen.
+Mit der Eingabe des Datensatzes``iris`` kannst du dir den Datensatz in der Console anzeigen lassen. Wenn du ``head(iris)`` angibst, zeigt er dir nur die ersten Zeilen des Datensatzes an.
 
 `@hint`
 Benutze den Zuweisungspfeil wie im Beispiel.
