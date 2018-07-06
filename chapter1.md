@@ -74,7 +74,7 @@ Die Identifikationsnummer hier im Krankenhaus setzt sich aus der OP-Dauer in Sek
   schreiben den Namen, eine spitze Klammer mit Öffnung nach rechts, einen Bindestrich, die Zahl oder das Objekt.
 
 Einfache Zuweisungen funktionieren über einen Pfeil. Beispiel: ``mein_name <- "hans"``
-``mein_name`` ist dabei eine neue Variable, die du dadurch erstellst. Darin speichern tust du hans. 
+``mein_name`` ist dabei eine neue Variable, die du dadurch erstellst. Darin speichern tust du hans.
 
 `@instructions`
 Die Identifikationsnummer des Patienten soll in der Variablen 'id' gespeichert werden. Dafür müssen wir zunächst die errechnete OP-Dauer in Sekunden speichern.
@@ -90,7 +90,6 @@ mein_name <- "hans"
 
 # Zeigt Inhalt an
 mein_name
-
 ```
 `@solution`
 ```{r}
@@ -122,9 +121,12 @@ key: 674882dfea
 
 ```
 
-Mit den Variablen können wir auch rechnen. Die OP-Dauer verkürzt sich um 1000 Sekunden. 
- Variablen überschreiben funktioniert 
-  exakt so, wie Variablen zuweisen.
+Mit den Variablen können wir auch rechnen. Einmal angelegt, können wir mit ihrem Namen immer wieder auf sie zugreifen.  Variablen überschreiben, d.h. manipulieren, funktioniert exakt so, wie Variablen zuweisen.
+```mein_name <- "hans"
+mein_name <- "peter"``
+
+Die OP-Dauer verkürzt sich um 1000 Sekunden. 
+
 
 `@instructions`
 Ziehe diese 1000 Sekunden von der bisher errechneten und in 'id' gespeicherten OP-Dauer ab und 
@@ -133,7 +135,10 @@ Ziehe diese 1000 Sekunden von der bisher errechneten und in 'id' gespeicherten O
 `@hint`
 
 
-
+`@pre_exercise_code`
+```{r}
+id <- 7200
+```
 
 `@solution`
 ```{r}
