@@ -60,7 +60,7 @@ key: 6c4623ef65
 
 ```
 
-Einfache Zuweisungen funktionieren über einen Pfeil. Beispiel: ``mein_name <- "hans"```
+Einfache Zuweisungen funktionieren über einen Pfeil. Beispiel: ``mein_name <- "hans"``
 mein_name ist dabei eine neue Variable, die du dadurch erstellst. Beispieldatensätze von R wie iris
 
 `@instructions`
