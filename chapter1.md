@@ -77,7 +77,9 @@ Benutze den Zuweisungspfeil wie im Beispiel.
 # Erstellt Variable mit Inhalt
 mein_name <- "hans"
 
-# Erstelle Variable mit Datensatz
+# Zeigt Inhalt an
+mein_name
+
 ```
 `@solution`
 ```{r}
