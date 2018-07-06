@@ -236,3 +236,53 @@ success_msg("Gut gemacht!")
 
 
 
+
+
+---
+## Insert exercise title here
+
+```yaml
+type: NormalExercise
+
+xp: 100
+
+key: f5c1362148
+
+
+
+```
+
+Wir möchten nun die richtige und vollständige Identifikationsnummer generieren und sie in ``id`` festhalten. Damit überschreiben wir die OP-Dauer, die momentan in ``id`` gespeichert ist. Den Wert kriegen wir dann auch nie wieder zurück, falls wir damit weiterhin rechnen möchten. Es ist daher gut zu überlegen, ob nicht doch eine neue Variable angelegt werden soll. Wir überschreiben (!) hier in diesem Fall dennoch, Operationen im Krankenhaus sind schließlich auch nicht so einfach rückgängig zu machen.
+
+R stellt einige **Funktionen **bereit. Eine Funktion bekommt einen Input (z. B. eine Zahl oder ein Objekt), macht etwas damit und gibt wieder etwas (das kann z. B. ebenfalls eine Zahl oder ein Objekt sein) zurück. Du kannst dir das vorstellen wie deinen Körper: Du gibst ihm ein Butterbrot zu essen, irgendetwas passiert damit in deinem Körper und später kommt wieder etwas raus ;-P Welche Prozesse genau in deinem Körper ablaufen, weißt du nur, wenn du hineinschaust. Übertragen auf die Funktionen in R heißt das, du musst erstmal nicht wissen, was die Funktionen detailliert macht, aber du musst wissen, was du der Funktion "zu essen" geben musst und was du dann erwartest, was rauskommen soll. Wenn du in R mal nicht weißt, wofür eine Funktion da ist, dann kannst du die Dokumentation bzw. Hilfe aufrufen mit ``?funktionsname`` oder mit ``help(funktionsname)``.  Ein Beispiel: ``?paste0``
+
+Mit der Funktion ``paste0()`` kannst du eine Zeichenkette aus mehreren Zeichenketten zusammensetzen. Das kannst du gerne in der Konsole mit ``paste0("Sonne","Mond")`` ausprobieren. Die Werte werden dabei als Argumente übergeben und von der Funktion ohne ein Leerzeichen (deswegen 0) zusammensetzt. Innerhalb der runden Funktionsklammern gibst du Optionen an, das ist z.B.  auf welche Werte du sie anwenden möchtest. Mehrere Optionen (man nennt sie **Argumente**) werden durch Kommata getrennt. Wenn du wissen möchtest, welche Optionen es gibt, kannst du dies u.a. auf der Hilfeseite nachlesen.
+
+`@instructions`
+Generiere die vollständige Identifikationsnummer, die sich aus den Variablen ``name``, ``id`` (die OP-Dauer) und ``farbe`` genau in dieser Reihenfolge zusammensetzt. Benutze dafür die Funktion ``paste0``.
+Überschreibe die Variable ``id`` (du weißt, das funktioniert wie eine Zuweisung) mit der generierten Identifikationsnummer.
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+name <- "Günther"
+farbe <- "Blau"
+id <- 6200
+```
+
+`@solution`
+```{r}
+id <- paste0(name,id,farbe)
+```
+`@sct`
+```{r}
+test_error()
+test_object("id")
+success_msg("Herzlichen Glückwunsch!")
+```
+
+
+
+
