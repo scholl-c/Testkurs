@@ -24,7 +24,7 @@ Beispiel:
 ``2+2``  
 ``40-2``  
 ``3*4``  
-``45/5``  
+``45/5``
 
 `@instructions`
 Errechne die Sekunden, die der leitende Oberarzt bei einer 2-stündigen OP im OP-Saal verbringen muss. Verwende dazu mindestens einen arithmetischen Operator.
@@ -210,7 +210,7 @@ Die Identifikationsnummer hier im Krankenhaus setzt sich aus der OP-Dauer in Sek
 
 Der Patient heißt laut Personalausweis _Günther_ und seine Lieblingsfarbe ist _Blau_. Bevor wir diese wichtigen Informationen vergessen, speichern wir sie jeweils in einer Variablen ab!
   
-Zeichenketten können ebenso in Variablen gespeichert werden wie Zahlen. Im Gegensatz zu Zahlen muss man Zeichenketten mit Anführungszeichen umrahmen. 
+Zeichenketten können ebenso in Variablen gespeichert werden wie Zahlen. Im Gegensatz zu Zahlen muss man Zeichenketten mit Anführungszeichen umrahmen.
 
 `@instructions`
 Speichere seinen Namen in ``name`` ab und seine Lieblingsfarbe in ``farbe``. Wie eine Zuweisung funktioniert, weißt du ja bereits.
@@ -263,8 +263,6 @@ Mit der Funktion ``paste0()`` kannst du eine Zeichenkette aus mehreren Zeichenke
 Generiere die vollständige Identifikationsnummer, die sich aus den Variablen ``name``, ``id`` (die OP-Dauer) und ``farbe`` genau in dieser Reihenfolge zusammensetzt. Benutze dafür die Funktion ``paste0``.
 Überschreibe die Variable ``id`` (du weißt, das funktioniert wie eine Zuweisung) mit der generierten Identifikationsnummer.
 
-`@hint`
-
 
 `@pre_exercise_code`
 ```{r}
@@ -303,12 +301,10 @@ key: 5e0dc21918
 
 ```
 
-Nun ist noch wichtig, dass die komplette Identifikationsnummer groß geschrieben wird. Das können wir durch die Funktion ``toupper()`` erreichen. 
+Nun ist noch wichtig, dass die komplette Identifikationsnummer groß geschrieben wird. Das können wir durch die Funktion ``toupper()`` erreichen.
 
 `@instructions`
 Wende diese Funktion auf ``id`` an und überschreibe ``id``.
-
-`@hint`
 
 
 `@pre_exercise_code`
@@ -361,13 +357,20 @@ Wenn du die Gründe nachschlagen möchtest, musst du auf die zweite Spalte bzw. 
 `@hint`
 Halte dich an die beiden im Text beschriebenen Art und Weisen die Spalte auszugeben. Referenziere auf die Spalte mit ``grund``
 
-
+`@pre_exercise_code`
+```{r}
+patienten <- read.csv()
+```
 
 `@solution`
 ```{r}
 patienten$grund
 ```
-
+`@sct`
+```{r}
+test_error()
+success_msg("Super!")
+```
 
 
 
