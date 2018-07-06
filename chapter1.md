@@ -190,3 +190,49 @@ Eine Variable darf mit einem Punkt beginnen, danach darf aber keine Zahl folgen.
 
 
 
+
+
+---
+## Insert exercise title here
+
+```yaml
+type: NormalExercise
+
+xp: 100
+
+key: 4ae649f0f7
+
+
+
+```
+
+Die Identifikationsnummer hier im Krankenhaus setzt sich aus der OP-Dauer in Sekunden, dem Vornamen des Patienten und seiner Lieblingsfarbe zusammen. Die OP-Dauer haben wir bereits errechnet und in ``id`` gespeichert. Nun benötigen wir für die Identifikationsnummer noch den Vornamen des Patienten und seine Lieblingsfarbe.
+
+Der Patient heißt laut Personalausweis Günther und seine Lieblingsfarbe ist Blau. Bevor wir diese wichtigen Informationen vergessen, speichern wir sie jeweils in einer Variablen ab!
+  
+Zeichenketten können ebenso in Variablen gespeichert werden wie Zahlen. Im Gegensatz zu Zahlen muss man Zeichenketten mit Anführungszeichen umrahmen. 
+
+`@instructions`
+Speichere seinen Namen in ``name`` ab und seine Lieblingsfarbe in ``farbe``. Wie eine Zuweisung funktioniert, weißt du ja bereits.
+
+`@hint`
+Vergiss nicht den Zuweisungspfeil und vergiss nicht, die Anführungszeichen zu setzen. Die Variablennamen werden hier klein geschrieben (siehe Aufgabenstellung).
+
+
+
+`@solution`
+```{r}
+name <- "Günther"
+farbe <- "blau"
+```
+`@sct`
+```{r}
+test_error()
+test_object("name")
+test_object("farbe")
+success_msg("Gut gemacht!")
+```
+
+
+
+
