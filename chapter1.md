@@ -193,7 +193,7 @@ Eine Variable darf mit einem Punkt beginnen, danach darf aber keine Zahl folgen.
 
 
 ---
-## Insert exercise title here
+## Zeichenketten
 
 ```yaml
 type: NormalExercise
@@ -228,8 +228,8 @@ farbe <- "Blau"
 `@sct`
 ```{r}
 test_error()
-check_object("name")
-check_object("farbe")
+check_object("name",incorrect_msg="Nein, so nicht. Vielleicht ein Tippfehler?")
+check_object("farbe", incorrect_msg="Nein, so nicht. Vielleicht ein Tippfehler?")
 success_msg("Gut gemacht!")
 ```
 
