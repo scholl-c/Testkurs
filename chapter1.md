@@ -122,8 +122,8 @@ key: 674882dfea
 ```
 
 Mit den Variablen können wir auch rechnen. Einmal angelegt, können wir mit ihrem Namen immer wieder auf sie zugreifen.  Variablen überschreiben, d.h. manipulieren, funktioniert exakt so, wie Variablen zuweisen.
-```mein_name <- "hans" ``
-``mein_name <- "peter"``
+``mein_name <- "Hans"   
+``mein_name <- "Peter"``
 
 Die OP-Dauer verkürzt sich um 1000 Sekunden. 
 
