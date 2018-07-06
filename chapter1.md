@@ -135,7 +135,7 @@ Die OP-Dauer verkürzt sich um 1000 Sekunden.
 Ziehe diese 1000 Sekunden von der bisher errechneten und in ``id`` gespeicherten OP-Dauer ab und überschreibe die Variable ``id`` mit der neuen OP-Dauer.
 
 `@hint`
-Benutze nur die Variable zum errechnen des neuen Wertes und nicht die 7200 Sekunden. Überschreibe die Variable, indem du den Zuweisungspfeil benutzt.
+Benutze nur die Variable zum errechnen des neuen Wertes und nicht den konkreten Wert, d.h. die 7200 Sekunden. Überschreibe die Variable, indem du den Zuweisungspfeil benutzt.
 
 `@pre_exercise_code`
 ```{r}
