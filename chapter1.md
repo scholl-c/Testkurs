@@ -64,24 +64,18 @@ key: 6c4623ef65
 
 ```
 
-Die Identifikationsnummer hier im Krankenhaus setzt sich aus der OP-Dauer in Sekunden, 
-  den Vornamen des Patienten und seiner Lieblingsfarbe zusammen. 
-   Wir können Zahlen oder Objekte in einer Variablen speichern. Eine Variable kannst du dir als eine Art Name vorstellen, nur 
-  deutlich flexibler. Die Namen der Variablen (wie hier z.B. id) sollten möglichst aussagekräftig sein und 
-  nicht aus einem reservierten Wort wie z.B. function, TRUE, NA oä. bestehen. Zugelassen sind 
-  Namen, die Buchstaben, Zahlen, Unterstriche oder Punkte enthalten. Das erste Zeichen muss dabei 
-  ein Buchstabe oder ein Punkt sein. Auf den Punkt darf dann aber keine Zahl folgen.
+Die Identifikationsnummer hier im Krankenhaus setzt sich aus der OP-Dauer in Sekunden, dem Vornamen des Patienten und seiner Lieblingsfarbe zusammen. Die Identifikationsnummer des Patienten soll später in der Variablen ``id`` gespeichert werden.
 
- Im Gegensatz zu dem Namen des Patienten, können wir den Namen immer wieder umbenennen 
-  oder den Inhalt, d.h. die Zahl oder das Objekt, überschreiben. Bei Menschen geht das nicht so leicht ... 
-  Die Vergabe eines Namens bzw. das Speichern in einer Variablen funktioniert mit einem Zuweisungspfeil. Wir 
-  schreiben den Namen, eine spitze Klammer mit Öffnung nach rechts, einen Bindestrich, die Zahl oder das Objekt.
+Wir können Zahlen oder Objekte in einer **Variablen** speichern. Eine Variable kannst du dir als eine Art Name vorstellen, nur deutlich flexibler. Die Namen der Variablen (wie hier z.B. ``id`` oder ``mein_name``) sollten möglichst aussagekräftig sein und nicht aus einem reservierten Wort wie z.B. function, TRUE, NA oä. bestehen. Zugelassen sind Namen, die Buchstaben, Zahlen, Unterstriche oder Punkte enthalten. Das erste Zeichen muss dabei ein Buchstabe oder ein Punkt sein. Auf den Punkt darf dann aber keine Zahl folgen.
 
-Einfache Zuweisungen funktionieren über einen Pfeil. Beispiel: ``mein_name <- "hans"``
-``mein_name`` ist dabei eine neue Variable, die du dadurch erstellst. Darin speichern tust du hans.
+Im Gegensatz zu dem Namen des Patienten, können wir den Namen immer wieder umbenennen oder den Inhalt, d.h. die Zahl oder das Objekt, überschreiben. Bei Menschen geht das nicht so leicht ...  Die Vergabe eines Namens bzw. das Speichern in einer Variablen funktioniert mit einem Zuweisungspfeil. Wir schreiben den Namen, eine spitze Klammer mit Öffnung nach rechts ``<``, einen Bindestrich ``-``, die Zahl oder das Objekt.
+Ein Beispiel:   
+``mein_name <- "Hans"``  
+
+``mein_name`` ist dabei eine neue Variable, die du dadurch erstellst. Darin speichern tust du "Hans".
 
 `@instructions`
-Die Identifikationsnummer des Patienten soll in der Variablen 'id' gespeichert werden. Dafür müssen wir zunächst die errechnete OP-Dauer in Sekunden speichern.
+Speichere zunächst die errechnete OP-Dauer (7200) in Sekunden, indem du sie der Variablen ``id`` zuweist (und damit auch eine neue Variable erstellst).
 
 `@hint`
 Benutze den Zuweisungspfeil wie im Beispiel.
@@ -90,7 +84,7 @@ Benutze den Zuweisungspfeil wie im Beispiel.
 `@sample_code`
 ```{r}
 # Erstellt Variable mit Inhalt
-mein_name <- "hans"
+mein_name <- "Hans"
 
 # Zeigt Inhalt an
 mein_name
