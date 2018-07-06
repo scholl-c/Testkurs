@@ -126,7 +126,7 @@ Mit den Variablen können wir auch rechnen. Einmal angelegt, können wir mit ihr
 ``mein_name <- "Hans"``   
 ``mein_name <- "Peter"``
 
-Führt man beide Zeilen nacheinander aus, so ist der neue Wert der Variable ``mein_name`` Peter. Dass die Variable mal den Wert "Hans" hatte, ist nicht mehr abrufbar.
+Führt man beide Zeilen nacheinander aus, so ist der neue Wert der Variable ``mein_name`` "Peter". Dass die Variable mal den Wert "Hans" hatte, ist nicht mehr abrufbar.
 
 Die OP-Dauer verkürzt sich um 1000 Sekunden. 
 
@@ -135,7 +135,7 @@ Die OP-Dauer verkürzt sich um 1000 Sekunden.
 Ziehe diese 1000 Sekunden von der bisher errechneten und in ``id`` gespeicherten OP-Dauer ab und überschreibe die Variable ``id`` mit der neuen OP-Dauer.
 
 `@hint`
-Benutze nur die Variable zum errechnen des neuen Wertes und nicht die 7200 Sekunden.
+Benutze nur die Variable zum errechnen des neuen Wertes und nicht die 7200 Sekunden. Überschreibe die Variable, indem du den Zuweisungspfeil benutzt.
 
 `@pre_exercise_code`
 ```{r}
@@ -149,8 +149,8 @@ id <- id-1000
 `@sct`
 ```{r}
 test_error()
-test_object("id")
-test_student_typed("id <- id-1000")
+test_object("id",incorrect_msg="Nein, das stimmt leider nicht.")
+test_student_typed("id <- id-1000",not_typed_msg="Nein, das stimmt leider nicht.")
 success_msg("Supi!")
 ```
 
