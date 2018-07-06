@@ -63,7 +63,12 @@ key: 6c4623ef65
 Die Identifikationsnummer hier im Krankenhaus setzt sich aus der OP-Dauer in Sekunden, 
   den Vornamen des Patienten und seiner Lieblingsfarbe zusammen. 
    Wir können Zahlen oder Objekte in einer Variablen speichern. Eine Variable kannst du dir als eine Art Name vorstellen, nur 
-  deutlich flexibler. Im Gegensatz zu dem Namen des Patienten, können wir den Namen immer wieder umbenennen 
+  deutlich flexibler. Die Namen der Variablen (wie hier z.B. id) sollten möglichst aussagekräftig sein und 
+  nicht aus einem reservierten Wort wie z.B. function, TRUE, NA oä. bestehen. Zugelassen sind 
+  Namen, die Buchstaben, Zahlen, Unterstriche oder Punkte enthalten. Das erste Zeichen muss dabei 
+  ein Buchstabe oder ein Punkt sein. Auf den Punkt darf dann aber keine Zahl folgen.
+
+ Im Gegensatz zu dem Namen des Patienten, können wir den Namen immer wieder umbenennen 
   oder den Inhalt, d.h. die Zahl oder das Objekt, überschreiben. Bei Menschen geht das nicht so leicht ... 
   Die Vergabe eines Namens bzw. das Speichern in einer Variablen funktioniert mit einem Zuweisungspfeil. Wir 
   schreiben den Namen, eine spitze Klammer mit Öffnung nach rechts, einen Bindestrich, die Zahl oder das Objekt.
@@ -96,6 +101,49 @@ id <- 7200
 test_error()
 test_student_typed("id <- 7200")
 success_msg("Toll!")
+```
+
+
+
+
+
+
+---
+## Variablen
+
+```yaml
+type: NormalExercise
+
+xp: 100
+
+key: 674882dfea
+
+
+
+```
+
+Mit den Variablen können wir auch rechnen. Die OP-Dauer verkürzt sich um 1000 Sekunden. 
+ Variablen überschreiben funktioniert 
+  exakt so, wie Variablen zuweisen.
+
+`@instructions`
+Ziehe diese 1000 Sekunden von der bisher errechneten und in 'id' gespeicherten OP-Dauer ab und 
+  überschreibe die Variable 'id' mit der neuen OP-Dauer.
+
+`@hint`
+
+
+
+
+`@solution`
+```{r}
+id <- id-1000
+```
+`@sct`
+```{r}
+test_error()
+test_object("id","6200","No")
+success_msg("Supi!")
 ```
 
 
