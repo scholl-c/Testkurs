@@ -306,6 +306,8 @@ Nun ist noch wichtig, dass die komplette Identifikationsnummer groß geschrieben
 `@instructions`
 Wende diese Funktion auf ``id`` an und überschreibe ``id``.
 
+`@hint`
+
 
 `@pre_exercise_code`
 ```{r}
@@ -402,6 +404,256 @@ Gib in die eckigen Klammern (direkt hinter ``patienten``) die Position der Zelle
 ```{r}
 patienten[2,3]
 ```
+
+
+
+
+
+
+
+---
+## Zeilen auswählen
+
+```yaml
+type: NormalExercise
+
+xp: 100
+
+key: 0e9c727645
+
+
+
+```
+
+
+
+`@instructions`
+
+
+`@hint`
+
+
+
+
+
+
+
+
+
+
+
+
+---
+## Daten bearbeiten
+
+```yaml
+type: BulletExercise
+
+xp: 100
+
+key: cbb2cdcdee
+
+
+
+```
+
+Genauso kannst du auch Spalten, 
+  Zeilen, und Zellen umbenennen.  Das könnte so ähnlich aussehen datensatz[zeile,spalte] <- 'neuer Wert' und hilft dir hoffentlich, 
+  diese Aufgabe zu lösen.
+
+
+
+
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise
+
+xp: 25
+
+key: b51ddc667b
+
+
+
+```
+
+
+
+`@instructions`
+Das Bauchweh bei Patient Nr. 3 hat sich konkretisiert. Es handelt sich um eine Bauchfellentzündung. 
+  Wenn du einen neuen Wert in eine Zelle schreiben möchtest kannst du das durch eine Zuweisung.
+
+`@hint`
+
+
+
+
+
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise
+
+xp: 25
+
+key: f7af524836
+
+
+
+```
+
+
+
+`@instructions`
+Die Zusammensetzung der Identifikationsnummern soll ab sofort geändert werden. Deshalb 
+  müssen auch alle bisherigen IDs geändert werden. Es soll nur noch der Vorname zur Generierung 
+  der ID genutzt werden, aber zusätzlich eine fortlaufende Nummer eingefügt werden. Die 
+  IDs der vier aktuellen Patienten-IDs werden zu BILL0001, WILMA0002, URMEL0003, IDA0004, ÖLF0005 
+  umbenannt.
+
+Nun müssen wir natürlich nicht jede einzelne Zelle umbenennen, sondern können das komfortabler 
+  in dem wir die ganze Spalte 'id' umbenennen. Spalten benennt man ebenfalls über eine Zuweisung 
+  um. Dabei weist man der entsprechenden Spalte einen Vektor, der hier z.B. die neuen IDs beinhaltet, 
+  zu. Ein Vektor bildest du mit der Funktion c(). Innerhalb von c soll eine Liste mit Werten. Bilde 
+  den Vektor für die neuen IDs BILL0001, WILMA0002, URMEL0003, IDA0004, ÖLF0005. Vergiss nicht, die 
+  IDs in Anführungszeichen zu setzen. Die Werte werden mit Komma getrennt. Speichere den Vektor in 'neue_ids'
+
+`@hint`
+
+
+
+
+
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise
+
+xp: 25
+
+key: 231b3f294a
+
+
+
+```
+
+
+
+`@instructions`
+Überschreibe die Spalte 'id' in 'patienten' mit den neuen IDs.
+
+`@hint`
+
+
+
+
+
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise
+
+xp: 25
+
+key: 4c0a794a61
+
+
+
+```
+
+
+
+`@instructions`
+In der Klinik wird ein neues Programm eingesetzt, das das Alter von Menschen erkennen kann. 
+  Man hat nun einen Fehler entdeckt, sodass alle Patienten ein Jahr jünger sind als eingetragen wurde. 
+  Das muss nun auch bei den aktuellen vier Patienten behoben werden. Man kann arithmetische Operationen auch auf Spalten anwenden bzw. mit Spalten rechnen.
+  Ändere das Alter der Patienten entsprechend ab und überschreibe damit das aktuell eingetragene Alter. Generell funktioniert diese Art arithmetische Operationen nur, wenn die ganze Zeile oder Spalte 
+  Werte desselben Typs enthält.
+
+`@hint`
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+## Magrittr
+
+```yaml
+type: NormalExercise
+
+xp: 100
+
+key: 64f0bb4715
+
+
+
+```
+
+R funktioniert in mancher Hinsicht wie eine Operation. Du hast ein Objekt (z.B. ein Mensch) und ein Ziel, wie z.B. den Blinddarm herauszunehmen. Dafür sind viele Handgriffe nötig, die in einer bestimmten Reihenfolge ausgeführt werden müssen. Ein typischer Anwendungsfall in R ist z.B. die Verteilung oder Häufigkeiten von einer oder zwei Variablen (z.B. das Alter und Geschlecht) zu plotten. Dazu hast du z.B. einen Datensatz vorliegen und führst verschiedene vorverarbeitende Schritte aus um die Daten in die richtige Form zu bringen.
+
+Arbeitet man mit R im Sinne von Operationen an einem Datensatz, dann eignet sich dafür das **Paket magrittr**. Pakete kann man zusätzlich installieren mit ``install.packages("paketname")`` und nach erfolgreicher Installation mit ``library(paketname)`` benutzen. Bisher müssen wir entweder jedesmal den Datensatz überschreiben oder für jeden verarbeitenden Schritt einen neuen Datensatz anlegen. Magrittr eröffnet dafür die Möglichkeit zu pipen. Das Pipe-Symbol ist dabei ein ``%>%`` und kettet die einzelnen _Handgriffe_ aneinander.
+
+`@instructions`
+
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+library(magrittr)
+```
+
+
 
 
 
