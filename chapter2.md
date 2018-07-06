@@ -1,7 +1,7 @@
 ---
   title: "Grundlagen"
-  description: "Insert the chapter description here"
-  v2: false
+  description: "Umgang mit Datensätzen und Einstieg in die deskriptive Statistik"
+  v2: true
 
 ---
 ## Erhebungsart
@@ -18,7 +18,6 @@ key: 910001d0a4
 ```
 
 Bob ist ein ganz gewöhnlicher Student. Das neue Semester hat begonnen und heute ist sein erster Tag als Hilfskraft von Herrn Professor Ratistikus. "Was für eine langweilige Aufgabe!", denkt Bob, als er seine erste Aufgabe des Tages erfährt. Der Professor hat ihn gebeten die Teilnehmer seiner Seminare zu zählen. Um welche Erhebungsart handelt es sich dabei?
-
 
 
 `@hint`
