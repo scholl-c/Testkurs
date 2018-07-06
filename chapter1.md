@@ -290,7 +290,7 @@ success_msg("Herzlichen Glückwunsch!")
 
 
 ---
-## Insert exercise title here
+## Funktion anwenden
 
 ```yaml
 type: NormalExercise
@@ -329,6 +329,45 @@ test_error()
 test_object("id")
 success_msg("So ist es richtig!")
 ```
+
+
+
+
+
+
+---
+## Datensätze
+
+```yaml
+type: NormalExercise
+
+xp: 100
+
+key: a2b770b99c
+
+
+
+```
+
+Der erste Patient hat seine OP erfolgreich überstanden. Da kommen auch schon die nächsten Patienten. Auch diese haben mehr oder weniger schwere Operationen vor sich. Welche Ursachen gab es für die jeweiligen Operationen?
+
+In R hast du die Möglichkeit nicht nur mit Variablen und Funktionen zu arbeiten, sondern auch mit **Datensätzen**. Die Datensätze kannst du in R einlesen mit zum Beispiel ``read.csv()`` oder ``load()`` und darauf zugreifen, die Daten bearbeiten und analysieren.  Datensätze haben Spalten und Zeilen. Ein Eintrag in einem Datensatz entspricht einer Zeile und ein Attribut (Eigenschaft) entspricht einer Spalte. Du kannst auf eine bestimmte Spalte in einem Datensatz mit dem Dollarzeichen zugreifen, wie z.B. ``datensatz$spalte`` oder mit der alternativen Schreibweise ``datensatz[,spalte]``. Die Schreibweise mit den eckigen Klammern ist dir vielleicht auch schon von Programmiersprachen bekannt. Über die eckigen Klammern kannst du auf Zeilen und Spalten zugreifen. Du kannst dadurch auch auf einzelne Zellen oder letztendlich den ganzen Datensatz zugreifen. Zuerst müssen die Zeilen angegeben werden, dann die Spalten, also ist die Schreibweise folglich ``datensatz[zeile,spalte] ``. Im Beispiel eben haben wir nur eine Spalte auswählen wollen. Wir lassen deshalb die Angabe für die Zeilen einfach leer, d.h. es werden automatisch alle Zeilen ausgewählt. Das Komma müssen wir dennoch schreiben.
+
+Die Daten der Patienten findest du in ``patienten``. Einen Einblick in den Datensatz bekommst du mit ``head(patienten)``.
+
+`@instructions`
+Wenn du die Gründe nachschlagen möchtest, musst du auf die zweite Spalte bzw. die Spalte namens ``grund`` zugreifen.  Lasse dir die Gründe ausgeben.
+
+`@hint`
+Halte dich an die beiden im Text beschriebenen Art und Weisen die Spalte auszugeben. Referenziere auf die Spalte mit ``grund``
+
+
+
+`@solution`
+```{r}
+patienten$grund
+```
+
 
 
 
