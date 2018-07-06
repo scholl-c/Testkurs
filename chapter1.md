@@ -38,7 +38,6 @@ Eine Stunde hat 60 Minuten, eine Minute besteht aus 60 Sekunden.
 ```{r}
 test_error()
 test_output_contains("7200",incorrect_msg="falsch")
-test_function("`*`",incorrect_msg="nope")
 success_msg("Super!")
 ```
 
