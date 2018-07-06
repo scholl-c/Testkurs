@@ -306,8 +306,6 @@ Nun ist noch wichtig, dass die komplette Identifikationsnummer groß geschrieben
 `@instructions`
 Wende diese Funktion auf ``id`` an und überschreibe ``id``.
 
-`@hint`
-
 
 `@pre_exercise_code`
 ```{r}
@@ -357,11 +355,14 @@ Die Daten der Patienten findest du in ``patienten``. Einen Einblick in den Daten
 Wenn du die Gründe nachschlagen möchtest, musst du auf die zweite Spalte bzw. die Spalte namens ``grund`` zugreifen.  Lasse dir die Gründe ausgeben.
 
 `@hint`
-Halte dich an die beiden im Text beschriebenen Art und Weisen die Spalte auszugeben. Referenziere auf die Spalte mit ``grund`` patienten$grund
+Halte dich an die beiden im Text beschriebenen Art und Weisen die Spalte auszugeben. Referenziere auf die Spalte mit ``grund``
 
 
 
-
+`@solution`
+```{r}
+patienten$grund
+```
 `@sct`
 ```{r}
 test_error()
@@ -393,11 +394,14 @@ Beispielsweise kannst du mit ``patienten[5,"grund"]`` auf die Zelle in der 5. Re
 Zeige den Inhalt der Zelle (in ``patienten``) in der zweiten Reihe und der dritten Spalte an.
 
 `@hint`
-Gib in die eckigen Klammern (direkt hinter ``patienten``) die Position der Zelle an. Achte auf die richtige Reihenfolge der Positionsangaben. patienten[2,3]
+Gib in die eckigen Klammern (direkt hinter ``patienten``) die Position der Zelle an. Achte auf die richtige Reihenfolge der Positionsangaben.
 
 
 
-
+`@solution`
+```{r}
+patienten[2,3]
+```
 
 
 
