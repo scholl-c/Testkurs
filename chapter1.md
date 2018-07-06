@@ -19,7 +19,7 @@ key: 2401a95bb9
 
 Wir befinden uns im OP-Saal. Der Patient ist erst vor Kurzem eingeliefert worden. Die OP wird voraussichtlich 2 Stunden dauern. Wie viele Sekunden sind das bloß? In so einer Notsituation darf kein Fehler passieren und der Assistenzarzt weiß nicht wo ihm der Kopf steht, deshalb verlässt er sich auf R.
 
-Du kannst arithmetische Befehle wie gewohnt benutzen, d.h. das Pluszeichen, Minuszeichen, Sternchen und den Schrägstrich für die arithmetischen Grundoperationen. 
+Du kannst arithmetische Befehle - wie vielleicht aus anderen Programmiersprachen oder von dem Taschenrechner gewohnt - benutzen, d.h. das Pluszeichen, Minuszeichen, Sternchen und den Schrägstrich für die arithmetischen Grundoperationen. 
 Beispiel: 
 ``2+2``  
 ``40-2``  
@@ -119,15 +119,14 @@ key: 674882dfea
 
 ```
 
+Die OP-Dauer verkürzt sich um 1000 Sekunden. 
+
 Mit den Variablen können wir auch rechnen. Einmal angelegt, können wir mit ihrem Namen immer wieder auf sie zugreifen.  Variablen überschreiben, d.h. manipulieren, funktioniert exakt so, wie Variablen zuweisen.
 
 ``mein_name <- "Hans"``   
 ``mein_name <- "Peter"``
 
 Führt man beide Zeilen nacheinander aus, so ist der neue Wert der Variable ``mein_name`` "Peter". Dass die Variable mal den Wert "Hans" hatte, ist nicht mehr abrufbar.
-
-Die OP-Dauer verkürzt sich um 1000 Sekunden. 
-
 
 `@instructions`
 Ziehe diese 1000 Sekunden von der bisher errechneten und in ``id`` gespeicherten OP-Dauer ab und überschreibe die Variable ``id`` mit der neuen OP-Dauer.
@@ -152,6 +151,42 @@ test_student_typed("id <- id-1000",not_typed_msg="Rechne mit R, nicht im Kopf!")
 success_msg("Supi!")
 ```
 
+
+
+
+
+
+---
+## Valide Variablennamen
+
+```yaml
+type: PureMultipleChoiceExercise
+
+xp: 50
+
+key: 13ebf18169
+
+
+
+```
+
+Ist ``.4aabb`` ein valider Name für eine Variable?
+
+
+`@hint`
+Eine Variable darf mit einem Punkt beginnen, danach darf aber keine Zahl folgen.
+
+
+
+
+
+`@possible_answers`
+- Ja
+- [Nein]
+
+`@feedbacks`
+- Genau richtig!
+- Nein, das ist kein valider Variablenname.
 
 
 
