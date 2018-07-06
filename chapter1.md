@@ -306,6 +306,8 @@ Nun ist noch wichtig, dass die komplette Identifikationsnummer groß geschrieben
 `@instructions`
 Wende diese Funktion auf ``id`` an und überschreibe ``id``.
 
+`@hint`
+
 
 `@pre_exercise_code`
 ```{r}
@@ -371,6 +373,41 @@ patienten$grund
 test_error()
 success_msg("Super!")
 ```
+
+
+
+
+
+
+---
+## Zellen auswählen
+
+```yaml
+type: NormalExercise
+
+xp: 100
+
+key: 59d80431b7
+
+
+
+```
+
+Beispielsweise kannst du mit ``patienten[5,"grund"]`` auf die Zelle in der 5. Reihe und Spalte ``grund`` zugreifen. Du kannst auf Spalten und Zeilen nicht nur mit ihrem Namen referenzieren (wie z.B. ``grund``), sondern auch einfach über ihre Position (z.B. 2). Du musst also nicht wissen, wie die Spalte bzw. Zeile heißt.
+
+`@instructions`
+Zeige den Inhalt der Zelle (in ``patienten``) in der zweiten Reihe und der dritten Spalte an.
+
+`@hint`
+Gib in die eckigen Klammern (direkt hinter ``patienten``) die Position der Zelle an. Achte auf die richtige Reihenfolge der Positionsangaben.
+
+
+
+`@solution`
+```{r}
+patienten[2,3]
+```
+
 
 
 
