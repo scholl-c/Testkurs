@@ -66,6 +66,7 @@ Einfache Zuweisungen funktionieren über einen Pfeil. Beispiel: ``mein_name <- "
 `@instructions`
 die R sagt, es soll den Beispiel-Datensatz namens iris mit dem Namen iris in deine Arbeitsumgebung 
   laden. Lade den Datensatz ``iris`` in die Datenumgebung von R,speichere ihn in einer Variable ``mein_iris_datensatz``
+Mit ``View(iris)`` kannst du dir den Datensatz anzeigen lassen.
 
 `@hint`
 Benutze den Zuweisungspfeil wie im Beispiel.
