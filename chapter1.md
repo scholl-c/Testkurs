@@ -228,8 +228,8 @@ farbe <- "blau"
 `@sct`
 ```{r}
 test_error()
-test_object("name")
-test_object("farbe")
+check_object("name")
+check_object("farbe")
 success_msg("Gut gemacht!")
 ```
 
