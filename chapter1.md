@@ -36,7 +36,7 @@ Eine Stunde hat 60 Minuten, eine Minute besteht aus 60 Sekunden.
 ```
 `@sct`
 ```{r}
-test_output_contains("7200","No!","No2!")
+test_output_contains("7200",incorrect_msg="falsch")
 success_msg("Super!")
 ```
 
