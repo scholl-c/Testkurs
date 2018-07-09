@@ -418,3 +418,49 @@ success_msg("Super gemacht!")
 
 
 
+
+
+---
+## Insert exercise title here
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 1fc7e418af   
+```
+
+Möchtest du nicht den Typ der Daten, sondern den des Objekts wissen, kannst du das mit der Funktion ``class()`` herausfinden. 
+
+`@instructions`
+Wende die Funktion auf ``geschlecht`` an.
+
+`@hint`
+Benutze die Funktion ``class()`` und übergib der Funktion ``geschlecht``.
+
+`@pre_exercise_code`
+
+```{r}
+geschlecht <- factor(c("m", "m", "w", "m", "w", "w", "w", "w", "w", "w", "m", "w"))
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+class(geschlecht)
+```
+`@sct`
+
+```{r}
+test_error()
+test_output_contains("class(geschlecht)",incorrect_msg="Falsch")
+success_msg("Juhhuu!")
+```
+
+
+
+
