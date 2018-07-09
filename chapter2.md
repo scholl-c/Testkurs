@@ -54,10 +54,14 @@ Er fragt sich, in welcher Veranstaltung wohl die meisten und die wenigstens Stud
 
 Das Minimum einer Datenreihe kannst du mit der Funktion ``min`` und das Maximum entsprechend mit der Funktion ``max`` berechnen. Gib doch mal ``min(Studis$Anwesend)`` ein. Du erinnerst dich: Mit dem Dollarzeichen kannst du eine Spalte aus einem Datensatz (hier: die Spalte ``Anwesend``) auswählen.
 
-`@instructions`
 - ``c(min(Studis$Anwesend),max(Studis$Anwesend))``
-- [``summary(Studis$Anwesend)``]
--  ``c(which.min(unique(Studis$Anwesend)),which.max(unique(Studis$Anwesend)))``
+- ``summary(Studis$Anwesend)``
+-  [``c(which.min(unique(Studis$Anwesend)),which.max(unique(Studis$Anwesend)))``]
+
+`@instructions`
+- Apfel
+- Birne
+- [Banane]
 
 `@hint`
 Du brauchst die Funktionen min() und max(). Du solltest wissen, dass man auf Spalten in einem Dataframe mit einem $ zugreifen kann.
