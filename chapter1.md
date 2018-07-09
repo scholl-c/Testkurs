@@ -381,7 +381,7 @@ Gib in die eckigen Klammern (direkt hinter ``patienten``) die Position der Zelle
 `@pre_exercise_code`
 
 ```{r}
-patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
+patienten <- read.csv(" http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
 ```
 `@sample_code`
 
@@ -426,7 +426,7 @@ key: 0e9c727645
 `@pre_exercise_code`
 
 ```{r}
-patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
+patienten <- read.csv(" http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
 ```
 `@sample_code`
 
@@ -470,7 +470,7 @@ Genauso kannst du auch Spalten,
 `@pre_exercise_code`
 
 ```{r}
-patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
+patienten <- read.csv(" http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
 ```
 `@sample_code`
 
@@ -640,7 +640,7 @@ Arbeitet man mit R im Sinne von Operationen an einem Datensatz, dann eignet sich
 
 ```{r}
 library(magrittr)
-patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
+patienten <- read.csv(" http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
 ```
 `@sample_code`
 
