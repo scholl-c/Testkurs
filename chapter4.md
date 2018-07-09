@@ -23,6 +23,9 @@ Lasse dir das Histogramm der Variable ``Anzahl_Farben`` ausgeben. Dazu übergibs
 `@hint`
 Suche in der Hilfe nach der Verwendung des Befehl ``hist()`` und wenn du Probleme hast bei dem zusammengesetzten Variablen, benutze die Notation in eckigen Klammern statt der Dollar-Notation. 
 hist(Gummibaerchen$Anzahl_Farben)
+test_error()
+test_student_typed("hist(Gummibaerchen$Anzahl_Farben)",not_typed_msg="Nein, so nicht.")
+success_msg("Richtig so!")
 
 `@pre_exercise_code`
 
@@ -45,10 +48,9 @@ hist(Gummibaerchen$Anzahl_Farben)
 `@sct`
 
 ```{r}
-test_error()
-test_student_typed("hist(Gummibaerchen$Anzahl_Farben)",not_typed_msg="Nein, so nicht.")
-success_msg("Richtig so!")
+
 ```
+
 
 
 
