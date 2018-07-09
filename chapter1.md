@@ -645,13 +645,11 @@ R funktioniert in mancher Hinsicht wie eine Operation. Du hast ein Objekt (z.B. 
 
 Arbeitet man mit R im Sinne von Operationen an einem Datensatz, dann eignet sich dafür das **Paket magrittr**. Pakete kann man zusätzlich installieren mit ``install.packages("paketname")`` und nach erfolgreicher Installation mit ``library(paketname)`` benutzen. Bisher müssen wir entweder jedesmal den Datensatz überschreiben oder für jeden verarbeitenden Schritt einen neuen Datensatz anlegen. Magrittr eröffnet dafür die Möglichkeit zu pipen. Das Pipe-Symbol ist dabei ein ``%>%`` und kettet die einzelnen _Handgriffe_ aneinander.
 
-Ein Tutorial für Anfänger mit magrittr findest du unter [http://r4ds.had.co.nz/pipes.html](url)
-
 `@instructions`
-Vervollständige das Beispiel, indem du ...
+Konstruiere analog zu dem Beispiel ein neues Beispiel, bei dem die Spalte ``alter`` ausgewählt wird und ein Jahr zu dem Alter addiert wird. Kleiner Tipp: Die Addition von z.B. eins funktioniert in magrittr mit der Funktion ``"+"(1)``. Benutze auch das Pipe-Symbol ``%>%`` um die Anweisungen zu verketten.
 
 `@hint`
-
+Halte dich an das Beispiel. Ändere bei der zweiten Anweisung den Spaltennamen zu ``alter`` und ändere die dritte Anweisung aus dem (kleinen) Tipp.
 
 `@pre_exercise_code`
 
@@ -662,21 +660,24 @@ patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/re
 `@sample_code`
 
 ```{r}
-# sample
-patienten %>% select("alter") %>% "+"(1)
+# Binde das Paket magrittr ein
+library(magrittr)
+
+# Beispiel
+patienten %>% select("grund") %>% toupper(.)
 ```
 `@solution`
 
 ```{r}
-
+patienten %>% select("alter") %>% "+"(1)
 ```
-
 `@sct`
 
 ```{r}
-
+test_error()
+test_student_typed("patienten %>% select("alter") %>% "+"(1)",not_typed_msg="Fast richtig, aber noch nicht ganz.")
+success_msg("Du bist ein Genie!")
 ```
-
 
 
 
