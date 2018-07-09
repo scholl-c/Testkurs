@@ -55,7 +55,7 @@ test_function("typeof",incorrect_msg="Leider falsch!")
 
 
 ---
-## Insert exercise title here
+## Verschiedene Datentypen
 
 ```yaml
 type: PureMultipleChoiceExercise 
