@@ -37,7 +37,7 @@ Bob sieht in jedem Raum nach und zählt die Studierenden. Ein Experiment findet 
 
 
 ---
-## Insert exercise title here
+## Minimum und Maximum
 
 ```yaml
 type: MultipleChoiceExercise 
@@ -48,9 +48,7 @@ key: d546b2c206
 Bob war fleißig und hat in allen Vorlesungen und Seminaren von Prof. Ratistikus die Studierenden gezählt. Er möchte diese Daten mit R auswerten. Dazu liest er seine csv-Datei
 namens ``Studierendenzaehlung.csv`` unter dem Variablennamen ``Studis`` in R ein. Er macht das mit ``read.csv2("Studierendenzaehlung.csv",sep=",",skip=1)``. 
 
-> Super, das hat schon mal geklappt!
-
-, freut sich Bob. 
+> Super, das hat schon mal geklappt!, freut sich Bob. 
 Er fragt sich, in welcher Veranstaltung wohl die meisten und die wenigstens Studierenden anwesend waren. Kannst du ihm helfen? Welchen Befehl kann er NICHT dazu verwenden?
 
 `@instructions`
