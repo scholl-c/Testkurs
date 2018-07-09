@@ -73,10 +73,10 @@ Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/dat
 `@sct`
 
 ```{r}
-- Nein  
-- Nein  
-- Ja
-- Nein
+- c(min(Studis$Anwesend),max(Studis$Anwesend))
+- summary(Studis$Anwesend)
+- c(which.min(unique(Studis$Anwesend)),which.max(unique(Studis$Anwesend)))]
+- min(Studis$Anwesend); max(Studis$Anwesend)
 ```
 
 
