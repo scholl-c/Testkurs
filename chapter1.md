@@ -498,8 +498,7 @@ key: b51ddc667b
 
 
 `@instructions`
-Das Bauchweh bei Patient Nr. 3 hat sich konkretisiert. Es handelt sich um eine Bauchfellentzündung. 
-  Wenn du einen neuen Wert in eine Zelle schreiben möchtest kannst du das durch eine Zuweisung.
+Das Bauchweh bei Patient Nr. 3 hat sich konkretisiert. Es handelt sich um eine Bauchfellentzündung. Wenn du einen neuen Wert in eine Zelle schreiben möchtest kannst du das durch eine Zuweisung.
 
 `@hint`
 
