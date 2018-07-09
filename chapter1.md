@@ -487,7 +487,7 @@ patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/re
 
 ***
 
-
+## Zellen bearbeiten
 
 ```yaml
 type: NormalExercise 
@@ -501,9 +501,21 @@ key: b51ddc667b
 Das Bauchweh bei Patient Nr. 3 hat sich konkretisiert. Es handelt sich um eine Bauchfellentzündung. Wenn du einen neuen Wert in eine Zelle schreiben möchtest kannst du das durch eine Zuweisung.
 
 `@hint`
+Halte dich an das Beispiel. Zeile ist 3, Spalte ist 2.
 
+`@solution`
 
+```{r}
+patienten[3,2]<-"Bauchfellentzündung"
+```
 
+`@sct`
+
+```{r}
+test_error()
+test_output_contains("patienten[3,2]<-'Bauchfellentzündung'",incorrect_msg="Nein, so nicht.")
+success_msg("Super gemacht!")
+```
 
 
 
@@ -516,6 +528,7 @@ Das Bauchweh bei Patient Nr. 3 hat sich konkretisiert. Es handelt sich um eine B
 
 ***
 
+## Spalten umbennen (1)
 
 
 ```yaml
@@ -541,12 +554,20 @@ Nun müssen wir natürlich nicht jede einzelne Zelle umbenennen, sondern können
   IDs in Anführungszeichen zu setzen. Die Werte werden mit Komma getrennt. Speichere den Vektor in 'neue_ids'
 
 `@hint`
+Die Reihenfolge der IDs ist wichtig.
 
+`@solution`
+```r
+neue_ids <- c("BILL0001", "WILMA0002", "URMEL0003", "IDA0004", "ÖLF0005")
+```
 
+`@sct`
 
-
-
-
+```r
+test_error()
+test_object("neue_ids",incorrect_msg="Nein, das klappt so nicht.")
+success_msg("Super!")
+```
 
 
 
@@ -556,6 +577,7 @@ Nun müssen wir natürlich nicht jede einzelne Zelle umbenennen, sondern können
 
 ***
 
+## Spalten umbennen (2)
 
 
 ```yaml
@@ -570,11 +592,19 @@ key: 231b3f294a
 Überschreibe die Spalte 'id' in 'patienten' mit den neuen IDs.
 
 `@hint`
+Wähle die Spalte aus und weise ihr neue_ids zu.
 
+`@solution`
+```r
+patienten$id <- neue_ids
+```
 
-
-
-
+`@sct`
+```r
+test_error()
+test_object("patienten$id",incorrect_msg="Nein, das hat nicht geklappt.")
+success_msg("Genial!")
+```
 
 
 
@@ -585,6 +615,7 @@ key: 231b3f294a
 
 ***
 
+## Mit Spalten rechnen
 
 
 ```yaml
@@ -599,11 +630,20 @@ key: 4c0a794a61
 In der Klinik wird ein neues Programm eingesetzt, das das Alter von Menschen erkennen kann. Man hat nun einen Fehler entdeckt, sodass alle Patienten ein Jahr jünger sind als eingetragen wurde. Das muss nun auch bei den aktuellen vier Patienten behoben werden. Man kann arithmetische Operationen auch auf Spalten anwenden bzw. mit Spalten rechnen. Ändere das Alter der Patienten entsprechend ab und überschreibe damit das aktuell eingetragene Alter. Generell funktioniert diese Art arithmetische Operationen nur, wenn die ganze Zeile oder Spalte Werte desselben Typs enthält.
 
 `@hint`
+Wähle die Spalte aus und überschreibe sie mit der gleichen Spalte minus 1.
 
+`@solution`
+```r
+patienten$alter <- patienten$alter-1
+```
 
+`@sct`
+```r
+test_error()
+test_object("patienten$alter",incorrect_msg="Das funktioniert so nicht.")
+success_msg("Toll gemacht!")
 
-
-
+```
 
 
 
