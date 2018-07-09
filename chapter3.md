@@ -294,7 +294,7 @@ zahlen <- c("4","5.6","12","29","4.4")
 
 ```yaml
 type: NormalExercise 
-xp: 50 
+xp: 35 
 key: ea95814b47   
 ```
 
@@ -338,7 +338,7 @@ success_msg("Super gemacht!")
 
 ```yaml
 type: NormalExercise 
-xp: 50 
+xp: 35 
 key: ba65c7eb14   
 ```
 
@@ -368,6 +368,50 @@ zahlen <- as.double(zahlen)
 test_error()
 test_object("zahlen")
 success_msg("Toll!")
+```
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 30 
+key: d78701c724   
+```
+
+
+
+`@instructions`
+Nun kannst du nochmal versuchen, die Summe zu berechnen.
+
+`@hint`
+Berechne die Summe von ``zahlen`` mit ``sum()``
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+sum(zahlen)
+```
+`@sct`
+
+```{r}
+test_error()
+test_output_contains("sum(zahlen)",incorrect_msg="Falsch!")
+success_msg("Super gemacht!")
 ```
 
 
