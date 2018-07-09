@@ -378,12 +378,26 @@ Zeige den Inhalt der Zelle (in ``patienten``) in der zweiten Reihe und der dritt
 `@hint`
 Gib in die eckigen Klammern (direkt hinter ``patienten``) die Position der Zelle an. Achte auf die richtige Reihenfolge der Positionsangaben.
 
+`@pre_exercise_code`
 
+```{r}
+patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
+```
+`@sample_code`
+
+```{r}
+
+```
 
 `@solution`
 
 ```{r}
 patienten[2,3]
+```
+`@sct`
+
+```{r}
+
 ```
 
 
@@ -403,11 +417,34 @@ key: 0e9c727645
 
 
 
+`@instructions`
 
 
+`@hint`
 
 
+`@pre_exercise_code`
 
+```{r}
+patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+
+```
+
+`@sct`
+
+```{r}
+
+```
 
 
 
@@ -430,7 +467,16 @@ Genauso kannst du auch Spalten,
 
 
 
+`@pre_exercise_code`
 
+```{r}
+patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
+```
+`@sample_code`
+
+```{r}
+
+```
 
 
 
@@ -584,15 +630,35 @@ R funktioniert in mancher Hinsicht wie eine Operation. Du hast ein Objekt (z.B. 
 
 Arbeitet man mit R im Sinne von Operationen an einem Datensatz, dann eignet sich dafür das **Paket magrittr**. Pakete kann man zusätzlich installieren mit ``install.packages("paketname")`` und nach erfolgreicher Installation mit ``library(paketname)`` benutzen. Bisher müssen wir entweder jedesmal den Datensatz überschreiben oder für jeden verarbeitenden Schritt einen neuen Datensatz anlegen. Magrittr eröffnet dafür die Möglichkeit zu pipen. Das Pipe-Symbol ist dabei ein ``%>%`` und kettet die einzelnen _Handgriffe_ aneinander.
 
+`@instructions`
+
+
+`@hint`
 
 
 `@pre_exercise_code`
 
 ```{r}
 library(magrittr)
+patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
+```
+`@sample_code`
+
+```{r}
+
 ```
 
+`@solution`
 
+```{r}
+
+```
+
+`@sct`
+
+```{r}
+
+```
 
 
 
