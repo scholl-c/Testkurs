@@ -664,7 +664,7 @@ patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/re
 library(magrittr)
 
 # Beispiel
-patienten %>% select("grund")
+patienten %>% select("grund") %>% toupper(.)
 ```
 `@solution`
 
@@ -675,7 +675,6 @@ patienten %>% select("alter") %>% "+"(1)
 
 ```{r}
 test_error()
-test_student_typed("patienten %>% select("alter") %>% "+"(1)",not_typed_msg="Fast richtig, aber noch nicht ganz.")
 success_msg("Du bist ein Genie!")
 ```
 
