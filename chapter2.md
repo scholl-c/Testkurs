@@ -153,7 +153,7 @@ colnames(Studis)[1] <- "Veranstaltung"
 
 ```{r}
 test_error()
-test_function("colnames",incorrect_msg="Benutze die Funktion colnames")
+test_student_typed("colnames(Studis)[1] <- "Veranstaltung"", not_typed_msg = "Das war leider noch nicht ganz richtig.")
 success_msg("Toll gemacht!")
 ```
 
