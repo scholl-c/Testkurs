@@ -314,7 +314,7 @@ Muss Bob vor dem Zusammenführen der Datensätze mit ``merge()`` seine Daten ebe
 
 
 ---
-## Insert exercise title here
+## Datensätze zusammenführen
 
 ```yaml
 type: NormalExercise 
@@ -352,6 +352,43 @@ Studis <- merge(Studis,Raeume)
 ```{r}
 test_error()
 success_msg("Herzlichen Glückwunsch! Das hat geklappt!")
+```
+
+
+
+
+
+
+---
+## Differenz zweier Spalten
+
+```yaml
+type: MultipleChoiceExercise 
+xp: 50 
+key: 6feb828762   
+```
+
+Prof. Ratistikus möchte wissen, wie sehr er sich bei der Raumplanung verschätzt hat. Dazu möchte er die absolute Differenz der angemeldeten Studenten und der Raumkapazität berechnen. **Welcher Befehl führt NICHT zum gewünschten Ergebnis?**
+
+`@instructions`
+- ``Studis$verschaetzt <- abs(Studis$Angemeldet-Studis$Raumkapazität)``
+- ``Studis$verschaetzt <- abs(diff(Studis$Angemeldet,Studis$Raumkapazität))``
+- [``Studis$verschaetzt <- lapply(Studis$Angemeldet,Studis$Raumkapazität,diff)``]
+
+`@hint`
+``abs()`` gibt den Betrag an, ``diff()`` und das Minus haben hier denselben Effekt
+
+`@pre_exercise_code`
+
+```{r}
+Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/f7c3df4f7a167efcf7ff74b306b8045a10f83365/Studierendenzaehlung.csv",sep=";")
+```
+
+
+`@sct`
+
+```{r}
+test_mc(3, feedback_msgs = c("Falsch, achte auf die Fragestellung", "Falsch, achte auf die Fragestellung", "Ja, genau den kann man nicht verwenden"))
 ```
 
 
