@@ -57,7 +57,7 @@ Das Minimum einer Datenreihe kannst du mit der Funktion ``min`` und das Maximum 
 `@instructions`
 - c(min(Studis$Anwesend),max(Studis$Anwesend))
 - summary(Studis$Anwesend)
-- [c(which.min(unique(Studis$Anwesend)),which.max(unique(Studis$Anwesend)))]
+- [ c(which.min(unique(Studis$Anwesend)),which.max(unique(Studis$Anwesend))) ]
 
 `@hint`
 Du brauchst die Funktionen min() und max(). Du solltest wissen, dass man auf Spalten in einem Dataframe mit einem $ zugreifen kann.
