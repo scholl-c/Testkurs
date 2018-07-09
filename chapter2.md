@@ -101,14 +101,14 @@ Es handelt sich um ein einfaches Maß für die Streuung.
 
 
 `@possible_answers`
-- [Spannweite]
 - Differenzbreite
+- [Spannweite]
 - Dehnungswert
 - Abstandshöhe
 
 `@feedbacks`
-- Ja, richtig!
 - Nein, falsch
+- Ja, richtig!
 - Nein, falsch
 - Nein, falsch
 
