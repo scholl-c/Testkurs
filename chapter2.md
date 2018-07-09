@@ -49,6 +49,7 @@ Bob war fleißig und hat in allen Vorlesungen und Seminaren von Prof. Ratistikus
 namens ``Studierendenzaehlung.csv`` unter dem Variablennamen ``Studis`` in R ein. Er macht das mit ``read.csv2("Studierendenzaehlung.csv",sep=",",skip=1)``. 
 
 > Super, das hat schon mal geklappt!, freut sich Bob. 
+
 Er fragt sich, in welcher Veranstaltung wohl die meisten und die wenigstens Studierenden anwesend waren. Kannst du ihm helfen? Welchen Befehl kann er NICHT dazu verwenden?
 
 `@instructions`
@@ -62,9 +63,8 @@ Du brauchst die Funktionen min() und max(). Du solltest wissen, dass man auf Spa
 `@pre_exercise_code`
 
 ```{r}
-
+Studis <- read.csv2("https://assets.datacamp.com/production/repositories/3196/datasets/1e5d9ec9fbf68a511b51b513183222dd40447e9a/Studierendenzaehlung.csv",sep="",skip=1)
 ```
-
 
 
 `@sct`
