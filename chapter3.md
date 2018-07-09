@@ -180,7 +180,7 @@ key: 7568a92801
 
 
 `@instructions`
-Das also Zeichenketten _(character)_. Wenn du dir ``daten`` ausgeben lässt, siehst du, dass es sich um Daten handelt. Wenn du zum Beispiel eine Grafik mit zeitlichem Verlauf erstellen möchtest, müssen dazu diese Daten auch als Daten interpretiert werden. Das geht hier zum Beispiel mit der Funktion ``as.Date()``. Die Funktion braucht allerdings noch einen Hinweis, wie die Daten formatiert sind. Dazu werden Platzhalter verwendet wie ``%m`` für Monat, ``%d`` für Tag oder ``%Y`` für eine vierstellige Jahreszahl. Weitere Abkürzungen findest du in der Dokumentation. Das Format in diesem Fall ist ``%d.%m.%Y`` und muss als zweites Argument übergeben werden. Wende die Funktion ``as.Date()`` auf ``daten`` an und überschreibe dabei ``daten``.
+Das sind also Zeichenketten _(character)_. Wenn du dir ``daten`` ausgeben lässt, siehst du, dass es sich um Daten handelt. Wenn du zum Beispiel eine Grafik mit zeitlichem Verlauf erstellen möchtest, müssen dazu diese Daten auch als Daten interpretiert werden. Das geht hier zum Beispiel mit der Funktion ``as.Date()``. Die Funktion braucht allerdings noch einen Hinweis, wie die Daten formatiert sind. Dazu werden Platzhalter verwendet wie ``%m`` für Monat, ``%d`` für Tag oder ``%Y`` für eine vierstellige Jahreszahl. Weitere Abkürzungen findest du in der Dokumentation. Das Format in diesem Fall ist ``%d.%m.%Y`` und muss als zweites Argument übergeben werden. Wende die Funktion ``as.Date()`` auf ``daten`` an und überschreibe dabei ``daten``.
 
 `@hint`
 Benutze ``as.Date()``. Übergib der Funktion als erstes unser Objekt ``daten`` und als zweites das Format.
