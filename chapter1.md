@@ -417,13 +417,13 @@ xp: 100
 key: 0e9c727645   
 ```
 
-
+Schaue dir die Akte des vierten Patienten an. Du möchtest alle Angaben von ihm sehen.
 
 `@instructions`
-
+Zeige den Inhalt der vierten Zeile an.
 
 `@hint`
-
+Vergiss das Komma nicht!
 
 `@pre_exercise_code`
 
@@ -439,15 +439,15 @@ patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/re
 `@solution`
 
 ```{r}
-
+patienten[4,]
 ```
-
 `@sct`
 
 ```{r}
-
+test_error()
+test_output_contains("patienten$grund",incorrect_msg="Nein, das ist falsch.")
+success_msg("Super!")
 ```
-
 
 
 
