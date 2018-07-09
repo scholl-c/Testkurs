@@ -17,8 +17,7 @@ Grafiken können helfen, die Verteilung und die Zusammensetzung der Daten zu unt
 Eine Gruppe Studenten hat Gummibärchenpackungen untersucht und festgehalten, wie viele Bärchen und Farben sich jeweils in einer Packung befinden. Die Daten sind bereits in der Arbeitsumgebung geladen. Das Histogramm, Streudiagramm und der Boxplot können dir ähnliche Auskünfte über Verteilung von einer oder zwei Variablen geben wie der Befehl ``summary()``.
 
 `@instructions`
-Lasse dir das Histogramm der Variable ``Anzahl_Farben`` ausgeben. Dazu übergibst du die Variable 
-  dem Befehl ``hist()``, wie z.B. ``hist(Gummibaerchen$Anzahl_Farben)``. Mach das mal.
+Lasse dir das Histogramm der Variable ``Anzahl_Farben`` ausgeben. Dazu übergibst du die Variable dem Befehl ``hist()``, wie z.B. ``hist(Gummibaerchen$Anzahl_Farben)``. Mach das mal.
 
 `@hint`
 Suche in der Hilfe nach der Verwendung des Befehl ``hist()`` und wenn du Probleme hast bei dem zusammengesetzten Variablen, benutze die Notation in eckigen Klammern statt der Dollar-Notation.
@@ -46,6 +45,44 @@ test_error()
 test_student_typed("hist(Gummibaerchen$Anzahl_Farben)",not_typed_msg="Nein, so nicht.")
 success_msg("Richtig so!")
 ```
+
+
+
+
+
+
+---
+## Histogramm lesen
+
+```yaml
+type: MultipleChoiceExercise 
+xp: 50 
+key: c116410a3e   
+```
+
+Sieh dir das Histogramm an! Du siehst die Häufigkeiten der Anzahl der Farben. Auf der x-Achse erkennst du dass es minimum 4 und maximal 6 verschiedene Farben pro Beutel gibt. Was ist die häufigste Anzahl Farben in den untersuchten Beuteln?
+
+`@instructions`
+- 4
+- [5]
+- 6
+
+`@hint`
+Etwas ungeschickt ist hier die Aufteilung der x-Achse in Dezimalwerte. Es gibt jedoch eigentlich nur vollständige Gummibärchen und daher nur ganzzahlige Werte.
+
+`@pre_exercise_code`
+
+```{r}
+hist(Gummibaerchen$Anzahl_Farben)
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
 
 
 
