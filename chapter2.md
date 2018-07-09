@@ -79,3 +79,38 @@ test_mc(3, feedback_msgs = c("Falsch, achte auf die Fragestellung", "Falsch, ach
 
 
 
+
+
+---
+## Minimum und Maximum
+
+```yaml
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: 14e20e1505   
+```
+
+Wenn ich die Differenz zwischen den maximalen und minimalen anwesenden Studierenden berechne, bezeichnet man das als ... ?
+
+
+`@hint`
+Es handelt sich um ein einfaches Maß für die Streuung.
+
+
+
+
+
+`@possible_answers`
+- [Spannweite]
+- Differenzbreite
+- Dehnungswert
+- Abstandshöhe
+
+`@feedbacks`
+- Ja, richtig!
+- Nein, falsch
+- Nein, falsch
+- Nein, falsch
+
+
+
