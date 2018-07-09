@@ -114,3 +114,49 @@ Es handelt sich um ein einfaches Maß für die Streuung.
 
 
 
+
+
+---
+## Spaltennamen ändern
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 9deef9b064   
+```
+
+Prof. Ratistikus ist stets sehr bedacht und akribisch genau. Er weist Bob darauf hin, den Spaltennamen von ``Seminar`` zu dem allgemeineren Titel ``Veranstaltung`` zu ändern. Wie kann er das tun? (Benutze die Funktion ``colnames()``)
+
+`@instructions`
+Ändere den Spaltennamen zu ``Veranstaltung``.
+
+`@hint`
+Mit [1] kannst du auf den ersten Wert in einem Objekt zugreifen.
+
+`@pre_exercise_code`
+
+```{r}
+Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/f7c3df4f7a167efcf7ff74b306b8045a10f83365/Studierendenzaehlung.csv",sep=";")
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+colnames(Studis)[1] <- "Veranstaltung"
+```
+`@sct`
+
+```{r}
+test_error()
+test_object("Studis")
+success_msg("Toll gemacht!")
+```
+
+
+
+
