@@ -72,9 +72,9 @@ Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/dat
 `@sct`
 
 ```{r}
-- Nein
-- Nein
-- Ja genau!
+- Nein  
+- Nein  
+- Ja genau! 
 ```
 
 
