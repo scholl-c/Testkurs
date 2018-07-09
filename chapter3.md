@@ -43,8 +43,8 @@ typeof(cars$speed)
 
 ```{r}
 test_error()
-success_msg("Ja, genau!")
 test_function("typeof",incorrect_msg="Leider falsch!")
+success_msg("Ja, genau!")
 ```
 
 
