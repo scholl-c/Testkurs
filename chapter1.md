@@ -338,11 +338,6 @@ Halte dich an die beiden im Text beschriebenen Art und Weisen die Spalte auszuge
 ```{r}
 patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
 ```
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
@@ -383,11 +378,6 @@ Gib in die eckigen Klammern (direkt hinter ``patienten``) die Position der Zelle
 
 ```{r}
 patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
-```
-`@sample_code`
-
-```{r}
-
 ```
 
 `@solution`
@@ -430,11 +420,6 @@ Vergiss das Komma nicht!
 ```{r}
 patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
 ```
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
@@ -472,11 +457,6 @@ Genauso kannst du auch Spalten, Zeilen, und Zellen umbenennen.  Das könnte so �
 ```{r}
 patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
 ```
-`@sample_code`
-
-```{r}
-
-```
 
 
 
@@ -487,7 +467,7 @@ patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/re
 
 ***
 
-## Zellen bearbeiten
+
 
 ```yaml
 type: NormalExercise 
@@ -503,12 +483,13 @@ Das Bauchweh bei Patient Nr. 3 hat sich konkretisiert. Es handelt sich um eine B
 `@hint`
 Halte dich an das Beispiel. Zeile ist 3, Spalte ist 2.
 
+
+
 `@solution`
 
 ```{r}
 patienten[3,2]<-"Bauchfellentzündung"
 ```
-
 `@sct`
 
 ```{r}
@@ -523,12 +504,8 @@ success_msg("Super gemacht!")
 
 
 
-
-
-
 ***
 
-## Spalten umbennen (1)
 
 
 ```yaml
@@ -556,14 +533,16 @@ Nun müssen wir natürlich nicht jede einzelne Zelle umbenennen, sondern können
 `@hint`
 Die Reihenfolge der IDs ist wichtig.
 
+
+
 `@solution`
-```r
+
+```{r}
 neue_ids <- c("BILL0001", "WILMA0002", "URMEL0003", "IDA0004", "ÖLF0005")
 ```
-
 `@sct`
 
-```r
+```{r}
 test_error()
 test_object("neue_ids",incorrect_msg="Nein, das klappt so nicht.")
 success_msg("Super!")
@@ -577,7 +556,6 @@ success_msg("Super!")
 
 ***
 
-## Spalten umbennen (2)
 
 
 ```yaml
@@ -594,13 +572,16 @@ key: 231b3f294a
 `@hint`
 Wähle die Spalte aus und weise ihr neue_ids zu.
 
+
+
 `@solution`
-```r
+
+```{r}
 patienten$id <- neue_ids
 ```
-
 `@sct`
-```r
+
+```{r}
 test_error()
 test_object("patienten$id",incorrect_msg="Nein, das hat nicht geklappt.")
 success_msg("Genial!")
@@ -612,10 +593,8 @@ success_msg("Genial!")
 
 
 
-
 ***
 
-## Mit Spalten rechnen
 
 
 ```yaml
@@ -632,19 +611,20 @@ In der Klinik wird ein neues Programm eingesetzt, das das Alter von Menschen erk
 `@hint`
 Wähle die Spalte aus und überschreibe sie mit der gleichen Spalte minus 1.
 
+
+
 `@solution`
-```r
+
+```{r}
 patienten$alter <- patienten$alter-1
 ```
-
 `@sct`
-```r
+
+```{r}
 test_error()
 test_object("patienten$alter",incorrect_msg="Das funktioniert so nicht.")
 success_msg("Toll gemacht!")
-
 ```
-
 
 
 
@@ -665,8 +645,10 @@ R funktioniert in mancher Hinsicht wie eine Operation. Du hast ein Objekt (z.B. 
 
 Arbeitet man mit R im Sinne von Operationen an einem Datensatz, dann eignet sich dafür das **Paket magrittr**. Pakete kann man zusätzlich installieren mit ``install.packages("paketname")`` und nach erfolgreicher Installation mit ``library(paketname)`` benutzen. Bisher müssen wir entweder jedesmal den Datensatz überschreiben oder für jeden verarbeitenden Schritt einen neuen Datensatz anlegen. Magrittr eröffnet dafür die Möglichkeit zu pipen. Das Pipe-Symbol ist dabei ein ``%>%`` und kettet die einzelnen _Handgriffe_ aneinander.
 
-`@instructions`
+Ein Tutorial für Anfänger mit magrittr findest du unter [http://r4ds.had.co.nz/pipes.html](url)
 
+`@instructions`
+Vervollständige das Beispiel, indem du ...
 
 `@hint`
 
@@ -680,9 +662,9 @@ patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/re
 `@sample_code`
 
 ```{r}
-
+# sample
+patienten %>% select("alter") %>% "+"(1)
 ```
-
 `@solution`
 
 ```{r}
