@@ -7,14 +7,9 @@
 ## Arithmetische Operationen
 
 ```yaml
-type: NormalExercise
-
-xp: 100
-
-key: 2401a95bb9
-
-
-
+type: NormalExercise 
+xp: 100 
+key: 2401a95bb9   
 ```
 
 Wir befinden uns im OP-Saal. Der Patient ist erst vor Kurzem eingeliefert worden. Die OP wird voraussichtlich 2 Stunden dauern. Wie viele Sekunden sind das bloß? In so einer Notsituation darf kein Fehler passieren und der Assistenzarzt weiß nicht wo ihm der Kopf steht, deshalb verlässt er sich auf R.
@@ -35,10 +30,12 @@ Eine Stunde hat 60 Minuten, eine Minute besteht aus 60 Sekunden.
 
 
 `@solution`
+
 ```{r}
 2*60*60
 ```
 `@sct`
+
 ```{r}
 test_error()
 test_output_contains("7200",incorrect_msg="falsch")
@@ -54,14 +51,9 @@ success_msg("Super!")
 ## Zuweisungen
 
 ```yaml
-type: NormalExercise
-
-xp: 100
-
-key: 6c4623ef65
-
-
-
+type: NormalExercise 
+xp: 100 
+key: 6c4623ef65   
 ```
 
 Die Identifikationsnummer hier im Krankenhaus setzt sich aus der OP-Dauer in Sekunden, dem Vornamen des Patienten und seiner Lieblingsfarbe zusammen. Die Identifikationsnummer des Patienten soll später in der Variablen ``id`` gespeichert werden.
@@ -82,6 +74,7 @@ Benutze den Zuweisungspfeil wie im Beispiel.
 
 
 `@sample_code`
+
 ```{r}
 # Erstellt Variable mit Inhalt
 mein_name <- "Hans"
@@ -90,10 +83,12 @@ mein_name <- "Hans"
 mein_name
 ```
 `@solution`
+
 ```{r}
 id <- 7200
 ```
 `@sct`
+
 ```{r}
 test_error()
 test_student_typed("id <- 7200")
@@ -109,14 +104,9 @@ success_msg("Toll!")
 ## Variablen
 
 ```yaml
-type: NormalExercise
-
-xp: 100
-
-key: 674882dfea
-
-
-
+type: NormalExercise 
+xp: 100 
+key: 674882dfea   
 ```
 
 Die OP-Dauer verkürzt sich um 1000 Sekunden. 
@@ -135,15 +125,18 @@ Ziehe diese 1000 Sekunden von der bisher errechneten und in ``id`` gespeicherten
 Benutze nur die Variable zum errechnen des neuen Wertes und nicht den konkreten Wert, d.h. die 7200 Sekunden. Überschreibe die Variable, indem du den Zuweisungspfeil benutzt.
 
 `@pre_exercise_code`
+
 ```{r}
 id <- 7200
 ```
 
 `@solution`
+
 ```{r}
 id <- id-1000
 ```
 `@sct`
+
 ```{r}
 test_error()
 test_object("id",incorrect_msg="Nein, das stimmt leider nicht.")
@@ -160,14 +153,9 @@ success_msg("Supi!")
 ## Valide Variablennamen
 
 ```yaml
-type: PureMultipleChoiceExercise
-
-xp: 50
-
-key: 13ebf18169
-
-
-
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: 13ebf18169   
 ```
 
 Ist ``.4aabb`` ein valider Name für eine Variable?
@@ -196,14 +184,9 @@ Eine Variable darf mit einem Punkt beginnen, danach darf aber keine Zahl folgen.
 ## Zeichenketten
 
 ```yaml
-type: NormalExercise
-
-xp: 100
-
-key: 4ae649f0f7
-
-
-
+type: NormalExercise 
+xp: 100 
+key: 4ae649f0f7   
 ```
 
 Die Identifikationsnummer hier im Krankenhaus setzt sich aus der OP-Dauer in Sekunden, dem Vornamen des Patienten und seiner Lieblingsfarbe zusammen. Die OP-Dauer haben wir bereits errechnet und in ``id`` gespeichert. Nun benötigen wir für die Identifikationsnummer noch den Vornamen des Patienten und seine Lieblingsfarbe.
@@ -221,11 +204,13 @@ Vergiss nicht den Zuweisungspfeil und vergiss nicht, die Anführungszeichen zu s
 
 
 `@solution`
+
 ```{r}
 name <- "Günther"
 farbe <- "Blau"
 ```
 `@sct`
+
 ```{r}
 test_error()
 check_object("name",incorrect_msg="Nein, so nicht. Vielleicht ein Tippfehler?")
@@ -242,14 +227,9 @@ success_msg("Gut gemacht!")
 ## Funktionen
 
 ```yaml
-type: NormalExercise
-
-xp: 100
-
-key: f5c1362148
-
-
-
+type: NormalExercise 
+xp: 100 
+key: f5c1362148   
 ```
 
 Wir möchten nun die richtige und vollständige Identifikationsnummer generieren und sie in ``id`` festhalten. Damit überschreiben wir die OP-Dauer, die momentan in ``id`` gespeichert ist. Den Wert kriegen wir dann auch nie wieder zurück, falls wir damit weiterhin rechnen möchten. Es ist daher gut zu überlegen, ob nicht doch eine neue Variable angelegt werden soll. Wir überschreiben (!) hier in diesem Fall dennoch, Operationen im Krankenhaus sind schließlich auch nicht so einfach rückgängig zu machen.
@@ -263,10 +243,9 @@ Mit der Funktion ``paste0()`` kannst du eine Zeichenkette aus mehreren Zeichenke
 Generiere die vollständige Identifikationsnummer, die sich aus den Variablen ``name``, ``id`` (die OP-Dauer) und ``farbe`` genau in dieser Reihenfolge zusammensetzt. Benutze dafür die Funktion ``paste0``.
 Überschreibe die Variable ``id`` (du weißt, das funktioniert wie eine Zuweisung) mit der generierten Identifikationsnummer.
 
-`@hint`
-
 
 `@pre_exercise_code`
+
 ```{r}
 name <- "Günther"
 farbe <- "Blau"
@@ -274,10 +253,12 @@ id <- 6200
 ```
 
 `@solution`
+
 ```{r}
 id <- paste0(name,id,farbe)
 ```
 `@sct`
+
 ```{r}
 test_error()
 test_object("id")
@@ -293,14 +274,9 @@ success_msg("Herzlichen Glückwunsch!")
 ## Funktion anwenden
 
 ```yaml
-type: NormalExercise
-
-xp: 100
-
-key: 5e0dc21918
-
-
-
+type: NormalExercise 
+xp: 100 
+key: 5e0dc21918   
 ```
 
 Nun ist noch wichtig, dass die komplette Identifikationsnummer groß geschrieben wird. Das können wir durch die Funktion ``toupper()`` erreichen.
@@ -308,10 +284,9 @@ Nun ist noch wichtig, dass die komplette Identifikationsnummer groß geschrieben
 `@instructions`
 Wende diese Funktion auf ``id`` an und überschreibe ``id``.
 
-`@hint`
-
 
 `@pre_exercise_code`
+
 ```{r}
 name <- "Günther"
 farbe <- "Blau"
@@ -320,10 +295,12 @@ id <- paste0(name,id,farbe)
 ```
 
 `@solution`
+
 ```{r}
 id <- toupper(id)
 ```
 `@sct`
+
 ```{r}
 test_error()
 test_object("id")
@@ -339,14 +316,9 @@ success_msg("So ist es richtig!")
 ## Datensätze
 
 ```yaml
-type: NormalExercise
-
-xp: 100
-
-key: a2b770b99c
-
-
-
+type: NormalExercise 
+xp: 100 
+key: a2b770b99c   
 ```
 
 Der erste Patient hat seine OP erfolgreich überstanden. Da kommen auch schon die nächsten Patienten. Auch diese haben mehr oder weniger schwere Operationen vor sich. Welche Ursachen gab es für die jeweiligen Operationen?
@@ -361,13 +333,24 @@ Wenn du die Gründe nachschlagen möchtest, musst du auf die zweite Spalte bzw. 
 `@hint`
 Halte dich an die beiden im Text beschriebenen Art und Weisen die Spalte auszugeben. Referenziere auf die Spalte mit ``grund``
 
+`@pre_exercise_code`
 
+```{r}
+patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
+```
+`@sample_code`
+
+```{r}
+
+```
 
 `@solution`
+
 ```{r}
 patienten$grund
 ```
 `@sct`
+
 ```{r}
 test_error()
 success_msg("Super!")
@@ -382,14 +365,9 @@ success_msg("Super!")
 ## Zellen auswählen
 
 ```yaml
-type: NormalExercise
-
-xp: 100
-
-key: 59d80431b7
-
-
-
+type: NormalExercise 
+xp: 100 
+key: 59d80431b7   
 ```
 
 Beispielsweise kannst du mit ``patienten[5,"grund"]`` auf die Zelle in der 5. Reihe und Spalte ``grund`` zugreifen. Du kannst auf Spalten und Zeilen nicht nur mit ihrem Namen referenzieren (wie z.B. ``grund``), sondern auch einfach über ihre Position (z.B. 2). Du musst also nicht wissen, wie die Spalte bzw. Zeile heißt.
@@ -403,6 +381,7 @@ Gib in die eckigen Klammern (direkt hinter ``patienten``) die Position der Zelle
 
 
 `@solution`
+
 ```{r}
 patienten[2,3]
 ```
@@ -417,22 +396,13 @@ patienten[2,3]
 ## Zeilen auswählen
 
 ```yaml
-type: NormalExercise
-
-xp: 100
-
-key: 0e9c727645
-
-
-
+type: NormalExercise 
+xp: 100 
+key: 0e9c727645   
 ```
 
 
 
-`@instructions`
-
-
-`@hint`
 
 
 
@@ -449,14 +419,9 @@ key: 0e9c727645
 ## Daten bearbeiten
 
 ```yaml
-type: BulletExercise
-
-xp: 100
-
-key: cbb2cdcdee
-
-
-
+type: BulletExercise 
+xp: 100 
+key: cbb2cdcdee   
 ```
 
 Genauso kannst du auch Spalten, 
@@ -479,14 +444,9 @@ Genauso kannst du auch Spalten,
 
 
 ```yaml
-type: NormalExercise
-
-xp: 25
-
-key: b51ddc667b
-
-
-
+type: NormalExercise 
+xp: 25 
+key: b51ddc667b   
 ```
 
 
@@ -514,14 +474,9 @@ Das Bauchweh bei Patient Nr. 3 hat sich konkretisiert. Es handelt sich um eine B
 
 
 ```yaml
-type: NormalExercise
-
-xp: 25
-
-key: f7af524836
-
-
-
+type: NormalExercise 
+xp: 25 
+key: f7af524836   
 ```
 
 
@@ -559,14 +514,9 @@ Nun müssen wir natürlich nicht jede einzelne Zelle umbenennen, sondern können
 
 
 ```yaml
-type: NormalExercise
-
-xp: 25
-
-key: 231b3f294a
-
-
-
+type: NormalExercise 
+xp: 25 
+key: 231b3f294a   
 ```
 
 
@@ -593,14 +543,9 @@ key: 231b3f294a
 
 
 ```yaml
-type: NormalExercise
-
-xp: 25
-
-key: 4c0a794a61
-
-
-
+type: NormalExercise 
+xp: 25 
+key: 4c0a794a61   
 ```
 
 
@@ -630,27 +575,19 @@ In der Klinik wird ein neues Programm eingesetzt, das das Alter von Menschen erk
 ## Magrittr
 
 ```yaml
-type: NormalExercise
-
-xp: 100
-
-key: 64f0bb4715
-
-
-
+type: NormalExercise 
+xp: 100 
+key: 64f0bb4715   
 ```
 
 R funktioniert in mancher Hinsicht wie eine Operation. Du hast ein Objekt (z.B. ein Mensch) und ein Ziel, wie z.B. den Blinddarm herauszunehmen. Dafür sind viele Handgriffe nötig, die in einer bestimmten Reihenfolge ausgeführt werden müssen. Ein typischer Anwendungsfall in R ist z.B. die Verteilung oder Häufigkeiten von einer oder zwei Variablen (z.B. das Alter und Geschlecht) zu plotten. Dazu hast du z.B. einen Datensatz vorliegen und führst verschiedene vorverarbeitende Schritte aus um die Daten in die richtige Form zu bringen.
 
 Arbeitet man mit R im Sinne von Operationen an einem Datensatz, dann eignet sich dafür das **Paket magrittr**. Pakete kann man zusätzlich installieren mit ``install.packages("paketname")`` und nach erfolgreicher Installation mit ``library(paketname)`` benutzen. Bisher müssen wir entweder jedesmal den Datensatz überschreiben oder für jeden verarbeitenden Schritt einen neuen Datensatz anlegen. Magrittr eröffnet dafür die Möglichkeit zu pipen. Das Pipe-Symbol ist dabei ein ``%>%`` und kettet die einzelnen _Handgriffe_ aneinander.
 
-`@instructions`
-
-
-`@hint`
 
 
 `@pre_exercise_code`
+
 ```{r}
 library(magrittr)
 ```
