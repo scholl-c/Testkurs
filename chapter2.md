@@ -434,7 +434,7 @@ Kann man die Werte in ``Raum`` ordnen? Gibt es einen Nullpunkt?
 
 
 ---
-## Insert exercise title here
+## Filtern
 
 ```yaml
 type: MultipleChoiceExercise 
@@ -445,9 +445,9 @@ key: efe7d80ce1
 Prof. Ratistikus und Bob laufen gerade den Flur der Verwaltung entlang, als ihnen Frau Mustermann aus dem Sekretariat zufällig begegnet. Sie möchte für die Raumplanung wissen, welche Veranstaltungen Prof. Ratistikus in Raum 25-05.4C hat. Da Prof. Ratistikus sehr vergesslich ist, bittet er Bob schnell nachzuschauen. **Welcher Befehl gibt ihm nicht die gewünschten Veranstaltungen sondern eine Fehlermeldung?**
 
 `@instructions`
-- raum <- Raeume[Raeume$Raum=="25-05.4C",]
-- raum<-subset(Raeume,Raeume$Raum == "25-05.4C")
-- [raum <- Raeume[Raeume$Raum=="25-05.4C"]]
+- ``raum <- Raeume[Raeume$Raum=="25-05.4C",]``
+- ``raum<-subset(Raeume,Raeume$Raum == "25-05.4C")``
+- ``[raum <- Raeume[Raeume$Raum=="25-05.4C"]]``
 
 `@hint`
 Das Komma ist nicht bedeutungslos.
