@@ -73,7 +73,7 @@ Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/dat
 `@sct`
 
 ```{r}
-
+test_mc(3, feedback_msgs = c("Falsch, achte auf die Fragestellung", "Falsch, achte auf die Fragestellung", "Ja, genau den kann man nicht verwenden", "Falsch, achte auf die Fragestellung"))
 ```
 
 
