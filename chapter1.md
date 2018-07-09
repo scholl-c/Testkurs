@@ -353,7 +353,7 @@ patienten$grund
 
 ```{r}
 test_error()
-test_output_contains("patienten$grund",incorrect_msg="Neee!")
+
 success_msg("Super!")
 ```
 
