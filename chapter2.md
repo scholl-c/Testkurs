@@ -243,3 +243,38 @@ success_msg("Jaa! Volltreffer!")
 
 
 
+
+
+---
+## Datensätze zusammenführen
+
+```yaml
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: 3bccbd14d6   
+```
+
+Prof. Ratistikus hat für ihn noch mehr Informationen bereitgestellt. Er hat für Bob die Räume der Veranstaltungen und ihre Kapazität notiert. Bob steht vor der Herausforderung, die beiden Datensätze zusammenzuführen. Welche Funktion kann er dafür nutzen?
+
+
+`@hint`
+``summary()`` kennst du bereits. Weißt du noch wofür wir das benutzen konnten? Mit ``mean()`` errechnest du den Mittelwert. Bleiben noch ``tapply`` oder ``merge``. Nimm dir hierfür die Dokumentation zur Hilfe. Du kannst die Funktionen auch auf einer lokalen Installation von R ausprobieren.
+
+
+
+
+
+`@possible_answers`
+- mean()
+- summary()
+- [merge()]
+- tapply()
+
+`@feedbacks`
+- Nee!
+- Falsch
+- Richtig!
+- Leider falsch.
+
+
+
