@@ -99,7 +99,9 @@ key: 18a1b4f5fa
 ```
 
 Nachdem man nun andere besser kennengelernt hat, sortiert man sie gerne mal in andere imaginäre Schubladen um. Das kannst du auch mit den Daten in R machen. 
-Wir arbeiten im Folgenden mit dem Objekt namens ``daten``.
+Wir arbeiten im Folgenden mit dem Objekt namens ``daten``. 
+
+Exkurs: Falls du mal mit Zeitinverallen, der Dauer o.ä. umgehen musst, schaue dir das Paket namens ``lubridate`` an.
 
 
 
