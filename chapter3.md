@@ -127,7 +127,7 @@ daten <- c("04.03.1999","12.06.1973","22.01.2018","09.05.2013")
 
 ```yaml
 type: NormalExercise 
-xp: 50 
+xp: 35 
 key: 7b3ea49696   
 ```
 
@@ -171,7 +171,7 @@ success_msg("Super!")
 
 ```yaml
 type: NormalExercise 
-xp: 50 
+xp: 35 
 key: 7568a92801   
 ```
 
@@ -201,6 +201,52 @@ daten <- as.Date(daten,"%d.%m.%Y")
 test_error()
 test_object("daten","Nee")
 success_msg("Das hat gut geklappt!")
+```
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 30 
+key: bb8c72d423   
+```
+
+
+
+`@instructions`
+Wenn du eine Arbeitsumgebung, wie z. B. ``RStudio`` nutzt, kannst du nach diesem Schritt sehen, dass sich der Datentyp verändert hat und unser Datum richtig erkannt wurde. 
+
+Die Funktion ``weekdays()`` gibt dir jetzt die Wochentage der Daten an. Wende die Funktion ``weekdays()`` auf ``daten`` an.
+
+`@hint`
+Benutze die Funktion ``weekdays()``
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+weekdays(daten)
+```
+`@sct`
+
+```{r}
+test_error()
+test_output_contains("weekdays(daten)","nee")
+success_msg("Sehr gut!")
 ```
 
 
