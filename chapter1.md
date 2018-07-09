@@ -445,7 +445,7 @@ patienten[4,]
 
 ```{r}
 test_error()
-test_output_contains("patienten$grund",incorrect_msg="Nein, das ist falsch.")
+test_output_contains("patienten[4,]",incorrect_msg="Nein, das ist falsch.")
 success_msg("Super!")
 ```
 
