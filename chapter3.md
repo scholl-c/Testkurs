@@ -294,7 +294,7 @@ zahlen <- c("4","5.6","12","29","4.4")
 
 ```yaml
 type: NormalExercise 
-xp: 100 
+xp: 50 
 key: ea95814b47   
 ```
 
@@ -324,6 +324,50 @@ sum(zahlen)
 test_error()
 test_output_contains("sum(zahlen)",incorrect_msg="Falsch!")
 success_msg("Super gemacht!")
+```
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 50 
+key: ba65c7eb14   
+```
+
+
+
+`@instructions`
+Du erhältst den Fehler, dass es sich um einen ungültigen Typ handelt. Um mit diesen Zahlen die Summe zu berechnen, musst du sie umwandeln in den Double-Datentyp mit ``as.numeric()`` oder ``as.double()``. Der Integer-Datentyp ist hier nicht ausreichend, weil es sich nicht ausschließlich um Ganze Zahlen handelt. Parse ``zahlen`` als double und überschreibe damit ``zahlen``.
+
+`@hint`
+Überschreibe ``zahlen`` und wandle ``zahlen`` in einen Double-Datentyp mit ``as.double()`` um.
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+zahlen <- as.double(zahlen)
+```
+`@sct`
+
+```{r}
+test_error()
+test_object("zahlen")
+success_msg("Toll!")
 ```
 
 
