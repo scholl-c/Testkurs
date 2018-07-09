@@ -1,0 +1,1 @@
+hist(Gummibaerchen$Anzahl_Farben)
