@@ -431,3 +431,42 @@ Kann man die Werte in ``Raum`` ordnen? Gibt es einen Nullpunkt?
 
 
 
+
+
+---
+## Insert exercise title here
+
+```yaml
+type: MultipleChoiceExercise 
+xp: 50 
+key: efe7d80ce1   
+```
+
+Prof. Ratistikus und Bob laufen gerade den Flur der Verwaltung entlang, als ihnen Frau Mustermann aus dem Sekretariat zufällig begegnet. Sie möchte für die Raumplanung wissen, welche Veranstaltungen Prof. Ratistikus in Raum 25-05.4C hat. Da Prof. Ratistikus sehr vergesslich ist, bittet er Bob schnell nachzuschauen. **Welcher Befehl gibt ihm nicht die gewünschten Veranstaltungen sondern eine Fehlermeldung?**
+
+`@instructions`
+- raum <- Raeume[Raeume$Raum=="25-05.4C",]
+- raum<-subset(Raeume,Raeume$Raum == "25-05.4C")
+- [raum <- Raeume[Raeume$Raum=="25-05.4C"]]
+
+`@hint`
+Das Komma ist nicht bedeutungslos.
+
+`@pre_exercise_code`
+
+```{r}
+Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/f7c3df4f7a167efcf7ff74b306b8045a10f83365/Studierendenzaehlung.csv",sep=";")
+Raeume <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/29d7ffd1e2d96f6b8b94ce9904d6ad5ba5f2644e/Raeume.csv")
+Studis <- merge(Studis,Raeume)
+```
+
+
+`@sct`
+
+```{r}
+test_mc(3, feedback_msgs = c("Falsch, achte auf die Fragestellung", "Falsch, achte auf die Fragestellung", "Ja, genau den kann man nicht verwenden"))
+```
+
+
+
+
