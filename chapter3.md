@@ -90,7 +90,7 @@ Schaue dir andere Datensätze an und bestimme mit ``typeof()`` ihre Datentypen.
 
 
 ---
-## Datentyp verändern
+## Datentyp erkennen
 
 ```yaml
 type: TabExercise 
@@ -249,6 +249,81 @@ weekdays(daten)
 test_error()
 test_output_contains("weekdays(daten)",incorrect_msg="nee")
 success_msg("Sehr gut!")
+```
+
+
+
+
+
+
+
+---
+## Datentypen verändern
+
+```yaml
+type: TabExercise 
+xp: 100 
+key: d3d561c9b0   
+```
+
+Der Datentyp ``character``, d.h. Zeichenkette, ist nach der Art 'Wir nehmen's wie's kommt', weil man alle möglichen Zeichen darin speichern kann. Auch Zahlen. Aber man kann, selbst wenn man nur Zahlen gespeichert hat, nicht damit rechnen. 
+
+
+
+`@pre_exercise_code`
+
+```{r}
+zahlen <- c("4","5.6","12","29","4.4")
+```
+`@sample_code`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: ea95814b47   
+```
+
+
+
+`@instructions`
+Versuche mit dem Objekt ``zahlen`` zu rechnen, in dem du die Summe berechnest mit ``sum()``.
+
+`@hint`
+Berechne die Summe von ``zahlen`` mit ``sum()``
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+sum(zahlen)
+```
+`@sct`
+
+```{r}
+test_error()
+test_output_contains("sum(zahlen)",incorrect_msg="Falsch!")
+success_msg("Super gemacht!")
 ```
 
 
