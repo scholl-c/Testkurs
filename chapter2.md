@@ -195,3 +195,51 @@ Seminar, Vorlesung, etc. sind Kategorien, die man in keine Rangfolge bringen kan
 
 
 
+
+
+---
+## Spalte anfügen
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 77229759c8   
+```
+
+Bob hat sich die Veranstaltungsarten als Faktor ``v_typ`` in R geladen. Er möchte diese Spalte an das Dataframe ``Studis`` anfügen und es damit überschreiben. Wie kann er das tun?
+
+`@instructions`
+Füge die Spalte an das Dataframe an. Ggf. recherchiere über Möglichkeiten, dies zu erreichen.
+
+`@hint`
+Benutze die Funktion ``cbind()``
+
+`@pre_exercise_code`
+
+```{r}
+Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/f7c3df4f7a167efcf7ff74b306b8045a10f83365/Studierendenzaehlung.csv",sep=";")
+v_typ <- as.factor(c("Vorlesung","Aufbauseminar","Vorlesung","Vorlesung","Seminar","Vorlesung","Seminar","Vorlesung","Seminar","Seminar"))
+```
+`@sample_code`
+
+```{r}
+# zeige v_typ
+v_typ
+```
+`@solution`
+
+```{r}
+Studis <- cbind(Studis,v_typ)
+```
+`@sct`
+
+```{r}
+test_error()
+test_object("Studis")
+success_msg("Jaa! Volltreffer!")
+
+```
+
+
+
+
