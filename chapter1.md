@@ -660,14 +660,18 @@ patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/re
 `@sample_code`
 
 ```{r}
+# Binde das Paket magrittr ein
+library(magrittr)
 
+# Beispiel
+patienten %>% select("grund") %>% toupper(.)
 ```
-
 `@solution`
 
 ```{r}
-patienten %>% select("alter") %>% "+"(1)
+
 ```
+
 `@sct`
 
 ```{r}
