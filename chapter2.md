@@ -125,7 +125,7 @@ xp: 100
 key: 9deef9b064   
 ```
 
-Prof. Ratistikus ist stets sehr bedacht und akribisch genau. Er weist Bob darauf hin, den Spaltennamen von ``Seminar`` zu dem allgemeineren Titel ``Veranstaltung`` zu ändern. Wie kann er das tun? (Benutze die Funktion ``colnames()``)
+Prof. Ratistikus ist stets sehr bedacht und akribisch genau. Er weist Bob darauf hin, den Spaltennamen von ``Seminar`` zu dem allgemeineren Titel ``Veranstaltung`` zu ändern. Wie kann er das tun? Benutze die Funktion ``colnames()``.
 
 `@instructions`
 Ändere den Spaltennamen zu ``Veranstaltung``.
@@ -153,7 +153,7 @@ colnames(Studis)[1] <- "Veranstaltung"
 
 ```{r}
 test_error()
-test_object("Studis")
+test_function("colnames",incorrect_msg="Benutze die Funktion colnames")
 success_msg("Toll gemacht!")
 ```
 
