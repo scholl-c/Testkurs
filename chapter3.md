@@ -421,7 +421,7 @@ success_msg("Super gemacht!")
 
 
 ---
-## Insert exercise title here
+## Objekttyp
 
 ```yaml
 type: NormalExercise 
@@ -459,6 +459,54 @@ class(geschlecht)
 test_error()
 test_output_contains("class(geschlecht)",incorrect_msg="Falsch")
 success_msg("Juhhuu!")
+```
+
+
+
+
+
+
+---
+## Faktoren
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 33990503c9   
+```
+
+Wenn du Datensätze mit ``read.csv`` einliest, kommt es vor, dass Spalten nicht als ``character`` erkannt werden, sondern als ``factor`` eingelesen werden. Faktoren (factors) sind für nominalskalierte Daten geeignet und haben sogenannte ``levels``, das sind die verschiedenen Ausprägungen. Beispielsweise enthält eine Spalte die Geschlechter und die ``levels`` wären dann entsprechend männlich und weiblich.
+
+Es kann sein, dass die Faktoren Probleme machen und kann daher sinnvoll sein, sie umzuwandeln. Am Einfachsten geht das mit ``as.vector()``. 
+
+`@instructions`
+Wandle ``geschlecht`` in einen Vektor um und überschreibe ``geschlecht``.
+
+`@hint`
+Benutze ``as.vector()`` und übergib der Funktion ``geschlecht``.
+
+`@pre_exercise_code`
+
+```{r}
+geschlecht <- factor(c("m", "m", "w", "m", "w", "w", "w", "w", "w", "w", "m", "w"))
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+geschlecht <- as.vector(geschlecht)
+```
+`@sct`
+
+```{r}
+test_error()
+test_object("geschlecht")
+success_msg("Sehr gut! Du weißt jetzt, wie du mit den Datentypen umgehen kannst.")
 ```
 
 
