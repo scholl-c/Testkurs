@@ -26,9 +26,8 @@ Suche in der Hilfe nach der Verwendung des Befehl ``hist()`` und wenn du Problem
 `@pre_exercise_code`
 
 ```{r}
-
+Gummibaerchen <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
-
 `@sample_code`
 
 ```{r}
