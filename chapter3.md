@@ -44,7 +44,6 @@ typeof(cars$speed)
 ```{r}
 test_error()
 success_msg("Ja, genau!")
-test_output_contains("typeof(cars$speed)",incorrect_msg="Leider falsch!")
 test_function("typeof",incorrect_msg="Leider falsch!")
 
 ```
