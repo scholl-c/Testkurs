@@ -396,3 +396,38 @@ test_mc(3, feedback_msgs = c("Falsch, achte auf die Fragestellung", "Falsch, ach
 
 
 
+
+
+---
+## Skalenniveau
+
+```yaml
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: 1cff02cfb2   
+```
+
+Wie ist die Variable 'Raum' skaliert?
+
+
+`@hint`
+Kann man die Werte in ``Raum`` ordnen? Gibt es einen Nullpunkt?
+
+
+
+
+
+`@possible_answers`
+- [nominalskaliert]
+- ordinalskaliert
+- intervallskaliert
+- verhältnisskaliert
+
+`@feedbacks`
+- Ja!
+- Nein
+- Nein
+- Nein
+
+
+
