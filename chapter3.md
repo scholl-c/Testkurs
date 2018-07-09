@@ -87,3 +87,79 @@ Schaue dir andere Datensätze an und bestimme mit ``typeof()`` ihre Datentypen.
 
 
 
+
+
+---
+## Datentyp verändern
+
+```yaml
+type: TabExercise 
+xp: 100 
+key: 18a1b4f5fa   
+```
+
+Nachdem man nun andere besser kennengelernt hat, sortiert man sie gerne mal in andere imaginäre Schubladen um. Das kannst du auch mit den Daten in R machen. 
+Wir arbeiten im Folgenden mit dem Objekt namens ``daten``.
+
+
+
+`@pre_exercise_code`
+
+```{r}
+daten <- c("04.03.1999","12.06.1973","22.01.2018","09.05.2013")
+```
+`@sample_code`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 7b3ea49696   
+```
+
+
+
+`@instructions`
+Bestimme den Datentyp von ``daten`` mit typeof().
+
+`@hint`
+Benutze die Funktion ``typeof()`` und wende sie auf ``daten`` an.
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+typeof(daten)
+```
+`@sct`
+
+```{r}
+test_error()
+test_student_typed("typeof(daten)","leider nicht")
+success_msg("Super!")
+```
+
+
+
+
+
