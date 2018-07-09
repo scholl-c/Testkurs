@@ -470,3 +470,46 @@ test_mc(3, feedback_msgs = c("Falsch, achte auf die Fragestellung", "Falsch, ach
 
 
 
+
+
+---
+## Length und Unique
+
+```yaml
+type: MultipleChoiceExercise 
+xp: 50 
+key: 9f4864d200   
+```
+
+Prof. Ratistikus diktiert Bob diesen Befehl:
+ ``length(unique(Studis$Raum))``. 
+
+Wie ist das Ergebnis dieses Befehls zu interpetieren?
+
+`@instructions`
+- Durchschnittliche Länge der Raumnummern(-Zeichen)
+- Summe der Raumnummer-Ziffern
+- Anzahl der Einträge in der Spalte 'Raum'
+- [Gesamtzahl der unterschiedlichen Räume]
+
+`@hint`
+Probiere den Befehl in der Konsole aus.
+
+`@pre_exercise_code`
+
+```{r}
+Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/f7c3df4f7a167efcf7ff74b306b8045a10f83365/Studierendenzaehlung.csv",sep=";")
+Raeume <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/29d7ffd1e2d96f6b8b94ce9904d6ad5ba5f2644e/Raeume.csv")
+Studis <- merge(Studis,Raeume)
+```
+
+
+`@sct`
+
+```{r}
+test_mc(4, feedback_msgs = c("Falsch","Falsch","Falsch","Richtig"))
+```
+
+
+
+
