@@ -513,3 +513,42 @@ test_mc(4, feedback_msgs = c("Falsch","Falsch","Falsch","Richtig"))
 
 
 
+
+
+---
+## Insert exercise title here
+
+```yaml
+type: MultipleChoiceExercise 
+xp: 50 
+key: 8357b5d959   
+```
+
+Prof. Ratistikus hat die Vermutung, dass zu seinen deutschsprachigen Kursen mehr Studenten erscheinen als in seinen englischsprachigen Kursen. Daraufhin bittet er Bob die Daten zu analysieren. Darf Bob den 
+arithmetischen Mittelwert von der Variable ``Anwesend`` bilden?
+
+`@instructions`
+- [Ja]
+- Nein
+
+`@hint`
+Überlege, wie die Variable skaliert ist.
+
+`@pre_exercise_code`
+
+```{r}
+Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/f7c3df4f7a167efcf7ff74b306b8045a10f83365/Studierendenzaehlung.csv",sep=";")
+Raeume <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/29d7ffd1e2d96f6b8b94ce9904d6ad5ba5f2644e/Raeume.csv")
+Studis <- merge(Studis,Raeume)
+```
+
+
+`@sct`
+
+```{r}
+test_mc(1, feedback_msgs = c("Richtig","Falsch"))
+```
+
+
+
+
