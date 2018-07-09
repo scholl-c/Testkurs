@@ -352,7 +352,7 @@ Studis <- merge(Studis,Raeume)
 
 ```{r}
 test_error()
-success_msg("Herzlichen Glückwunsch!")
+success_msg("Herzlichen Glückwunsch! Das hat geklappt!")
 ```
 
 
