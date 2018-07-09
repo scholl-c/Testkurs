@@ -382,6 +382,8 @@ Prof. Ratistikus möchte wissen, wie sehr er sich bei der Raumplanung verschätz
 
 ```{r}
 Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/f7c3df4f7a167efcf7ff74b306b8045a10f83365/Studierendenzaehlung.csv",sep=";")
+Raeume <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/29d7ffd1e2d96f6b8b94ce9904d6ad5ba5f2644e/Raeume.csv")
+Studis <- merge(Studis,Raeume)
 ```
 
 
