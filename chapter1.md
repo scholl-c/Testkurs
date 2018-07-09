@@ -655,7 +655,8 @@ Halte dich an das Beispiel. Ändere bei der zweiten Anweisung den Spaltennamen z
 
 ```{r}
 library(magrittr)
-patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
+library(readr)
+patienten <- read_csv("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
 ```
 `@sample_code`
 
@@ -664,7 +665,7 @@ patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/re
 library(magrittr)
 
 # Beispiel
-patienten %>% extract("grund") %>% toupper(.)
+patienten %>% extract("grund") %>% toupper()
 ```
 `@solution`
 
