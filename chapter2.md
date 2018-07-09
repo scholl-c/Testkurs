@@ -160,3 +160,38 @@ success_msg("Toll gemacht!")
 
 
 
+
+
+---
+## Skalenniveau
+
+```yaml
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: 43ea0a6499   
+```
+
+Nachdem Bob jetzt mit deiner Hilfe die Spalte zu ``Veranstaltung`` umbenannt hat, schaut er im Veranstaltungsverzeichnis nach, welche Veranstaltung nun ein Seminar oder eine Vorlesung ist. Welchem Skalenniveau entspricht das?
+
+
+`@hint`
+Seminar, Vorlesung, etc. sind Kategorien, die man in keine Rangfolge bringen kann.
+
+
+
+
+
+`@possible_answers`
+- [Nominalskala]
+- Ordinalskala
+- Verhältniskala
+- Intervallskala
+
+`@feedbacks`
+- Das ist richtig!
+- Falsch
+- Falsch
+- Falsch
+
+
+
