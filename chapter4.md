@@ -21,7 +21,8 @@ Lasse dir das Histogramm der Variable ``Anzahl_Farben`` ausgeben. Dazu übergibs
   dem Befehl ``hist()``, wie z.B. ``hist(Gummibaerchen$Anzahl_Farben)``. Mach das mal.
 
 `@hint`
-Suche in der Hilfe nach der Verwendung des Befehl ``hist()`` und wenn du Probleme hast bei dem zusammengesetzten Variablen, benutze die Notation in eckigen Klammern statt der Dollar-Notation.
+Suche in der Hilfe nach der Verwendung des Befehl ``hist()`` und wenn du Probleme hast bei dem zusammengesetzten Variablen, benutze die Notation in eckigen Klammern statt der Dollar-Notation. 
+hist(Gummibaerchen$Anzahl_Farben)
 
 `@pre_exercise_code`
 
@@ -38,8 +39,9 @@ Suche in der Hilfe nach der Verwendung des Befehl ``hist()`` und wenn du Problem
 `@solution`
 
 ```{r}
-hist(Gummibaerchen$Anzahl_Farben)
+
 ```
+
 `@sct`
 
 ```{r}
