@@ -206,10 +206,10 @@ xp: 100
 key: 77229759c8   
 ```
 
-Bob hat sich die Veranstaltungsarten als Faktor ``v_typ`` in R geladen. Er möchte diese Spalte an das Dataframe ``Studis`` anfügen und es damit überschreiben. Wie kann er das tun?
+Bob hat sich die Veranstaltungsarten als Faktor ``v_typ`` in R geladen. Er möchte diese Spalte an das Dataframe ``Studis`` anfügen und es damit überschreiben, d.h. das Dataframe erweitern um diese Spalte. Wie kann er das tun?
 
 `@instructions`
-Füge die Spalte an das Dataframe an. Ggf. recherchiere über Möglichkeiten, dies zu erreichen.
+Füge die Spalte an das Dataframe an. Benutze ``cbind``. Weitere Hilfe findest du, wenn du ``?cbind`` in die Konsole eingibst.
 
 `@hint`
 Benutze die Funktion ``cbind()``
@@ -223,9 +223,9 @@ v_typ <- as.factor(c("Vorlesung","Aufbauseminar","Vorlesung","Vorlesung","Semina
 `@sample_code`
 
 ```{r}
-# zeige v_typ
-v_typ
+
 ```
+
 `@solution`
 
 ```{r}
