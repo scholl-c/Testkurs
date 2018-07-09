@@ -596,11 +596,7 @@ key: 4c0a794a61
 
 
 `@instructions`
-In der Klinik wird ein neues Programm eingesetzt, das das Alter von Menschen erkennen kann. 
-  Man hat nun einen Fehler entdeckt, sodass alle Patienten ein Jahr jünger sind als eingetragen wurde. 
-  Das muss nun auch bei den aktuellen vier Patienten behoben werden. Man kann arithmetische Operationen auch auf Spalten anwenden bzw. mit Spalten rechnen.
-  Ändere das Alter der Patienten entsprechend ab und überschreibe damit das aktuell eingetragene Alter. Generell funktioniert diese Art arithmetische Operationen nur, wenn die ganze Zeile oder Spalte 
-  Werte desselben Typs enthält.
+In der Klinik wird ein neues Programm eingesetzt, das das Alter von Menschen erkennen kann. Man hat nun einen Fehler entdeckt, sodass alle Patienten ein Jahr jünger sind als eingetragen wurde. Das muss nun auch bei den aktuellen vier Patienten behoben werden. Man kann arithmetische Operationen auch auf Spalten anwenden bzw. mit Spalten rechnen. Ändere das Alter der Patienten entsprechend ab und überschreibe damit das aktuell eingetragene Alter. Generell funktioniert diese Art arithmetische Operationen nur, wenn die ganze Zeile oder Spalte Werte desselben Typs enthält.
 
 `@hint`
 
