@@ -665,7 +665,7 @@ patienten <- read_csv("http://s3.amazonaws.com/assets.datacamp.com/production/re
 library(magrittr)
 
 # Beispiel
-patienten %>% extract("grund") %>% toupper()
+patienten %>% extract("grund") %>% toupper(.)
 ```
 `@solution`
 
