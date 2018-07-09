@@ -463,9 +463,7 @@ xp: 100
 key: cbb2cdcdee   
 ```
 
-Genauso kannst du auch Spalten, 
-  Zeilen, und Zellen umbenennen.  Das könnte so ähnlich aussehen datensatz[zeile,spalte] <- 'neuer Wert' und hilft dir hoffentlich, 
-  diese Aufgabe zu lösen.
+Genauso kannst du auch Spalten, Zeilen, und Zellen umbenennen.  Das könnte so ähnlich aussehen ``datensatz[zeile,spalte] <- 'neuer Wert'`` und hilft dir hoffentlich, diese Aufgabe zu lösen.
 
 
 
