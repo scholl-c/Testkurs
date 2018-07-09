@@ -353,6 +353,7 @@ patienten$grund
 
 ```{r}
 test_error()
+test_object("patienten$grund",incorrect_msg="Neee!")
 success_msg("Super!")
 ```
 
