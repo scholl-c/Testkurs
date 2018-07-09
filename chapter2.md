@@ -50,9 +50,9 @@ namens ``Studierendenzaehlung.csv`` unter dem Variablennamen ``Studis`` in R ein
 
 > Super, das hat schon mal geklappt!, freut sich Bob. 
 
-Er fragt sich, in welcher Veranstaltung wohl die meisten und die wenigstens Studierenden anwesend waren. Kannst du ihm helfen? Welchen Befehl kann er NICHT dazu verwenden? 
+Er fragt sich, in welcher Veranstaltung wohl die meisten und die wenigstens Studierenden anwesend waren. Kannst du ihm helfen? **Welchen Befehl kann er NICHT dazu verwenden? **
 
-Das Minimum einer Datenreihe kannst du mit der Funktion ``min`` und das Maximum entsprechend mit der Funktion ``max`` berechnen. Gib doch mal ```min(Studis$Anwesend)`` ein. Du erinnerst dich: Mit dem Dollarzeichen kannst du eine Spalte aus einem Datensatz (hier: die Spalte ``Anwesend``) auswählen.
+Das Minimum einer Datenreihe kannst du mit der Funktion ``min`` und das Maximum entsprechend mit der Funktion ``max`` berechnen. Gib doch mal ``min(Studis$Anwesend)`` ein. Du erinnerst dich: Mit dem Dollarzeichen kannst du eine Spalte aus einem Datensatz (hier: die Spalte ``Anwesend``) auswählen.
 
 `@instructions`
 - c(min(Studis$Anwesend),max(Studis$Anwesend))
