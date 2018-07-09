@@ -13,14 +13,14 @@ skills: 1
 key: fa0c9a259f   
 ```
 
-Mit der Funktion typeof() kannst du dir den Datentyp eines Objekts anzeigen lassen. 
+Mit der Funktion ``typeof()`` kannst du dir den Datentyp eines Objekts anzeigen lassen. 
   
 
 `@instructions`
-Lasse dir den Datentyp von der Spalte 'speed' von dem Datensatz 'cars' anzeigen.
+Lasse dir den Datentyp von der Spalte ``speed`` von dem Datensatz ``cars`` anzeigen.
 
 `@hint`
-Referenziere mit dem Dollarzeichen auf die Spalte 'speed'.
+Referenziere mit dem Dollarzeichen auf die Spalte ``speed``.
 
 `@pre_exercise_code`
 
