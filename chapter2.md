@@ -65,7 +65,7 @@ Du brauchst die Funktionen min() und max(). Du solltest wissen, dass man auf Spa
 `@pre_exercise_code`
 
 ```{r}
-Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c729985d39110fcedf8ca170a763a31b0a59dd1f/Studierendenzaehlung.csv",sep=";")
+Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/f7c3df4f7a167efcf7ff74b306b8045a10f83365/Studierendenzaehlung.csv",sep=";")
 ```
 
 
