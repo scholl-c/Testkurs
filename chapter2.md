@@ -516,7 +516,7 @@ test_mc(4, feedback_msgs = c("Falsch","Falsch","Falsch","Richtig"))
 
 
 ---
-## Insert exercise title here
+## Mittelwert
 
 ```yaml
 type: MultipleChoiceExercise 
@@ -547,6 +547,56 @@ Studis <- merge(Studis,Raeume)
 
 ```{r}
 test_mc(1, feedback_msgs = c("Richtig","Falsch"))
+```
+
+
+
+
+
+
+---
+## Mittelwerte für Gruppen
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: abdd990282   
+```
+
+Da Bob den Mittelwert berechnen darf, möchte er zeigen, dass in den englischen Kursen durchschnittlich weniger Studierende teilnehmen als in den deutschen Kursen. 
+Kannst du ihm dabei helfen? 
+
+`@instructions`
+Erstelle ein neues Dataframe ``anwesend_nach_sprache``, in dem der arithmetische Mittelwert der anwesenden Studierenden für jeweils die englischen und die deutschen Kurse gelistet ist. 
+Tipp: Benutze ``aggregate``
+
+`@hint`
+Tippe ``help(aggregate)`` in die Konsole ein.
+
+`@pre_exercise_code`
+
+```{r}
+Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/f7c3df4f7a167efcf7ff74b306b8045a10f83365/Studierendenzaehlung.csv",sep=";")
+Raeume <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/29d7ffd1e2d96f6b8b94ce9904d6ad5ba5f2644e/Raeume.csv")
+Studis <- merge(Studis,Raeume)
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+anwesend_nach_sprache <- aggregate(Studis$Angemeldet ~ Studis$Sprache,FUN=mean)
+```
+`@sct`
+
+```{r}
+test_error()
+test_object("anwesend_nach_sprache")
+success_msg("Bob ist sehr zufrieden und bedankt sich für deine Hilfe.")
 ```
 
 
