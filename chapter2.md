@@ -278,3 +278,83 @@ Prof. Ratistikus hat für ihn noch mehr Informationen bereitgestellt. Er hat fü
 
 
 
+
+
+---
+## Datensätze zusammenführen
+
+```yaml
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: f08fa5a55c   
+```
+
+Prof. Ratistikus hat für ihn noch mehr Informationen bereitgestellt. Er hat für Bob die Räume der Veranstaltungen und ihre Kapazität notiert. Die Liste der Räume und deren Kapazität hat Prof. Ratistikus nach der alphabetischen Reihenfolge der Seminartitel notiert. 
+
+Muss Bob vor dem Zusammenführen der Datensätze mit ``merge()`` seine Daten ebenfalls nach der alphabetischen Reihenfolge der Seminare notieren?
+
+
+`@hint`
+``merge()`` führt die Datensätze nach den Seminartiteln zusammen; diese müssen also übereinstimmen.
+
+
+
+
+
+`@possible_answers`
+- Ja
+- [Nein]
+
+`@feedbacks`
+- Nein, das muss Bob nicht.
+- Ja, richtig! Er muss sie nicht sortieren.
+
+
+
+
+
+---
+## Insert exercise title here
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: bc561c01f0   
+```
+
+Bob möchte nun die beiden Datensätze ``Studis`` und ``Raeume`` in ``Studis`` zusammenführen (und damit ``Studis`` überschreiben.
+
+`@instructions`
+Hilf Bob, die Datensätze in ``Studis`` zusammenzuführen. Gib den dazu nötigen Befehl ein.
+
+`@hint`
+Benutze den Befehl ``merge()``
+
+`@pre_exercise_code`
+
+```{r}
+library(readr)
+Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/f7c3df4f7a167efcf7ff74b306b8045a10f83365/Studierendenzaehlung.csv",sep=";")
+Raeume <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/29d7ffd1e2d96f6b8b94ce9904d6ad5ba5f2644e/Raeume.csv")
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+Studis <- merge(Studis,Raeume)
+```
+`@sct`
+
+```{r}
+test_error()
+success_msg("Herzlichen Glückwunsch!")
+```
+
+
+
+
