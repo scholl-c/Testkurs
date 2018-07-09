@@ -76,6 +76,7 @@ Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/dat
 - Nein  
 - Nein  
 - Ja
+- Nein
 ```
 
 
