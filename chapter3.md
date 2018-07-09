@@ -134,7 +134,7 @@ key: 7b3ea49696
 
 
 `@instructions`
-Bestimme den Datentyp von ``daten`` mit typeof().
+Bestimme den Datentyp von ``daten`` mit ``typeof()``.
 
 `@hint`
 Benutze die Funktion ``typeof()`` und wende sie auf ``daten`` an.
@@ -155,7 +155,7 @@ typeof(daten)
 
 ```{r}
 test_error()
-test_student_typed("typeof(daten)","leider nicht")
+test_student_typed("typeof(daten)")
 success_msg("Super!")
 ```
 
