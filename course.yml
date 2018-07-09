@@ -3,6 +3,7 @@ description: A description of the course.
 programming_language: r
 from: r-base-prod:v1.0.0
 datasets:
+  Raeume.csv: Raeume
   patienten.csv: Patienten
   README.md: Readme
   Studierendenzaehlung.csv: Studierendenzaehlung
