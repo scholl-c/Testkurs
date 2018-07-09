@@ -336,7 +336,7 @@ Halte dich an die beiden im Text beschriebenen Art und Weisen die Spalte auszuge
 `@pre_exercise_code`
 
 ```{r}
-patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
+patienten <- read.csv(" http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
 ```
 `@sample_code`
 
