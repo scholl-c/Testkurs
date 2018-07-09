@@ -153,7 +153,7 @@ colnames(Studis)[1] <- "Veranstaltung"
 
 ```{r}
 test_error()
-test_student_typed("colnames(Studis)[1] <- "Veranstaltung"", not_typed_msg = "Das war leider noch nicht ganz richtig.")
+test_student_typed("colnames(Studis)[1] <- 'Veranstaltung'", not_typed_msg = "Das war leider noch nicht ganz richtig.")
 success_msg("Toll gemacht!")
 ```
 
