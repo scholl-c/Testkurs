@@ -136,7 +136,7 @@ Bei so wenigen ganzzahligen Werten ist das Histogramm weniger schön. Da es erst
 _(Tipp: In dem Mit dem Pfeiltaste nach oben, erhältst du deine zuletzt eingegebenen Befehle und kannst diese wiederverwenden. Hier haben wir das für dich schon eingetragen.)_
 
 `@instructions`
-Beschrifte die Achsen wie folgt: Der Titel soll `Histogramm Anzahl Gummibärchen` heißen, die y-Achse soll mit `Häufigkeit` und die x-Achse mit `Anzahl` beschriftet werden.
+Beschrifte die Achsen wie folgt: Der Titel soll `Histogramm Anzahl Gummibaerchen` heißen, die y-Achse soll mit `Haeufigkeit` und die x-Achse mit `Anzahl` beschriftet werden.
 
 `@hint`
 Suche in der Hilfe nach `hist()` bzw. gib `?hist` in die Konsole ein.
@@ -155,9 +155,9 @@ hist(Gummibaerchen$Anzahl_Farben)
 
 ```{r}
 hist(Gummibaerchen$Anzahl_Farben,
-       main="Histogramm Anzahl Gummibärchen",
+       main="Histogramm Anzahl Gummibaerchen",
        xlab="Anzahl",
-       ylab="Häufigkeit")
+       ylab="Haeufigkeit")
 ```
 `@sct`
 
