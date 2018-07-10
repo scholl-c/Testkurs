@@ -170,3 +170,49 @@ success_msg("Geschafft!")
 
 
 
+
+
+---
+## Insert exercise title here
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: d9dee3c3ca   
+```
+
+Ein nächstes, sehr einfaches Diagramm, ist der x-y-Plot bzw. das Streudiagramm. Damit kannst du die Verteilung von zwei Variablen plotten. Dabei erkennst du auch, ob diese Variablen womöglich in Beziehung stehen. Der Befehl dazu ist `plot()`
+
+`@instructions`
+Lasse dir das Streudiagramm für die Variablen `Anzahl_Farben` und `Anzahl_Baeren` anzeigen. Du kannst damit sehen, ob Packungen mit mehr Bären auch mehr oder sogar weniger Farben enthalten.
+
+`@hint`
+`plot` benötigt mindestens zwei Argumente. In diesem Fall die beiden Variablen
+
+`@pre_exercise_code`
+
+```{r}
+Gummibaerchen <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+plot(Gummibaerchen$Anzahl_Baeren,Gummibaerchen$Anzahl_Farben)
+```
+`@sct`
+
+```{r}
+test_error()
+test_function("plot",incorrect_msg="Dieser Weg ist falsch.")
+success_msg("Sehr gut!")
+```
+
+
+
+
