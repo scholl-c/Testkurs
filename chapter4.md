@@ -87,3 +87,89 @@ test_mc(2,"Nein","Ja","Nein")
 
 
 
+
+
+---
+## Nominalskalierte Variable plotten
+
+```yaml
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: 8aff2152fd   
+```
+
+Kannst du mit `hist()` auch die Häufigkeiten einer nominalskalierten Variable plotten? Zum Beispiel hast du eine Umfrage erstellt und möchtest die Häufigkeiten der jeweiligen Geschlechter plotten.
+
+
+`@hint`
+Die Skalierung der x-Achse erfolgt in Intervallen und erfordert eine Reihenfolge.
+
+
+
+
+
+`@possible_answers`
+- Ja
+- [Nein]
+
+`@feedbacks`
+- Falsch
+- Richtig
+
+
+
+
+
+---
+## Insert exercise title here
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: ea8e5425fb   
+```
+
+Wie wir die Häufigkeiten einer nominalskalierten Variable plotten können, behandeln wir später im Verlauf der Lektion. Das Histogramm bietet eine erste, einfache Möglichkeit numerische Variablen zu plotten und z.B. auf Normalverteilung zu untersuchen.
+
+Bei so wenigen ganzzahligen Werten ist das Histogramm weniger schön. Da es erstmal um das Prinzip geht, bearbeiten wir nun noch das Diagramm. Es fehlen noch die richtigen **Achsenbeschriftungen**. Mit den Attributen `main`, `xlab` und `ylab` kannst du das Histogramm und die entsprechenden Achsen beschriften. 
+
+_(Tipp: In dem Mit dem Pfeiltaste nach oben, erhältst du deine zuletzt eingegebenen Befehle und kannst diese wiederverwenden. Hier haben wir das für dich schon eingetragen.)_
+
+`@instructions`
+Beschrifte die Achsen wie folgt: Der Titel soll `Histogramm Anzahl Gummibärchen` heißen, die y-Achse soll mit `Häufigkeit` und die x-Achse mit `Anzahl` beschriftet werden.
+
+`@hint`
+Suche in der Hilfe nach `hist()` bzw. gib `?hist` in die Konsole ein.
+
+`@pre_exercise_code`
+
+```{r}
+Gummibaerchen <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
+```
+`@sample_code`
+
+```{r}
+hist(Gummibaerchen$Anzahl_Farben)
+```
+`@solution`
+
+```{r}
+hist(Gummibaerchen$Anzahl_Farben,
+       main="Histogramm Anzahl Gummibärchen",
+       xlab="Anzahl",
+       ylab="Häufigkeit")
+```
+`@sct`
+
+```{r}
+test_error()
+test_output_contains("hist(Gummibaerchen$Anzahl_Farben,
+       main="Histogramm Anzahl Gummibärchen",
+       xlab="Anzahl",
+       ylab="Häufigkeit")",incorrect_msg="nö")
+success_msg("Geschafft!")
+```
+
+
+
+
