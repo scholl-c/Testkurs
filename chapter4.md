@@ -121,7 +121,7 @@ Die Skalierung der x-Achse erfolgt in Intervallen und erfordert eine Reihenfolge
 
 
 ---
-## Insert exercise title here
+## Achsenbeschriftungen
 
 ```yaml
 type: NormalExercise 
@@ -133,7 +133,7 @@ Wie wir die Häufigkeiten einer nominalskalierten Variable plotten können, beha
 
 Bei so wenigen ganzzahligen Werten ist das Histogramm weniger schön. Da es erstmal um das Prinzip geht, bearbeiten wir nun noch das Diagramm. Es fehlen noch die richtigen **Achsenbeschriftungen**. Mit den Attributen `main`, `xlab` und `ylab` kannst du das Histogramm und die entsprechenden Achsen beschriften. 
 
-_(Tipp: In dem Mit dem Pfeiltaste nach oben, erhältst du deine zuletzt eingegebenen Befehle und kannst diese wiederverwenden. Hier haben wir das für dich schon eingetragen.)_
+_(Tipp: In dem Mit dem Pfeiltaste nach oben, erhältst du deine zuletzt eingegebenen Befehle und kannst diese wiederverwenden. Hier haben wir den letzten Befehl für dich eingetragen.)_
 
 `@instructions`
 Beschrifte die Achsen wie folgt: Der Titel soll `Histogramm Anzahl Gummibaerchen` heißen, die y-Achse soll mit `Haeufigkeit` und die x-Achse mit `Anzahl` beschriftet werden.
