@@ -219,7 +219,7 @@ success_msg("Sehr gut!")
 
 
 ---
-## Insert exercise title here
+## Streudiagramm-Ansicht
 
 ```yaml
 type: MultipleChoiceExercise 
@@ -250,6 +250,7 @@ plot(Gummibaerchen$Anzahl_Baeren,Gummibaerchen$Anzahl_Farben)
 
 ```{r}
 test_mc(3,"Nein, alles korrekt.","Doch, das hat geklappt","Das ist der Grund!","R passt die Skalierung in der Regel automatisch an.")
+success_msg("Alles gut")
 ```
 
 
