@@ -286,3 +286,44 @@ Stelle dir eine angenäherte Gerade durch die Mitte der Punkte vor. In welche Ri
 
 
 
+
+
+---
+## Insert exercise title here
+
+```yaml
+type: MultipleChoiceExercise 
+xp: 50 
+key: 240a1641ce   
+```
+
+Du siehst ein Kreisdiagramm. Es eignet sich, um die Zusammensetzung von etwas aufzuzeigen. In diesem Fall zeigt es die durchschnittliche Zusammensetzung (in Prozent) von Gummibärchenfarben in einer Tüte. Was ist an diesem Kreisdiagramm ungünstig, sodass man eher von dieser Diagrammart absehen sollte?
+
+`@instructions`
+- Die Farbwahl
+- Die Anzahl der Kategorien (hier die verschiedenen Farben)
+- Die Position der Legende
+- Die Hintergrundfarbe
+
+`@hint`
+Es gibt einen Punkt, den man aufgrund der Daten nicht verändern kann, weil der davon abhängig ist.
+
+`@pre_exercise_code`
+
+```{r}
+Gummibaerchen <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
+source("https://assets.datacamp.com/production/repositories/3196/datasets/801e4015d0381e190aaccd014017fb702389287b/gummibaeren_verteilung_kreis.R")
+```
+
+
+`@sct`
+
+```{r}
+test_mc(2,"Nein","Diese Art der Grafik ist ungünstig, weil wir sehr viele Kategorien haben, die 
+  alle ähnlich groß sind. Es ist mit dem Auge schwer zu sehen, ob nun die grünen oder die 
+  roten Gummibärchen im Mittel häufiger vorkommen.","Nein","Nein")
+```
+
+
+
+
