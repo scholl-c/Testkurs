@@ -163,7 +163,7 @@ hist(Gummibaerchen$Anzahl_Farben,
 
 ```{r}
 test_error()
-test_output_contains("hist(Gummibaerchen$Anzahl_Farben,main='Histogramm Anzahl Gummibaerchen',xlab='Anzahl',ylab='Haeufigkeit')")
+test_object("hist(Gummibaerchen$Anzahl_Farben,main='Histogramm Anzahl Gummibaerchen',xlab='Anzahl',ylab='Haeufigkeit')")
 success_msg("Geschafft!")
 ```
 
