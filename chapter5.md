@@ -89,25 +89,25 @@ key: 6c987915ec
 
 
 `@instructions`
-
+Das Histogramm stellt die Verteilung graphisch dar. Zeichne das Histogramm von der Verteilung der Werte in `nv`.
 
 `@hint`
-
+Benutze `hist()`
 
 
 
 `@solution`
 
 ```{r}
-
+hist(nv)
 ```
-
 `@sct`
 
 ```{r}
-
+test_error()
+test_student_typed("hist(nv"),not_typed_msg="Nicht ganz.")
+success_msg("Genau so sieht das Histogramm aus!")
 ```
-
 
 
 
