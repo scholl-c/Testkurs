@@ -422,9 +422,7 @@ key: a53109b722
 
 
 `@instructions`
-Die einzelnen Balken zeigen nun die Höhe der einzelnen Mittelwerte der 
-  verschiedenen Farben. Um die Balken den Farben zuzuordnen, müssen wir einen weiteren 
-  Parameter angeben und zwar names.arg mit Farben_Mean$rowname. Mach das mal.
+Die einzelnen Balken zeigen nun die Höhe der einzelnen Mittelwerte der verschiedenen Farben. Um die Balken den Farben zuzuordnen, müssen wir einen weiteren Parameter angeben und zwar `names.arg` mit `Farben_Mean$rowname`. Mach das mal.
 
 `@hint`
 
@@ -507,12 +505,10 @@ key: fb552b8c00
 
 
 `@instructions`
-Ein wenig Farbe wäre sinnvoll, um den Inhalt des Balkendiagramms schneller 
-  erfassen zu können. Gib zusätzlich noch col=baeren_colors als Argument ein.
+Ein wenig Farbe wäre sinnvoll, um den Inhalt des Balkendiagramms schneller erfassen zu können. Gib zusätzlich noch `col=baeren_colors` als Argument ein.
 
 `@hint`
-Einmal Pfeiltaste nach oben und du erhältst das zuvor eingegebenen Kommando. 
-  Nun füge das Attribut, wie in der Frage beschrieben ans Ende dazu.
+Einmal Pfeiltaste nach oben und du erhältst das zuvor eingegebenen Kommando. Nun füge das Attribut, wie in der Frage beschrieben ans Ende dazu.
 
 
 `@sample_code`
