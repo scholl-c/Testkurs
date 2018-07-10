@@ -320,25 +320,16 @@ Farben_Mean <- Gummibaerchen[,2:7] %>% colMeans()  %>%
   rownames_to_column()
 
 baeren_colors <- c("#8B0000", "#ff0000", "#ff9900","#ffd700","#32cd32","#ffffff")
-ggplot(Farben_Mean,aes(x="", y=value, fill=rowname)) + 
-  coord_polar("y", start=0) + 
-  geom_bar(width = 1, stat="identity") +
-  scale_fill_manual(values=c("#8B0000", "#ffd700", "#32cd32","#ff0000","#ff9900","#ffffff"),name="Farben")+
-  xlab("")+
-  ylab("")+
-  ggtitle("Durchschnittliche Verteilung von \nGummibärchenfarben in Tütchen")
-
-
+source("https://assets.datacamp.com/production/repositories/3196/datasets/801e4015d0381e190aaccd014017fb702389287b/gummibaeren_verteilung_kreis.R")
 ```
 
 
 `@sct`
 
 ```{r}
-test_mc(2,"Nein","Diese Art der Grafik ist ungünstig, weil wir sehr viele Kategorien haben, die 
-  alle ähnlich groß sind. Es ist mit dem Auge schwer zu sehen, ob nun die grünen oder die 
-  roten Gummibärchen im Mittel häufiger vorkommen.","Nein","Nein")
+
 ```
+
 
 
 
