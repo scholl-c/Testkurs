@@ -27,11 +27,6 @@ Suche in der Hilfe nach der Verwendung des Befehl ``hist()`` und wenn du Problem
 ```{r}
 Gummibaerchen <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
@@ -194,11 +189,6 @@ Lasse dir das Streudiagramm für die Variablen `Anzahl_Farben` und `Anzahl_Baere
 ```{r}
 Gummibaerchen <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
@@ -330,6 +320,59 @@ source("https://assets.datacamp.com/production/repositories/3196/datasets/801e40
 test_mc(2,"Nein","Diese Art der Grafik ist ungünstig, weil wir sehr viele Kategorien haben, die 
   alle ähnlich groß sind. Es ist mit dem Auge schwer zu sehen, ob nun die grünen oder die 
   roten Gummibärchen im Mittel häufiger vorkommen.","Nein","Nein")
+```
+
+
+
+
+
+
+---
+## Balkendiagramm
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: ab2a25beb7   
+```
+
+## Warum das Balkendiagramm vorziehen?
+Diese Art der Grafik ist ungünstig, weil wir sehr viele Kategorien haben, die alle ähnlich groß sind. Es ist mit dem Auge schwer zu sehen, ob nun die grünen oder die roten Gummibärchen im Mittel häufiger vorkommen. Kreisdiagramme sind nur in wenigen Fällen wirklich sinnvoll. Sie eignen sich bei wenigen Ausprägungen einer Variable wie z.B. bei Geschlecht. Wenn du ein einfaches Kreisdiagramm erstellen möchtest, schau dir die Funktion `pie()` an. Besser eignet sich hier ein Balkendiagramm. 
+
+`@instructions`
+Erstelle mit denselben Daten, die auch für das Kreisdiagramm verwendet wurden, ein Balkendiagramm. Die Daten sind in `Farben_Mean`gespeichert. Benutze `barplot()`. Gib `Farben_Mean$value` als erstes Argument an.
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+Gummibaerchen <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
+library(ggplot2)
+library(magrittr)
+Farben_Mean <- Gummibaerchen[,2:7] %>% colMeans()  %>% 
+  prop.table() %>% 
+  melt() %>% 
+  rownames_to_column()
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+barplot(Farben_Mean$value)
+```
+`@sct`
+
+```{r}
+test_error()
+test_function("barplot")
+success_msg("Toll gemacht!")
 ```
 
 
