@@ -30,6 +30,7 @@ xp: 100
 ```yaml
 type: NormalExercise
 xp: 100
+key: dd9a55e54f
 ```
 
 `@instructions`
@@ -53,6 +54,7 @@ xp: 100
 ```yaml
 type: NormalExercise
 xp: 100
+key: 7cbf355413
 ```
 
 `@instructions`
