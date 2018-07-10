@@ -312,6 +312,14 @@ Es gibt einen Punkt, den man aufgrund der Daten nicht verändern kann, weil der 
 
 ```{r}
 Gummibaerchen <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
+library(ggplot2)
+library(magrittr)
+Farben_Mean <- Gummibaerchen[,2:7] %>% colMeans()  %>% 
+  prop.table() %>% 
+  melt() %>% 
+  rownames_to_column()
+
+baeren_colors <- c("#8B0000", "#ff0000", "#ff9900","#ffd700","#32cd32","#ffffff")
 source("https://assets.datacamp.com/production/repositories/3196/datasets/801e4015d0381e190aaccd014017fb702389287b/gummibaeren_verteilung_kreis.R")
 ```
 
