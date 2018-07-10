@@ -155,18 +155,18 @@ hist(Gummibaerchen$Anzahl_Farben)
 
 ```{r}
 hist(Gummibaerchen$Anzahl_Farben,
-       main="Histogramm Anzahl Gummibärchen",
+       main="Histogramm Anzahl Gummibaerchen",
        xlab="Anzahl",
-       ylab="Häufigkeit")
+       ylab="Haeufigkeit")
 ```
 `@sct`
 
 ```{r}
 test_error()
 test_output_contains("hist(Gummibaerchen$Anzahl_Farben,
-       main='Histogramm Anzahl Gummibärchen',
+       main='Histogramm Anzahl Gummibaerchen',
        xlab='Anzahl',
-       ylab='Häufigkeit')",incorrect_msg="nö")
+       ylab='Haeufigkeit')",incorrect_msg="nö")
 success_msg("Geschafft!")
 ```
 
