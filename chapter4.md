@@ -255,3 +255,34 @@ test_mc(3,"Nein, alles korrekt.","Doch, das hat geklappt","Das ist der Grund!","
 
 
 
+
+
+---
+## Streudiagramm Interpretation
+
+```yaml
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: c22157ee7b   
+```
+
+Bei diesen wenigen Datenpunkten braucht man eine größere Stichprobe, um einen Zusammenhang zu bestätigen oder zu widerlegen. Wir werden später auf Zusammenhänge d.h. Korrelationen zurückkommen. Einfache positive oder negative Zusammenhänge könnte man mit 'Je mehr, desto mehr' oder 'Je mehr, desto weniger' beschreiben. Wenn ein Zusammenhang in Frage käme, dann wäre das welcher?
+
+
+`@hint`
+Stelle dir eine angenäherte Gerade durch die Mitte der Punkte vor. In welche Richtung zeigt sie? Eher nach oben, in die positive Richtung, oder eher nach unten, in die negative Richtung?
+
+
+
+
+
+`@possible_answers`
+- [Je mehr, desto mehr]
+- Je mehr, desto weniger
+
+`@feedbacks`
+- Ja, richtig, die Vermutung liegt nahe, dass wir bei mehr Bären in der Packung auch eine größere Vielfalt an Farben vorfinden.
+- Nein, genau anders herum.
+
+
+
