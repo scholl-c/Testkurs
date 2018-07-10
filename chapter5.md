@@ -148,9 +148,8 @@ shapiro.test(nv)
 `@sct`
 
 ```{r}
-
+success_msg("Es handelt sich, wie vermutet, um eine Normalverteilung.")
 ```
-
 
 
 
