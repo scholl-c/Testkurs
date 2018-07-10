@@ -331,18 +331,14 @@ test_mc(2,"Nein","Diese Art der Grafik ist ungünstig, weil wir sehr viele Kateg
 ## Balkendiagramm
 
 ```yaml
-type: NormalExercise 
+type: TabExercise 
 xp: 100 
-key: ab2a25beb7   
+key: c2727a0fc7   
 ```
 
 ## Warum das Balkendiagramm vorziehen?
 Diese Art der Grafik ist ungünstig, weil wir sehr viele Kategorien haben, die alle ähnlich groß sind. Es ist mit dem Auge schwer zu sehen, ob nun die grünen oder die roten Gummibärchen im Mittel häufiger vorkommen. Kreisdiagramme sind nur in wenigen Fällen wirklich sinnvoll. Sie eignen sich bei wenigen Ausprägungen einer Variable wie z.B. bei Geschlecht. Wenn du ein einfaches Kreisdiagramm erstellen möchtest, schau dir die Funktion `pie()` an. Besser eignet sich hier ein Balkendiagramm. 
 
-`@instructions`
-Erstelle mit denselben Daten, die auch für das Kreisdiagramm verwendet wurden, ein Balkendiagramm. Die Daten sind in `Farben_Mean`gespeichert. Benutze `barplot()`. Gib `Farben_Mean$value` als erstes Argument an.
-
-`@hint`
 
 
 `@pre_exercise_code`
@@ -362,6 +358,38 @@ Farben_Mean <- Gummibaerchen[,2:7] %>% colMeans()  %>%
 
 ```
 
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 25 
+key: 855960165b   
+```
+
+
+
+`@instructions`
+Erstelle mit denselben Daten, die auch für das Kreisdiagramm verwendet wurden, ein Balkendiagramm. Die Daten sind in `Farben_Mean`gespeichert. Benutze `barplot()`. Gib `Farben_Mean$value` als erstes Argument an.
+
+`@hint`
+
+
+
+`@sample_code`
+
+```{r}
+
+```
+
 `@solution`
 
 ```{r}
@@ -373,6 +401,188 @@ barplot(Farben_Mean$value)
 test_error()
 test_function("barplot")
 success_msg("Toll gemacht!")
+```
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 25 
+key: a53109b722   
+```
+
+
+
+`@instructions`
+Die einzelnen Balken zeigen nun die Höhe der einzelnen Mittelwerte der 
+  verschiedenen Farben. Um die Balken den Farben zuzuordnen, müssen wir einen weiteren 
+  Parameter angeben und zwar names.arg mit Farben_Mean$rowname. Mach das mal.
+
+`@hint`
+
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+barplot(Farben_Mean$value, names.arg=Farben_Mean$rowname)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: MultipleChoiceExercise 
+xp: 25 
+key: f464bb627c   
+```
+
+
+
+`@instructions`
+- [Gelb]
+- Grün
+- Rot
+- Orange
+
+`@hint`
+Mit diesem Balkendiagramm kannst du nun schön vergleichen, welche Farbe im Mittel 
+  am häufigsten in den Tütchen vorhanden war. Welche Farbe ist das?
+
+In welcher Maßeinheit ist die y-Achse?
+
+
+
+
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 25 
+key: fb552b8c00   
+```
+
+
+
+`@instructions`
+Ein wenig Farbe wäre sinnvoll, um den Inhalt des Balkendiagramms schneller 
+  erfassen zu können. Gib zusätzlich noch col=baeren_colors als Argument ein.
+
+`@hint`
+Einmal Pfeiltaste nach oben und du erhältst das zuvor eingegebenen Kommando. 
+  Nun füge das Attribut, wie in der Frage beschrieben ans Ende dazu.
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+barplot(Farben_Mean$value, names.arg=Farben_Mean$rowname, col=baeren_colors)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+---
+## Boxplot
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: a2b485ad08   
+```
+
+Wir haben nun gesehen, wie wir die Verteilung einer Variable plotten können, wie wir die Verteilung zweier Variablen in Beziehung setzen und entsprechend plotten können. Einfache Kreisdiagramme eignen sich bei wenigen Ausprägungen um die Zusammensetzung einer Variable zu zeigen. Balkendiagramme dagegen eignen sich für den Vergleich von Häufigkeiten einer nominalskalierten Variable oder auch den Vergleich von Mittelwerten.
+
+> Einen wichtigen Plot solltet ihr noch kennen... 
+
+den Boxplot. Er gibt ebenso Auskunft über die Verteilung und Lage von Variablen. Er zeigt den Median, das untere und obere Quantil (25 und 75 Prozent) und die Ausreißer.
+
+`@instructions`
+Teste den Befehl `boxplot` mit einer Variablen aus dem Datenset `Gummibaerchen`.
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+Gummibaerchen <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+boxplot(Gummibaerchen$Anzahl_Baeren)
+```
+`@sct`
+
+```{r}
+test_error()
+test_function("boxplot")
+success_msg("Mit einer Variablen nutzen wir noch nicht die ganze Funktion von boxplot. 
+  Wir werden später nochmal auf den Boxplot zurückkommen. Teste gerne die gezeigten Funktionen nochmal selbst!")
 ```
 
 
