@@ -43,7 +43,7 @@ Eine sehr wichtige Voraussetzung ist oft die Normalverteilung. Dies kann man mit
 
 ```yaml
 type: NormalExercise 
-xp: 50 
+xp: 35 
 key: 4cf70b1d63   
 ```
 
@@ -82,7 +82,7 @@ success_msg("Guter Anfang!")
 
 ```yaml
 type: NormalExercise 
-xp: 50 
+xp: 35 
 key: 6c987915ec   
 ```
 
@@ -108,6 +108,49 @@ test_error()
 test_student_typed("hist(nv"),not_typed_msg="Nicht ganz.")
 success_msg("Genau so sieht das Histogramm aus!")
 ```
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 30 
+key: 09f55661b5   
+```
+
+
+
+`@instructions`
+Du siehst, dass das Histogramm symmetrisch ausschaut. Das Histogramm kann allerdings nur ein Indiz sein. Mit shapiro.test() kannst du überprüfen, ob es sich tatsächlich um eine Normalverteilung handelt. Der p-Wert sollte größer als 0.05 sein. Prüfe auf Normalverteilung.
+
+`@hint`
+Benutze `shapiro.test()` und übergib der Funktion unsere Normalverteilung `nv`
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+shapiro.test(nv)
+```
+`@sct`
+
+```{r}
+
+```
+
 
 
 
