@@ -14,10 +14,10 @@ key: 2867b34f3e
 
 Grafiken können helfen, die Verteilung und die Zusammensetzung der Daten zu untersuchen. Ebenso kann man Beziehungen und den Vergleich zwischen Variablen (in unserem Fall die Spalten) herausfinden. 
 
-Eine Gruppe Studenten hat Gummibärchenpackungen untersucht und festgehalten, wie viele Bärchen und Farben sich jeweils in einer Packung befinden. Die Daten sind bereits in der Arbeitsumgebung geladen. Das Histogramm, Streudiagramm und der Boxplot können dir ähnliche Auskünfte über Verteilung von einer oder zwei Variablen geben wie der Befehl ``summary()``.
+Eine Gruppe Studenten hat Gummibärchenpackungen untersucht und festgehalten, wie viele Bärchen und Farben sich jeweils in einer Packung befinden. Die Daten sind als Datensatz ``Gummibaerchen`` bereits in der Arbeitsumgebung geladen. Das Histogramm, Streudiagramm und der Boxplot können dir ähnliche Auskünfte über Verteilung von einer oder zwei Variablen geben wie der Befehl ``summary()``.
 
 `@instructions`
-Lasse dir das Histogramm der Variable ``Anzahl_Farben`` ausgeben. Dazu übergibst du die Variable dem Befehl ``hist()``, wie z.B. ``hist(Gummibaerchen$Anzahl_Farben)``. Mach das mal.
+Lasse dir das Histogramm der Variable ``Anzahl_Farben`` ausgeben. Dazu übergibst du die Variable dem Befehl ``hist()``, wie z.B. ``hist(Gummibaerchen$Anzahl_Baeren)``. Mach das mal.
 
 `@hint`
 Suche in der Hilfe nach der Verwendung des Befehl ``hist()`` und wenn du Probleme hast bei dem zusammengesetzten Variablen, benutze die Notation in eckigen Klammern statt der Dollar-Notation.
@@ -60,7 +60,7 @@ xp: 50
 key: c116410a3e   
 ```
 
-Sieh dir das Histogramm an! Du siehst die Häufigkeiten der Anzahl der Farben. Auf der x-Achse erkennst du dass es minimum 4 und maximal 6 verschiedene Farben pro Beutel gibt. Was ist die häufigste Anzahl Farben in den untersuchten Beuteln?
+Sieh dir nochmal das eben erzeugte Histogramm an! Du siehst die Häufigkeiten der Anzahl der Farben. Auf der x-Achse erkennst du dass es minimal 4 und maximal 6 verschiedene Farben pro Beutel gibt. Was ist die häufigste Anzahl Farben in den untersuchten Beuteln?
 
 `@instructions`
 - 4
@@ -73,6 +73,7 @@ Etwas ungeschickt ist hier die Aufteilung der x-Achse in Dezimalwerte. Es gibt j
 `@pre_exercise_code`
 
 ```{r}
+Gummibaerchen <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 hist(Gummibaerchen$Anzahl_Farben)
 ```
 
@@ -80,9 +81,8 @@ hist(Gummibaerchen$Anzahl_Farben)
 `@sct`
 
 ```{r}
-
+test_mc(2,"Nein","Ja","Nein")
 ```
-
 
 
 
