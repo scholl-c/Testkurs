@@ -327,9 +327,10 @@ source("https://assets.datacamp.com/production/repositories/3196/datasets/801e40
 `@sct`
 
 ```{r}
-
+test_mc(2,"Nein","Diese Art der Grafik ist ungünstig, weil wir sehr viele Kategorien haben, die 
+  alle ähnlich groß sind. Es ist mit dem Auge schwer zu sehen, ob nun die grünen oder die 
+  roten Gummibärchen im Mittel häufiger vorkommen.","Nein","Nein")
 ```
-
 
 
 
