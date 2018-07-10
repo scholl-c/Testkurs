@@ -173,7 +173,7 @@ success_msg("Geschafft!")
 
 
 ---
-## Insert exercise title here
+## Streudiagramm
 
 ```yaml
 type: NormalExercise 
@@ -211,6 +211,45 @@ plot(Gummibaerchen$Anzahl_Baeren,Gummibaerchen$Anzahl_Farben)
 test_error()
 test_function("plot",incorrect_msg="Dieser Weg ist falsch.")
 success_msg("Sehr gut!")
+```
+
+
+
+
+
+
+---
+## Insert exercise title here
+
+```yaml
+type: MultipleChoiceExercise 
+xp: 50 
+key: 2683758429   
+```
+
+Auch hier kannst du mit `xlab` und `ylab` die Achsen ordentlich beschriften und mit `main` der Grafik einen Titel geben. Warum siehst du hier nur fünf Datenpunkte, obwohl `Gummibaerchen` eigentlich zwanzig Zeilen umfasst?
+
+`@instructions`
+- Das muss ein Fehler sein
+- Die Datei wurde nicht korrekt eingelesen
+- Die Punkte liegen übereinander und erscheinen deswegen als eins
+- Die Achsen sind nicht lang genug sodass man alle Punkte erkennen kann
+
+`@hint`
+Du kannst die Grafik mit dem Button 'Zoom' vergrößern.
+
+`@pre_exercise_code`
+
+```{r}
+Gummibaerchen <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
+plot(Gummibaerchen$Anzahl_Baeren,Gummibaerchen$Anzahl_Farben)
+```
+
+
+`@sct`
+
+```{r}
+test_mc(3,"Nein, alles korrekt.","Doch, das hat geklappt","Das ist der Grund!","R passt die Skalierung in der Regel automatisch an.")
 ```
 
 
