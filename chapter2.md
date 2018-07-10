@@ -37,7 +37,7 @@ Bob sieht in jedem Raum nach und zählt die Studierenden. Ein Experiment findet 
 
 
 ---
-## Minimum und Maximum
+## Minimum und Maximum (1)
 
 ```yaml
 type: MultipleChoiceExercise 
@@ -82,7 +82,7 @@ test_mc(3, feedback_msgs = c("Falsch, achte auf die Fragestellung", "Falsch, ach
 
 
 ---
-## Minimum und Maximum
+## Minimum und Maximum (2)
 
 ```yaml
 type: PureMultipleChoiceExercise 
