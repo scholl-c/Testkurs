@@ -155,3 +155,80 @@ success_msg("Es handelt sich, wie vermutet, um eine Normalverteilung.")
 
 
 
+
+
+---
+## Shapiro-Wilk-Test
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 056b27e418   
+```
+
+Wir haben nun Daten mit der durchschnittlichen Anzahl der Sonnenflecken zwischen 1749 und 1983 pro Monat. Der Datensatz ist aus dem Paket `datasets`, das normalerweise mit R installiert wird. Du kannst also einfach mit `sunspots` auf den Datensatz zugreifen, auch wenn du ihn in deiner Arbeitsumgebung (Fenster oben rechts mit den Variablen) nicht sehen kannst.
+
+`@instructions`
+Prüfe diese Daten auf Normalverteilung.
+
+`@hint`
+Benutze `shapiro.test()` wie zuvor auch
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+shapiro.test(sunspots)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+---
+## Normalverteilt oder nicht?
+
+```yaml
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: 044d736c05   
+```
+
+Der p-Wert liegt bei 2.2*10^-16 und das bedeutet ...
+
+
+`@hint`
+*10^-16 bedeutet, dass das Komma um 16 Stellen nach links verschoben wird. Wir erhalten eine seeehr kleine Zahl.
+
+
+
+
+
+`@possible_answers`
+- ...es liegt eine Normalverteilung vor
+- [...es liegt keine Normalverteilung vor]
+
+`@feedbacks`
+- Nein
+- Richtig, wir haben keine Normalverteilung vorliegen
+
+
+
