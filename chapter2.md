@@ -163,7 +163,7 @@ success_msg("Toll gemacht!")
 
 
 ---
-## Skalenniveau
+## Skalenniveau (1)
 
 ```yaml
 type: PureMultipleChoiceExercise 
@@ -246,7 +246,7 @@ success_msg("Jaa! Volltreffer!")
 
 
 ---
-## Datensätze zusammenführen
+## Datensätze zusammenführen (1)
 
 ```yaml
 type: PureMultipleChoiceExercise 
@@ -281,7 +281,7 @@ Prof. Ratistikus hat für ihn noch mehr Informationen bereitgestellt. Er hat fü
 
 
 ---
-## Datensätze zusammenführen
+## Datensätze zusammenführen (2)
 
 ```yaml
 type: PureMultipleChoiceExercise 
@@ -314,7 +314,7 @@ Muss Bob vor dem Zusammenführen der Datensätze mit ``merge()`` seine Daten ebe
 
 
 ---
-## Datensätze zusammenführen
+## Datensätze zusammenführen (3)
 
 ```yaml
 type: NormalExercise 
@@ -399,7 +399,7 @@ test_mc(3, feedback_msgs = c("Falsch, achte auf die Fragestellung", "Falsch, ach
 
 
 ---
-## Skalenniveau
+## Skalenniveau (2)
 
 ```yaml
 type: PureMultipleChoiceExercise 
