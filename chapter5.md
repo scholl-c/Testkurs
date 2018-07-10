@@ -232,3 +232,205 @@ Der p-Wert liegt bei 2.2*10^-16 und das bedeutet ...
 
 
 
+
+
+---
+## Schiefe
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: c7922eadc3   
+```
+
+Wenn wir keine Normalverteilung vorliegen haben, dürfen wir daher einige parametrische Tests nicht rechnen. Wenn die Verteilung nicht normalverteilt ist, gibt es Eigenschaften, die diese Verteilung beschreiben können. Dazu gehört die Schiefe (engl. skewness) der Verteilung, sowie die Wölbung (engl. kurtosis) der Verteilung. In dem Paket `moments` gibt es zwei entsprechende Funktionen dafür. Bei einer Normalverteilung liegen beide Werte bei 0. 
+
+Normalverteilte Daten bzw. symmetrische Verteilungen haben eine Schiefe um die 0. Linksschiefe Verteilungen haben eine Schiefe von kleiner 0 und rechtsschiefe Verteilungen entsprechend eine Schiefe größer 0.
+
+`@instructions`
+Berechne beispielhaft die Schiefe von `sunspots` mit `skewness()`.
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+library(moments)
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+skewness(sunspots)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+---
+## Schiefe von sunspots
+
+```yaml
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: b55032df18   
+```
+
+Die Verteilung von `sunspots` ist ...
+
+
+`@hint`
+Für linksschiefe Verteilungen liefert `skewness` einen Wert kleiner Null, für rechtsschiefe Verteilungen einen Wert größer Null. Der Wert von `skewness(sunspots)` ist 1.1003
+
+
+
+
+
+`@possible_answers`
+- linksschief
+- normalverteilt
+- [rechtsschief]
+
+`@feedbacks`
+- Nein
+- Nein
+- Wenn wir keine Normalverteilung vorliegen haben, können wir verteilungsfreie bzw. non-parametrische Tests nutzen. Alternativ kann man versuchen, die Daten in eine annähernde Normalverteilung zu transformieren. Man kann das z.B. mit dem Logarithmus (log) oder der Wurzel (sqrt) versuchen. Erreicht man eine Normalverteilung (mit Test überprüfen!) darf man mit diesen transformierten Daten parametrische Tests rechnen.
+
+
+
+
+
+---
+## Insert exercise title here
+
+```yaml
+type: TabExercise 
+xp: 100 
+key: 725a51bcb9   
+```
+
+Die Varianzhomogenität ist ebenfalls eine wichtige Voraussetzung, ohne diese 
+  man einige der Tests nicht rechnen sollte. Es wird geprüft, ob die Varianzen der Populationen 
+  aus denen wir Stichproben vorliegen haben, homogen sind, d.h. etwa gleich sind. Wir können 
+  das mit dem Levene-Test prüfen. Die Funktion leveneTest() in dem Paket 'car' gibt und dazu den 
+  p-Wert aus. Ist der p-Wert größer als 0.05 können wir Varianzhomogenität annehmen.
+
+Da die Varianzhomogenität jetzt Varianzen aus verschiedenen Gruppen vergleicht und wir 
+  keine Eigenschaften einer Verteilung untersuchen, kann man den Levene-Test nicht auf der 
+  Messreihe der sunspots anwenden! Wir benutzen nun den Datensatz 'InsectSprays'. Es wurde die 
+  Anzahl von Insekten auf Versuchsfeldern gemessen, die jeweils mit verschiedenen Insektiziden 
+  behandelt wurden. Die Spalte 'spray' indiziert, welches Spray (A-F) genutzt wurde und die 
+  Spalte 'count' enthält die Anzahl der Insekten.
+
+
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 50 
+key: 53f04ed4ac   
+```
+
+
+
+`@instructions`
+Berechne die Homogenität der Varianzen der verschiedenen Spray-Gruppen. 
+  Benutze dazu leveneTest() und übergib als erstes Argument die Spalte 'count' und als zweites 
+  Argument die Spalte 'spray'.
+
+`@hint`
+
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+leveneTest(InsectSprays$count,InsectSprays$spray)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: MultipleChoiceExercise 
+xp: 50 
+key: faf6c8771b   
+```
+
+
+
+`@instructions`
+
+
+`@hint`
+
+
+
+
+
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
