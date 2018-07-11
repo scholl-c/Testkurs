@@ -96,3 +96,34 @@ kappa2(interrater[,c(4,5)],'equal')
 
 
 
+
+
+---
+## Interpretation Cohens Kappa
+
+```yaml
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: 2874b910e2   
+```
+
+Welche Gruppe hatte eine größere Übereinstimmung in der Bewertung nach Cohens Kappa?
+
+
+`@hint`
+Der Wert für Kappa misst in Prozent die Übereinstimmung der Ratings. Ab etwa 0.4 aufwärts ist der Wert befriedigend, ab 0.6 ist er gut.
+
+
+
+
+
+`@possible_answers`
+- Die beiden Studenten
+- [Die beiden Professoren]
+
+`@feedbacks`
+- Nein, die waren sich nicht so einig.
+- Ja!
+
+
+
