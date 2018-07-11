@@ -450,3 +450,34 @@ t.test(extra~group,sleep,paired=TRUE)
 
 
 
+
+
+---
+## Insert exercise title here
+
+```yaml
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: f1c2521138   
+```
+
+Können wir nun einen Unterschied in der Wirkung der beiden Schlafmittel auf die Anzahl der Schlafstunden finden?
+
+
+`@hint`
+Ist der p-Wert kleiner als 0.05, so haben wir einen signifikanten Unterschied gefunden.
+
+
+
+
+
+`@possible_answers`
+- [Ja]
+- Nein
+
+`@feedbacks`
+- Richtig
+- Falsch
+
+
+
