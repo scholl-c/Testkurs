@@ -327,3 +327,49 @@ Die Nullhypothese nimmt an, dass eine Normalverteilung vorliegt. Sie wird nur ab
 
 
 
+
+
+---
+## Insert exercise title here
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: d3b2073af6   
+```
+
+Die Stichproben sind normalverteilt, wir dürfen also `t.test()` verwenden. Um den t-Test zu rechnen, müssen wir noch prüfen, ob Varianzhomogenität vorliegt. Liegt diese nicht vor, rechnet `t.test()` automatisch den Welch-Test, der diese Voraussetzung nicht benötigt. Bei gepaarten t-Tests ist dies eigentlich nicht nötig, da die Varianzhomogenität keine Rolle spielt, jedoch prüfen wir hier beispielhaft trotzdem auf Varianzhomogenität.
+Auf den Hilfeseiten hast du vielleicht schon mal gelesen, dass man eine '**formula**' angeben kann. Eine einfache 'formula' bzw. Formel besteht aus der Angabe von zwei Variablen und einer Tilde (~). In vielen Fällen ist das die `abhängige Variable ~ unabhängige Variable` (oder auch Gruppierungsvariable). Dabei ist die Reihenfolge wichtig! Du erhältst andere (oder gar keine) Ergebnisse, wenn du die beiden Variablen vertauschst.
+
+`@instructions`
+Überprüfe die beiden Gruppen auf Varianzhomogenität. Du kannst das mit der Funktion `leveneTest()` aus dem Paket `car` machen. Gib als ersten Parameter die `formula` an und als zweiten Parameter den Datensatz `sleep`.
+
+`@hint`
+Kleiner Tipp: die Formel ist `extra~group`
+
+`@pre_exercise_code`
+
+```{r}
+library(car)
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+leveneTest(extra~group,sleep)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
