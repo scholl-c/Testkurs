@@ -315,9 +315,10 @@ normalverteilt <- function(x) {
 `@sct`
 
 ```{r}
-
+test_error()
+check_function("normalverteilt",incorrect_msg="Nicht ganz")
+success_msg("Super gemacht!")
 ```
-
 
 
 
