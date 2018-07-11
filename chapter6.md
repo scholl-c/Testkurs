@@ -992,7 +992,7 @@ ds_bereinigt <- subset(ds,Alter>68)
 
 
 ---
-## Insert exercise title here
+## Spaltenwerte umbennen
 
 ```yaml
 type: NormalExercise 
@@ -1036,6 +1036,57 @@ ds$Sprachauswahl <- recode_factor(ds$Sprachauswahl,"eng"=1,"ger"=0)
 success_msg("Wie immer, wenn du die Original-Werte nicht verlieren möchtest, kannst du eine neue 
   Spalte erstellen. Im Folgenden werden wir eine neue Spalte erstellen. Außerdem gibt es ähnliche Funktionen wie revalue oder mapvalues.")
 ```
+
+
+
+
+
+
+---
+## Rekodieren
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 1c130ba1e8   
+```
+
+Du kannst eine kontinulierliche Variable (wie das Alter) in eine kategoriale Variable (wie Altersgruppen) umwandeln nach folgendem Schema `datensatz$kategoriale_var[datensatz$kontinuierliche_var bedingung] <- 'kategorie_name' ` und statt der Bedingung kann dann z.B. >18 stehen oder auch eine verknüpfte Bedingung. Zum Beispiel könnte eine Altersgruppe so festgelegt werden: `ds$Alter_neu[ds$Alter>18 & ds$Alter<30] <- 'junge Erwachsene'`
+Wenn zum Schluss jedes Alter auch einer Kategorie zugeordnet sein soll, brauchst du Bedingungen, die die ganze Bandbreite der Altersverteilung abdecken.
+
+`@instructions`
+- Erstelle eine neue Variable namens 'Altersgruppe', in der 'Teenager' für alle 12-bis-18-Jährigen eingetragen 
+  sein soll. Benutze für die Bedingungen ausschließlich das > oder < Zeichen.
+- Erstelle eine neue Kategorie namens 'Senioren' für alle, die älter als 55 Jahre sind.
+
+`@hint`
+Halte dich an die Vorlage. Bedenke, dass das Alter von 18 (und 12) in der Altersgruppe eingeschlossen sein sollen.
+Bei den Senioren brauchst du nur eine Bedingung d.h. keine verknüpfte Bedingung.
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+ds$Altersgruppe[ds$Alter>11 & ds$Alter<19] <- "Teenager"
+ds$Altersgruppe[ds$Alter>55] <- "Senioren"
+```
+`@sct`
+
+```{r}
+
+```
+
 
 
 
