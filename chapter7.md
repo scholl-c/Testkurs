@@ -330,7 +330,7 @@ Die Nullhypothese nimmt an, dass eine Normalverteilung vorliegt. Sie wird nur ab
 
 
 ---
-## Insert exercise title here
+## Varianzhomogenität
 
 ```yaml
 type: NormalExercise 
@@ -370,6 +370,37 @@ leveneTest(extra~group,sleep)
 ```
 
 
+
+
+
+
+
+---
+## Insert exercise title here
+
+```yaml
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: 7921f81915   
+```
+
+Wir haben einen p-Wert größer als 0.05. Dürfen wir var.equal=TRUE setzen?
+
+
+`@hint`
+
+
+
+
+
+
+`@possible_answers`
+- [Ja]
+- Nein
+
+`@feedbacks`
+- Genau!
+- Falsch
 
 
 
