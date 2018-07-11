@@ -200,3 +200,48 @@ table(Umfragedaten$BERUFSTAETIG,Umfragedaten$GESCHL)
 
 
 
+
+
+---
+## Nominalskalierte Daten plotten
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 4387d18d9b   
+```
+
+Wenn wir diese Häufigkeiten, d.h. Häufigkeiten nominalskalierte Daten veranschaulichen möchten, so können wir die `table()`-Funktion auf eine nominalskalierte Variable anwenden und das Ergebnis mit barplot() plotten lassen. 
+
+`@instructions`
+Probiere das für die Variable Geschlecht nun aus.
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+Umfragedaten <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+barplot(table(Umfragedaten$GESCHL))
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
