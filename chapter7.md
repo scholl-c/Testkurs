@@ -404,3 +404,49 @@ Wir haben einen p-Wert größer als 0.05. Dürfen wir `var.equal=TRUE` setzen?
 
 
 
+
+
+---
+## Gepaarter t-Test
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: d46cdfee95   
+```
+
+Nun kannst du den t-Test rechnen. Die Vorlage dafür ist `t.test(formel,datensatz,optionale parameter) `
+Denke auch daran, unsere optionalen Parameter `paired=TRUE` einzubauen. `var.equal=TRUE` ist hier nicht nötig, da es sich um einen gepaarten t-Test, d.h. wir haben verbundene Stichproben, handelt.
+
+`@instructions`
+Rechne den Test.
+
+`@hint`
+Die formula entspricht der formula aus dem Levene-Test.
+
+`@pre_exercise_code`
+
+```{r}
+library(car)
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+t.test(extra~group,sleep,paired=TRUE)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
