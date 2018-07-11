@@ -185,3 +185,34 @@ test_mc(3,"Nein","Nein","Ja")
 
 
 
+
+
+---
+## Testvoraussetzung
+
+```yaml
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: 49a83afe17   
+```
+
+Ist die abhängige Variable auf Intervall- oder Verhältnisskalenniveau?
+
+
+`@hint`
+Welche Rechenoperationen kann man mit Angaben in 'Stunden' durchführen?
+
+
+
+
+
+`@possible_answers`
+- [Ja]
+- Nein
+
+`@feedbacks`
+- Richtig
+- Falsch
+
+
+
