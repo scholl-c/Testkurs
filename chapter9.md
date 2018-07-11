@@ -2,7 +2,7 @@
   title: "Funktionen und Schleifen"
 
 ---
-## Alle Spalten mit colMeans
+## Durchschnitt aller Spalten
 
 ```yaml
 type: NormalExercise 
@@ -47,7 +47,7 @@ colMeans(cars)
 
 
 ---
-## Insert exercise title here
+## Summe aller Spalten
 
 ```yaml
 type: NormalExercise 
@@ -82,9 +82,8 @@ colSums(cars)
 `@sct`
 
 ```{r}
-
+success_msg("Damit hast du jetzt zwei sehr einfache Funktionen kennengelernt, die dir sehr viel Arbeit ersparen können. Es gibt auch die Möglichkeit, das auf Zeilen auszuführen, siehe dazu rowMeans() und rowSums().")
 ```
-
 
 
 
