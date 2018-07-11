@@ -465,3 +465,169 @@ unique(ds$Sprachauswahl)
 
 
 
+
+
+---
+## Leere Angaben
+
+```yaml
+type: TabExercise 
+xp: 100 
+key: 1b327584fb   
+```
+
+Puh! Soweit scheint alles gut zu sein! 
+
+
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 35 
+key: 00ac756676   
+```
+
+
+
+`@instructions`
+Überprüfe nun analog zur vorherigen Aufgabe das Alter auf unerwartete Werte.
+
+`@hint`
+Innerhalb von `unique()` muss die Spalte `Alter` ausgewählt werden.
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+unique(ds$Alter)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 35 
+key: f58874e737   
+```
+
+
+
+`@instructions`
+Vielleicht fällt dir nun die leere Angabe auf. Löschen kannst du die leeren Angaben, wenn du alle Felder auswählst, die keine leere Angabe enthalten und den Datensatz überschreibst. Wir haben noch nicht gelernt, wie **Zeilen nach einer Bedingung ausgewählt** werden können. Es gibt dazu zwei Möglichkeiten. Die eine Möglichkeit ist mit der Funktion `subset()` und die andere ist sehr ähnlich zu der Auswahl von Zeilen, nur dass man da eine Bedingung angeben kann.
+
+Du möchtest die Zeilen auswählen, die keine leere Angabe enthalten. Benutze dazu `subset()`. Du kannst dies nach folgendem Schema benutzen `subset(datensatz,bedingung)`. In der Formulierung der Bedingung kannst du Spaltennamen (ohne Anführungszeichen), logische Operatoren und Vergleichszeichen wie == oder != nutzen.
+
+`@hint`
+Benutze `Alter!=""` als Bedingung
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+subset(ds,Alter!="")
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 30 
+key: 68f0c28842   
+```
+
+
+
+`@instructions`
+Wenn du alternativ na.omit() nutzen möchtest, wandle die leeren Angaben in NA's um. 
+  Das geht mit der Funtion na_if(), die als erstes Argument die Spalte bzw. einen Vektor nimmt 
+  und als zweites Argument die leere Angabe, also zwei Anführungszeichen.
+
+`@hint`
+Benutze als erstes Argument ds$Alter, als zweites Argument '' und trenne die Argumente 
+  mit Komma.
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+na_if(ds$Alter,"")
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
