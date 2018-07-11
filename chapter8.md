@@ -584,13 +584,10 @@ key: 0dcb1617af
 
 
 `@instructions`
-Wir können mit lm() (lm steht für linear model) eine Gerade berechnen lassen und 
-  diese dann mit abline() auf unser Streudiagramm legen. Zeichne dazu zuerst nochmal das 
-  Streudiagramm, gib zuerst die Variable für die Schokotafeln an, danach die Variable für den IQ. 
-  Gib aber dieses Mal die beiden Variablen als formula (d.h. verbunden durch die Tilde ~) an.
+Wir können mit `lm()` (lm steht für _linear model_) eine Gerade berechnen lassen und diese dann mit `abline()` auf unser Streudiagramm legen. Zeichne dazu zuerst nochmal das Streudiagramm, gib zuerst die Variable für die Schokotafeln an, danach die Variable für den IQ. Gib aber dieses Mal die beiden Variablen als `formula` (d.h. verbunden durch die Tilde ~) an.
 
 `@hint`
-Benutze plot() für das Streudiagramm. Verwende die Dollar-Schreibweise.
+Benutze `plot()` für das Streudiagramm. Verwende die Dollar-Schreibweise.
 
 
 `@sample_code`
