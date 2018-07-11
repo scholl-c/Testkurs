@@ -378,7 +378,7 @@ xp: 100
 key: 2f2d3b4af1   
 ```
 
-Du siehst, dass wir uns hier die Konstruktion einer Schleife über alle Spalten gespart haben. Es kann jedoch Fälle geben, wo du selbst eine Schleife bauen musst. Du kannst dir dazu die Konstrukte mit den Schlüsselwörtern for, while oder repeat anschauen.
+Du siehst, dass wir uns hier die Konstruktion einer Schleife über alle Spalten gespart haben. Es kann jedoch Fälle geben, wo du selbst eine Schleife bauen musst. Du kannst dir dazu die Konstrukte mit den Schlüsselwörtern _for_, _while_ oder _repeat_ anschauen.
 
 Sowohl Wiederholungen zu vermeiden als auch deinen Code schneller machen, kann die Vektorisierung leisten. Lass uns nun mal ein einfaches Beispiel betrachten, um dir das zu verdeutlichen:
 
@@ -387,9 +387,9 @@ Sowohl Wiederholungen zu vermeiden als auch deinen Code schneller machen, kann d
 `@pre_exercise_code`
 
 ```{r}
-
+v1 <- c(51,402,537)
+v2 <- c(24,309,54)
 ```
-
 `@sample_code`
 
 ```{r}
