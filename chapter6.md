@@ -1008,21 +1008,16 @@ Nun hast du ein bereinigtes Datenset, in dem sowohl Ausreißer, Dubletten als au
 Möchten wir statt 'eng' und 'ger' vielleicht 0 und 1 kodieren, oder einfach nur zu 'Deutsch' und 'Englisch' umbenennen, müssen wir rekodieren. Das geht ganz einfach mit der Funktion `recode_factor` aus dem Paket `dplyr`.
 
 `@instructions`
-Rekodiere die Sprachauswahl neu, wobei 'ger' zu 0 und 'eng' zu 1 wird. Benutze dazu 
-  recode_factor(). Wir müssen hier die Spalte Sprachauswahl überschreiben(!) und ggf. danach 
-  von dem Datentyp Factor umwandeln zu Integer (sofern wir das brauchen sollten). recode_factor() 
-  nimmt als erstes Argument die Spalte, und alle weiteren Argumente sind von der Struktur, dass 
-  der Alter_Wert=Neuer_Wert und jeweils diese Zuweisungen mit Komma getrennt. Man kann so viele 
-  Zuweisungen machen, wie man möchte bzw. Werte zum rekodieren vorhanden sind.
+Rekodiere die Sprachauswahl neu, wobei 'ger' zu 0 und 'eng' zu 1 wird. Benutze dazu recode_factor(). Wir müssen hier die Spalte Sprachauswahl überschreiben(!) und ggf. danach von dem Datentyp Factor umwandeln zu Integer (sofern wir das brauchen sollten). recode_factor() nimmt als erstes Argument die Spalte, und alle weiteren Argumente sind von der Struktur, dass der Alter_Wert=Neuer_Wert und jeweils diese Zuweisungen mit Komma getrennt. Man kann so viele Zuweisungen machen, wie man möchte bzw. Werte zum rekodieren vorhanden sind.
 
 `@hint`
-Vergiss nicht, die Spalte zu überschreiben mit den neuen Werten.
+Vergiss nicht, die Spalte mit den neuen Werten zu überschreiben.
 
 `@pre_exercise_code`
 
 ```{r}
 library(dplyr)
-
+ds <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
 `@sample_code`
 
