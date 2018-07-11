@@ -380,7 +380,9 @@ key: 2f2d3b4af1
 
 Du siehst, dass wir uns hier die Konstruktion einer Schleife über alle Spalten gespart haben. Es kann jedoch Fälle geben, wo du selbst eine Schleife bauen musst. Du kannst dir dazu die Konstrukte mit den Schlüsselwörtern _for_, _while_ oder _repeat_ anschauen.
 
-Sowohl Wiederholungen zu vermeiden als auch deinen Code schneller machen, kann die Vektorisierung leisten. Lass uns nun mal ein einfaches Beispiel einer Vektorrechnung betrachten: 
+Sowohl Wiederholungen zu vermeiden als auch deinen Code schneller machen, kann die Vektorisierung leisten. 
+
+Lass uns nun mal ein einfaches Beispiel einer Vektorrechnung betrachten. Klar, könnte man in diesem Beispiel alle drei Rechnungen auch separat durchführen, aber es gibt sehr viele Beispiele, da lohnt es sich Vektorisierung einzubauen.
 
 
 
