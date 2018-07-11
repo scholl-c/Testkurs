@@ -464,21 +464,17 @@ grouped <- read.csv("https://assets.datacamp.com/production/repositories/3196/da
 
 ```yaml
 type: NormalExercise 
-xp: 100 
+xp: 35 
 key: 0f09db7e26   
 ```
 
 
 
 `@instructions`
-Konstruiere ein Balkendiagramm, das je Test die durchschnittlichen Ergebnisse 
-  der Teilnehmer vergleicht. Die Facetten sollen die verschiedenen Tests sein, die Balken stellen 
-  die Ergebnisse der Raucher/Nicht-Raucher und Langschläfer/Frühaufsteher dar. Je nach 
-  Frühaufsteher oder Langschläfer, Raucher oder Nicht-Raucher sollen sich die Balkenfarben unterscheiden 
-  (benutze dafür die Angabe fill).
+Konstruiere ein Balkendiagramm, das je Test die durchschnittlichen Ergebnisse der Teilnehmer vergleicht. Die Facetten sollen die verschiedenen Tests sein, die Balken stellen die Ergebnisse der Raucher/Nicht-Raucher und Langschläfer/Frühaufsteher dar. Je nach Frühaufsteher oder Langschläfer, Raucher oder Nicht-Raucher sollen sich die Balkenfarben unterscheiden (benutze dafür die Angabe fill).
 
 `@hint`
-Benutze das Datenset 'grouped'. Gib erst +geom_bar() an und dann +facet_wrap().
+Benutze das Datenset `grouped`. Gib erst `+geom_bar()` an und dann `+facet_wrap()`.
 
 
 `@sample_code`
@@ -492,6 +488,77 @@ Benutze das Datenset 'grouped'. Gib erst +geom_bar() an und dann +facet_wrap().
 ```{r}
 ggplot(grouped,aes(x=variable2,y=value,fill=value2))+geom_bar(stat="identity",position="dodge")+facet_wrap(~variable)
 ```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: MultipleChoiceExercise 
+xp: 35 
+key: bf57b500a7   
+```
+
+
+
+`@instructions`
+Wenn du davon ausgehst, dass Langschläfer weniger gut mit Tests zu früher Stunde 
+  umgehen können und daher schlechter abschneiden als die Frühaufsteher, was kannst du dann 
+  über den dritten Test im Vergleich zu dem ersten Test sagen? (rein spekulativ)
+
+`@hint`
+
+
+
+
+
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: MultipleChoiceExercise 
+xp: 30 
+key: 6d52f0e0dd   
+```
+
+
+
+`@instructions`
+Könnte dieser Unterschied zwischen Langschläfern und Frühaufstehern auch 
+  rein zufällig zustande gekommen sein?
+
+`@hint`
+
+
+
+
+
 `@sct`
 
 ```{r}
