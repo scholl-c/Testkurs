@@ -502,9 +502,8 @@ ggplot(Farben_Mean,aes(x=farben,y=value))+geom_col(fill=baeren_colors)
 `@sct`
 
 ```{r}
-
+success_msg("Du hast nun noch längst nicht alles gesehen. Auch einen Boxplot kannst du mit geom_boxplot() erstellen, oder Linienplot mit geom_line().")
 ```
-
 
 
 
