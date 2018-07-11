@@ -1066,9 +1066,8 @@ Bei den Senioren brauchst du nur eine Bedingung d.h. keine verknüpfte Bedingung
 `@pre_exercise_code`
 
 ```{r}
-
+ds <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
-
 `@sample_code`
 
 ```{r}
