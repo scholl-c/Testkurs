@@ -3,6 +3,7 @@ description: Herzlich Willkommen zum Kurs Statistik mit R!
 programming_language: r
 from: r-base-prod:v1.0.0
 datasets:
+  Umfragedaten.csv: Umfragedaten
   histogramm.R: Histogramm
   Raeume.csv: Raeume
   patienten.csv: Patienten
