@@ -39,3 +39,115 @@ test_mc(1,"Ja, richtig, sie sind sind intervallskaliert.","Nein")
 
 
 
+
+
+---
+## Insert exercise title here
+
+```yaml
+type: TabExercise 
+xp: 100 
+key: a0ecb44b50   
+```
+
+
+
+
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 50 
+key: 07a7ae480e   
+```
+
+
+
+`@instructions`
+Mit der Funktion plot() können wir uns ein Streudiagramm ausgeben lassen. Anhand des Streudiagramms kann man schon leicht erkennen, ob eine Korrelation vorliegen könnte bzw. ob es sich um eine positive oder negative Korrelation handelt.
+
+`@hint`
+Die beiden Variablen 'Tafeln' und 'IQ' müssen der Funktion plot() übergeben werden.
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+plot(choco$Tafeln,choco$IQ)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: MultipleChoiceExercise 
+xp: 50 
+key: a89391793a   
+```
+
+
+
+`@instructions`
+Handelt es sich vermutlich eher um eine positive oder negative Korrelation? Die 
+  positive Korrelation wäre 'Je höher der Schokoladentafelkonsum im Jahr, desto höher auch 
+  der IQ' und eine negative Korrelation 'Je höher der Schokoladentafelkonsum im Jahr, desto 
+  geringer der IQ'.
+
+`@hint`
+
+
+
+
+
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
