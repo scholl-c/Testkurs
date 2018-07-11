@@ -1,0 +1,52 @@
+---
+  title: "Besondere Tests"
+
+---
+## Interrater-Reliabilität
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 2a24acb3f2   
+```
+
+Es gibt zwei Tests, den du noch kennen solltest. Wir beginnen mit der **Interrater-Reliabilität**. Damit wird die Verlässlichkeit oder Übereinstimmung zwei oder mehrerer Coder/Rater angegeben. Coder meint Menschen, die kodieren, d.h. Schlagwörter vergeben, nach einem bestimmten Muster umkodieren. Rater meint Menschen, die etwas bewerten.
+
+Beispielsweise soll eine neue Professoren-Stelle besetzt werden. Dazu wurden mehrere Kandidaten vorgeladen und hielten Probevorträge, die von jeweils zwei Studenten und zwei Professoren bewertet wurden. Wie einig sind sich die Studenten bzw. Professoren?
+
+Bei einem Vergleich von zwei Codern/Ratern mit Kodierungen auf Nominalskalenniveau wird **Cohens Kappa** bestimmt, bei mehreren Codern/Ratern das **Fleiss Kappa**. Wir haben im Beispiel ordinalskalierte Bewertungen von 1 (schlecht) bis 7 (sehr gut). Bei Daten auf Ordinalskalenniveau empfiehlt es sich den gewichteten Kappa zu berechnen. Es besteht die Möglichkeit zwischen 'equal' oder 'squared' zu wählen. 
+_Hinweis: Bei Cohens Kappa auf Nominalskalenniveau schreiben wir 'unweighted'_
+
+`@instructions`
+Wie übereinstimmend haben die Studenten bewertet? Berechne den gewichteten Cohens Kappa  mit `kappa2(interrater[,c(2,3)],'equal')`. Für `kappa2` wurde das Paket `irr` geladen.
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+library(irr)
+interrater <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/32fe40c479aa377d8af347dd26bcd1d7ed5d636e/interrater.csv")
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+kappa2(interrater[,c(2,3)],'equal')
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
