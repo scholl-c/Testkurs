@@ -216,3 +216,36 @@ Welche Rechenoperationen kann man mit Angaben in 'Stunden' durchführen?
 
 
 
+
+
+---
+## Insert exercise title here
+
+```yaml
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: 08ff55df0f   
+```
+
+Dürfen wir nun prinzipiell die Funktion t.test() benutzen?
+
+
+`@hint`
+Wir haben bisher nur geprüft, ob das Skalenniveau ausreicht.
+
+
+
+
+
+`@possible_answers`
+- Ja
+- Nein
+- [Weiß nicht]
+
+`@feedbacks`
+- Falsch
+- Falsch
+- Richtig, das wissen wir noch nicht.
+
+
+
