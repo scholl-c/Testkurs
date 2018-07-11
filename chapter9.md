@@ -221,3 +221,97 @@ sapply(cars,Mode)
 
 
 
+
+
+---
+## Eigene Funktionen schreiben
+
+```yaml
+type: TabExercise 
+xp: 100 
+key: ca92ba91ee   
+```
+
+Manchmal ist das aber nicht ganz das, was du brauchst. Für Individualisten gibt es die Möglichkeit Funktionen und Schleifen selbst zu schreiben. R bietet dazu die gängigen Lösungen an, die du auch in anderen Programmiersprachen findest. Dazu zählen zum Beispiel _if-Konstrukte_, _for-Schleifen_ und das Schlüsselwort _function_.
+
+**Beachte** aber: Viele gängige Funktionen wurden bereits realisiert und in Paketen bereitgestellt und für viele Anwendungsfälle gibt es schon einfache Lösungen. Das sei gesagt, bevor du komplexe Schleifen und Abfragen baust.
+
+Wir stellen uns nun vor, wir haben ein größeres Datenset und möchten auf Normalverteilung prüfen. Wir möchten, dass wir ausgegeben bekommen 'normalverteilt', wenn die jeweilige Spalte normalverteilt ist und 'nicht normalverteilt' wenn sie es nicht ist. Wir schreiben dazu zuerst eine Funktion, die uns je nach Testergebnis von dem Shapiro-Wilk-Test ausgibt, ob es normalverteilt ist oder nicht und dann wenden wir diese Funktion mit `lapply` auf alle Spalten an.
+
+
+
+`@pre_exercise_code`
+
+```{r}
+library(datasets)
+```
+`@sample_code`
+
+```{r}
+# Ergänze diese Funktion, sodass...
+# aufgrund von dem Testergebnis (p-Wert) von dem Shapiro-Wilk-Test
+# ausgegeben wird, ob der eingegebene Vektor
+# normalverteilt ist oder nicht
+
+normalverteilt <- function(x) {
+  p <- shapiro.test(x)["p.value"]
+  # Ergänze in den Klammern die Bedingung
+  if () {
+    print("normalverteilt")
+  } else {
+    # Ergänze die Ausgabe
+  }
+}
+```
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: e742790a65   
+```
+
+
+
+`@instructions`
+Schreibe die Funktion, die entweder 'normalverteilt' oder 'nicht normalverteilt' ausgibt, 
+  je nachdem wie der Shapiro-Wilk-Test ausfällt. Ergänze, wie im Kommentar beschrieben, die beiden 
+  Zeilen. Der p-Wert ist bereits in einer Variablen gespeichert, sodass du ihn mit den 0.05 vergleichen 
+  kannst.
+
+`@hint`
+
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+
+```
+
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
