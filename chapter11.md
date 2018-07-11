@@ -37,9 +37,8 @@ mathetest <- read.csv("https://assets.datacamp.com/production/repositories/3196/
 `@sct`
 
 ```{r}
-
+test_mc(1,"Super erkannt!","Nein","Falsch","Falsch")
 ```
-
 
 
 
