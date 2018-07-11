@@ -546,3 +546,69 @@ Beim Diagramm muss man besonders auf ... achten.
 
 
 
+
+
+---
+## Daten umstrukturieren
+
+```yaml
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: db719f222c   
+```
+
+Für manche Grafiken oder Auswertungen musst du die Daten umstrukturieren. Welcher Befehl passt nicht zu diesem Arbeitsschritt?
+
+
+`@hint`
+
+
+
+
+
+
+`@possible_answers`
+- `melt()`
+- `aggregate()`
+- [`na.omit()`]
+
+`@feedbacks`
+- Falsch
+- Falsch
+- Richtig, der passt nicht!
+
+
+
+
+
+---
+## Statistische Kennwerte
+
+```yaml
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: 9628aa86be   
+```
+
+Nachdem wir aussagekräftige Grafiken und Testergebnisse vorliegen haben, werden die Ergebnisse zusammengefasst und berichtet. Welche Art der Darstellung der Ergebnisse eignet sich besonders bei vielen statistischen Kennwerten?
+
+
+`@hint`
+
+
+
+
+
+
+`@possible_answers`
+- [Tabellen]
+- Fließtext
+- Diagramme
+
+`@feedbacks`
+- Genau! Vielen Dank für deine Teilnahme an diesem Kurs.
+- Nein
+- Nein
+
+
+
