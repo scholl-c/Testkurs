@@ -73,3 +73,130 @@ Nun haben wir unsere Daten eingelesen und wie geht es weiter?
 
 
 
+
+
+---
+## Datenanalyse
+
+```yaml
+type: MultipleChoiceExercise 
+xp: 50 
+key: 5be53d83dd   
+```
+
+Schau dir die erhobenen Daten in `Umfragedaten` an. Ist `na.omit(Umfragedaten)` hier nötig?
+
+`@instructions`
+- Ja
+- [Nein]
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+Umfragedaten <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
+```
+
+
+`@sct`
+
+```{r}
+- Falsch
+- Richtig, wir schließen so zu viele Personen aus. Auch wenn die Personen nur einen Teil der Angaben gemacht haben, können wir sie in den entsprechenden Analysen noch einbeziehen.
+```
+
+
+
+
+
+
+---
+## Häufigkeiten
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 6acc5548f0   
+```
+
+Um uns einen Überblick über die Daten zu verschaffen, hast du ja bereits den Befehl `summary()` kennengelernt. Du siehst die statistischen Kennwerte einzelner Variablen. Ein weiterer Befehl ist `table()`, der dir die Häufigkeiten verschiedener Ausprägungen angeben kann.
+
+`@instructions`
+Benutze `table()` um dir anzuzeigen, wie viele männliche und wie viele weibliche Personen mitgemacht haben. Die entsprechende Variable heißt `GESCHL`. Übergib `table()` diese Variable, vergiss nicht, das Datenset zu spezifizieren. Benutze die Dollar-Schreibweise.
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+Umfragedaten <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+table(Umfragedaten$GESCHL)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+---
+## Kreuztabellen
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 07a7abf75f   
+```
+
+`table()` kannst du auch für verschiedene andere, nominalskalierte Variablen verwenden. Du kannst `table()` ebenso dafür anwenden, sogenannte Kreuztabellen zu erstellen. Du übergibst dafür `table()` zwei Variablen, jeweils mit Komma getrennt. 
+
+`@instructions`
+Übergib `table()` als ersten Paramter die Variable `BERUFSTAETIG` und als zweite Variable `GESCHL`. Verwende auch hier die Dollarschreibweise. Du siehst nun, getrennt nach Männern bzw. Frauen in welcher Art sie berufstätig sind.
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+Umfragedaten <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+table(Umfragedaten$BERUFSTAETIG,Umfragedaten$GESCHL)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
