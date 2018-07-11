@@ -44,3 +44,48 @@ colMeans(cars)
 
 
 
+
+
+---
+## Insert exercise title here
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 01dd6ee727   
+```
+
+Die Funktion erspart dir also, das per einzelne Befehle zu berechnen. Möchtest du nur eine bestimmte Spalte berechnen, kannst du dies zum Beispiel mit `colMeans(cars$dist)` oder auch `colMeans(cars[,c('speed','dist')])` angeben. Eine andere Funktion, die analog wie `colMeans()` funktioniert, nennt sich `colSums()`. Damit kannst du die Summe der Spalten berechnen. 
+
+`@instructions`
+In diesem Beispiel macht das wenig Sinn, aber wir machen das trotzdem mal. Benutze `colSums()` und berechne somit die Summe der Bremswege und Geschwindigkeiten (macht keinen Sinn!)
+
+`@hint`
+Benutze `colSums()` wie du im vorherigen Beispiel `colMeans()` benutzt hast
+
+`@pre_exercise_code`
+
+```{r}
+library(datasets)
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+colSums(cars)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
