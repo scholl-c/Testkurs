@@ -162,3 +162,49 @@ Ab ca. 0.7 oder 0.8 (je nach Auslegung) kann man von einer akzeptablen oder gute
 
 
 
+
+
+---
+## Cronbachs Alpha berechnen
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 8c2a6c845f   
+```
+
+Du kannst jetzt Cronbachs Alpha ausprobieren. Nehmen wir an, wir hätten verschiedenen Personen vier Fragen (in Form einer 5er-Likert-Skala) gestellt und in `cronbach` gespeichert.
+
+`@instructions`
+Messe mit der Funktion `cronbach.alpha()` aus dem Paket `ltm` die interne Konsistenz dieser Skala.
+
+`@hint`
+Verwende die Funktion cronbach.alpha() und übergib den Datensatz 'cronbach'
+
+`@pre_exercise_code`
+
+```{r}
+cronbach <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/3c6d7fd41b65af514dadf8ae0a06cad868e463d2/cronbach.csv")
+library(ltm)
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+cronbach.alpha(cronbach)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
