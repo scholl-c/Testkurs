@@ -1,0 +1,13 @@
+variable,variable2,value2,value
+Test1,Raucher,ja,8.842105263157896
+Test2,Raucher,ja,13.052631578947368
+Test3,Raucher,ja,15.578947368421053
+Test1,Langschlaefer,ja,7.869565217391305
+Test2,Langschlaefer,ja,13.26086956521739
+Test3,Langschlaefer,ja,16.782608695652176
+Test1,Raucher,nein,7.529411764705882
+Test2,Raucher,nein,12.764705882352942
+Test3,Raucher,nein,17.058823529411764
+Test1,Langschlaefer,nein,8.846153846153847
+Test2,Langschlaefer,nein,12.307692307692308
+Test3,Langschlaefer,nein,15.384615384615385
