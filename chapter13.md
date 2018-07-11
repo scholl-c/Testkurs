@@ -513,3 +513,36 @@ Möchte ich die durchschnittlichen Arbeitsstunden bezogen auf den Schulabschluss
 
 
 
+
+
+---
+## Diagrammgestaltung
+
+```yaml
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: 33189a448e   
+```
+
+Beim Diagramm muss man besonders auf ... achten.
+
+
+`@hint`
+
+
+
+
+
+
+`@possible_answers`
+- Achsenbeschriftungen und einen aussagekräftigen Titel
+- Harmonische Farben und Verzierungen
+- die Platzierung der Legende
+
+`@feedbacks`
+- Genau!
+- Naja, Verzierungen lenken eher ab und wirken unseriös
+- Das funktioniert in der Regel ganz gut mit den Standardeinstellungen
+
+
+
