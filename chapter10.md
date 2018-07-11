@@ -135,3 +135,36 @@ ggplot(Gummibaerchen,aes(Anzahl_Farben))+geom_histogram(binwidth=1)
 
 
 
+
+
+---
+## Insert exercise title here
+
+```yaml
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: d32a267b1a   
+```
+
+Was können wir gut durch ein Streudiagramm darstellen?
+
+
+`@hint`
+Denke auch hier daran, wie die Achsen belegt sein werden.
+
+
+
+
+
+`@possible_answers`
+- Verteilung einer Variable
+- [Verteilung zweier Variablen]
+- Zusammensetzung einer Variablen
+
+`@feedbacks`
+- Nein
+- Richtig!
+- Nein
+
+
+
