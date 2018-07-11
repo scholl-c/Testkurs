@@ -30,7 +30,7 @@ Bedenke, dass die Tilde impliziert, dass wir eine abhängige und eine unabhängi
 `@pre_exercise_code`
 
 ```{r}
-mathetest <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/ade54dc40604e210c38ef19defcf24a3e6d92717/mathetest.csv",sep=".")
+mathetest <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/ade54dc40604e210c38ef19defcf24a3e6d92717/mathetest.csv",sep="\")
 ```
 
 
