@@ -478,3 +478,38 @@ Die Frage '_Hängt die (subjektive) Zufriedenheit mit einer Berufstätigkeit zus
 
 
 
+
+
+---
+## Diagrammart
+
+```yaml
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: f68c9d5675   
+```
+
+Möchte ich die durchschnittlichen Arbeitsstunden bezogen auf den Schulabschluss (Hauptschule, mittlere Reife, Hochschulreife) darstellen, so bietet sich ein ... an.
+
+
+`@hint`
+
+
+
+
+
+
+`@possible_answers`
+- Kreisdiagramm
+- Liniendiagramm
+- Histogramm
+- [Balkendiagramm]
+
+`@feedbacks`
+- Nein, leider ist das meist ungeeignet und schlecht lesbar
+- Nein, die Schulabschlüsse haben keine Verbindung und sind zum Beispiel keine chronologische Sortierung
+- Nein, das Histogramm gäbe dir lediglich die Häufigkeiten der Arbeitsstunden aus, funktioniert nicht für nominalskalierte Variablen
+- Genau!
+
+
+
