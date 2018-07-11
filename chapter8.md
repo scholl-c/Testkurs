@@ -50,7 +50,7 @@ xp: 100
 key: a0ecb44b50   
 ```
 
-
+Die Zusammenhänge (**Korrelationen**), die wir im Folgenden berechnen, beziehen sich nur auf die Zusammenhänge von zwei Variablen. Zwei Dinge beschreiben den Zusammenhang - die Stärke und die Form. Die Korrelationskoeffizienten nach Pearson oder Spearman beschreiben die **Stärke des Zusammenhangs**. Sie erkennen allerdings ausschließlich lineare Zusammenhänge. Reine lineare Zusammenhänge sind in 'Je mehr... desto mehr' oder 'Je mehr ... desto weniger' Phrasen zu beschreiben. Die einfachste Form des Zusammenhangs (Regression) ist der lineare Zusammenhang. Mit einer Regressionsanalyse kann man versuchen, Voraussagen zu treffen.
 
 
 
