@@ -746,7 +746,7 @@ ds$Alter <- as.integer(ds$Alter)
 
 ```yaml
 type: NormalExercise 
-xp: 100 
+xp: 20 
 key: 73c3d14373   
 ```
 
@@ -754,6 +754,171 @@ key: 73c3d14373
 
 `@instructions`
 Lasse dir den Boxplot über die Altersverteilung ausgeben.
+
+`@hint`
+Nutze die Funktion `boxplot()`
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+boxplot(ds$Alter)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 20 
+key: f695a7cfc6   
+```
+
+
+
+`@instructions`
+Für die folgenden Analysen musst du wissen, ob das Alter hier normalverteilt ist. Prüfe das mit dem Shapiro-Wilk-Test.
+
+`@hint`
+Nutze `shapiro.test()`
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+shapiro.test(ds$Alter)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: MultipleChoiceExercise 
+xp: 20 
+key: 9558e8d289   
+```
+
+
+
+`@instructions`
+Können wir hier für das Alter nach dem Shapiro-Wilk-Test eine Normalverteilung annehmen?
+
+`@hint`
+
+
+
+
+
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 20 
+key: 0f4c9a07f1   
+```
+
+
+
+`@instructions`
+Richtig, wir können hier keine Normalverteilung annehmen. Die klassischen **Ausreißertests** setzen allerdings eine Normalverteilung voraus. Haben wir eine _Normalverteilung_ vorliegen, liegen 99,9% der Werte in dem Intervall von der 2,5-fachen Standardabweichung um den Mittelwert. Können wir wie hier _keine Normalverteilung_ annehmen, liegen nach Tschebyscheff mindestens 94% der Werte in dem Intervall der 4-fachen Standardabweichung um den Mittelwert.
+
+Berechne die Obergrenze des Intervalls um den Mittelwert und die 4-fache Standardabweichung. Dazu berechnest du die Standardabweichung mit `sd()` und multiplizierst sie mit 4, addierst sie dann zu dem Mittelwert, den du mit `mean()` berechnest.
+
+`@hint`
+Es geht immer noch um die Altersverteilung
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+mean(ds$Alter)+4*sd(ds$Alter)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 20 
+key: aeddc5c94c   
+```
+
+
+
+`@instructions`
+Berechne ebenso die Untergrenze.
 
 `@hint`
 
@@ -768,7 +933,54 @@ Lasse dir den Boxplot über die Altersverteilung ausgeben.
 `@solution`
 
 ```{r}
-boxplot(ds$Alter)
+mean(ds$Alter)-4*sd(ds$Alter)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 0 
+key: a849842bdc   
+```
+
+
+
+`@instructions`
+Nicht immer macht es Sinn, die Untergrenze bzw. Obergrenze zu berechnen, z.B. wenn eine 
+  natürliche Grenze vorliegt. Es ist nicht nachvollziehbar, dass jemand unter 0 Jahre alt ist.
+Wenn wir nun alle über der Obergrenze ausschließen möchten, bilden wir ein neues Datenset, 
+  dass alle Teilnehmer mit einem Alter überhalb der Obergrenze ausschließt. Die Obergrenze liegt
+  in unserem Fall gerundet bei 68 Jahren. Das neue Datenset soll 'ds_bereinigt' heißen.
+
+`@hint`
+Benutze subset()
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+ds_bereinigt <- subset(ds,Alter>68)
 ```
 `@sct`
 
