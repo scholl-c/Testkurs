@@ -611,7 +611,7 @@ library(cluster)
 
 ```yaml
 type: NormalExercise 
-xp: 100 
+xp: 25 
 key: d5af1c6f91   
 ```
 
@@ -635,6 +635,131 @@ Der erste Parameter ist `agriculture`, der zweite Parameter ist `3`
 ```{r}
 p.cluster <- kmeans(agriculture,3)
 ```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 25 
+key: 8a5c7e3843   
+```
+
+
+
+`@instructions`
+Wir möchten die Cluster in einer Grafik darstellen. Dazu müssen wir zunächst `p.cluster$cluster` mit `as.factor()` in Faktoren umwandeln. Mach das mal.
+
+`@hint`
+Überschreibe `p.cluster$cluster` mit den in Faktoren umgewandelten `p.clluster$cluster`
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+p.cluster$cluster <- as.factor(p.cluster$cluster)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 25 
+key: dcf1a66d2b   
+```
+
+
+
+`@instructions`
+Nun kann eine Grafik erstellt werden, die die Zugehörigkeit zu den Gruppen visualisiert.
+
+`@hint`
+
+
+
+`@sample_code`
+
+```{r}
+ggplot(agriculture, aes(x, y, label = rownames(agriculture))) + 
+  scale_fill_discrete(name = "Cluster") +
+  geom_label(aes(fill = p.cluster$cluster), colour = "white", 
+             fontface = "bold", size=2)
+```
+`@solution`
+
+```{r}
+ggplot(agriculture, aes(x, y, label = rownames(agriculture))) + 
+  scale_fill_discrete(name = "Cluster") +
+  geom_label(aes(fill = p.cluster$cluster), colour = "white", 
+             fontface = "bold", size=2)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: MultipleChoiceExercise 
+xp: 25 
+key: 24484f91fc   
+```
+
+
+
+`@instructions`
+Welche Länder wurden nicht derselben Gruppe zugeordnet? Du weißt nun, wie du mit Gruppen in statistischen Erhebungen umgehen kannst.
+
+`@hint`
+
+
+
+
+
 `@sct`
 
 ```{r}
