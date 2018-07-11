@@ -989,3 +989,59 @@ ds_bereinigt <- subset(ds,Alter>68)
 
 
 
+
+
+---
+## Insert exercise title here
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 00229a0806   
+```
+
+Nun hast du ein bereinigtes Datenset, in dem sowohl Ausreißer, Dubletten als auch fehlende Werte ausgeschlossen wurden. Es gibt noch zwei vorverarbeitendene Schritte, die wir hier noch besprechen wollen. 
+
+- Und zwar geht es darum, eine **neue Variable aus einer bestehenden** zu bilden. Ein Anwendungsfall dafür ist z.B. ein Altersgruppierung. Wir möchten eine neue Variable erstellen, in denen wir Altersgruppen festhalten. 
+- Eine zweite Vorverarbeitung könnte sein, dass man Variablen neu kodiert.
+
+Möchten wir statt 'eng' und 'ger' vielleicht 0 und 1 kodieren, oder einfach nur zu 'Deutsch' und 'Englisch' umbenennen, müssen wir rekodieren. Das geht ganz einfach mit der Funktion `recode_factor` aus dem Paket `dplyr`.
+
+`@instructions`
+Rekodiere die Sprachauswahl neu, wobei 'ger' zu 0 und 'eng' zu 1 wird. Benutze dazu 
+  recode_factor(). Wir müssen hier die Spalte Sprachauswahl überschreiben(!) und ggf. danach 
+  von dem Datentyp Factor umwandeln zu Integer (sofern wir das brauchen sollten). recode_factor() 
+  nimmt als erstes Argument die Spalte, und alle weiteren Argumente sind von der Struktur, dass 
+  der Alter_Wert=Neuer_Wert und jeweils diese Zuweisungen mit Komma getrennt. Man kann so viele 
+  Zuweisungen machen, wie man möchte bzw. Werte zum rekodieren vorhanden sind.
+
+`@hint`
+Vergiss nicht, die Spalte zu überschreiben mit den neuen Werten.
+
+`@pre_exercise_code`
+
+```{r}
+library(dplyr)
+
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+ds$Sprachauswahl <- recode_factor(ds$Sprachauswahl,"eng"=1,"ger"=0)
+```
+`@sct`
+
+```{r}
+success_msg("Wie immer, wenn du die Original-Werte nicht verlieren möchtest, kannst du eine neue 
+  Spalte erstellen. Im Folgenden werden wir eine neue Spalte erstellen. Außerdem gibt es ähnliche Funktionen wie revalue oder mapvalues.")
+```
+
+
+
+
