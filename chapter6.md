@@ -30,11 +30,21 @@ Innerhalb der runden Klammern von `duplicated()` muss der Name deines Datensatze
 ```{r}
 ds <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
+`@sample_code`
+
+```{r}
+
+```
 
 `@solution`
 
 ```{r}
 duplicated(ds)
+```
+`@sct`
+
+```{r}
+
 ```
 
 
@@ -282,7 +292,7 @@ Denk mal scharf nach! ;)
 
 
 ---
-## Insert exercise title here
+## Zufällige Duplikate
 
 ```yaml
 type: PureMultipleChoiceExercise 
@@ -309,6 +319,150 @@ Selbst wenn du andere Merkmale hinzufügst, kannst du nicht sicher sein, ob es n
 - Richtig
 - Nein, das alleine reicht nicht
 - Nein, das könnte auch schief gehen
+
+
+
+
+
+---
+## Mittelwert berechnen
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: dea228c286   
+```
+
+Nun hast du das Duplikat entfernt. 
+
+> Endlich kannst du mit den ersten Analysen starten! 
+
+`@instructions`
+Berechne den Altersdurchschnitt mit der Funktion `mean()`
+
+`@hint`
+Auf die Spalte `Alter` greifst du mit `ds$Alter` zu.
+
+`@pre_exercise_code`
+
+```{r}
+ds <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+mean(ds$Alter)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+---
+## NA
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: d04e8b4c20   
+```
+
+**Das kann doch nicht sein? Was ist denn dieses komische NA?**
+_NA_ steht für _no answer_ oder _not available_. Das bedeutet, es kann keine Antwort gegeben werden.
+
+**Aber warum? R kann doch einfach das Durchschnittsalter der Personen errechnen, die es mir verraten haben und die anderen, die es mir nicht verraten wollten, außen vor lassen.**
+Ja, das kann R. Aber das musst du explizit sagen. Zum Beispiel kannst du das bei der Funktion `mean()`, wenn du als zweites Argument `na.rm` auf TRUE setzt. Standardmäßig ist es auf FALSE. Und das `rm` steht für _remove_, d.h. R bezieht die _NAs_ bei der Berechnung des Durchschnitts nicht mit ein. 
+
+Du möchtest die _NA_'s ein für alle mal loswerden? Kein Problem! Die Funktion `na.omit()` entfernt alle Zeilen mit NA's aus dem Datenset. Die komplette Zeile! Da du aber trotzdem auswerten möchtest, welche Sprachauswahl bevorzugt wurde, und manche Leute einfach nur nicht ihr Alter nennen wollten, belässt du es erstmal dabei, die _NA_'s nicht zu löschen. Den Mittelwert konntest du ja auch so berechnen.
+
+`@instructions`
+Versuche nochmal den Durchschnitt zu berechnen, setze aber `na.rm` auf TRUE.
+
+`@hint`
+Gib zusätzlich zur vorherigen Berechnung noch `na.rm=TRUE` an.
+
+`@pre_exercise_code`
+
+```{r}
+ds <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+mean(ds$Alter,na.rm=TRUE)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+---
+## Manipulationen aufdecken
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: d4c211aa81   
+```
+
+Du möchtest nun überprüfen, ob keiner deine Umfrage manipuliert hat und nur die vorgegebenen Möglichkeiten für die Sprachauswahl - nämlich eng und ger - ausgewählt wurden. Dafür und für andere Fälle wenn du eine Ausgabe aller unterschiedlichen Ausprägungen einer Variablen haben möchtest, kannst du unique() benutzen. Selbst wenn ein Wert mehrfach vorkommt, wird er dir nur einmal angezeigt. 
+
+`@instructions`
+Überprüfe damit die Werte für die Sprachauswahl.
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+ds <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+
+```
+
+`@sct`
+
+```{r}
+
+```
+
+
 
 
 
