@@ -245,9 +245,8 @@ Wir berechnen die Korrelation und interpretieren ihre Ergebnisse.
 `@pre_exercise_code`
 
 ```{r}
-
+choco <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8fabac37c6b40b6274b29eba130b53d8c7e70b8/choco.csv")
 ```
-
 `@sample_code`
 
 ```{r}
@@ -267,7 +266,7 @@ Wir berechnen die Korrelation und interpretieren ihre Ergebnisse.
 
 ```yaml
 type: NormalExercise 
-xp: 100 
+xp: 20 
 key: b53b297937   
 ```
 
@@ -291,6 +290,145 @@ Mit `cor.test()` können wir eine Korrelation berechnen. Wir übergeben dazu uns
 ```{r}
 cor.test(choco$Tafeln,choco$IQ)
 ```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: MultipleChoiceExercise 
+xp: 20 
+key: bd4fd1e4b3   
+```
+
+
+
+`@instructions`
+Liegt eine Korrelation vor?
+
+`@hint`
+
+
+
+
+
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: MultipleChoiceExercise 
+xp: 20 
+key: 7652c3139a   
+```
+
+
+
+`@instructions`
+Wie stark oder schwach ist die Korrelation und liegt eine positive oder 
+  negative Korrelation vor?
+
+`@hint`
+
+
+
+
+
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: MultipleChoiceExercise 
+xp: 20 
+key: b63e9d42cb   
+```
+
+
+
+`@instructions`
+Es kann sein, dass eine Korrelation vorliegt, das Ergebnis aber nicht signifikant ist, das 
+  heißt, es auch zufällig zustande gekommen sein kann. Ist diese Korrelation signifikant?
+
+`@hint`
+
+
+
+
+
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: MultipleChoiceExercise 
+xp: 20 
+key: 42e7571b42   
+```
+
+
+
+`@instructions`
+Wir haben also eine stark positive Korrelation zwischen Schokoladentafelkonsum und 
+  dem IQ bei unseren Testpersonen gefunden. Was können wir sagen?
+
+`@hint`
+
+
+
+
+
 `@sct`
 
 ```{r}
