@@ -199,7 +199,7 @@ shapiro.test(choco$IQ)
 
 
 ---
-## Insert exercise title here
+## Welcher Korrelationskoeffizient?
 
 ```yaml
 type: PureMultipleChoiceExercise 
@@ -224,6 +224,81 @@ In der Regel wird der Test verwendet, sofern möglich, der für das Skalenniveau
 `@feedbacks`
 - Darf man, geht aber noch mehr.
 - Ja, den sollte man nehmen!
+
+
+
+
+
+---
+## Korrelation berechnen
+
+```yaml
+type: TabExercise 
+xp: 100 
+key: 3b156896e3   
+```
+
+Wir berechnen die Korrelation und interpretieren ihre Ergebnisse.
+
+
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: b53b297937   
+```
+
+
+
+`@instructions`
+Mit `cor.test()` können wir eine Korrelation berechnen. Wir übergeben dazu unsere beiden Variablen. Berechne den Korrelationskoeffizienten für unser Beispiel.
+
+`@hint`
+
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+cor.test(choco$Tafeln,choco$IQ)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
 
 
 
