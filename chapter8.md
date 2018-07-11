@@ -492,7 +492,7 @@ cor.test(choco$Tafeln,choco$IQ,method="spearman")
 
 
 ---
-## Insert exercise title here
+## Korrelationsmatrix
 
 ```yaml
 type: NormalExercise 
@@ -531,6 +531,85 @@ cor(choco)
 ```{r}
 
 ```
+
+
+
+
+
+
+
+---
+## Regressionsanalyse
+
+```yaml
+type: TabExercise 
+xp: 100 
+key: 06df13ffe6   
+```
+
+Die Regressionsanalyse versucht herauszufinden, um welche Form des Zusammenhangs es sich 
+  handelt. Bis jetzt haben wir nur auf lineare Zusammenhänge untersucht. Desweiteren können 
+  damit Voraussagen für z.B. die Entwicklung in Zukunft getroffen werden.
+
+
+
+`@pre_exercise_code`
+
+```{r}
+choco <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8fabac37c6b40b6274b29eba130b53d8c7e70b8/choco.csv")
+```
+`@sample_code`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 0dcb1617af   
+```
+
+
+
+`@instructions`
+Wir können mit lm() (lm steht für linear model) eine Gerade berechnen lassen und 
+  diese dann mit abline() auf unser Streudiagramm legen. Zeichne dazu zuerst nochmal das 
+  Streudiagramm, gib zuerst die Variable für die Schokotafeln an, danach die Variable für den IQ. 
+  Gib aber dieses Mal die beiden Variablen als formula (d.h. verbunden durch die Tilde ~) an.
+
+`@hint`
+Benutze plot() für das Streudiagramm. Verwende die Dollar-Schreibweise.
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+plot(choco$Tafeln~choco$IQ)
+```
+`@sct`
+
+```{r}
+
+```
+
 
 
 
