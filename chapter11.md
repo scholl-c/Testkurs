@@ -43,3 +43,55 @@ test_mc(1,"Super erkannt!","Nein","Falsch","Falsch")
 
 
 
+
+
+---
+## Aggregieren
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: ac1512248d   
+```
+
+Nun möchten wir aber ein Balkendiagramm (ggplot2) mit dem Durchschnittswert erstellen. Können wir einfach ggplot(mathetest,aes(x=Raucher,y=Test1))+geom_col() benutzen? Nein, denn ggplot weiß auf diese Weise nicht, dass wir gerne den Mittelwert für Raucher=ja und Raucher=nein verwenden möchten. ggplot() würde uns nur die ersten beiden Werte, die es in der Tabelle für jeweils einen Raucher und einen Nicht-Raucher findet, plotten, nicht den Mittelwert aller Raucher bzw. aller Nicht-Raucher.
+
+Dabei kann dir die Funktion aggregate() helfen. aggregate() nimmt drei Parameter: 
+- die formula
+- der Datensatzname
+- die Funktion mit der aggregiert wird. 
+Der dritte Parameter kann z.B. mean, sum oder median sein. Die formula ist dabei identisch zu der formula bei der Erstellung des Boxplot.
+
+`@instructions`
+Wende aggregate() so an, dass du den Mittelwert (mean) im Ergebnis des ersten Tests der Gruppe der Raucher und der Gruppe der Nicht-Raucher ausgegeben bekommst. Speichere die aggregierten Daten in `rauchertest1`.
+
+`@hint`
+Denke daran, dass die formula der des Boxplots entspricht.
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+rauchertest1 <- aggregate(Test1~Raucher,mathetest,mean)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
