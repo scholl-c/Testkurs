@@ -42,7 +42,7 @@ test_mc(1,"Ja, richtig, sie sind sind intervallskaliert.","Nein")
 
 
 ---
-## Insert exercise title here
+## Korrelationen
 
 ```yaml
 type: TabExercise 
@@ -57,9 +57,8 @@ Die Zusammenhänge (**Korrelationen**), die wir im Folgenden berechnen, beziehen
 `@pre_exercise_code`
 
 ```{r}
-
+choco <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8fabac37c6b40b6274b29eba130b53d8c7e70b8/choco.csv")
 ```
-
 `@sample_code`
 
 ```{r}
