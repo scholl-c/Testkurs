@@ -54,17 +54,17 @@ xp: 100
 key: ac1512248d   
 ```
 
-Nun möchten wir aber ein Balkendiagramm (`ggplot2`) mit dem Durchschnittswert erstellen. **Können wir einfach `ggplot(mathetest,aes(x=Raucher,y=Test1))+geom_col()` benutzen?** Nein, denn `ggplot` weiß auf diese Weise nicht, dass wir gerne den Mittelwert für _Raucher=ja_ und _Raucher=nein_ verwenden möchten. `ggplot()` würde uns nur die ersten beiden Werte, die es in der Tabelle für jeweils einen Raucher und einen Nicht-Raucher findet, plotten, und nicht den Mittelwert aller Raucher bzw. aller Nicht-Raucher.
+Nun möchten wir aber ein Balkendiagramm (`ggplot2`) mit dem Durchschnittswert erstellen. Können wir einfach `ggplot(mathetest,aes(x=Raucher,y=Test1))+geom_col()` benutzen? Nein, denn `ggplot` weiß auf diese Weise nicht, dass wir gerne den Mittelwert für _Raucher=ja_ und _Raucher=nein_ verwenden möchten. `ggplot()` würde uns nur die ersten beiden Werte, die es in der Tabelle für jeweils einen Raucher und einen Nicht-Raucher findet, plotten, und nicht den Mittelwert aller Raucher bzw. aller Nicht-Raucher.
 
-Dabei kann dir die Funktion aggregate() helfen. aggregate() nimmt drei Parameter: 
+Dabei kann dir die Funktion `aggregate()` helfen. `aggregate()` nimmt drei Parameter: 
 - die formula
 - der Datensatzname
 - die Funktion mit der aggregiert wird. 
 
-Der dritte Parameter kann z.B. mean, sum oder median sein. Die formula ist dabei identisch zu der formula bei der Erstellung des Boxplot.
+Der dritte Parameter kann z.B. _mean_, _sum_ oder _median_ sein. Die _formula_ ist dabei identisch zu der _formula_ bei der Erstellung des Boxplot.
 
 `@instructions`
-Wende aggregate() so an, dass du den Mittelwert (mean) im Ergebnis des ersten Tests der Gruppe der Raucher und der Gruppe der Nicht-Raucher ausgegeben bekommst. Speichere die aggregierten Daten in `rauchertest1`.
+Wende `aggregate()` so an, dass du den Mittelwert (_mean_) im Ergebnis des ersten Tests der Gruppe der Raucher und der Gruppe der Nicht-Raucher ausgegeben bekommst. Speichere die aggregierten Daten in `rauchertest1`.
 
 `@hint`
 Denke daran, dass die formula der des Boxplots entspricht.
@@ -72,9 +72,9 @@ Denke daran, dass die formula der des Boxplots entspricht.
 `@pre_exercise_code`
 
 ```{r}
-
+mathetest <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/ade54dc40604e210c38ef19defcf24a3e6d92717/mathetest.csv")
+library(ggplot2)
 ```
-
 `@sample_code`
 
 ```{r}
