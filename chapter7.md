@@ -145,7 +145,7 @@ paired bedeutet hier nichts anderes als 'verbunden'
 
 
 ---
-## Insert exercise title here
+## Abhängige und unabhängige Variablen
 
 ```yaml
 type: MultipleChoiceExercise 
@@ -154,9 +154,10 @@ key: cc589f06e3
 ```
 
 Lasse dir mit der Funktion `head()` die ersten Zeilen des Datensatzes `sleep` anzeigen. Der Datensatz enthält drei Variablen: 
-- die ID des Probanden, 
+- die ID des Probanden,  
 - das Schlafmittel (1 oder 2), 
 - und die Schlafstunden im Vergleich zu einem normalen Schlaf der Probanden. 
+
 Welches davon ist die abhängige Variable?
 
 `@instructions`
