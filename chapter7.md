@@ -476,15 +476,7 @@ Ist der p-Wert kleiner als 0.05, so haben wir einen signifikanten Unterschied ge
 - Nein
 
 `@feedbacks`
-- Richtig! 
-
-> Wenn Voraussetzung nicht gegeben sind, 
-
-z.B. deine abhängige Variable nur ordinalskaliert ist, oder deine Daten nicht normalverteilt sind, sind **non-parametrische** oder auch verteilungsfreie Tests zu rechnen. Rechne dann z.B. den **Mann-Whitney-U-Test** für unverbundene Stichproben mit wilcox.test(). 
-
-> Wenn
-
- deine unabhängige Variable mehr als zwei Ausprägungen hat bzw. du mehr als zwei Gruppen vergleichen möchtest, kannst du dir **ANOVA**s (bei intervallskalierter Variable) und den **Kruskal Wallis Test** (bei ordinalskalierter Variable) anschauen.
+- Richtig! Wenn Voraussetzung nicht gegeben sind, z.B. deine abhängige Variable nur ordinalskaliert ist, oder deine Daten nicht normalverteilt sind, sind **non-parametrische** oder auch verteilungsfreie Tests zu rechnen. Rechne dann z.B. den **Mann-Whitney-U-Test** für unverbundene Stichproben mit wilcox.test(). Wenn deine unabhängige Variable mehr als zwei Ausprägungen hat bzw. du mehr als zwei Gruppen vergleichen möchtest, kannst du dir **ANOVA**s (bei intervallskalierter Variable) und den **Kruskal Wallis Test** (bei ordinalskalierter Variable) anschauen.
 - Falsch
 
 
