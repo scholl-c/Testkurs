@@ -286,9 +286,9 @@ xp: 100
 key: 725a51bcb9   
 ```
 
-Die Varianzhomogenität ist ebenfalls eine wichtige Voraussetzung, ohne diese man einige der Tests nicht rechnen sollte. Es wird geprüft, ob die Varianzen der Populationen aus denen wir Stichproben vorliegen haben, homogen sind, d.h. etwa gleich sind. Wir können das mit dem Levene-Test prüfen. Die Funktion leveneTest() in dem Paket 'car' gibt und dazu den p-Wert aus. Ist der p-Wert größer als 0.05 können wir Varianzhomogenität annehmen.
+Die Varianzhomogenität ist ebenfalls eine wichtige Voraussetzung, ohne diese man einige der Tests nicht rechnen sollte. Es wird geprüft, ob die Varianzen der Populationen aus denen wir Stichproben vorliegen haben, homogen sind, d.h. etwa gleich sind. Wir können das mit dem Levene-Test prüfen. Die Funktion `leveneTest()` in dem Paket `car` gibt und dazu den p-Wert aus. Ist der p-Wert größer als 0.05 können wir Varianzhomogenität annehmen.
 
-Da die Varianzhomogenität jetzt Varianzen aus verschiedenen Gruppen vergleicht und wir keine Eigenschaften einer Verteilung untersuchen, kann man den Levene-Test nicht auf der Messreihe der sunspots anwenden! Wir benutzen nun den Datensatz 'InsectSprays'. Es wurde die Anzahl von Insekten auf Versuchsfeldern gemessen, die jeweils mit verschiedenen Insektiziden behandelt wurden. Die Spalte 'spray' indiziert, welches Spray (A-F) genutzt wurde und die Spalte 'count' enthält die Anzahl der Insekten.
+Da die Varianzhomogenität jetzt Varianzen aus verschiedenen Gruppen vergleicht und wir keine Eigenschaften einer Verteilung untersuchen, kann man den Levene-Test nicht auf der Messreihe der `sunspots` anwenden! Wir benutzen nun den Datensatz `InsectSprays`. Es wurde die Anzahl von Insekten auf Versuchsfeldern gemessen, die jeweils mit verschiedenen Insektiziden behandelt wurden. Die Spalte `spray` indiziert, welches Spray (A-F) genutzt wurde und die Spalte `count` enthält die Anzahl der Insekten.
 
 
 
@@ -323,7 +323,7 @@ key: 53f04ed4ac
 
 
 `@instructions`
-Berechne die Homogenität der Varianzen der verschiedenen Spray-Gruppen. Benutze dazu leveneTest() und übergib als erstes Argument die Spalte 'count' und als zweites Argument die Spalte 'spray'.
+Berechne die Homogenität der Varianzen der verschiedenen Spray-Gruppen. Benutze dazu `leveneTest()` und übergib als erstes Argument die Spalte `count` und als zweites Argument die Spalte `spray`.
 
 `@hint`
 
@@ -343,9 +343,10 @@ leveneTest(InsectSprays$count,InsectSprays$spray)
 `@sct`
 
 ```{r}
-
+test_error()
+test_output_contains("leveneTest(InsectSprays$count,InsectSprays$spray)",incorrect_msg="Leider falsch")
+success_msg("Super!")
 ```
-
 
 
 
