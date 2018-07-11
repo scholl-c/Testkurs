@@ -570,3 +570,84 @@ Könnte dieser Unterschied zwischen Langschläfern und Frühaufstehern auch
 
 
 
+
+
+---
+## Clustern
+
+```yaml
+type: TabExercise 
+xp: 100 
+key: c0d9fe48b0   
+```
+
+Bisher waren uns die Gruppen bekannt und wir konnten die Daten nach den Variablen entsprechend gruppieren. Wenn du allerdings Daten erhebst, um dann Gruppen zu bilden, nennt sich das **Clustering**. Wir bilden Gruppen und ordnen unsere Daten den Gruppen zu, das Ganze aber nach der Erhebung der Daten und mit Hilfe von Algorithmen.
+
+Ein Algorithmus dafür nennt sich _k-means_. Eine entsprechende Funktion namens `kmeans` findet sich im Paket `cluster`. Das Paket haben wir bereits geladen, die Funktion steht zur Verfügung. Der Datensatz `agriculture` stammt ebenfalls aus dem Paket und besteht aus dem Bruttosozialprodukt pro Kopf (x) und dem Anteil der in der Landwirtschaft arbeitenden Bevölkerung (y) verschiedener Länder in Europa. Wir versuchen nun, die Länder zu gruppieren.
+
+
+
+`@pre_exercise_code`
+
+```{r}
+library(cluster)
+```
+`@sample_code`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: d5af1c6f91   
+```
+
+
+
+`@instructions`
+Wende den kmeans-Algorithmus auf diesen Datensatz an. kmeans() verlangt zwei Parameter. Der 
+  erste Parameter spezifiziert den Datensatz (hier 'agriculture') und der zweite Parameter legt die 
+  Anzahl der Cluster d.h. Gruppen fest, die man bilden möchte. Die Anzahl der Gruppen kann man 
+  auch algorithmisch bestimmen lassen, wir werden hier, weil es einfacher ist, versuchen, die Anzahl der 
+  Gruppen festzulegen. Wir versuchen drei Gruppen zu bilden. Speichere das Ergebnis in der Variable 
+  'p.cluster'.
+
+`@hint`
+Der erste Parameter ist 'agriculture', der zweite Parameter ist '3'
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+p.cluster <- kmeans(agriculture,3)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
