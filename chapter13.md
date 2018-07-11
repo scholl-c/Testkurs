@@ -245,3 +245,236 @@ barplot(table(Umfragedaten$GESCHL))
 
 
 
+
+
+---
+## Nominalskalierte Daten plotten mit ggplot2
+
+```yaml
+type: TabExercise 
+xp: 100 
+key: 287bec7e85   
+```
+
+
+
+
+
+`@pre_exercise_code`
+
+```{r}
+Umfragedaten <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
+```
+`@sample_code`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 50 
+key: 08e719b191   
+```
+
+
+
+`@instructions`
+Möchtest du dasselbe mit dem Paket ggplot2 plotten, so wandle stattdessen zunächst 
+  das Ergebnis von table() mit as.data.frame() in ein Dataframe um und speichere es. Mach das 
+  mal mit der Variable Geschlecht und speichere es unter 'geschl'.
+
+`@hint`
+
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+geschl <- as.data.frame(table(Umfragedaten$GESCHL))
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 50 
+key: c4c62dddd6   
+```
+
+
+
+`@instructions`
+Nun kannst du den Plot erstellen. Benutze +geom_col() und den eben erstellten Datensatz. 
+  Gib als x 'Var1' und als y 'Freq' an.
+
+`@hint`
+
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+ggplot(geschl,aes(x=Var1,y=Freq))+geom_col()
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+---
+## Prozentuale Kreuztabelle
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 0dbfa0c98a   
+```
+
+Es gibt noch die Variante `prop.table()` zu benutzen. Damit können direkt die prozentualen Anteile berechnet werden, wie zum Beispiel mit `prop.table(table(Umfragedaten$GESCHL))`. 
+
+`@instructions`
+Mache das mal für die Variable `BERUFSTAETIG`.
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+Umfragedaten <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+prop.table(table(Umfragedaten$BERUFSTAETIG))
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+---
+## Grafiken und Tests
+
+```yaml
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: 2833aad673   
+```
+
+Nun kennst du zwei Möglichkeiten, die Häufigkeiten nominalskalierter Daten zu plotten.  Was ist **kein** Grund, um sich solche Häufigkeiten ausgeben zu lassen?
+
+Egal, ob man nun einer Forschungsfrage nachgeht, oder einen statistischen Report schreibt, die Tests und Grafiken ergeben sich anhand des Skalenniveaus der entsprechenden Variablen und der Fragen, die man stellt.
+
+
+`@hint`
+
+
+
+
+
+
+`@possible_answers`
+- [um Daten zu gruppieren]
+- um eine Übersicht über die Daten zu bekommen
+- um mehr über die Stichprobe bzw. Zusammensetzung der Teilnehmer zu erfahkeinren
+
+`@feedbacks`
+- Richtig
+- Falsch
+- Falsch
+
+
+
+
+
+---
+## Fragen und ihre Analysen
+
+```yaml
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: 5079f7a520   
+```
+
+Die Frage '_Hängt die (subjektive) Zufriedenheit mit einer Berufstätigkeit zusammen?_' resultiert in einer ...
+
+
+`@hint`
+
+
+
+
+
+
+`@possible_answers`
+- Analyse der Unterschiede in den zentralen Tendenzen
+- [Zusammenhangsanalyse]
+- Clusteranalyse
+
+`@feedbacks`
+- Nein
+- Ja!
+- Nein
+
+
+
