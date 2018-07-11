@@ -279,3 +279,36 @@ Denk mal scharf nach! ;)
 
 
 
+
+
+---
+## Insert exercise title here
+
+```yaml
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: 49a3054785   
+```
+
+Genau, zwei Personen hatten zufällig das gleiche Alter und das gleiche Geschlecht. Du möchtest die Personen also eigentlich nicht ausschließen. Auf was musst du daher achten, wenn du Duplikate entfernst?
+
+
+`@hint`
+Selbst wenn du andere Merkmale hinzufügst, kannst du nicht sicher sein, ob es nicht doch Personen gibt, die sich in den abgefragten Merkmalen gleichen.
+
+
+
+
+
+`@possible_answers`
+- [Dass ich einen eindeutige Referenz für jede Zeile habe (z.B. eine fortlaufende Nummer)]
+- Dass ich meine Stichprobengröße richtig wähle
+- Dass ich andere Merkmale hinzufüge, in denen sich die Personen unterscheiden
+
+`@feedbacks`
+- Richtig
+- Nein, das alleine reicht nicht
+- Nein, das könnte auch schief gehen
+
+
+
