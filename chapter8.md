@@ -150,3 +150,80 @@ Handelt es sich vermutlich eher um eine positive oder negative Korrelation? Die
 
 
 
+
+
+---
+## Prüfen auf Normalverteilung
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 0159166d9f   
+```
+
+Bevor wir die Korrelation rechnen dürfen, müssen wir prüfen, ob die Variablen normalverteilt sind. Wir überprüfen das mit dem Shapiro-Wilk-Test. Wenn der p-Wert größer als 0.05 ist, dürfen wir annehmen, dass eine Stichprobe normalverteilt ist. 
+
+`@instructions`
+Überprüfe zuerst, ob der Schokoladentafelkonsum normalverteilt ist. Nun prüfe, ob auch der IQ unserer Testpersonen normalverteilt ist.
+
+`@hint`
+Verwende `shapiro.test()`
+
+`@pre_exercise_code`
+
+```{r}
+choco <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8fabac37c6b40b6274b29eba130b53d8c7e70b8/choco.csv")
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+shapiro.test(choco$Tafeln)
+shapiro.test(choco$IQ)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+---
+## Insert exercise title here
+
+```yaml
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: 5feafa6a5e   
+```
+
+Welchen Korrelationskoeffizienten sollten wir folglich benutzen?
+
+
+`@hint`
+In der Regel wird der Test verwendet, sofern möglich, der für das Skalenniveau geeignet ist bzw. mehr Voraussetzungen hat (und diese alle erfüllt werden)
+
+
+
+
+
+`@possible_answers`
+- Spearman-Rangkorrelation
+- [Pearson-Korrelation]
+
+`@feedbacks`
+- Darf man, geht aber noch mehr.
+- Ja, den sollte man nehmen!
+
+
+
