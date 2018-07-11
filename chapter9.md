@@ -283,10 +283,7 @@ key: e742790a65
 
 
 `@instructions`
-Schreibe die Funktion, die entweder 'normalverteilt' oder 'nicht normalverteilt' ausgibt, 
-  je nachdem wie der Shapiro-Wilk-Test ausfällt. Ergänze, wie im Kommentar beschrieben, die beiden 
-  Zeilen. Der p-Wert ist bereits in einer Variablen gespeichert, sodass du ihn mit den 0.05 vergleichen 
-  kannst.
+Schreibe die Funktion, die entweder 'normalverteilt' oder 'nicht normalverteilt' ausgibt, je nachdem wie der Shapiro-Wilk-Test ausfällt. Ergänze, wie im Kommentar beschrieben, die beiden Zeilen. Der p-Wert ist bereits in einer Variablen gespeichert, sodass du ihn mit den 0.05 vergleichen kannst.
 
 `@hint`
 
@@ -301,9 +298,20 @@ Schreibe die Funktion, die entweder 'normalverteilt' oder 'nicht normalverteilt'
 `@solution`
 
 ```{r}
+# Ergänze diese Funktion, sodass...
+# aufgrund von dem Testergebnis (p-Wert) von dem Shapiro-Wilk-Test
+# ausgegeben wird, ob der eingegebene Vektor
+# normalverteilt ist oder nicht
 
+normalverteilt <- function(x) {
+  p <- shapiro.test(x)["p.value"]
+  if (p > 0.05) {
+    print("normalverteilt")
+  } else {
+    print("nicht normalverteilt")
+  }
+}
 ```
-
 `@sct`
 
 ```{r}
