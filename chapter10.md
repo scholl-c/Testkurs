@@ -34,8 +34,9 @@ Gib `?library` ein.
 `@solution`
 
 ```{r}
-library(ggplot2)
+
 ```
+
 `@sct`
 
 ```{r}
