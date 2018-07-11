@@ -140,7 +140,7 @@ key: 06594d325d
 
 Der zweite Test, den wir betrachten, ist **Cronbachs Alpha**. Er misst die interne Konsistenz einer Skala. Einfach gesagt, messen wir die Korrelation zwischen den Antworten in einem Fragebogen. Er gibt daher an, ob zwei oder mehr Fragen dasselbe messen.
 
-Ein Anwendungsfall sind Persönlichkeitstest: Es sollen mehrere Dimensionen einer Persönlichkeit, wie zum Beispiel Extrovertiertheit oder Gewissenhaftigkeit gemessen werden. Zu jeder Dimension gibt es mehrere Fragen. Es soll überprüft werden, ob die Teilnehmer des Persönlichkeitstests so geantwortet haben, dass man mit dieser Fragestellung verlässlich messen konnte, wie beispielsweise extrovertiert oder gewissenhaft jemand ist.
+Ein Anwendungsfall sind Persönlichkeitstest: Es sollen mehrere Dimensionen einer Persönlichkeit, wie zum Beispiel Extrovertiertheit oder Gewissenhaftigkeit gemessen werden. Zu jeder Dimension gibt es mehrere Fragen. Es soll überprüft werden, ob die Teilnehmer des Persönlichkeitstests so geantwortet haben, dass man mit dieser Fragestellung verlässlich messen konnte, wie beispielsweise extrovertiert oder gewissenhaft jemand ist. Durch unklare Fragen oder Personen, die sozial erwünscht antworten, kann Cronbachs Alpha sinken.
 
 Cronbachs Alpha liegt zwischen 0 und 1. Was bedeutet hier ein Wert von zum Beispiel 0.4?
 
