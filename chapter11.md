@@ -618,15 +618,10 @@ key: d5af1c6f91
 
 
 `@instructions`
-Wende den kmeans-Algorithmus auf diesen Datensatz an. kmeans() verlangt zwei Parameter. Der 
-  erste Parameter spezifiziert den Datensatz (hier 'agriculture') und der zweite Parameter legt die 
-  Anzahl der Cluster d.h. Gruppen fest, die man bilden möchte. Die Anzahl der Gruppen kann man 
-  auch algorithmisch bestimmen lassen, wir werden hier, weil es einfacher ist, versuchen, die Anzahl der 
-  Gruppen festzulegen. Wir versuchen drei Gruppen zu bilden. Speichere das Ergebnis in der Variable 
-  'p.cluster'.
+Wende den kmeans-Algorithmus auf diesen Datensatz an. `kmeans()` verlangt zwei Parameter. Der erste Parameter spezifiziert den Datensatz (hier `agriculture`) und der zweite Parameter legt die Anzahl der Cluster d.h. Gruppen fest, die man bilden möchte. Die Anzahl der Gruppen kann man auch algorithmisch bestimmen lassen, wir werden hier, weil es einfacher ist, versuchen, die Anzahl der Gruppen festzulegen. Wir versuchen drei Gruppen zu bilden. Speichere das Ergebnis in der Variable `p.cluster`.
 
 `@hint`
-Der erste Parameter ist 'agriculture', der zweite Parameter ist '3'
+Der erste Parameter ist `agriculture`, der zweite Parameter ist `3`
 
 
 `@sample_code`
