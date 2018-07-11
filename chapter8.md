@@ -577,7 +577,7 @@ choco <- read.csv("https://assets.datacamp.com/production/repositories/3196/data
 
 ```yaml
 type: NormalExercise 
-xp: 100 
+xp: 50 
 key: 0dcb1617af   
 ```
 
@@ -610,6 +610,50 @@ plot(choco$Tafeln~choco$IQ)
 
 ```
 
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 50 
+key: ddb29f1399   
+```
+
+
+
+`@instructions`
+Nun lege mit `abline(lm(formula))` die berechnete Gerade über das Streudiagramm. Ersetze `formula` durch die eben verwendete `formula` für das Streudiagramm.
+
+`abline()` funktioniert nur richtig, wenn gerade ein Plot aktiv ist d.h. du vorher `plot()` aufgerufen hast. Andernfalls bekommst du die Fehlermeldung '_plot.new has not been called yet_'
+
+`@hint`
+
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+abline(lm(choco$Tafeln~choco$IQ))
+```
+`@sct`
+
+```{r}
+success_msg("Du kannst nun Zusammenhänge überprüfen und lineare Regressionsmodelle zeichnen. Andere Formen, wie z.B. polynomiale Regression oder logistische Regression, werden wir in dieser Lektion nicht behandeln.")
+```
 
 
 
