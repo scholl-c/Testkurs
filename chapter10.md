@@ -102,10 +102,8 @@ Nun werden wir dieses Histogramm plotten mit `ggplot2`. In der vorherigen Lektio
 
 Für unser Histogramm reicht die Angabe eines Datensatzes und einer Variablen. Denn bei der Form eines Histogramms ist festgelegt, dass die y-Achse die Häufigkeit der Vorkommen der einzelnen Ausprägungen angibt. Zusätzlich geben wir `geom_histogram()` als dritten Bestandteil an.
 
-Wir möchten wieder wissen, wie häufig einzelne Farben in verschiedenen Packungen vorkommen. Der Befehl durch `ggplot` eingeleitet und wir übergeben Gummibaerchen als unser Dataframe. Als zweites Argument geben wir die Variablen an, die wir plotten möchten. Das zweite Argument ist jedoch eingerahmt in `aes()`, was die Abkürzung für '_aesthetics_' ist. Dann müssen wir noch spezifizieren, dass wir diese Daten in Form eines Histogramms anzeigen möchten. Dieser Teil wird eingeleitet durch ein + und die entsprechende Form wie z.B. `geom_histogram()`. Zusätzlich setzen wir den Parameter `binwidth` auf 1. Das steuert die Balkenbreite. Damit es für dich leichter ist, gebe ich dir hier eine Vorlage, die du anpassen musst... `ggplot(dataframe,aes(variable))+geom_histogram(binwidth=20)`
-
 `@instructions`
-
+Wir möchten wieder wissen, wie häufig einzelne Farben in verschiedenen Packungen vorkommen. Der Befehl durch `ggplot` eingeleitet und wir übergeben Gummibaerchen als unser Dataframe. Als zweites Argument geben wir die Variablen an, die wir plotten möchten. Das zweite Argument ist jedoch eingerahmt in `aes()`, was die Abkürzung für '_aesthetics_' ist. Dann müssen wir noch spezifizieren, dass wir diese Daten in Form eines Histogramms anzeigen möchten. Dieser Teil wird eingeleitet durch ein + und die entsprechende Form wie z.B. `geom_histogram()`. Zusätzlich setzen wir den Parameter `binwidth` auf 1. Das steuert die Balkenbreite. Damit es für dich leichter ist, gebe ich dir hier eine Vorlage, die du anpassen musst... `ggplot(dataframe,aes(variable))+geom_histogram(binwidth=20)`
 
 `@hint`
 Bei der Vorlage ersetzt du `dataframe`, `variable` und `20` durch die im Text angegebenen Daten.
@@ -114,7 +112,7 @@ Bei der Vorlage ersetzt du `dataframe`, `variable` und `20` durch die im Text an
 
 ```{r}
 library(ggplot2)
-Gummibaerchen <- 
+Gummibaerchen <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
 `@sample_code`
 

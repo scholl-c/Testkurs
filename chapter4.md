@@ -27,6 +27,11 @@ Suche in der Hilfe nach der Verwendung des Befehl ``hist()`` und wenn du Problem
 ```{r}
 Gummibaerchen <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
+`@sample_code`
+
+```{r}
+
+```
 
 `@solution`
 
@@ -336,8 +341,7 @@ xp: 100
 key: c2727a0fc7   
 ```
 
-## Warum das Balkendiagramm vorziehen?
-Diese Art der Grafik ist ungünstig, weil wir sehr viele Kategorien haben, die alle ähnlich groß sind. Es ist mit dem Auge schwer zu sehen, ob nun die grünen oder die roten Gummibärchen im Mittel häufiger vorkommen. Kreisdiagramme sind nur in wenigen Fällen wirklich sinnvoll. Sie eignen sich bei wenigen Ausprägungen einer Variable wie z.B. bei Geschlecht. Wenn du ein einfaches Kreisdiagramm erstellen möchtest, schau dir die Funktion `pie()` an. Besser eignet sich hier ein Balkendiagramm. 
+Diese Art der Grafik ist ungünstig, weil wir sehr viele Kategorien haben, die alle ähnlich groß sind. Es ist mit dem Auge schwer zu sehen, ob nun die grünen oder die roten Gummibärchen im Mittel häufiger vorkommen. Kreisdiagramme sind nur in wenigen Fällen wirklich sinnvoll. Sie eignen sich bei wenigen Ausprägungen einer Variable wie z.B. bei Geschlecht. Wenn du ein einfaches Kreisdiagramm erstellen möchtest, schau dir die Funktion `pie()` an. Besser eignet sich hier ein Balkendiagramm.
 
 
 
@@ -351,11 +355,6 @@ Farben_Mean <- Gummibaerchen[,2:7] %>% colMeans()  %>%
   prop.table() %>% 
   melt() %>% 
   rownames_to_column()
-```
-`@sample_code`
-
-```{r}
-
 ```
 
 
@@ -553,18 +552,11 @@ den Boxplot. Er gibt ebenso Auskunft über die Verteilung und Lage von Variablen
 `@instructions`
 Teste den Befehl `boxplot` mit einer Variablen aus dem Datenset `Gummibaerchen`.
 
-`@hint`
-
 
 `@pre_exercise_code`
 
 ```{r}
 Gummibaerchen <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
-```
-`@sample_code`
-
-```{r}
-
 ```
 
 `@solution`
