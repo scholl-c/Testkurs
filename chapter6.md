@@ -627,3 +627,156 @@ na_if(ds$Alter,"")
 
 
 
+
+
+---
+## na.omit
+
+```yaml
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: 6ff897ead8   
+```
+
+Du hast eine Umfrage erstellt und dabei verschiedene **optionale**, wie auch **obligatorische** Fragen gestellt. Insgesamt haben 500 Teilnehmer an deiner Umfrage teilgenommen und diese abgeschlossen. Deine Daten hast du so aufbereitet, dass jeder Teilnehmer einer Zeile, und jede Frage einer Spalte entspricht. Wenn optionale Fragen nicht beantwortet wurden, enthalten diese Zellen ein _NA_. Wie solltest du `na.omit()` nutzen?
+
+
+`@hint`
+Wenn du `na.omit()` auf dem ganzen Datensatz anwendest, löschst du alle Teilnehmer, die auch nur eine optionale Frage nicht beantwortet haben.
+
+
+
+
+
+`@possible_answers`
+- Ich kann `na.omit()` hier gar nicht nutzen
+- [Ich sollte `na.omit()` nur auf einem subset anwenden]
+- Ich sollte `na.omit()` auf den ganzen Datensatz anwenden
+
+`@feedbacks`
+
+
+
+
+
+
+---
+## Ausreißer erkennen
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 6c73942d08   
+```
+
+> 'Das kann doch nicht sein!'
+
+, denkst du, als du dir die Daten anschaust und siehst, dass jemand das Alter 101 eingetragen hat. Darfst du diese Person einfach löschen, weil dir das Alter unglaubwürdig erscheint?
+**Du solltest nicht unbegründet Teilnehmer ausschließen.** Im Boxplot werden dir zum Beispiel die Ausreißer graphisch angezeigt. Du musst dazu das Alter als Integer parsen. 
+
+`@instructions`
+Benutze `as.integer()` und parse damit das Alter als Integer-Werte. Folglich wirst du sehen, dass jetzt die leeren Felder zu _NA_ geworden sind. Du musst also in dieser Spalte keine leeren Felder mehr berücksichtigen.
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+ds <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+ds$Alter <- as.integer(ds$Alter)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+---
+## Ausreißer ausschließen
+
+```yaml
+type: TabExercise 
+xp: 100 
+key: 3a275d53c6   
+```
+
+
+
+
+
+`@pre_exercise_code`
+
+```{r}
+ds <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
+```
+`@sample_code`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 73c3d14373   
+```
+
+
+
+`@instructions`
+Lasse dir den Boxplot über die Altersverteilung ausgeben.
+
+`@hint`
+
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+boxplot(ds$Alter)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
