@@ -367,3 +367,166 @@ lapply(cars,normalverteilt)
 
 
 
+
+
+---
+## Vektorisierung
+
+```yaml
+type: TabExercise 
+xp: 100 
+key: 2f2d3b4af1   
+```
+
+Du siehst, dass wir uns hier die Konstruktion einer Schleife über alle Spalten gespart haben. Es kann jedoch Fälle geben, wo du selbst eine Schleife bauen musst. Du kannst dir dazu die Konstrukte mit den Schlüsselwörtern for, while oder repeat anschauen.
+
+Sowohl Wiederholungen zu vermeiden als auch deinen Code schneller machen, kann die Vektorisierung leisten. Lass uns nun mal ein einfaches Beispiel betrachten, um dir das zu verdeutlichen:
+
+
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 35 
+key: 059fb525cd   
+```
+
+
+
+`@instructions`
+Erstelle einen Vektor mit der Verkettungsfunktion `c()`. Gib `v1 <- c(51,402,537)` ein.
+
+`@hint`
+
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+v1 <- c(51,402,537)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 35 
+key: 9cdb881b5f   
+```
+
+
+
+`@instructions`
+Gib nun den Vektor v2 mit `v2 <- c(24,309,54)` ein.
+
+`@hint`
+
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+v2 <- c(24,309,54)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 30 
+key: 371601568d   
+```
+
+
+
+`@instructions`
+Addiere die Vektoren und speichere das Ergebnis in `v3`.
+
+`@hint`
+
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+v3 <- v1+v2
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
