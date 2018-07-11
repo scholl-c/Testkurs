@@ -547,9 +547,9 @@ xp: 100
 key: 06df13ffe6   
 ```
 
-Die Regressionsanalyse versucht herauszufinden, um welche Form des Zusammenhangs es sich 
-  handelt. Bis jetzt haben wir nur auf lineare Zusammenhänge untersucht. Desweiteren können 
-  damit Voraussagen für z.B. die Entwicklung in Zukunft getroffen werden.
+Die Regressionsanalyse versucht herauszufinden, um welche Form des Zusammenhangs es sich handelt. Bis jetzt haben wir nur auf lineare Zusammenhänge untersucht. Desweiteren können damit Voraussagen für z.B. die Entwicklung in Zukunft getroffen werden.
+
+Wir können mit `lm()` (lm steht für _linear model_) eine Gerade berechnen lassen und diese dann mit `abline()` auf unser Streudiagramm legen. 
 
 
 
@@ -584,7 +584,7 @@ key: 0dcb1617af
 
 
 `@instructions`
-Wir können mit `lm()` (lm steht für _linear model_) eine Gerade berechnen lassen und diese dann mit `abline()` auf unser Streudiagramm legen. Zeichne dazu zuerst nochmal das Streudiagramm, gib zuerst die Variable für die Schokotafeln an, danach die Variable für den IQ. Gib aber dieses Mal die beiden Variablen als `formula` (d.h. verbunden durch die Tilde ~) an.
+Zeichne dazu zuerst nochmal das Streudiagramm, gib zuerst die Variable für die Schokotafeln an, danach die Variable für den IQ. Gib aber dieses Mal die beiden Variablen als `formula` (d.h. verbunden durch die Tilde ~) an.
 
 `@hint`
 Benutze `plot()` für das Streudiagramm. Verwende die Dollar-Schreibweise.
