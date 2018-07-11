@@ -172,3 +172,52 @@ lapply(cars,Mode)
 
 
 
+
+
+---
+## Alternative sapply
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 82e4778553   
+```
+
+Alternativ kannst du auch `sapply()` nutzen. Der einzige Unterschied liegt in der Ausgabe. 
+
+`@instructions`
+Sieh dir das an, in dem du analog zum vorherigen Beispiel statt `lapply()` `sapply()` anwendest.
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+library(datasets)
+Mode <- function(x) {
+  ux <- unique(x)
+  ux[which.max(tabulate(match(x, ux)))]
+}
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+sapply(cars,Mode)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
