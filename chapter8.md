@@ -443,7 +443,7 @@ Wir haben also eine stark positive Korrelation zwischen Schokoladentafelkonsum u
 
 
 ---
-## Insert exercise title here
+## Spearman-Rangkorrelation
 
 ```yaml
 type: NormalExercise 
@@ -478,6 +478,53 @@ choco <- read.csv("https://assets.datacamp.com/production/repositories/3196/data
 
 ```{r}
 cor.test(choco$Tafeln,choco$IQ,method="spearman")
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+---
+## Insert exercise title here
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: e83ad4f3bd   
+```
+
+Es kann sein, dass du die Korrelation zwischen mehreren Variablen untersuchen möchtest. Auch da musst du alle Variablen auf Normalverteiltheit überprüfen und nachsehen, ob die Korrelationen überhaupt signifikant sind, aber du kannst dir sparen die Korrelationskoeffizienten einzeln zu berechnen - sondern die Datenmatrix mit allen zu untersuchenden Variablen der  Funktion `cor()` übergeben. 
+
+Die Matrix ist an der Diagonalen gespiegelt, weil es keine Rolle spielt, ob du die Anzahl der Schokotafeln mit dem IQ korrelierst oder den IQ mit der Anzahl der Schokoladentafeln. Du erkennst zudem, dass jede Variable mit sich selbst perfekt korreliert, d.h. der Wert liegt bei 1. Auch hier kannst du mit `method='spearman'` angeben, dass z.B. die Spearman-Rangkorrelation verwendet werden soll.
+
+`@instructions`
+Berechne die Korrelationsmatrix für unseren Datensatz mit `cor()`.
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+choco <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8fabac37c6b40b6274b29eba130b53d8c7e70b8/choco.csv")
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+cor(choco)
 ```
 `@sct`
 
