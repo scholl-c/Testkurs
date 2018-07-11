@@ -219,7 +219,7 @@ Welche Rechenoperationen kann man mit Angaben in 'Stunden' durchführen?
 
 
 ---
-## Insert exercise title here
+## t-Test benutzen?
 
 ```yaml
 type: PureMultipleChoiceExercise 
@@ -246,6 +246,84 @@ Wir haben bisher nur geprüft, ob das Skalenniveau ausreicht.
 - Falsch
 - Falsch
 - Richtig, das wissen wir noch nicht.
+
+
+
+
+
+---
+## Stichproben
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 19e43fd635   
+```
+
+Wir müssen zuerst die Stichproben auf Normalverteilung prüfen. Dazu benutzen wir wieder den Shapiro-Wilk-Test (`shapiro.test`). 
+
+`@instructions`
+Prüfe zunächst, ob die Stichprobe für Gruppe 1 (erstes Schlafmittel) normalverteilt ist. Prüfe dann, ob die Stichprobe für Gruppe 2 (zweites Schlafmittel) normalverteilt ist.
+
+`@hint`
+Bilde ein subset, wähle die Spalte 'extra' aus und wende darauf shapiro.test an.
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+shapiro.test(subset(sleep,group==1)$extra)
+shapiro.test(subset(sleep,group==2)$extra)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+---
+## Normalverteilung
+
+```yaml
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: 0e65ae44fa   
+```
+
+Beide p-Werte sind größer als 0,05. Dürfen wir also Normalverteilung annehmen?
+
+
+`@hint`
+Die Nullhypothese nimmt an, dass eine Normalverteilung vorliegt. Sie wird nur abgelehnt, wenn p kleiner als 0,05 ist.
+
+
+
+
+
+`@possible_answers`
+- [Ja]
+- Nein
+
+`@feedbacks`
+- Richtig
+- Falsch
 
 
 
