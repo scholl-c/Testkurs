@@ -214,3 +214,299 @@ ggplot(Gummibaerchen,aes(x=Anzahl_Farben,y=Anzahl_Baeren))+geom_point()
 
 
 
+
+
+---
+## Achsenbeschriftung in ggplot2
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: b3cf321d71   
+```
+
+Um die Grafik verständlicher zu gestalten, können wir Achsenbeschriftungen und einen Titel hinzufügen. Das können wir mit der Spezifikation von `ggtitle()`, `xlab()` und `ylab()`. Diese hängen wir mit einem Plus an den `ggplot`-Befehl an, so wie wir es z.B. auch bei `geom_point` gemacht haben. Es ist dabei kein Problem, wenn wir mehrere Dinge anhängen.
+
+`@instructions`
+Lass uns dem Streudiagramm Achsenbezeichnungen und einen Titel geben! Nenne die x-Achse _Anzahl Farben_ die y-Achse _Anzahl Bären_ und den Titel _Mein erstes Streudiagramm_ (auch in dieser Reihenfolge!). Die Benennungen müssen jeweils in Anführungszeichen gesetzt werden.
+
+`@hint`
+Es ist alles gesagt. Lies genau.
+
+`@pre_exercise_code`
+
+```{r}
+library(ggplot2)
+Gummibaerchen <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+ggplot(Gummibaerchen,aes(x=Anzahl_Farben,y=Anzahl_Baeren))+geom_point()+xlab("Anzahl Farben")+ylab("Anzahl Bären")+ggtitle("Mein erstes Streudiagramm")
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+---
+## Balkendiagramm mit ggplot
+
+```yaml
+type: TabExercise 
+xp: 100 
+key: 957510df6b   
+```
+
+Wir erstellen nun ein Balkendiagramm mit `ggplot`. Wir möchten den Mittelwert der einzelnen Farben pro Tütchen plotten. Dafür sind einige Schritte Vorverarbeitung nötig.
+
+
+
+`@pre_exercise_code`
+
+```{r}
+library(ggplot2)
+library(reshape2)
+Gummibaerchen <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
+Farben_Mean <- colMeans(Gummibaerchen[,2:7])
+baeren_colors <- c("#8B0000", "#ffd700", "#32cd32","#ff0000","#ff9900","#ffffff")
+```
+`@sample_code`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 20 
+key: 548942aef1   
+```
+
+
+
+`@instructions`
+Wir wissen für jede Farbe, wie oft sie jeweils in den zwanzig einzelnen Tütchen vorkommt. Dies steht für jede Farbe in einer eigenen Spalte. Zunächst errechnen wir die Mittelwerte pro Spalte, d.h. wie oft kommt diese oder jene Farbe im Durchschnitt pro Tütchen vor. Wir können das mit der Funktion `colMeans()` berechnen. Dazu wählen wir alle Spalten mit Farbennamen aus, das sind Spalte 2 bis Spalte 7. Das Ergebnis speichern wir in `Farben_Mean`.
+
+`@hint`
+Wähle alle Spalten von 2 bis 7 aus. Das geht über [,2:7]
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+Farben_Mean <- colMeans(Gummibaerchen[,2:7])
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 20 
+key: e5abaf015b   
+```
+
+
+
+`@instructions`
+`ggplot` braucht die Daten in einem bestimmten Format. Das erreichen wir oft über den Befehl `melt()` aus dem `reshape2`-Package. Wende den Befehl `melt()` auf `Farben_Mean` (und überschreibe damit `Farben_Mean`)
+
+`@hint`
+
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+Farben_Mean <- melt(Farben_Mean)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 20 
+key: e28bb21eeb   
+```
+
+
+
+`@instructions`
+Es ist nun notwendig, dass wir die Namen der Zeilen, also z.B. 'dunkelrot' als eigene Spalte zur Verfügung haben, um diese Variable später an die x-Achse zu binden. Dazu verwenden wir den Befehl `rownames()` und nennen die Variable für die Zeilennamen `farben`. Versuch das mal.
+
+`@hint`
+Eine Variable erstellen kannst auf dem gleichen Weg, wie du eine auswählen kannst, d.h. über eckige Klammern.
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+Farben_Mean["farben"] <- rownames(Farben_Mean)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 20 
+key: 4e3d3ad736   
+```
+
+
+
+`@instructions`
+Nun haben wir alle Vorbereitungen abgeschlossen und können das erste Balkendiagramm plotten. Dafür bekommst du wieder eine Vorlage, die du abändern sollst... `ggplot(dataframe,aes(x=variable1,y=variable2))+geom_col()`
+
+`@hint`
+Ersetze _dataframe_, _variable1_ und _variable2_.
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+ggplot(Farben_Mean,aes(x=farben,y=value))+geom_col()
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 20 
+key: 5fad3ed520   
+```
+
+
+
+`@instructions`
+Nun sind `ggplot`-Grafiken nicht immer schwarz-weiß, sondern in schönen Farben möglich. Dazu haben wir bereits einen Vektor `baeren_colors` mit Farbcodes vorliegen. Wenn wir die Balken einfärben möchten, können wir das über den Parameter `fill` in `geom_col()` tun. Weise `fill` die `baeren_colors` zu.
+
+`@hint`
+Momentan sind in `geom_col()` noch keine Parameter angegeben. Füge `fill=baeren_colors` hinzu.
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+ggplot(Farben_Mean,aes(x=farben,y=value))+geom_col(fill=baeren_colors)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
