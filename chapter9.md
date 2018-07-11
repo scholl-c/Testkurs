@@ -121,3 +121,54 @@ Was vermutest du aufgrund des Ergebnisses in der vorherigen Frage? Welche Antwor
 
 
 
+
+
+---
+## Eigene Funktion auf alle Spalten anwenden
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: e1f00c619a   
+```
+
+Vielleicht möchtest du abseits von Summe oder arithmetischem Mittelwert noch den Median oder Modus der verschiedenen Spalten berechnen? Vielleicht möchtest du auch etwas ganz anderes mit jeder Spalte machen? Kein Problem! Deine Individualität kannst du ausleben, in dem du eine kleine Funktion schreibst und mit `lapply` auf die Spalten des Datensatzes anwendest.
+
+Nun möchtest du den Modus für jede Spalte berechnen. `lapply()` wendet eine Funktion auf die Spalten eines Datensatzes, oder wenn keine Spalten spezifiziert wurden auf alle Spalten eines Datensatzes an. Du kannst `lapply()` nach dieser Vorlage benutzen: `lapply(datensatz,funktion)` 
+
+`@instructions`
+Berechne damit den Modus für alle Spalten in `cars`. Die Funktion namens `Mode`, die den Modus berechnet, stellen wir dir bereit.
+
+`@hint`
+Du musst keine Spalten spezifizieren und verwende unsere Funktion namens `Mode`
+
+`@pre_exercise_code`
+
+```{r}
+library(datasets)
+Mode <- function(x) {
+  ux <- unique(x)
+  ux[which.max(tabulate(match(x, ux)))]
+}
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+lapply(cars,Mode)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
