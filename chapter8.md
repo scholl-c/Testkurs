@@ -33,7 +33,7 @@ choco <- read.csv("https://assets.datacamp.com/production/repositories/3196/data
 `@sct`
 
 ```{r}
-test_mc("Ja, richtig, sie sind sind intervallskaliert.","Nein")
+test_mc(1,"Ja, richtig, sie sind sind intervallskaliert.","Nein")
 ```
 
 
