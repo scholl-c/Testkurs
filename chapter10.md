@@ -47,3 +47,93 @@ Gib `?library` ein.
 
 
 
+
+
+---
+## Histogramm mit ggplot2
+
+```yaml
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: b54e584970   
+```
+
+Auch mit `ggplot2` können wir ein Histogramm plotten. Ein Histogramm veranschaulicht die/den ... von Daten?
+
+
+`@hint`
+Was wird in der Regel auf der y-Achse eines Histogramms gemessen?
+
+
+
+
+
+`@possible_answers`
+- [Verteilung]
+- Beziehung
+- Zusammensetzung
+- Vergleich
+
+`@feedbacks`
+- Genau!
+- Nein
+- Nein
+- Nein
+
+
+
+
+
+---
+## Histogramm plotten
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 7d6d299a32   
+```
+
+Nun werden wir dieses Histogramm plotten mit `ggplot2`. In der vorherigen Lektion hast du gelernt, wie wir das mit dem einfachen Befehl `hist()` schon können. In `ggplot2` besteht ein einfacher Befehl aus drei Dingen. 
+
+- Erstens, der Angabe mit welchem Datensatz du arbeitest. 
+- Zweitens, welche Variablen geplottet werden sollen. Bei mehreren Variablen wird auch die Angabe auf welche 
+  Achse jeweils welche Variable gelegt wird benötigt. 
+- Drittens, **wie** die Daten geplottet werden sollen, also z.B. als Histogramm, als Balken, als Linien oder als Punkte. 
+
+Für unser Histogramm reicht die Angabe eines Datensatzes und einer Variablen. Denn bei der Form eines Histogramms ist festgelegt, dass die y-Achse die Häufigkeit der Vorkommen der einzelnen Ausprägungen angibt. Zusätzlich geben wir `geom_histogram()` als dritten Bestandteil an.
+
+Wir möchten wieder wissen, wie häufig einzelne Farben in verschiedenen Packungen vorkommen. Der Befehl durch `ggplot` eingeleitet und wir übergeben Gummibaerchen als unser Dataframe. Als zweites Argument geben wir die Variablen an, die wir plotten möchten. Das zweite Argument ist jedoch eingerahmt in `aes()`, was die Abkürzung für '_aesthetics_' ist. Dann müssen wir noch spezifizieren, dass wir diese Daten in Form eines Histogramms anzeigen möchten. Dieser Teil wird eingeleitet durch ein + und die entsprechende Form wie z.B. `geom_histogram()`. Zusätzlich setzen wir den Parameter `binwidth` auf 1. Das steuert die Balkenbreite. Damit es für dich leichter ist, gebe ich dir hier eine Vorlage, die du anpassen musst... `ggplot(dataframe,aes(variable))+geom_histogram(binwidth=20)`
+
+`@instructions`
+
+
+`@hint`
+Bei der Vorlage ersetzt du `dataframe`, `variable` und `20` durch die im Text angegebenen Daten.
+
+`@pre_exercise_code`
+
+```{r}
+library(ggplot2)
+Gummibaerchen <- 
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+ggplot(Gummibaerchen,aes(Anzahl_Farben))+geom_histogram(binwidth=1)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
