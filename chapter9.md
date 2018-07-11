@@ -382,7 +382,7 @@ Du siehst, dass wir uns hier die Konstruktion einer Schleife über alle Spalten 
 
 Sowohl Wiederholungen zu vermeiden als auch deinen Code schneller machen, kann die Vektorisierung leisten. 
 
-Lass uns nun mal ein einfaches Beispiel einer Vektorrechnung betrachten. Klar, könnte man in diesem Beispiel alle drei Rechnungen auch separat durchführen, aber es gibt sehr viele Beispiele, da lohnt es sich Vektorisierung einzubauen.
+Lass uns nun mal ein einfaches Beispiel einer Vektorrechnung betrachten. Klar, könnte man in diesem Mini-Beispiel alle drei Rechnungen auch separat durchführen, aber es gibt sehr viele Beispiele, da lohnt es sich Vektorisierung einzubauen.
 
 
 
