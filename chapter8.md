@@ -440,3 +440,52 @@ Wir haben also eine stark positive Korrelation zwischen Schokoladentafelkonsum u
 
 
 
+
+
+---
+## Insert exercise title here
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 13cb92af2a   
+```
+
+Streng genommen können wir keine der Aussagen machen. Aus einer Korrelation folgt keine **Kausalität**, d.h. wir wissen nicht, ob das eine das andere beeinflusst oder umgekehrt. Es könnte auch sein, dass hier ein dritter uns unbekannter Faktor beides beeinflusst. Zudem müssen wir bedenken, dass darin keine anderen Formen von Schokolade (wie z.B. Pralinen) abdecken. Wir haben nur eine kleine Stichprobe von 30 Personen.
+
+Bitte gehe vorsichtig mit solchen verallgemeinernden Aussagen um und zweifle, wenn du Aussagen dieser Art liest! Du solltest nicht den Entschluss fassen, nun mehr Schokolade zu konsumieren, um in Statistik besser zu werden.
+
+Die Spearman-Rangkorrelation kann mit der gleichen Funktion berechnet werden, nur muss zusätzlich `method='spearman'` angegeben werden.
+
+`@instructions`
+Berechne als Übung die Spearman-Rangkorrelation.
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+choco <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8fabac37c6b40b6274b29eba130b53d8c7e70b8/choco.csv")
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+cor.test(choco$Tafeln,choco$IQ,method="spearman")
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
