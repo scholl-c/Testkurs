@@ -376,7 +376,7 @@ leveneTest(extra~group,sleep)
 
 
 ---
-## Insert exercise title here
+## t-Test var.equal
 
 ```yaml
 type: PureMultipleChoiceExercise 
@@ -384,7 +384,7 @@ xp: 50
 key: 7921f81915   
 ```
 
-Wir haben einen p-Wert größer als 0.05. Dürfen wir var.equal=TRUE setzen?
+Wir haben einen p-Wert größer als 0.05. Dürfen wir `var.equal=TRUE` setzen?
 
 
 `@hint`
