@@ -146,7 +146,7 @@ ggplot(rauchertest1,aes(x=Raucher,y=Test1))+geom_col()
 
 
 ---
-## Insert exercise title here
+## Gruppiertes Balkendiagramm
 
 ```yaml
 type: MultipleChoiceExercise 
@@ -180,6 +180,245 @@ Du möchtest die Raucher mit den Nicht-Rauchern gut vergleichen können.
 ```{r}
 
 ```
+
+
+
+
+
+
+
+---
+## Gruppiertes Balkendiagramm mit ggplot2
+
+```yaml
+type: TabExercise 
+xp: 100 
+key: 37025434e0   
+```
+
+Nun haben wir das Problem, dass Test1, Test2 und Test3 verschiedene Spalten sind. Wir müssen ggplot allerdings eine Variable mit genau diesen Ausprägungen geben, wenn wir x festlegen. Es gibt dafür eine einfache Lösung. Und zwar wandeln wir das Format um, sodass Test1, Test2 und Test3 als Ausprägung in einer Spalte stehen. Wenn du das jetzt noch nicht verstehst, du wirst gleich sehen, wie es funktioniert.
+
+
+
+`@pre_exercise_code`
+
+```{r}
+library(ggplot2)
+library(reshape2)
+mathetest <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/ade54dc40604e210c38ef19defcf24a3e6d92717/mathetest.csv")
+```
+`@sample_code`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 20 
+key: a3fc2bff2f   
+```
+
+
+
+`@instructions`
+Die Funktion heißt `melt()` und stammt aus dem `reshape2`-Paket. Diese wandelt das Format unseres Datensatzes in ein Long-Format um. Wende nun die Funktion `melt()` auf unseren Datensatz `mathetest` an und speichere das Ergebnis in `melted`.
+
+`@hint`
+
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+melted <- melt(mathetest)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 20 
+key: fc15f39f80   
+```
+
+
+
+`@instructions`
+Der Informationsgehalt von `melted` ist identisch zum ursprünglichen Datensatz, lediglich das Format hat sich geändert. Schau dir `melted` an, nutze dafür die Funktion `head()`
+
+`@hint`
+
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+head(melted)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 20 
+key: 812b29ad7b   
+```
+
+
+
+`@instructions`
+Nun müssen wir wieder aggregieren, denn wir möchten einen Vergleich der Durchschnittswerte der Testergebnisse zwischen den beiden Gruppen vergleichen. Und zwar möchten wir den Durchschnitt (mean) der Testergebnisse (value) sowohl nach Raucher als auch nach Nummer des Tests (variable) berechnen. Du brauchst auch hier wieder eine formula. Diese besteht jedoch aus zwei Gruppierungsvariablen (Raucher, variable) die mit einem + verbunden werden. Damit bilden sie die rechte Seite der Tilde. Aggregiere und speichere den Datensatz in `raucheralletests`.
+
+`@hint`
+Benutze die Funktion `aggregate()` und übergib die richtige Formel, den Datensatz `melted` und die Funktion `mean` als Parameter.
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+raucheralletests <- aggregate(value~Raucher+variable,melted,mean)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 20 
+key: 03b431382d   
+```
+
+
+
+`@instructions`
+Nun haben wir die Daten so aufbereitet, dass sie sich als gruppiertes Balkendiagramm plotten lassen. Erstelle dieses Balkendiagramm mit `ggplot2`. Nutze `+geom_bar(stat='identity', position='dodge')` um ein gruppiertes Balkendiagramm erstellen zu lassen. Gib die Variablen für x und y richtig an, sodass wir pro Test sehen können, ob Raucher oder Nicht-Raucher besser abgeschnitten haben. Gib ebenso `fill=Raucher` für die Bildung der Gruppen an. Der Parameter `group` ist so nicht nötig.
+
+`@hint`
+
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+ggplot(raucheralletests,aes(x=variable,y=value,fill=Raucher))+geom_bar(stat="identity",position="dodge")
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: MultipleChoiceExercise 
+xp: 20 
+key: 06981c74ef   
+```
+
+
+
+`@instructions`
+Haben die Raucher immer durchschnittlich besser abgeschnitten?
+
+`@hint`
+
+
+
+
+
+`@sct`
+
+```{r}
+
+```
+
 
 
 
