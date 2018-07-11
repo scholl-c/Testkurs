@@ -961,14 +961,10 @@ key: a849842bdc
 
 
 `@instructions`
-Nicht immer macht es Sinn, die Untergrenze bzw. Obergrenze zu berechnen, z.B. wenn eine 
-  natürliche Grenze vorliegt. Es ist nicht nachvollziehbar, dass jemand unter 0 Jahre alt ist.
-Wenn wir nun alle über der Obergrenze ausschließen möchten, bilden wir ein neues Datenset, 
-  dass alle Teilnehmer mit einem Alter überhalb der Obergrenze ausschließt. Die Obergrenze liegt
-  in unserem Fall gerundet bei 68 Jahren. Das neue Datenset soll 'ds_bereinigt' heißen.
+Nicht immer macht es Sinn, die Untergrenze bzw. Obergrenze zu berechnen, z.B. wenn eine natürliche Grenze vorliegt. Es ist nicht nachvollziehbar, dass jemand unter 0 Jahre alt ist. Wenn wir nun alle über der Obergrenze ausschließen möchten, bilden wir ein neues Datenset, dass alle Teilnehmer mit einem Alter überhalb der Obergrenze ausschließt. Die Obergrenze liegt in unserem Fall gerundet bei 68 Jahren. Das neue Datenset soll `ds_bereinigt` heißen.
 
 `@hint`
-Benutze subset()
+Benutze `subset()`
 
 
 `@sample_code`
