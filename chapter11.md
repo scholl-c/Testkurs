@@ -96,3 +96,92 @@ rauchertest1 <- aggregate(Test1~Raucher,mathetest,mean)
 
 
 
+
+
+---
+## Balkendiagramm mit zwei Gruppen
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: d2f14f36e8   
+```
+
+Nun kannst du ein einfaches Balkendiagramm (`ggplot2`) erstellen, dass das durchschnittliche Ergebnis des ersten Tests für beide Gruppen (Raucher, Nicht-Raucher) zeigt. 
+
+`@instructions`
+Erstelle das Balkendiagramm, denke an `+geom_col()`
+
+`@hint`
+Nutze das eben erstellte aggregierte Datenset.
+
+`@pre_exercise_code`
+
+```{r}
+mathetest <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/ade54dc40604e210c38ef19defcf24a3e6d92717/mathetest.csv")
+rauchertest1 <- aggregate(Test1~Raucher,mathetest,mean)
+library(ggplot2)
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+ggplot(rauchertest1,aes(x=Raucher,y=Test1))+geom_col()
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+---
+## Insert exercise title here
+
+```yaml
+type: MultipleChoiceExercise 
+xp: 50 
+key: 4098eb419b   
+```
+
+Wunderbar! Du siehst, dass die Raucher im ersten Test durchschnittlich besser abgeschnitten haben. Wenn du nun nicht nur die Ergebnisse des ersten Tests, sondern auch der anderen Tests vergleichen möchtest, brauchst du ein gruppiertes Balkendiagramm.
+
+**Deine Aufgabe:** Nimm dir ein Blatt und skizziere, wie ein gruppiertes Balkendiagramm, das die durchschnittlichen Ergebnisse der Raucher bzw. Nicht-Raucher in allen drei Tests vergleicht, aussehen könnte.
+
+Welche Ausprägung der x-Achse wäre hier am Sinnvollsten?
+
+`@instructions`
+- Raucher (ja,nein)
+- [Tests(Test1,Test2,Test3)]
+
+`@hint`
+Du möchtest die Raucher mit den Nicht-Rauchern gut vergleichen können.
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
