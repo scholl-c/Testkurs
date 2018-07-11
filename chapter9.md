@@ -88,3 +88,36 @@ success_msg("Damit hast du jetzt zwei sehr einfache Funktionen kennengelernt, di
 
 
 
+
+
+---
+## Modus
+
+```yaml
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: 62397fee04   
+```
+
+Was berechnet der Modus?
+
+
+`@hint`
+Was vermutest du aufgrund des Ergebnisses in der vorherigen Frage? Welche Antwortmöglichkeit kannst du dadurch ausschließen?
+
+
+
+
+
+`@possible_answers`
+- [Den häufigsten Wert einer Zahlenreihe]
+- Den mittleren Wert einer sortierten Zahlenreihe
+- Den größten Wert einer Zahlenreihe
+
+`@feedbacks`
+- Ja!
+- Nein
+- Nein
+
+
+
