@@ -600,13 +600,10 @@ key: 68f0c28842
 
 
 `@instructions`
-Wenn du alternativ na.omit() nutzen möchtest, wandle die leeren Angaben in NA's um. 
-  Das geht mit der Funtion na_if(), die als erstes Argument die Spalte bzw. einen Vektor nimmt 
-  und als zweites Argument die leere Angabe, also zwei Anführungszeichen.
+Wenn du alternativ `na.omit()` nutzen möchtest, wandle die leeren Angaben in _NA_'s um. Das geht mit der Funtion `na_if()`, die als erstes Argument die Spalte bzw. einen Vektor nimmt und als zweites Argument die leere Angabe, also zwei Anführungszeichen.
 
 `@hint`
-Benutze als erstes Argument ds$Alter, als zweites Argument '' und trenne die Argumente 
-  mit Komma.
+Benutze als erstes Argument `ds$Alter`, als zweites Argument `""` und trenne die Argumente mit Komma.
 
 
 `@sample_code`
