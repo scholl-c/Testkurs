@@ -276,7 +276,7 @@ normalverteilt <- function(x) {
 
 ```yaml
 type: NormalExercise 
-xp: 100 
+xp: 50 
 key: e742790a65   
 ```
 
@@ -319,6 +319,49 @@ test_error()
 check_function("normalverteilt",incorrect_msg="Nicht ganz")
 success_msg("Super gemacht!")
 ```
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 50 
+key: 3fe300b96c   
+```
+
+
+
+`@instructions`
+Nun wenden wir unsere Funktion auf die Spalten von `cars` an. Benutze dazu den Befehl `lapply()`.
+
+`@hint`
+Das Prinzip ist das gleiche wie unserer Modus-Berechnung.
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+lapply(cars,normalverteilt)
+```
+`@sct`
+
+```{r}
+
+```
+
 
 
 
