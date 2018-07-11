@@ -256,7 +256,7 @@ library(datasets)
 normalverteilt <- function(x) {
   p <- shapiro.test(x)["p.value"]
   # Ergänze in den Klammern die Bedingung
-  if (________) {
+  if () {
     print("normalverteilt")
   } else {
     # Ergänze die Ausgabe
