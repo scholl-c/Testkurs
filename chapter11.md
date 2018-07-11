@@ -54,12 +54,13 @@ xp: 100
 key: ac1512248d   
 ```
 
-Nun möchten wir aber ein Balkendiagramm (ggplot2) mit dem Durchschnittswert erstellen. Können wir einfach ggplot(mathetest,aes(x=Raucher,y=Test1))+geom_col() benutzen? Nein, denn ggplot weiß auf diese Weise nicht, dass wir gerne den Mittelwert für Raucher=ja und Raucher=nein verwenden möchten. ggplot() würde uns nur die ersten beiden Werte, die es in der Tabelle für jeweils einen Raucher und einen Nicht-Raucher findet, plotten, nicht den Mittelwert aller Raucher bzw. aller Nicht-Raucher.
+Nun möchten wir aber ein Balkendiagramm (`ggplot2`) mit dem Durchschnittswert erstellen. **Können wir einfach `ggplot(mathetest,aes(x=Raucher,y=Test1))+geom_col()` benutzen?** Nein, denn `ggplot` weiß auf diese Weise nicht, dass wir gerne den Mittelwert für _Raucher=ja_ und _Raucher=nein_ verwenden möchten. `ggplot()` würde uns nur die ersten beiden Werte, die es in der Tabelle für jeweils einen Raucher und einen Nicht-Raucher findet, plotten, und nicht den Mittelwert aller Raucher bzw. aller Nicht-Raucher.
 
 Dabei kann dir die Funktion aggregate() helfen. aggregate() nimmt drei Parameter: 
 - die formula
 - der Datensatzname
 - die Funktion mit der aggregiert wird. 
+
 Der dritte Parameter kann z.B. mean, sum oder median sein. Die formula ist dabei identisch zu der formula bei der Erstellung des Boxplot.
 
 `@instructions`
