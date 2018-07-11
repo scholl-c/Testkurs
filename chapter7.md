@@ -67,3 +67,78 @@ Bilde den Satz - 'Ich möchte untersuchen, ob [x] von [y] abhängt.' Dabei ist [
 
 
 
+
+
+---
+## Verbundene und unverbundene Stichproben
+
+```yaml
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: 7f2e0d8c1a   
+```
+
+Welchen Test man rechnen darf, wird des weiteren durch
+- (1) Sind die Stichproben der beiden Gruppen verbunden oder unverbunden (manche sagen auch abhängig oder unabhängig)? 
+- (2) Sind die Stichproben normalverteilt oder zumindest ausreichend groß? 
+- (3) Kann Varianzhomogenität angenommen werden?
+bestimmt.
+
+**Verbunden** sind die Stichproben (das hat jetzt nichts mehr mit den Variablen zu tun) dann, wenn Personen zweimal oder mehrfach gemessen oder befragt wurden. Macht man zum Beispiel eine Untersuchung zur Konzentrationsfähigkeit und lässt die gleichen Probanden einmal morgens und einmal abends die gleichen Aufgaben lösen, handelt es sich um eine verbundene Stichprobe. Wie du auf **Varianzhomogenität** und Normalverteilung prüfen kannst, hast du in der Lektion zu Allgemeinen Tests gelernt. Die Prüfung auf Varianzhomogenität und Normalverteilung bezieht sich jeweils auf die Stichproben der beiden Gruppen, wie z.B. die Körpergrößen der Frauen und die Körpergrößen der Männer.
+
+Ist das **Skalenniveau** der abhängigen Variable mindestens intervallskaliert und kann eine Normalverteilung angenommen werden, darf man grundsätzlich die Funktion `t.test()` verwenden. Die Parameter müssen je nach Voraussetzung angepasst werden. Handelt es sich um eine **verbundene Stichprobe**, muss `paired=TRUE` angegeben werden. Kann **Varianzhomogenität** angenommen werden, setze `var.equal=TRUE`
+
+Es kommt vor, dass du eine Ahnung hast, wie die Gruppen sich unterscheiden. Zum Beispiel könnte das sein, dass du prüfen möchtest, ob Frauen signifikant kleiner sind als Männer. Wenn das der Fall ist nennt man das eine gerichtete Hypothese und du solltest `alternative='less'` oder `alternative='greater'` angeben. In allen anderen Fällen ist `alternative='two.sided'` dh. du weißt nicht, in welche Richtung die Abweichung besteht. Es handelt sich daher um eine ungerichtete Hypothese. Das ist auch der Default-Wert und muss daher nicht explizit angegeben werden.
+
+Es wurden zwei Schlafmittel an 10 Personen getestet und die Zunahme der Stunden im Schlaf gemessen. Damit sollen die beiden Schlafmittel verglichen werden. Die 10 Probanden testen also beide Schlafmittel. Es handelt sich folglich um ...
+Nun wollen wir anhand eines Beispiels durchgehen, wie man die zentralen Tendenzen 
+  zweier Gruppen vergleicht.
+
+
+`@hint`
+
+
+
+
+
+
+`@possible_answers`
+- [eine verbundene Stichprobe]
+- eine unverbundene Stichprobe
+
+`@feedbacks`
+
+
+
+
+
+
+---
+## Insert exercise title here
+
+```yaml
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: 4bd33db4d3   
+```
+
+Demnach müssten wir ...
+
+
+`@hint`
+paired bedeutet hier nichts anderes als 'verbunden'
+
+
+
+
+
+`@possible_answers`
+- [`paired=TRUE` angeben]
+- `paired=FALSE` angeben
+
+`@feedbacks`
+- Ja, genau!
+- Nein, denk nochmal nach.
+
+
+
