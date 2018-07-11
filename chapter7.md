@@ -114,7 +114,7 @@ Nun wollen wir anhand eines Beispiels durchgehen, wie man die zentralen Tendenze
 
 
 ---
-## Insert exercise title here
+## t-Test paired
 
 ```yaml
 type: PureMultipleChoiceExercise 
@@ -139,6 +139,48 @@ paired bedeutet hier nichts anderes als 'verbunden'
 `@feedbacks`
 - Ja, genau!
 - Nein, denk nochmal nach.
+
+
+
+
+
+---
+## Insert exercise title here
+
+```yaml
+type: MultipleChoiceExercise 
+xp: 50 
+key: cc589f06e3   
+```
+
+Lasse dir mit der Funktion `head()` die ersten Zeilen des Datensatzes `sleep` anzeigen. Der Datensatz enthält drei Variablen: 
+- die ID des Probanden, 
+- das Schlafmittel (1 oder 2), 
+- und die Schlafstunden im Vergleich zu einem normalen Schlaf der Probanden. 
+Welches davon ist die abhängige Variable?
+
+`@instructions`
+- ID
+- Schlafmittel
+- [Schlafstunden]
+
+`@hint`
+Die abhängige Variable ist jene Größe, die sich verändert durch Einflussnahme durch die unabhängige Variable auf das Experiment.
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+
+`@sct`
+
+```{r}
+test_mc(3,"Nein","Nein","Ja")
+```
+
 
 
 
