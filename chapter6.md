@@ -1090,3 +1090,38 @@ ds$Altersgruppe[ds$Alter>55] <- "Senioren"
 
 
 
+
+
+---
+## Insert exercise title here
+
+```yaml
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: 3e806ad53d   
+```
+
+Wozu ist Rekodieren **nicht** nützlich?
+
+
+`@hint`
+
+
+
+
+
+
+`@possible_answers`
+- Für eine bessere statistische Auswertung
+- [Um nominalskalierte Variablen in ordinal- oder intervallskaliert umzuwandeln]
+- Umdrehen der Antworten auf einer 5er Likert-Skala
+- Wertebereiche zusammenzufassen und Gruppen zu bilden bzw. zu klassifizieren
+
+`@feedbacks`
+- Falsch, für die Auswertung ist das nützlich
+- Richtig, das geht mit Rekodieren leider nicht!
+- Falsch, das geht
+- Das ist der Sinn des Rekodieren
+
+
+
