@@ -437,7 +437,7 @@ Du möchtest nun überprüfen, ob keiner deine Umfrage manipuliert hat und nur d
 Überprüfe damit die Werte für die Sprachauswahl.
 
 `@hint`
-
+Innerhalb von unique() muss die Spalte 'Sprachauswahl' ausgewählt werden.
 
 `@pre_exercise_code`
 
@@ -453,9 +453,8 @@ ds <- read.csv("https://assets.datacamp.com/production/repositories/3196/dataset
 `@solution`
 
 ```{r}
-
+unique(ds$Sprachauswahl)
 ```
-
 `@sct`
 
 ```{r}
