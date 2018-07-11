@@ -138,7 +138,7 @@ ggplot(Gummibaerchen,aes(Anzahl_Farben))+geom_histogram(binwidth=1)
 
 
 ---
-## Insert exercise title here
+## Streudiagramm mit ggplot2
 
 ```yaml
 type: PureMultipleChoiceExercise 
@@ -165,6 +165,52 @@ Denke auch hier daran, wie die Achsen belegt sein werden.
 - Nein
 - Richtig!
 - Nein
+
+
+
+
+
+---
+## Streudiagramm plotten
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: f3bf2f5e9d   
+```
+
+Sofern du das Prinzip von `ggplot` verstanden hast, dürfte es nicht schwer für dich sein, das Streudiagramm von `Anzahl_Farben` und `Anzahl_Baeren` zu plotten. Im Unterschied zu dem Histogramm, haben wir nun zwei Variablen, die wir an die Achsen binden. Wir legen also fest, dass `Anzahl_Farben` an die x-Achse und `Anzahl_Baeren` an die y-Achse gebunden werden soll. Das Streudiagramm zeigt im einfachsten Fall eine Vielzahl von Punkten. Also wählen wir für die Darstellung `geom_point()`. 
+
+`@instructions`
+Plotte das Streudiagramm. Auch für diesen Fall gebe ich dir eine Vorlage... `ggplot(dataframe,aes(x=variable1,y=variable2))+geom_point()`
+
+`@hint`
+Ersetze _dataframe_, _variable1_ und _variable2_. Achte auf die richtige Zuweisung der Variablen zur x und y-Achse.
+
+`@pre_exercise_code`
+
+```{r}
+library(ggplot2)
+Gummibaerchen <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+ggplot(Gummibaerchen,aes(x=Anzahl_Farben,y=Anzahl_Baeren))+geom_point()
+```
+`@sct`
+
+```{r}
+
+```
+
+
 
 
 
