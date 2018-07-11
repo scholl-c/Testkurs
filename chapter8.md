@@ -26,9 +26,8 @@ Auf welchem Skalenniveau sind die Anzahl an verspeisten Schokoladentafel und der
 `@pre_exercise_code`
 
 ```{r}
-
+choco <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8fabac37c6b40b6274b29eba130b53d8c7e70b8/choco.csv")
 ```
-
 
 
 `@sct`
