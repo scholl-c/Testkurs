@@ -19,10 +19,10 @@ Professor Ratistikus hält ein Seminar zu den Grundlagen der Mathematik, in dem 
 Die vorliegenden Daten findest du in `mathetest`. Die Namen der Studenten sind dabei anonymisiert bzw. durch einen Code ersetzt worden. Als Erstes möchten wir eine Grafik erstellen, die darstellt, wie viele Punkte die Raucher und Nicht-Raucher im ersten Test durchschnittlich erzielt haben. Den passenden Boxplot kannst du dir anzeigen lassen mit...
 
 `@instructions`
-- boxplot(Test1 ~ Raucher,mathetest)
-- boxplot(Raucher ~ Test1,mathetest)
-- boxplot(mathetest$Raucher,mathetest$Test1)
-- boxplot(Test1,Raucher)
+- `boxplot(Test1 ~ Raucher,mathetest)`
+- `boxplot(Raucher ~ Test1,mathetest)`
+- `boxplot(mathetest$Raucher,mathetest$Test1)`
+- `boxplot(Test1,Raucher)`
 
 `@hint`
 Bedenke, dass die Tilde impliziert, dass wir eine abhängige und eine unabhängige Variable haben. Die Gruppierungsvariable bzw. die abhängige Variable steht auf der rechten Seite der Tilde.
@@ -30,9 +30,8 @@ Bedenke, dass die Tilde impliziert, dass wir eine abhängige und eine unabhängi
 `@pre_exercise_code`
 
 ```{r}
-
+mathetest <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/ade54dc40604e210c38ef19defcf24a3e6d92717/mathetest.csv")
 ```
-
 
 
 `@sct`
