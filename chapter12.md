@@ -50,3 +50,49 @@ kappa2(interrater[,c(2,3)],'equal')
 
 
 
+
+
+---
+## Cohens Kappa
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 4a839d64f8   
+```
+
+Nun berechne den Cohens Kappa analog zum vorherigen Beispiel für die Übereinstimmung der beiden Professoren.
+
+`@instructions`
+Berechne den Cohens Kappa, verwende `kappa2`.
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+library(irr)
+interrater <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/32fe40c479aa377d8af347dd26bcd1d7ed5d636e/interrater.csv")
+```
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+kappa2(interrater[,c(4,5)],'equal')
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
