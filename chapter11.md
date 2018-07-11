@@ -424,3 +424,82 @@ Haben die Raucher immer durchschnittlich besser abgeschnitten?
 
 
 
+
+
+---
+## Facettieren
+
+```yaml
+type: TabExercise 
+xp: 100 
+key: 2f86bddb5a   
+```
+
+Wenn zwei, drei große Gruppen hinsichtlich mehrerer verschiedener Aspekte verglichen werden sollen, kann man das Facettieren nutzen. Die Option `facet_wrap(~var)` kann zur ggplot-Grafik hinzugefügt werden. Ersetze `var` durch die Gruppierungsvariable. Für deinen Datensatz bedeutet das, dass du zwei Spalten mit jeweils unterschiedlichen Gruppierungsvariablen benötigst.
+Letzendlich handelt es sich dabei nur um eine weitere Möglichkeit Gruppen in Diagrammen darzustellen. Um dies einmal auszuprobieren, haben wir das Dataset `mathetest` zweimal umstrukturiert mit `melt()` und danach einmal aggregiert. Wir erhalten das Datenset `grouped`. Nun werden wir die Daten nutzen.
+
+
+
+`@pre_exercise_code`
+
+```{r}
+grouped <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c10445a54acbf03ddab878c0e17978e75e5fe6b6/grouped.csv")
+```
+`@sample_code`
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 0f09db7e26   
+```
+
+
+
+`@instructions`
+Konstruiere ein Balkendiagramm, das je Test die durchschnittlichen Ergebnisse 
+  der Teilnehmer vergleicht. Die Facetten sollen die verschiedenen Tests sein, die Balken stellen 
+  die Ergebnisse der Raucher/Nicht-Raucher und Langschläfer/Frühaufsteher dar. Je nach 
+  Frühaufsteher oder Langschläfer, Raucher oder Nicht-Raucher sollen sich die Balkenfarben unterscheiden 
+  (benutze dafür die Angabe fill).
+
+`@hint`
+Benutze das Datenset 'grouped'. Gib erst +geom_bar() an und dann +facet_wrap().
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+`@solution`
+
+```{r}
+ggplot(grouped,aes(x=variable2,y=value,fill=value2))+geom_bar(stat="identity",position="dodge")+facet_wrap(~variable)
+```
+`@sct`
+
+```{r}
+
+```
+
+
+
+
+
+
