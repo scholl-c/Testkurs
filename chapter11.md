@@ -1,6 +1,7 @@
 ---
   title: "Gruppen vergleichen"
   description: "In vielen Experimenten geht es darum, Gruppen zu vergleichen. In der folgenden Lektion lernst du, wie du die Daten entsprechend auswerten und passende Diagramme erstellen kannst."
+  v2: true
 
 ---
 ## Boxplot mit zwei Variablen
@@ -75,21 +76,11 @@ Denke daran, dass die formula der des Boxplots entspricht.
 mathetest <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/ade54dc40604e210c38ef19defcf24a3e6d92717/mathetest.csv")
 library(ggplot2)
 ```
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
 ```{r}
 rauchertest1 <- aggregate(Test1~Raucher,mathetest,mean)
-```
-`@sct`
-
-```{r}
-
 ```
 
 
@@ -107,7 +98,7 @@ xp: 100
 key: d2f14f36e8   
 ```
 
-Nun kannst du ein einfaches Balkendiagramm (`ggplot2`) erstellen, dass das durchschnittliche Ergebnis des ersten Tests für beide Gruppen (Raucher, Nicht-Raucher) zeigt. 
+Nun kannst du ein einfaches Balkendiagramm (`ggplot2`) erstellen, dass das durchschnittliche Ergebnis des ersten Tests für beide Gruppen (Raucher, Nicht-Raucher) zeigt.
 
 `@instructions`
 Erstelle das Balkendiagramm, denke an `+geom_col()`
@@ -122,21 +113,11 @@ mathetest <- read.csv("https://assets.datacamp.com/production/repositories/3196/
 rauchertest1 <- aggregate(Test1~Raucher,mathetest,mean)
 library(ggplot2)
 ```
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
 ```{r}
 ggplot(rauchertest1,aes(x=Raucher,y=Test1))+geom_col()
-```
-`@sct`
-
-```{r}
-
 ```
 
 
@@ -167,19 +148,9 @@ Welche Ausprägung der x-Achse wäre hier am Sinnvollsten?
 `@hint`
 Du möchtest die Raucher mit den Nicht-Rauchern gut vergleichen können.
 
-`@pre_exercise_code`
-
-```{r}
-
-```
 
 
 
-`@sct`
-
-```{r}
-
-```
 
 
 
@@ -206,11 +177,6 @@ Nun haben wir das Problem, dass Test1, Test2 und Test3 verschiedene Spalten sind
 library(ggplot2)
 library(reshape2)
 mathetest <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/ade54dc40604e210c38ef19defcf24a3e6d92717/mathetest.csv")
-```
-`@sample_code`
-
-```{r}
-
 ```
 
 
@@ -444,6 +410,7 @@ Letzendlich handelt es sich dabei nur um eine weitere Möglichkeit Gruppen in Di
 
 ```{r}
 grouped <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c10445a54acbf03ddab878c0e17978e75e5fe6b6/grouped.csv")
+library(ggplot2)
 ```
 `@sample_code`
 
@@ -591,11 +558,6 @@ Ein Algorithmus dafür nennt sich _k-means_. Eine entsprechende Funktion namens 
 
 ```{r}
 library(cluster)
-```
-`@sample_code`
-
-```{r}
-
 ```
 
 
