@@ -30,21 +30,11 @@ Innerhalb der runden Klammern von `duplicated()` muss der Name deines Datensatze
 ```{r}
 ds <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
 ```{r}
 duplicated(ds)
-```
-`@sct`
-
-```{r}
-
 ```
 
 
@@ -70,11 +60,6 @@ Wir möchten nun Duplikate finden, überprüfen und ausschließen.
 
 ```{r}
 ds <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
-```
-`@sample_code`
-
-```{r}
-
 ```
 
 
@@ -335,7 +320,7 @@ key: dea228c286
 
 Nun hast du das Duplikat entfernt. 
 
-> Endlich kannst du mit den ersten Analysen starten! 
+> Endlich kannst du mit den ersten Analysen starten!
 
 `@instructions`
 Berechne den Altersdurchschnitt mit der Funktion `mean()`
@@ -348,21 +333,11 @@ Auf die Spalte `Alter` greifst du mit `ds$Alter` zu.
 ```{r}
 ds <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
 ```{r}
 mean(ds$Alter)
-```
-`@sct`
-
-```{r}
-
 ```
 
 
@@ -399,21 +374,11 @@ Gib zusätzlich zur vorherigen Berechnung noch `na.rm=TRUE` an.
 ```{r}
 ds <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
 ```{r}
 mean(ds$Alter,na.rm=TRUE)
-```
-`@sct`
-
-```{r}
-
 ```
 
 
@@ -431,7 +396,7 @@ xp: 100
 key: d4c211aa81   
 ```
 
-Du möchtest nun überprüfen, ob keiner deine Umfrage manipuliert hat und nur die vorgegebenen Möglichkeiten für die Sprachauswahl - nämlich eng und ger - ausgewählt wurden. Dafür und für andere Fälle wenn du eine Ausgabe aller unterschiedlichen Ausprägungen einer Variablen haben möchtest, kannst du unique() benutzen. Selbst wenn ein Wert mehrfach vorkommt, wird er dir nur einmal angezeigt. 
+Du möchtest nun überprüfen, ob keiner deine Umfrage manipuliert hat und nur die vorgegebenen Möglichkeiten für die Sprachauswahl - nämlich eng und ger - ausgewählt wurden. Dafür und für andere Fälle wenn du eine Ausgabe aller unterschiedlichen Ausprägungen einer Variablen haben möchtest, kannst du unique() benutzen. Selbst wenn ein Wert mehrfach vorkommt, wird er dir nur einmal angezeigt.
 
 `@instructions`
 Überprüfe damit die Werte für die Sprachauswahl.
@@ -444,21 +409,11 @@ Innerhalb von unique() muss die Spalte 'Sprachauswahl' ausgewählt werden.
 ```{r}
 ds <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
 ```{r}
 unique(ds$Sprachauswahl)
-```
-`@sct`
-
-```{r}
-
 ```
 
 
@@ -476,7 +431,7 @@ xp: 100
 key: 1b327584fb   
 ```
 
-Puh! Soweit scheint alles gut zu sein! 
+Puh! Soweit scheint alles gut zu sein!
 
 
 
@@ -484,11 +439,6 @@ Puh! Soweit scheint alles gut zu sein!
 
 ```{r}
 ds <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
-```
-`@sample_code`
-
-```{r}
-
 ```
 
 
@@ -654,7 +604,9 @@ Wenn du `na.omit()` auf dem ganzen Datensatz anwendest, löschst du alle Teilneh
 - Ich sollte `na.omit()` auf den ganzen Datensatz anwenden
 
 `@feedbacks`
-
+- Falsch
+- Richtig
+- Falsch
 
 
 
@@ -672,12 +624,10 @@ key: 6c73942d08
 > 'Das kann doch nicht sein!'
 
 , denkst du, als du dir die Daten anschaust und siehst, dass jemand das Alter 101 eingetragen hat. Darfst du diese Person einfach löschen, weil dir das Alter unglaubwürdig erscheint?
-**Du solltest nicht unbegründet Teilnehmer ausschließen.** Im Boxplot werden dir zum Beispiel die Ausreißer graphisch angezeigt. Du musst dazu das Alter als Integer parsen. 
+**Du solltest nicht unbegründet Teilnehmer ausschließen.** Im Boxplot werden dir zum Beispiel die Ausreißer graphisch angezeigt. Du musst dazu das Alter als Integer parsen.
 
 `@instructions`
 Benutze `as.integer()` und parse damit das Alter als Integer-Werte. Folglich wirst du sehen, dass jetzt die leeren Felder zu _NA_ geworden sind. Du musst also in dieser Spalte keine leeren Felder mehr berücksichtigen.
-
-`@hint`
 
 
 `@pre_exercise_code`
@@ -685,21 +635,11 @@ Benutze `as.integer()` und parse damit das Alter als Integer-Werte. Folglich wir
 ```{r}
 ds <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
 ```{r}
 ds$Alter <- as.integer(ds$Alter)
-```
-`@sct`
-
-```{r}
-
 ```
 
 
@@ -726,11 +666,6 @@ key: 3a275d53c6
 ```{r}
 ds <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ds$Alter <- as.integer(ds$Alter)
-```
-`@sample_code`
-
-```{r}
-
 ```
 
 
@@ -1019,11 +954,6 @@ Vergiss nicht, die Spalte mit den neuen Werten zu überschreiben.
 library(dplyr)
 ds <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
@@ -1068,22 +998,12 @@ Bei den Senioren brauchst du nur eine Bedingung d.h. keine verknüpfte Bedingung
 ```{r}
 ds <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
 ```{r}
 ds$Altersgruppe[ds$Alter>11 & ds$Alter<19] <- "Teenager"
 ds$Altersgruppe[ds$Alter>55] <- "Senioren"
-```
-`@sct`
-
-```{r}
-
 ```
 
 
@@ -1103,8 +1023,6 @@ key: 3e806ad53d
 
 Wozu ist Rekodieren **nicht** nützlich?
 
-
-`@hint`
 
 
 
