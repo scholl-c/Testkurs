@@ -18,7 +18,16 @@ Eine sehr wichtige Voraussetzung ist oft die Normalverteilung. Dies kann man mit
 
 
 
+`@pre_exercise_code`
 
+```{r}
+nv <- rnorm(200,30)
+```
+`@sample_code`
+
+```{r}
+
+```
 
 
 
@@ -95,7 +104,7 @@ hist(nv)
 
 ```{r}
 test_error()
-test_student_typed("hist(nv"),not_typed_msg="Nicht ganz.")
+test_student_typed("hist(nv)",not_typed_msg="Nicht ganz.")
 success_msg("Genau so sieht das Histogramm aus!")
 ```
 
@@ -164,12 +173,27 @@ Prüfe diese Daten auf Normalverteilung.
 `@hint`
 Benutze `shapiro.test()` wie zuvor auch
 
+`@pre_exercise_code`
 
+```{r}
+
+```
+
+`@sample_code`
+
+```{r}
+
+```
 
 `@solution`
 
 ```{r}
 shapiro.test(sunspots)
+```
+`@sct`
+
+```{r}
+
 ```
 
 
@@ -225,17 +249,29 @@ Normalverteilte Daten bzw. symmetrische Verteilungen haben eine Schiefe um die 0
 `@instructions`
 Berechne beispielhaft die Schiefe von `sunspots` mit `skewness()`.
 
+`@hint`
+
 
 `@pre_exercise_code`
 
 ```{r}
 library(moments)
 ```
+`@sample_code`
+
+```{r}
+
+```
 
 `@solution`
 
 ```{r}
 skewness(sunspots)
+```
+`@sct`
+
+```{r}
+
 ```
 
 
@@ -296,11 +332,6 @@ Da die Varianzhomogenität jetzt Varianzen aus verschiedenen Gruppen vergleicht 
 
 ```{r}
 library(car)
-```
-`@sample_code`
-
-```{r}
-
 ```
 
 
