@@ -22,17 +22,7 @@ Lasse dir den Datentyp von der Spalte ``speed`` von dem Datensatz ``cars`` anzei
 `@hint`
 Referenziere mit dem Dollarzeichen auf die Spalte ``speed``.
 
-`@pre_exercise_code`
 
-```{r}
-
-```
-
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
@@ -109,11 +99,6 @@ Exkurs: Falls du mal mit Zeitinverallen, der Dauer o.ä. umgehen musst, schaue d
 
 ```{r}
 daten <- c("04.03.1999","12.06.1973","22.01.2018","09.05.2013")
-```
-`@sample_code`
-
-```{r}
-
 ```
 
 
@@ -235,9 +220,8 @@ Benutze die Funktion ``weekdays()``
 `@sample_code`
 
 ```{r}
-
+daten <- as.Date(daten,"%d.%m.%Y")
 ```
-
 `@solution`
 
 ```{r}
@@ -266,7 +250,7 @@ xp: 100
 key: d3d561c9b0   
 ```
 
-Der Datentyp ``character``, d.h. Zeichenkette, ist nach der Art 'Wir nehmen's wie's kommt', weil man alle möglichen Zeichen darin speichern kann. Auch Zahlen. Aber man kann, selbst wenn man nur Zahlen gespeichert hat, nicht damit rechnen. 
+Der Datentyp ``character``, d.h. Zeichenkette, ist nach der Art 'Wir nehmen's wie's kommt', weil man alle möglichen Zeichen darin speichern kann. Auch Zahlen. Aber man kann, selbst wenn man nur Zahlen gespeichert hat, nicht damit rechnen.
 
 
 
@@ -274,11 +258,6 @@ Der Datentyp ``character``, d.h. Zeichenkette, ist nach der Art 'Wir nehmen's wi
 
 ```{r}
 zahlen <- c("4","5.6","12","29","4.4")
-```
-`@sample_code`
-
-```{r}
-
 ```
 
 
@@ -429,7 +408,7 @@ xp: 100
 key: 1fc7e418af   
 ```
 
-Möchtest du nicht den Typ der Daten, sondern den des Objekts wissen, kannst du das mit der Funktion ``class()`` herausfinden. 
+Möchtest du nicht den Typ der Daten, sondern den des Objekts wissen, kannst du das mit der Funktion ``class()`` herausfinden.
 
 `@instructions`
 Wende die Funktion auf ``geschlecht`` an.
@@ -441,11 +420,6 @@ Benutze die Funktion ``class()`` und übergib der Funktion ``geschlecht``.
 
 ```{r}
 geschlecht <- factor(c("m", "m", "w", "m", "w", "w", "w", "w", "w", "w", "m", "w"))
-```
-`@sample_code`
-
-```{r}
-
 ```
 
 `@solution`
@@ -477,7 +451,7 @@ key: 33990503c9
 
 Wenn du Datensätze mit ``read.csv`` einliest, kommt es vor, dass Spalten nicht als ``character`` erkannt werden, sondern als ``factor`` eingelesen werden. Faktoren (factors) sind für nominalskalierte Daten geeignet und haben sogenannte ``levels``, das sind die verschiedenen Ausprägungen. Beispielsweise enthält eine Spalte die Geschlechter und die ``levels`` wären dann entsprechend männlich und weiblich.
 
-Es kann sein, dass die Faktoren Probleme machen und kann daher sinnvoll sein, sie umzuwandeln. Am Einfachsten geht das mit ``as.vector()``. 
+Es kann sein, dass die Faktoren Probleme machen und kann daher sinnvoll sein, sie umzuwandeln. Am Einfachsten geht das mit ``as.vector()``.
 
 `@instructions`
 Wandle ``geschlecht`` in einen Vektor um und überschreibe ``geschlecht``.
@@ -489,11 +463,6 @@ Benutze ``as.vector()`` und übergib der Funktion ``geschlecht``.
 
 ```{r}
 geschlecht <- factor(c("m", "m", "w", "m", "w", "w", "w", "w", "w", "w", "m", "w"))
-```
-`@sample_code`
-
-```{r}
-
 ```
 
 `@solution`
