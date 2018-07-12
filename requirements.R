@@ -2,9 +2,19 @@ library(remotes)
 
 ##### Install specific package versions from CRAN #####
 
-# install_version("ggplot2", "2.2.1")
-# install_version("dplyr", "0.7.5")
-# install_version("tidyr", "0.8.1")
+ install_version("ggplot2", "2.2.1")
+ install_version("dplyr", "0.7.5")
+ install_version("reshape2","1.4.3")
+ install_version("car","3.0.0")
+ install_version("datasets","3.6.0")
+ install_version("moments","0.14")
+ install_version("readr","1.1.1")
+ install_version("irr","0.84")
+ install_version("ltm","1.1-1")
+ install_version("cluster","2.0.7-1")
+ install_version("magrittr","1.5")
+ install_version("tibble","1.4.2")
+ install_version("tidyr", "0.8.1")
 # install_version("purrr", "0.2.4")
 
 ##### Install packages in development from GitHub #####
