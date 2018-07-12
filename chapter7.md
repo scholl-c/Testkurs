@@ -1,6 +1,7 @@
 ---
   title: "Test auf Unterschiede"
   description: "Es geht jetzt darum, Gruppen zu vergleichen. Man möchte wissen, ob sich z.B. Gruppen von \n  Versuchsteilnehmern oder Gruppen unterteilt nach Geschlecht in bestimmter Hinsicht voneinander \n  unterscheiden. Mit den folgenden Tests vergleichen wir die Lagemaße (Mittelwerte etc.) der \n  Gruppen auf signifikante Unterschiede."
+  v2: true
 
 ---
 ## Lagemaße
@@ -28,7 +29,10 @@ Bei welchem Diagramm kannst du Mittelwerte auf einen Blick erkennen?
 - Streudiagramm
 
 `@feedbacks`
-
+- Genau!
+- Nein
+- Nein
+- Nein
 
 
 
@@ -107,7 +111,8 @@ Nun wollen wir anhand eines Beispiels durchgehen, wie man die zentralen Tendenze
 - eine unverbundene Stichprobe
 
 `@feedbacks`
-
+- Genau!
+- Nein, das ist es nicht.
 
 
 
@@ -168,11 +173,6 @@ Welches davon ist die abhängige Variable?
 `@hint`
 Die abhängige Variable ist jene Größe, die sich verändert durch Einflussnahme durch die unabhängige Variable auf das Experiment.
 
-`@pre_exercise_code`
-
-```{r}
-
-```
 
 
 
@@ -260,7 +260,7 @@ xp: 100
 key: 19e43fd635   
 ```
 
-Wir müssen zuerst die Stichproben auf Normalverteilung prüfen. Dazu benutzen wir wieder den Shapiro-Wilk-Test (`shapiro.test`). 
+Wir müssen zuerst die Stichproben auf Normalverteilung prüfen. Dazu benutzen wir wieder den Shapiro-Wilk-Test (`shapiro.test`).
 
 `@instructions`
 Prüfe zunächst, ob die Stichprobe für Gruppe 1 (erstes Schlafmittel) normalverteilt ist. Prüfe dann, ob die Stichprobe für Gruppe 2 (zweites Schlafmittel) normalverteilt ist.
@@ -268,28 +268,13 @@ Prüfe zunächst, ob die Stichprobe für Gruppe 1 (erstes Schlafmittel) normalve
 `@hint`
 Bilde ein subset, wähle die Spalte 'extra' aus und wende darauf shapiro.test an.
 
-`@pre_exercise_code`
 
-```{r}
-
-```
-
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
 ```{r}
 shapiro.test(subset(sleep,group==1)$extra)
 shapiro.test(subset(sleep,group==2)$extra)
-```
-`@sct`
-
-```{r}
-
 ```
 
 
@@ -352,21 +337,11 @@ Kleiner Tipp: die Formel ist `extra~group`
 ```{r}
 library(car)
 ```
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
 ```{r}
 leveneTest(extra~group,sleep)
-```
-`@sct`
-
-```{r}
-
 ```
 
 
@@ -386,8 +361,6 @@ key: 7921f81915
 
 Wir haben einen p-Wert größer als 0.05. Dürfen wir `var.equal=TRUE` setzen?
 
-
-`@hint`
 
 
 
@@ -429,21 +402,11 @@ Die formula entspricht der formula aus dem Levene-Test.
 ```{r}
 library(car)
 ```
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
 ```{r}
 t.test(extra~group,sleep,paired=TRUE)
-```
-`@sct`
-
-```{r}
-
 ```
 
 
