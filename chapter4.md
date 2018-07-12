@@ -27,11 +27,6 @@ Suche in der Hilfe nach der Verwendung des Befehl ``hist()`` und wenn du Problem
 ```{r}
 Gummibaerchen <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
@@ -163,7 +158,7 @@ hist(Gummibaerchen$Anzahl_Farben,
 
 ```{r}
 test_error()
-test_function("hist(Gummibaerchen$Anzahl_Farben,main='Histogramm Anzahl Gummibaerchen',xlab='Anzahl',ylab='Haeufigkeit')")
+test_output_contains("hist(Gummibaerchen$Anzahl_Farben,main='Histogramm Anzahl Gummibaerchen',xlab='Anzahl',ylab='Haeufigkeit')",incorrect_msg="Nicht ganz")
 success_msg("Geschafft!")
 ```
 

@@ -1,5 +1,6 @@
 ---
   title: "Umfragen analysieren"
+  v2: true
 
 ---
 ## Forschungsfrage
@@ -52,8 +53,6 @@ Wenn man dann die Daten vorliegen hat, kann angefangen werden, auszuwerten. Wir 
 Nun haben wir unsere Daten eingelesen und wie geht es weiter?
 
 
-`@hint`
-
 
 
 
@@ -90,8 +89,6 @@ Schau dir die erhobenen Daten in `Umfragedaten` an. Ist `na.omit(Umfragedaten)` 
 - Ja
 - [Nein]
 
-`@hint`
-
 
 `@pre_exercise_code`
 
@@ -126,29 +123,17 @@ Um uns einen Überblick über die Daten zu verschaffen, hast du ja bereits den B
 `@instructions`
 Benutze `table()` um dir anzuzeigen, wie viele männliche und wie viele weibliche Personen mitgemacht haben. Die entsprechende Variable heißt `GESCHL`. Übergib `table()` diese Variable, vergiss nicht, das Datenset zu spezifizieren. Benutze die Dollar-Schreibweise.
 
-`@hint`
-
 
 `@pre_exercise_code`
 
 ```{r}
 Umfragedaten <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
 ```
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
 ```{r}
 table(Umfragedaten$GESCHL)
-```
-`@sct`
-
-```{r}
-
 ```
 
 
@@ -166,12 +151,10 @@ xp: 100
 key: 07a7abf75f   
 ```
 
-`table()` kannst du auch für verschiedene andere, nominalskalierte Variablen verwenden. Du kannst `table()` ebenso dafür anwenden, sogenannte Kreuztabellen zu erstellen. Du übergibst dafür `table()` zwei Variablen, jeweils mit Komma getrennt. 
+`table()` kannst du auch für verschiedene andere, nominalskalierte Variablen verwenden. Du kannst `table()` ebenso dafür anwenden, sogenannte Kreuztabellen zu erstellen. Du übergibst dafür `table()` zwei Variablen, jeweils mit Komma getrennt.
 
 `@instructions`
 Übergib `table()` als ersten Paramter die Variable `BERUFSTAETIG` und als zweite Variable `GESCHL`. Verwende auch hier die Dollarschreibweise. Du siehst nun, getrennt nach Männern bzw. Frauen in welcher Art sie berufstätig sind.
-
-`@hint`
 
 
 `@pre_exercise_code`
@@ -179,21 +162,11 @@ key: 07a7abf75f
 ```{r}
 Umfragedaten <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
 ```
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
 ```{r}
 table(Umfragedaten$BERUFSTAETIG,Umfragedaten$GESCHL)
-```
-`@sct`
-
-```{r}
-
 ```
 
 
@@ -211,12 +184,10 @@ xp: 100
 key: 4387d18d9b   
 ```
 
-Wenn wir diese Häufigkeiten, d.h. Häufigkeiten nominalskalierte Daten veranschaulichen möchten, so können wir die `table()`-Funktion auf eine nominalskalierte Variable anwenden und das Ergebnis mit barplot() plotten lassen. 
+Wenn wir diese Häufigkeiten, d.h. Häufigkeiten nominalskalierte Daten veranschaulichen möchten, so können wir die `table()`-Funktion auf eine nominalskalierte Variable anwenden und das Ergebnis mit barplot() plotten lassen.
 
 `@instructions`
 Probiere das für die Variable Geschlecht nun aus.
-
-`@hint`
 
 
 `@pre_exercise_code`
@@ -224,21 +195,11 @@ Probiere das für die Variable Geschlecht nun aus.
 ```{r}
 Umfragedaten <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
 ```
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
 ```{r}
 barplot(table(Umfragedaten$GESCHL))
-```
-`@sct`
-
-```{r}
-
 ```
 
 
@@ -264,11 +225,6 @@ key: 287bec7e85
 
 ```{r}
 Umfragedaten <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
-```
-`@sample_code`
-
-```{r}
-
 ```
 
 
@@ -376,12 +332,10 @@ xp: 100
 key: 0dbfa0c98a   
 ```
 
-Es gibt noch die Variante `prop.table()` zu benutzen. Damit können direkt die prozentualen Anteile berechnet werden, wie zum Beispiel mit `prop.table(table(Umfragedaten$GESCHL))`. 
+Es gibt noch die Variante `prop.table()` zu benutzen. Damit können direkt die prozentualen Anteile berechnet werden, wie zum Beispiel mit `prop.table(table(Umfragedaten$GESCHL))`.
 
 `@instructions`
 Mache das mal für die Variable `BERUFSTAETIG`.
-
-`@hint`
 
 
 `@pre_exercise_code`
@@ -389,21 +343,11 @@ Mache das mal für die Variable `BERUFSTAETIG`.
 ```{r}
 Umfragedaten <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
 ```
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
 ```{r}
 prop.table(table(Umfragedaten$BERUFSTAETIG))
-```
-`@sct`
-
-```{r}
-
 ```
 
 
@@ -425,8 +369,6 @@ Nun kennst du zwei Möglichkeiten, die Häufigkeiten nominalskalierter Daten zu 
 
 Egal, ob man nun einer Forschungsfrage nachgeht, oder einen statistischen Report schreibt, die Tests und Grafiken ergeben sich anhand des Skalenniveaus der entsprechenden Variablen und der Fragen, die man stellt.
 
-
-`@hint`
 
 
 
@@ -459,8 +401,6 @@ key: 5079f7a520
 Die Frage '_Hängt die (subjektive) Zufriedenheit mit einer Berufstätigkeit zusammen?_' resultiert in einer ...
 
 
-`@hint`
-
 
 
 
@@ -491,8 +431,6 @@ key: f68c9d5675
 
 Möchte ich die durchschnittlichen Arbeitsstunden bezogen auf den Schulabschluss (Hauptschule, mittlere Reife, Hochschulreife) darstellen, so bietet sich ein ... an.
 
-
-`@hint`
 
 
 
@@ -535,7 +473,7 @@ Beim Diagramm muss man besonders auf ... achten.
 
 
 `@possible_answers`
-- Achsenbeschriftungen und einen aussagekräftigen Titel
+- [Achsenbeschriftungen und einen aussagekräftigen Titel]
 - Harmonische Farben und Verzierungen
 - die Platzierung der Legende
 
@@ -575,7 +513,7 @@ Für manche Grafiken oder Auswertungen musst du die Daten umstrukturieren. Welch
 `@feedbacks`
 - Falsch
 - Falsch
-- Richtig, der passt nicht!
+- Richtig der passt nicht!
 
 
 
@@ -592,8 +530,6 @@ key: 9628aa86be
 
 Nachdem wir aussagekräftige Grafiken und Testergebnisse vorliegen haben, werden die Ergebnisse zusammengefasst und berichtet. Welche Art der Darstellung der Ergebnisse eignet sich besonders bei vielen statistischen Kennwerten?
 
-
-`@hint`
 
 
 
