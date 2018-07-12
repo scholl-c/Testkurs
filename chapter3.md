@@ -301,7 +301,7 @@ sum(zahlen)
 
 ```{r}
 test_error()
-test_output_contains("sum(zahlen)",incorrect_msg="Falsch!")
+test_student_typed("sum(zahlen)",not_typed_msg="Leider falsch")
 success_msg("Super gemacht!")
 ```
 
