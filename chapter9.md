@@ -1,5 +1,6 @@
 ---
   title: "Funktionen und Schleifen"
+  v2: true
 
 ---
 ## Durchschnitt aller Spalten
@@ -10,7 +11,7 @@ xp: 100
 key: 1727563e05   
 ```
 
-Wir arbeiten zunächst mit dem Datensatz `cars` aus dem Paket `datasets`. Das sind Daten aus den 1920er Jahren, die die Geschwindigkeit und den Bremsweg von Autos enthalten. Wir möchten wissen, was die durchschnittliche Geschwindigkeit (in Meilen pro Stunde) und der durchschnittliche Bremsweg (in _feet_) ist. Die beiden Variablen sind jeweils in den Spalten `speed` und `dist` festgehalten. 
+Wir arbeiten zunächst mit dem Datensatz `cars` aus dem Paket `datasets`. Das sind Daten aus den 1920er Jahren, die die Geschwindigkeit und den Bremsweg von Autos enthalten. Wir möchten wissen, was die durchschnittliche Geschwindigkeit (in Meilen pro Stunde) und der durchschnittliche Bremsweg (in _feet_) ist. Die beiden Variablen sind jeweils in den Spalten `speed` und `dist` festgehalten.
 
 `@instructions`
 Berechne die Durchschnittswerte, in dem du den Datensatz an `colMeans()` übergibst.
@@ -23,21 +24,11 @@ Da du den Durchschnitt der einzigen beiden Spalten berechnen möchtest, musst du
 ```{r}
 library(datasets)
 ```
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
 ```{r}
 colMeans(cars)
-```
-`@sct`
-
-```{r}
-
 ```
 
 
@@ -55,7 +46,7 @@ xp: 100
 key: 01dd6ee727   
 ```
 
-Die Funktion erspart dir also, das per einzelne Befehle zu berechnen. Möchtest du nur eine bestimmte Spalte berechnen, kannst du dies zum Beispiel mit `colMeans(cars$dist)` oder auch `colMeans(cars[,c('speed','dist')])` angeben. Eine andere Funktion, die analog wie `colMeans()` funktioniert, nennt sich `colSums()`. Damit kannst du die Summe der Spalten berechnen. 
+Die Funktion erspart dir also, das per einzelne Befehle zu berechnen. Möchtest du nur eine bestimmte Spalte berechnen, kannst du dies zum Beispiel mit `colMeans(cars$dist)` oder auch `colMeans(cars[,c('speed','dist')])` angeben. Eine andere Funktion, die analog wie `colMeans()` funktioniert, nennt sich `colSums()`. Damit kannst du die Summe der Spalten berechnen.
 
 `@instructions`
 In diesem Beispiel macht das wenig Sinn, aber wir machen das trotzdem mal. Benutze `colSums()` und berechne somit die Summe der Bremswege und Geschwindigkeiten (macht keinen Sinn!)
@@ -67,11 +58,6 @@ Benutze `colSums()` wie du im vorherigen Beispiel `colMeans()` benutzt hast
 
 ```{r}
 library(datasets)
-```
-`@sample_code`
-
-```{r}
-
 ```
 
 `@solution`
@@ -134,7 +120,7 @@ key: e1f00c619a
 
 Vielleicht möchtest du abseits von Summe oder arithmetischem Mittelwert noch den Median oder Modus der verschiedenen Spalten berechnen? Vielleicht möchtest du auch etwas ganz anderes mit jeder Spalte machen? Kein Problem! Deine Individualität kannst du ausleben, in dem du eine kleine Funktion schreibst und mit `lapply` auf die Spalten des Datensatzes anwendest.
 
-Nun möchtest du den Modus für jede Spalte berechnen. `lapply()` wendet eine Funktion auf die Spalten eines Datensatzes, oder wenn keine Spalten spezifiziert wurden auf alle Spalten eines Datensatzes an. Du kannst `lapply()` nach dieser Vorlage benutzen: `lapply(datensatz,funktion)` 
+Nun möchtest du den Modus für jede Spalte berechnen. `lapply()` wendet eine Funktion auf die Spalten eines Datensatzes, oder wenn keine Spalten spezifiziert wurden auf alle Spalten eines Datensatzes an. Du kannst `lapply()` nach dieser Vorlage benutzen: `lapply(datensatz,funktion)`
 
 `@instructions`
 Berechne damit den Modus für alle Spalten in `cars`. Die Funktion namens `Mode`, die den Modus berechnet, stellen wir dir bereit.
@@ -151,21 +137,11 @@ Mode <- function(x) {
   ux[which.max(tabulate(match(x, ux)))]
 }
 ```
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
 ```{r}
 lapply(cars,Mode)
-```
-`@sct`
-
-```{r}
-
 ```
 
 
@@ -183,12 +159,10 @@ xp: 100
 key: 82e4778553   
 ```
 
-Alternativ kannst du auch `sapply()` nutzen. Der einzige Unterschied liegt in der Ausgabe. 
+Alternativ kannst du auch `sapply()` nutzen. Der einzige Unterschied liegt in der Ausgabe.
 
 `@instructions`
 Sieh dir das an, in dem du analog zum vorherigen Beispiel statt `lapply()` `sapply()` anwendest.
-
-`@hint`
 
 
 `@pre_exercise_code`
@@ -200,21 +174,11 @@ Mode <- function(x) {
   ux[which.max(tabulate(match(x, ux)))]
 }
 ```
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
 ```{r}
 sapply(cars,Mode)
-```
-`@sct`
-
-```{r}
-
 ```
 
 
@@ -316,7 +280,7 @@ normalverteilt <- function(x) {
 
 ```{r}
 test_error()
-check_function("normalverteilt",incorrect_msg="Nicht ganz")
+test_function("normalverteilt",incorrect_msg="Nicht ganz")
 success_msg("Super gemacht!")
 ```
 
@@ -391,11 +355,6 @@ Lass uns nun mal ein einfaches Beispiel einer Vektorrechnung betrachten. Klar, k
 ```{r}
 v1 <- c(51,402,537)
 v2 <- c(24,309,54)
-```
-`@sample_code`
-
-```{r}
-
 ```
 
 
