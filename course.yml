@@ -3,9 +3,17 @@ description: Herzlich Willkommen zum Kurs Statistik mit R!
 programming_language: r
 from: r-base-prod:v1.0.0
 datasets:
-  Umfragedaten.csv: Umfragedaten
-  histogramm.R: Histogramm
-  Raeume.csv: Raeume
-  patienten.csv: Patienten
+  Gummibaerchen.csv: Gummibaerchen
   README.md: Readme
+  Raeume.csv: Raeume
   Studierendenzaehlung.csv: Studierendenzaehlung
+  Umfragedaten.csv: Umfragedaten
+  choco.csv: Choco
+  cronbach.csv: Cronbach
+  ds.csv: Ds
+  grouped.csv: Grouped
+  gummibaeren_verteilung_kreis.R: Gummibaeren verteilung kreis
+  histogramm.R: Histogramm
+  interrater.csv: Interrater
+  mathetest.csv: Mathetest
+  patienten.csv: Patienten
