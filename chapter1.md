@@ -213,8 +213,8 @@ farbe <- "Blau"
 
 ```{r}
 test_error()
-check_object("name",incorrect_msg="Nein, so nicht. Vielleicht ein Tippfehler?")
-check_object("farbe", incorrect_msg="Nein, so nicht. Vielleicht ein Tippfehler?")
+test_object("name",incorrect_msg="Nein, so nicht. Vielleicht ein Tippfehler?")
+test_object("farbe", incorrect_msg="Nein, so nicht. Vielleicht ein Tippfehler?")
 success_msg("Gut gemacht!")
 ```
 
@@ -457,6 +457,11 @@ Genauso kannst du auch Spalten, Zeilen, und Zellen umbenennen.  Das könnte so �
 ```{r}
 patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
 ```
+`@sample_code`
+
+```{r}
+
+```
 
 
 
@@ -517,18 +522,9 @@ key: f7af524836
 
 
 `@instructions`
-Die Zusammensetzung der Identifikationsnummern soll ab sofort geändert werden. Deshalb 
-  müssen auch alle bisherigen IDs geändert werden. Es soll nur noch der Vorname zur Generierung 
-  der ID genutzt werden, aber zusätzlich eine fortlaufende Nummer eingefügt werden. Die 
-  IDs der vier aktuellen Patienten-IDs werden zu BILL0001, WILMA0002, URMEL0003, IDA0004, ÖLF0005 
-  umbenannt.
+Die Zusammensetzung der Identifikationsnummern soll ab sofort geändert werden. Deshalb müssen auch alle bisherigen IDs geändert werden. Es soll nur noch der Vorname zur Generierung der ID genutzt werden, aber zusätzlich eine fortlaufende Nummer eingefügt werden. Die IDs der vier aktuellen Patienten-IDs werden zu BILL0001, WILMA0002, URMEL0003, IDA0004, ÖLF0005 umbenannt.
 
-Nun müssen wir natürlich nicht jede einzelne Zelle umbenennen, sondern können das komfortabler 
-  in dem wir die ganze Spalte 'id' umbenennen. Spalten benennt man ebenfalls über eine Zuweisung 
-  um. Dabei weist man der entsprechenden Spalte einen Vektor, der hier z.B. die neuen IDs beinhaltet, 
-  zu. Ein Vektor bildest du mit der Funktion c(). Innerhalb von c soll eine Liste mit Werten. Bilde 
-  den Vektor für die neuen IDs BILL0001, WILMA0002, URMEL0003, IDA0004, ÖLF0005. Vergiss nicht, die 
-  IDs in Anführungszeichen zu setzen. Die Werte werden mit Komma getrennt. Speichere den Vektor in 'neue_ids'
+Nun müssen wir natürlich nicht jede einzelne Zelle umbenennen, sondern können das komfortabler in dem wir die ganze Spalte 'id' umbenennen. Spalten benennt man ebenfalls über eine Zuweisung um. Dabei weist man der entsprechenden Spalte einen Vektor, der hier z.B. die neuen IDs beinhaltet, zu. Ein Vektor bildest du mit der Funktion c(). Innerhalb von c soll eine Liste mit Werten. Bilde den Vektor für die neuen IDs BILL0001, WILMA0002, URMEL0003, IDA0004, ÖLF0005. Vergiss nicht, die IDs in Anführungszeichen zu setzen. Die Werte werden mit Komma getrennt. Speichere den Vektor in 'neue_ids'
 
 `@hint`
 Die Reihenfolge der IDs ist wichtig.
