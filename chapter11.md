@@ -31,7 +31,8 @@ Bedenke, dass die Tilde impliziert, dass wir eine abhängige und eine unabhängi
 `@pre_exercise_code`
 
 ```{r}
-mathetest <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/ade54dc40604e210c38ef19defcf24a3e6d92717/mathetest.csv")
+library(readr)
+mathetest <- read_delim("https://assets.datacamp.com/production/repositories/3196/datasets/ade54dc40604e210c38ef19defcf24a3e6d92717/mathetest.csv", "\t", escape_double = FALSE, trim_ws = TRUE)
 ```
 
 
@@ -73,7 +74,8 @@ Denke daran, dass die formula der des Boxplots entspricht.
 `@pre_exercise_code`
 
 ```{r}
-mathetest <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/ade54dc40604e210c38ef19defcf24a3e6d92717/mathetest.csv")
+library(readr)
+mathetest <- read_delim("https://assets.datacamp.com/production/repositories/3196/datasets/ade54dc40604e210c38ef19defcf24a3e6d92717/mathetest.csv", "\t", escape_double = FALSE, trim_ws = TRUE)
 library(ggplot2)
 ```
 `@sample_code`
@@ -119,7 +121,8 @@ Nutze das eben erstellte aggregierte Datenset.
 `@pre_exercise_code`
 
 ```{r}
-mathetest <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/ade54dc40604e210c38ef19defcf24a3e6d92717/mathetest.csv")
+library(readr)
+mathetest <- read_delim("https://assets.datacamp.com/production/repositories/3196/datasets/ade54dc40604e210c38ef19defcf24a3e6d92717/mathetest.csv", "\t", escape_double = FALSE, trim_ws = TRUE)
 rauchertest1 <- aggregate(Test1~Raucher,mathetest,mean)
 library(ggplot2)
 ```
@@ -171,7 +174,8 @@ Du möchtest die Raucher mit den Nicht-Rauchern gut vergleichen können.
 `@pre_exercise_code`
 
 ```{r}
-mathetest <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/ade54dc40604e210c38ef19defcf24a3e6d92717/mathetest.csv")
+library(readr)
+mathetest <- read_delim("https://assets.datacamp.com/production/repositories/3196/datasets/ade54dc40604e210c38ef19defcf24a3e6d92717/mathetest.csv", "\t", escape_double = FALSE, trim_ws = TRUE)
 library(ggplot2)
 ```
 
@@ -205,7 +209,8 @@ Nun haben wir das Problem, dass Test1, Test2 und Test3 verschiedene Spalten sind
 ```{r}
 library(ggplot2)
 library(reshape2)
-mathetest <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/ade54dc40604e210c38ef19defcf24a3e6d92717/mathetest.csv")
+library(readr)
+mathetest <- read_delim("https://assets.datacamp.com/production/repositories/3196/datasets/ade54dc40604e210c38ef19defcf24a3e6d92717/mathetest.csv", "\t", escape_double = FALSE, trim_ws = TRUE)
 ```
 
 
@@ -438,7 +443,8 @@ Letzendlich handelt es sich dabei nur um eine weitere Möglichkeit Gruppen in Di
 `@pre_exercise_code`
 
 ```{r}
-grouped <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c10445a54acbf03ddab878c0e17978e75e5fe6b6/grouped.csv")
+library(readr)
+grouped <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c10445a54acbf03ddab878c0e17978e75e5fe6b6/grouped.csv")
 library(ggplot2)
 ```
 
@@ -582,6 +588,7 @@ Ein Algorithmus dafür nennt sich _k-means_. Eine entsprechende Funktion namens 
 
 ```{r}
 library(cluster)
+library(ggplot2)
 ```
 
 
