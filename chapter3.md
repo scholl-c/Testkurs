@@ -345,7 +345,7 @@ zahlen <- as.double(zahlen)
 
 ```{r}
 test_error()
-test_object("zahlen")
+#test_object("zahlen")
 success_msg("Toll!")
 ```
 
@@ -377,12 +377,13 @@ Berechne die Summe von ``zahlen`` mit ``sum()``
 `@sample_code`
 
 ```{r}
-
+zahlen <- as.double(zahlen)
 ```
 
 `@solution`
 
 ```{r}
+zahlen <- as.double(zahlen)
 sum(zahlen)
 ```
 `@sct`

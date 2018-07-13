@@ -395,10 +395,11 @@ xp: 50
 key: faf6c8771b   
 ```
 
-
+Varianzhomogenität liegt ...
 
 `@instructions`
-Varianzhomogenität liegt ...
+- vor
+- nicht vor
 
 `@hint`
 Ist der Wert p-Wert (hier Pr(>F)) größer als 0.05, dann nehmen wir Varianzhomogenität an.
@@ -409,7 +410,7 @@ Ist der Wert p-Wert (hier Pr(>F)) größer als 0.05, dann nehmen wir Varianzhomo
 `@sct`
 
 ```{r}
-
+test_mc(1,feedback_msgs=c("keine Ahnung","keine Ahnung"))
 ```
 
 
