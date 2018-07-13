@@ -620,7 +620,7 @@ patienten$alter <- patienten$alter-1
 
 ```{r}
 test_error()
-test_object("patienten$alter",incorrect_msg="Das funktioniert so nicht.")
+#test_object("patienten$alter",incorrect_msg="Das funktioniert so nicht.")
 success_msg("Toll gemacht!")
 ```
 
