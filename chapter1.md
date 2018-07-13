@@ -540,7 +540,7 @@ neue_ids <- c("BILL0001", "WILMA0002", "URMEL0003", "IDA0004", "ÖLF0005")
 
 ```{r}
 test_error()
-test_object("neue_ids",incorrect_msg="Nein, das klappt so nicht.")
+#test_object("neue_ids",incorrect_msg="Nein, das klappt so nicht.")
 success_msg("Super!")
 ```
 
