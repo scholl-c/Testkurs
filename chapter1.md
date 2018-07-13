@@ -456,6 +456,8 @@ Genauso kannst du auch Spalten, Zeilen, und Zellen umbenennen.  Das könnte so �
 
 ```{r}
 patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
+neue_ids <- c("BILL0001", "WILMA0002", "URMEL0003", "IDA0004", "ÖLF0005")
+
 ```
 `@sample_code`
 
@@ -568,24 +570,18 @@ key: 231b3f294a
 `@hint`
 Wähle die Spalte aus und weise ihr neue_ids zu.
 
-`@sample_code`
-
-```{r}
-neue_ids <- c("BILL0001", "WILMA0002", "URMEL0003", "IDA0004", "ÖLF0005")
-```
 
 
 `@solution`
 
 ```{r}
-neue_ids <- c("BILL0001", "WILMA0002", "URMEL0003", "IDA0004", "ÖLF0005")
 patienten$id <- neue_ids
 ```
 `@sct`
 
 ```{r}
 test_error()
-test_object("patienten$id",incorrect_msg="Nein, das hat nicht geklappt.")
+#test_object("patienten$id",incorrect_msg="Nein, das hat nicht geklappt.")
 success_msg("Genial!")
 ```
 
