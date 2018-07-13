@@ -95,7 +95,8 @@ Schau dir die erhobenen Daten in `Umfragedaten` an. Ist `na.omit(Umfragedaten)` 
 `@pre_exercise_code`
 
 ```{r}
-Umfragedaten <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
+library(readr)
+Umfragedaten <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
 ```
 
 
@@ -128,7 +129,8 @@ Benutze `table()` um dir anzuzeigen, wie viele männliche und wie viele weiblich
 `@pre_exercise_code`
 
 ```{r}
-Umfragedaten <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
+library(readr)
+Umfragedaten <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
 ```
 
 `@solution`
@@ -161,7 +163,8 @@ key: 07a7abf75f
 `@pre_exercise_code`
 
 ```{r}
-Umfragedaten <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
+library(readr)
+Umfragedaten <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
 ```
 
 `@solution`
@@ -194,7 +197,8 @@ Probiere das für die Variable Geschlecht nun aus.
 `@pre_exercise_code`
 
 ```{r}
-Umfragedaten <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
+library(readr)
+Umfragedaten <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
 ```
 
 `@solution`
@@ -225,7 +229,8 @@ key: 287bec7e85
 `@pre_exercise_code`
 
 ```{r}
-Umfragedaten <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
+library(readr)
+Umfragedaten <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
 ```
 
 
@@ -342,7 +347,8 @@ Mache das mal für die Variable `BERUFSTAETIG`.
 `@pre_exercise_code`
 
 ```{r}
-Umfragedaten <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
+library(readr)
+Umfragedaten <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
 ```
 
 `@solution`

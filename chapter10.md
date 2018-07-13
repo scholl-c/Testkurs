@@ -112,7 +112,8 @@ Bei der Vorlage ersetzt du `dataframe`, `variable` und `20` durch die im Text an
 
 ```{r}
 library(ggplot2)
-Gummibaerchen <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
+library(readr)
+Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
 `@sample_code`
 
@@ -191,7 +192,8 @@ Ersetze _dataframe_, _variable1_ und _variable2_. Achte auf die richtige Zuweisu
 
 ```{r}
 library(ggplot2)
-Gummibaerchen <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
+library(readr)
+Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
 `@sample_code`
 
@@ -237,7 +239,8 @@ Es ist alles gesagt. Lies genau.
 
 ```{r}
 library(ggplot2)
-Gummibaerchen <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
+library(readr)
+Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
 `@sample_code`
 
@@ -280,7 +283,8 @@ Wir erstellen nun ein Balkendiagramm mit `ggplot`. Wir möchten den Mittelwert d
 ```{r}
 library(ggplot2)
 library(reshape2)
-Gummibaerchen <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
+library(readr)
+Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 Farben_Mean <- colMeans(Gummibaerchen[,2:7])
 baeren_colors <- c("#8B0000", "#ffd700", "#32cd32","#ff0000","#ff9900","#ffffff")
 ```
