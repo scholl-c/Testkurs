@@ -88,8 +88,7 @@ xp: 100
 key: 18a1b4f5fa   
 ```
 
-Nachdem man nun andere besser kennengelernt hat, sortiert man sie gerne mal in andere imaginäre Schubladen um. Das kannst du auch mit den Daten in R machen. 
-Wir arbeiten im Folgenden mit dem Objekt namens ``daten``. 
+Nachdem man nun andere besser kennengelernt hat, sortiert man sie gerne mal in andere imaginäre Schubladen um. Das kannst du auch mit den Daten in R machen. Wir arbeiten im Folgenden mit dem Objekt namens ``daten``. 
 
 Exkurs: Falls du mal mit Zeitinverallen, der Dauer o.ä. umgehen musst, schaue dir das Paket namens ``lubridate`` an.
 
@@ -225,6 +224,7 @@ daten <- as.Date(daten,"%d.%m.%Y")
 `@solution`
 
 ```{r}
+daten <- as.Date(daten,"%d.%m.%Y")
 weekdays(daten)
 ```
 `@sct`
@@ -300,8 +300,8 @@ sum(zahlen)
 `@sct`
 
 ```{r}
-test_error()
-test_student_typed("sum(zahlen)",not_typed_msg="Leider falsch")
+#test_error()
+#test_student_typed("sum(zahlen)",not_typed_msg="Leider falsch")
 success_msg("Super gemacht!")
 ```
 
