@@ -28,7 +28,8 @@ Innerhalb der runden Klammern von `duplicated()` muss der Name deines Datensatze
 `@pre_exercise_code`
 
 ```{r}
-ds <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
+library(readr)
+ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
 
 `@solution`
@@ -59,7 +60,8 @@ Wir möchten nun Duplikate finden, überprüfen und ausschließen.
 `@pre_exercise_code`
 
 ```{r}
-ds <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
+library(readr)
+ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
 
 
@@ -331,7 +333,8 @@ Auf die Spalte `Alter` greifst du mit `ds$Alter` zu.
 `@pre_exercise_code`
 
 ```{r}
-ds <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
+library(readr)
+ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
 
 `@solution`
@@ -372,7 +375,8 @@ Gib zusätzlich zur vorherigen Berechnung noch `na.rm=TRUE` an.
 `@pre_exercise_code`
 
 ```{r}
-ds <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
+library(readr)
+ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
 
 `@solution`
@@ -407,7 +411,8 @@ Innerhalb von unique() muss die Spalte 'Sprachauswahl' ausgewählt werden.
 `@pre_exercise_code`
 
 ```{r}
-ds <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
+library(readr)
+ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
 
 `@solution`
@@ -438,7 +443,8 @@ Puh! Soweit scheint alles gut zu sein!
 `@pre_exercise_code`
 
 ```{r}
-ds <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
+library(readr)
+ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
 
 
@@ -633,7 +639,8 @@ Benutze `as.integer()` und parse damit das Alter als Integer-Werte. Folglich wir
 `@pre_exercise_code`
 
 ```{r}
-ds <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
+library(readr)
+ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
 
 `@solution`
@@ -664,7 +671,8 @@ key: 3a275d53c6
 `@pre_exercise_code`
 
 ```{r}
-ds <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
+library(readr)
+ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ds$Alter <- as.integer(ds$Alter)
 ```
 
@@ -952,7 +960,8 @@ Vergiss nicht, die Spalte mit den neuen Werten zu überschreiben.
 
 ```{r}
 library(dplyr)
-ds <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
+library(readr)
+ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
 
 `@solution`
@@ -996,7 +1005,8 @@ Bei den Senioren brauchst du nur eine Bedingung d.h. keine verknüpfte Bedingung
 `@pre_exercise_code`
 
 ```{r}
-ds <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
+library(readr)
+ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
 
 `@solution`
