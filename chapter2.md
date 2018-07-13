@@ -138,11 +138,6 @@ Mit [1] kannst du auf den ersten Wert in einem Objekt zugreifen.
 ```{r}
 Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/f7c3df4f7a167efcf7ff74b306b8045a10f83365/Studierendenzaehlung.csv",sep=";")
 ```
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
@@ -220,11 +215,6 @@ Benutze die Funktion ``cbind()``
 Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/f7c3df4f7a167efcf7ff74b306b8045a10f83365/Studierendenzaehlung.csv",sep=";")
 v_typ <- as.factor(c("Vorlesung","Aufbauseminar","Vorlesung","Vorlesung","Seminar","Vorlesung","Seminar","Vorlesung","Seminar","Seminar"))
 ```
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
@@ -237,7 +227,6 @@ Studis <- cbind(Studis,v_typ)
 test_error()
 test_object("Studis")
 success_msg("Jaa! Volltreffer!")
-
 ```
 
 
@@ -335,11 +324,6 @@ Benutze den Befehl ``merge()``
 ```{r}
 Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/f7c3df4f7a167efcf7ff74b306b8045a10f83365/Studierendenzaehlung.csv",sep=";")
 Raeume <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/29d7ffd1e2d96f6b8b94ce9904d6ad5ba5f2644e/Raeume.csv")
-```
-`@sample_code`
-
-```{r}
-
 ```
 
 `@solution`
@@ -564,7 +548,7 @@ key: abdd990282
 ```
 
 Da Bob den Mittelwert berechnen darf, möchte er zeigen, dass in den englischen Kursen durchschnittlich weniger Studierende teilnehmen als in den deutschen Kursen. 
-Kannst du ihm dabei helfen? 
+Kannst du ihm dabei helfen?
 
 `@instructions`
 Erstelle ein neues Dataframe ``anwesend_nach_sprache``, in dem der arithmetische Mittelwert der anwesenden Studierenden für jeweils die englischen und die deutschen Kurse gelistet ist. 
@@ -579,11 +563,6 @@ Tippe ``help(aggregate)`` in die Konsole ein.
 Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/f7c3df4f7a167efcf7ff74b306b8045a10f83365/Studierendenzaehlung.csv",sep=";")
 Raeume <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/29d7ffd1e2d96f6b8b94ce9904d6ad5ba5f2644e/Raeume.csv")
 Studis <- merge(Studis,Raeume)
-```
-`@sample_code`
-
-```{r}
-
 ```
 
 `@solution`

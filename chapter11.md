@@ -76,11 +76,21 @@ Denke daran, dass die formula der des Boxplots entspricht.
 mathetest <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/ade54dc40604e210c38ef19defcf24a3e6d92717/mathetest.csv")
 library(ggplot2)
 ```
+`@sample_code`
+
+```{r}
+
+```
 
 `@solution`
 
 ```{r}
 rauchertest1 <- aggregate(Test1~Raucher,mathetest,mean)
+```
+`@sct`
+
+```{r}
+
 ```
 
 
@@ -113,11 +123,21 @@ mathetest <- read.csv("https://assets.datacamp.com/production/repositories/3196/
 rauchertest1 <- aggregate(Test1~Raucher,mathetest,mean)
 library(ggplot2)
 ```
+`@sample_code`
+
+```{r}
+
+```
 
 `@solution`
 
 ```{r}
 ggplot(rauchertest1,aes(x=Raucher,y=Test1))+geom_col()
+```
+`@sct`
+
+```{r}
+
 ```
 
 
@@ -148,10 +168,19 @@ Welche Ausprägung der x-Achse wäre hier am Sinnvollsten?
 `@hint`
 Du möchtest die Raucher mit den Nicht-Rauchern gut vergleichen können.
 
+`@pre_exercise_code`
+
+```{r}
+mathetest <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/ade54dc40604e210c38ef19defcf24a3e6d92717/mathetest.csv")
+library(ggplot2)
+```
 
 
+`@sct`
 
-
+```{r}
+test_mc(2,feedback_msgs = c("Überlege nochmal","Ja genau!"))
+```
 
 
 
@@ -411,11 +440,6 @@ Letzendlich handelt es sich dabei nur um eine weitere Möglichkeit Gruppen in Di
 ```{r}
 grouped <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/c10445a54acbf03ddab878c0e17978e75e5fe6b6/grouped.csv")
 library(ggplot2)
-```
-`@sample_code`
-
-```{r}
-
 ```
 
 

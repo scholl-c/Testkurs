@@ -76,7 +76,7 @@ hist(Gummibaerchen$Anzahl_Farben)
 `@sct`
 
 ```{r}
-test_mc(2,"Nein","Ja","Nein")
+test_mc(2,feedback_msgs = c("Nein","Ja","Nein"))
 ```
 
 
@@ -239,7 +239,7 @@ plot(Gummibaerchen$Anzahl_Baeren,Gummibaerchen$Anzahl_Farben)
 `@sct`
 
 ```{r}
-test_mc(3,"Nein, alles korrekt.","Doch, das hat geklappt","Das ist der Grund!","R passt die Skalierung in der Regel automatisch an.")
+test_mc(3,feedback_msgs = c("Nein, alles korrekt.","Doch, das hat geklappt","Das ist der Grund!","R passt die Skalierung in der Regel automatisch an."))
 ```
 
 
@@ -318,9 +318,9 @@ source("https://assets.datacamp.com/production/repositories/3196/datasets/801e40
 `@sct`
 
 ```{r}
-test_mc(2,"Nein","Diese Art der Grafik ist ungünstig, weil wir sehr viele Kategorien haben, die 
+test_mc(2,feedback_msgs = c("Nein","Diese Art der Grafik ist ungünstig, weil wir sehr viele Kategorien haben, die 
   alle ähnlich groß sind. Es ist mit dem Auge schwer zu sehen, ob nun die grünen oder die 
-  roten Gummibärchen im Mittel häufiger vorkommen.","Nein","Nein")
+  roten Gummibärchen im Mittel häufiger vorkommen.","Nein","Nein"))
 ```
 
 

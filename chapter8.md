@@ -1,5 +1,6 @@
 ---
   title: "Test auf Zusammenhänge"
+  v2: true
 
 ---
 ## Skalenniveau der Variablen
@@ -33,7 +34,7 @@ choco <- read.csv("https://assets.datacamp.com/production/repositories/3196/data
 `@sct`
 
 ```{r}
-test_mc(1,"Ja, richtig, sie sind sind intervallskaliert.","Nein")
+test_mc(1,feedback_msgs = c("Ja, richtig, sie sind sind intervallskaliert.","Nein"))
 ```
 
 
@@ -58,11 +59,6 @@ Die Zusammenhänge (**Korrelationen**), die wir im Folgenden berechnen, beziehen
 
 ```{r}
 choco <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8fabac37c6b40b6274b29eba130b53d8c7e70b8/choco.csv")
-```
-`@sample_code`
-
-```{r}
-
 ```
 
 
@@ -161,7 +157,7 @@ xp: 100
 key: 0159166d9f   
 ```
 
-Bevor wir die Korrelation rechnen dürfen, müssen wir prüfen, ob die Variablen normalverteilt sind. Wir überprüfen das mit dem Shapiro-Wilk-Test. Wenn der p-Wert größer als 0.05 ist, dürfen wir annehmen, dass eine Stichprobe normalverteilt ist. 
+Bevor wir die Korrelation rechnen dürfen, müssen wir prüfen, ob die Variablen normalverteilt sind. Wir überprüfen das mit dem Shapiro-Wilk-Test. Wenn der p-Wert größer als 0.05 ist, dürfen wir annehmen, dass eine Stichprobe normalverteilt ist.
 
 `@instructions`
 Überprüfe zuerst, ob der Schokoladentafelkonsum normalverteilt ist. Nun prüfe, ob auch der IQ unserer Testpersonen normalverteilt ist.
@@ -174,22 +170,12 @@ Verwende `shapiro.test()`
 ```{r}
 choco <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8fabac37c6b40b6274b29eba130b53d8c7e70b8/choco.csv")
 ```
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
 ```{r}
 shapiro.test(choco$Tafeln)
 shapiro.test(choco$IQ)
-```
-`@sct`
-
-```{r}
-
 ```
 
 
@@ -246,11 +232,6 @@ Wir berechnen die Korrelation und interpretieren ihre Ergebnisse.
 
 ```{r}
 choco <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8fabac37c6b40b6274b29eba130b53d8c7e70b8/choco.csv")
-```
-`@sample_code`
-
-```{r}
-
 ```
 
 
@@ -460,29 +441,17 @@ Die Spearman-Rangkorrelation kann mit der gleichen Funktion berechnet werden, nu
 `@instructions`
 Berechne als Übung die Spearman-Rangkorrelation.
 
-`@hint`
-
 
 `@pre_exercise_code`
 
 ```{r}
 choco <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8fabac37c6b40b6274b29eba130b53d8c7e70b8/choco.csv")
 ```
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
 ```{r}
 cor.test(choco$Tafeln,choco$IQ,method="spearman")
-```
-`@sct`
-
-```{r}
-
 ```
 
 
@@ -507,29 +476,17 @@ Die Matrix ist an der Diagonalen gespiegelt, weil es keine Rolle spielt, ob du d
 `@instructions`
 Berechne die Korrelationsmatrix für unseren Datensatz mit `cor()`.
 
-`@hint`
-
 
 `@pre_exercise_code`
 
 ```{r}
 choco <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8fabac37c6b40b6274b29eba130b53d8c7e70b8/choco.csv")
 ```
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
 ```{r}
 cor(choco)
-```
-`@sct`
-
-```{r}
-
 ```
 
 
@@ -549,7 +506,7 @@ key: 06df13ffe6
 
 Die Regressionsanalyse versucht herauszufinden, um welche Form des Zusammenhangs es sich handelt. Bis jetzt haben wir nur auf lineare Zusammenhänge untersucht. Desweiteren können damit Voraussagen für z.B. die Entwicklung in Zukunft getroffen werden.
 
-Wir können mit `lm()` (lm steht für _linear model_) eine Gerade berechnen lassen und diese dann mit `abline()` auf unser Streudiagramm legen. 
+Wir können mit `lm()` (lm steht für _linear model_) eine Gerade berechnen lassen und diese dann mit `abline()` auf unser Streudiagramm legen.
 
 
 
@@ -557,11 +514,6 @@ Wir können mit `lm()` (lm steht für _linear model_) eine Gerade berechnen lass
 
 ```{r}
 choco <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8fabac37c6b40b6274b29eba130b53d8c7e70b8/choco.csv")
-```
-`@sample_code`
-
-```{r}
-
 ```
 
 

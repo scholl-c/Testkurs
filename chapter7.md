@@ -99,8 +99,6 @@ Nun wollen wir anhand eines Beispiels durchgehen, wie man die zentralen Tendenze
   zweier Gruppen vergleicht.
 
 
-`@hint`
-
 
 
 
@@ -173,13 +171,18 @@ Welches davon ist die abhängige Variable?
 `@hint`
 Die abhängige Variable ist jene Größe, die sich verändert durch Einflussnahme durch die unabhängige Variable auf das Experiment.
 
+`@pre_exercise_code`
+
+```{r}
+
+```
 
 
 
 `@sct`
 
 ```{r}
-test_mc(3,"Nein","Nein","Ja")
+test_mc(3,feedback_msgs = c("Nein","Nein","Ja"))
 ```
 
 
