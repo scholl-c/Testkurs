@@ -499,7 +499,7 @@ patienten[3,2]<-"Bauchfellentzündung"
 
 ```{r}
 test_error()
-test_output_contains("patienten[3,2]<-'Bauchfellentzündung'",incorrect_msg="Nein, so nicht.")
+test_object("patienten",incorrect_msg="Nein, so nicht.")
 success_msg("Super gemacht!")
 ```
 

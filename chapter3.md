@@ -231,7 +231,7 @@ weekdays(daten)
 
 ```{r}
 test_error()
-test_output_contains("weekdays(daten)",incorrect_msg="nee")
+#test_output_contains("weekdays(daten)",incorrect_msg="nee")
 success_msg("Sehr gut!")
 ```
 
