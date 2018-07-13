@@ -89,6 +89,8 @@ Schau dir die erhobenen Daten in `Umfragedaten` an. Ist `na.omit(Umfragedaten)` 
 - Ja
 - [Nein]
 
+`@hint`
+
 
 `@pre_exercise_code`
 
@@ -100,8 +102,7 @@ Umfragedaten <- read.csv("https://assets.datacamp.com/production/repositories/31
 `@sct`
 
 ```{r}
-- Falsch
-- Richtig, wir schließen so zu viele Personen aus. Auch wenn die Personen nur einen Teil der Angaben gemacht haben, können wir sie in den entsprechenden Analysen noch einbeziehen.
+test_mc(2,feedback_msgs=c("Falsch","Richtig, wir schließen so zu viele Personen aus. Auch wenn die Personen nur einen Teil der Angaben gemacht haben, können wir sie in den entsprechenden Analysen noch einbeziehen."))
 ```
 
 
@@ -465,8 +466,6 @@ key: 33189a448e
 Beim Diagramm muss man besonders auf ... achten.
 
 
-`@hint`
-
 
 
 
@@ -497,8 +496,6 @@ key: db719f222c
 
 Für manche Grafiken oder Auswertungen musst du die Daten umstrukturieren. Welcher Befehl passt nicht zu diesem Arbeitsschritt?
 
-
-`@hint`
 
 
 

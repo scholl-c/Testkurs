@@ -1,5 +1,6 @@
 ---
   title: "Besondere Tests"
+  v2: true
 
 ---
 ## Interrater-Reliabilität
@@ -66,8 +67,6 @@ Nun berechne den Cohens Kappa analog zum vorherigen Beispiel für die Übereinst
 `@instructions`
 Berechne den Cohens Kappa, verwende `kappa2`.
 
-`@hint`
-
 
 `@pre_exercise_code`
 
@@ -75,21 +74,11 @@ Berechne den Cohens Kappa, verwende `kappa2`.
 library(irr)
 interrater <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/32fe40c479aa377d8af347dd26bcd1d7ed5d636e/interrater.csv")
 ```
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
 ```{r}
 kappa2(interrater[,c(4,5)],'equal')
-```
-`@sct`
-
-```{r}
-
 ```
 
 
@@ -187,21 +176,11 @@ Verwende die Funktion cronbach.alpha() und übergib den Datensatz 'cronbach'
 cronbach <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/3c6d7fd41b65af514dadf8ae0a06cad868e463d2/cronbach.csv")
 library(ltm)
 ```
-`@sample_code`
-
-```{r}
-
-```
 
 `@solution`
 
 ```{r}
 cronbach.alpha(cronbach)
-```
-`@sct`
-
-```{r}
-
 ```
 
 
