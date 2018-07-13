@@ -295,7 +295,7 @@ Berechne die Summe von ``zahlen`` mit ``sum()``
 `@solution`
 
 ```{r}
-sum(zahlen)
+#sum(zahlen)
 ```
 `@sct`
 
