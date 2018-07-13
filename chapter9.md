@@ -280,7 +280,7 @@ normalverteilt <- function(x) {
 
 ```{r}
 test_error()
-test_function("normalverteilt",incorrect_msg="Nicht ganz")
+#test_function("normalverteilt",incorrect_msg="Nicht ganz")
 success_msg("Super gemacht!")
 ```
 
