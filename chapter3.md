@@ -390,7 +390,7 @@ sum(zahlen)
 
 ```{r}
 test_error()
-test_output_contains("sum(zahlen)",incorrect_msg="Falsch!")
+#test_output_contains("sum(zahlen)",incorrect_msg="Falsch!")
 success_msg("Super gemacht!")
 ```
 
@@ -432,7 +432,7 @@ class(geschlecht)
 
 ```{r}
 test_error()
-test_output_contains("class(geschlecht)",incorrect_msg="Falsch")
+#test_output_contains("class(geschlecht)",incorrect_msg="Falsch")
 success_msg("Juhhuu!")
 ```
 
