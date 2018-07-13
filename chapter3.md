@@ -142,7 +142,7 @@ typeof(daten)
 
 ```{r}
 test_error()
-test_student_typed("typeof(daten)",not_typed_msg="Das war leider falsch.")
+#test_student_typed("typeof(daten)",not_typed_msg="Das war leider falsch.")
 success_msg("Super!")
 ```
 
@@ -186,7 +186,7 @@ daten <- as.Date(daten,"%d.%m.%Y")
 
 ```{r}
 test_error()
-test_object("daten",incorrect_msg="Nee")
+#test_object("daten",incorrect_msg="Nee")
 success_msg("Das hat gut geklappt!")
 ```
 

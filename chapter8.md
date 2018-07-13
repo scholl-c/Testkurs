@@ -101,7 +101,7 @@ plot(choco$Tafeln,choco$IQ)
 `@sct`
 
 ```{r}
-
+success_msg("Super!")
 ```
 
 
@@ -121,13 +121,14 @@ xp: 50
 key: a89391793a   
 ```
 
-
-
-`@instructions`
 Handelt es sich vermutlich eher um eine positive oder negative Korrelation? Die 
   positive Korrelation wäre 'Je höher der Schokoladentafelkonsum im Jahr, desto höher auch 
   der IQ' und eine negative Korrelation 'Je höher der Schokoladentafelkonsum im Jahr, desto 
   geringer der IQ'.
+
+`@instructions`
+- positive Korrelation
+- negative Korrelation
 
 `@hint`
 
@@ -138,7 +139,7 @@ Handelt es sich vermutlich eher um eine positive oder negative Korrelation? Die
 `@sct`
 
 ```{r}
-
+test_mc(1,feedback_msgs=c("Ja","Nein"))
 ```
 
 
@@ -274,7 +275,7 @@ cor.test(choco$Tafeln,choco$IQ)
 `@sct`
 
 ```{r}
-
+success_msg("Gut gemacht!")
 ```
 
 
@@ -294,10 +295,11 @@ xp: 20
 key: bd4fd1e4b3   
 ```
 
-
+Liegt eine Korrelation vor?
 
 `@instructions`
-Liegt eine Korrelation vor?
+- Ja
+- Nein
 
 `@hint`
 
@@ -308,7 +310,7 @@ Liegt eine Korrelation vor?
 `@sct`
 
 ```{r}
-
+test_mc(1,feedback_msgs=c("Ja","Nein"))
 ```
 
 
