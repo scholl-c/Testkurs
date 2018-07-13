@@ -25,7 +25,8 @@ Suche in der Hilfe nach der Verwendung des Befehl ``hist()`` und wenn du Problem
 `@pre_exercise_code`
 
 ```{r}
-Gummibaerchen <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
+library(readr)
+Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
 
 `@solution`
@@ -68,7 +69,8 @@ Etwas ungeschickt ist hier die Aufteilung der x-Achse in Dezimalwerte. Es gibt j
 `@pre_exercise_code`
 
 ```{r}
-Gummibaerchen <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
+library(readr)
+Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 hist(Gummibaerchen$Anzahl_Farben)
 ```
 
@@ -139,7 +141,8 @@ Suche in der Hilfe nach `hist()` bzw. gib `?hist` in die Konsole ein.
 `@pre_exercise_code`
 
 ```{r}
-Gummibaerchen <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
+library(readr)
+Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
 `@sample_code`
 
@@ -187,7 +190,8 @@ Lasse dir das Streudiagramm für die Variablen `Anzahl_Farben` und `Anzahl_Baere
 `@pre_exercise_code`
 
 ```{r}
-Gummibaerchen <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
+library(readr)
+Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
 
 `@solution`
@@ -231,7 +235,8 @@ Du kannst die Grafik mit dem Button 'Zoom' vergrößern.
 `@pre_exercise_code`
 
 ```{r}
-Gummibaerchen <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
+library(readr)
+Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 plot(Gummibaerchen$Anzahl_Baeren,Gummibaerchen$Anzahl_Farben)
 ```
 
@@ -301,7 +306,8 @@ Es gibt einen Punkt, den man aufgrund der Daten nicht verändern kann, weil der 
 `@pre_exercise_code`
 
 ```{r}
-Gummibaerchen <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
+library(readr)
+Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 library(ggplot2)
 library(reshape2)
 library(magrittr)
@@ -344,7 +350,8 @@ Diese Art der Grafik ist ungünstig, weil wir sehr viele Kategorien haben, die a
 `@pre_exercise_code`
 
 ```{r}
-Gummibaerchen <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
+library(readr)
+Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 library(ggplot2)
 library(magrittr)
 Farben_Mean <- Gummibaerchen[,2:7] %>% colMeans()  %>% 
@@ -552,7 +559,8 @@ Teste den Befehl `boxplot` mit einer Variablen aus dem Datenset `Gummibaerchen`.
 `@pre_exercise_code`
 
 ```{r}
-Gummibaerchen <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
+library(readr)
+Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
 
 `@solution`
