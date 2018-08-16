@@ -1,6 +1,6 @@
 ---
-title: Grafiken
-description: "In dieser Ausgabe\ndreht sich alles um 'Wie zeige ich meinen Lesern, was ich sagen will?'.\nIn Zeitungen, Wissensschaftsmagazinen oder in anderen\n(populär-)wissenschaftlichen Publikationen findest du\noft unterstützende Grafiken. Wir zeigen dir heute, welche Möglichkeiten R\ndazu bietet und wie du selbst überzeugende Grafiken erstellst.\nIm ersten Teil dieser Lektion erfährst du, wie du deine Daten\nmit Hilfe von Plots besser verstehen kannst. Im zweiten Teil werden wir Grafiken mit der\nBibliothek ggplot2 erstellen. Los geht es mit dem ersten Teil"
+  title: "Grafiken"
+  description: "In dieser Ausgabe\ndreht sich alles um 'Wie zeige ich meinen Lesern, was ich sagen will?'.\nIn Zeitungen, Wissensschaftsmagazinen oder in anderen\n(populär-)wissenschaftlichen Publikationen findest du\noft unterstützende Grafiken. Wir zeigen dir heute, welche Möglichkeiten R\ndazu bietet und wie du selbst überzeugende Grafiken erstellst.\nIm ersten Teil dieser Lektion erfährst du, wie du deine Daten\nmit Hilfe von Plots besser verstehen kannst. Im zweiten Teil werden wir Grafiken mit der\nBibliothek ggplot2 erstellen. Los geht es mit dem ersten Teil"
 ---
 
 ## Histogramm
@@ -24,20 +24,26 @@ Lasse dir das Histogramm der Variable ``Anzahl_Farben`` ausgeben. Dazu übergibs
 Suche in der Hilfe nach der Verwendung des Befehl ``hist()`` und wenn du Probleme hast bei dem zusammengesetzten Variablen, benutze die Notation in eckigen Klammern statt der Dollar-Notation.
 
 `@pre_exercise_code`
+
 ```{r}
 library(readr)
 Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
+
 `@solution`
+
 ```{r}
 hist(Gummibaerchen$Anzahl_Farben)
 ```
+
 `@sct`
+
 ```{r}
 test_error()
 test_student_typed("hist(Gummibaerchen$Anzahl_Farben)",not_typed_msg="Nein, so nicht.")
 success_msg("Richtig so!")
 ```
+
 ---
 
 ## Histogramm lesen
@@ -61,15 +67,19 @@ Sieh dir nochmal das eben erzeugte Histogramm an! Du siehst die Häufigkeiten de
 Etwas ungeschickt ist hier die Aufteilung der x-Achse in Dezimalwerte. Es gibt jedoch eigentlich nur vollständige Gummibärchen und daher nur ganzzahlige Werte.
 
 `@pre_exercise_code`
+
 ```{r}
 library(readr)
 Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 hist(Gummibaerchen$Anzahl_Farben)
 ```
+
 `@sct`
+
 ```{r}
 test_mc(2,feedback_msgs = c("Nein","Ja","Nein"))
 ```
+
 ---
 
 ## Nominalskalierte Variable plotten
@@ -120,24 +130,32 @@ Beschrifte die Achsen wie folgt: Der Titel soll `Histogramm Anzahl Gummibaerchen
 Suche in der Hilfe nach `hist()` bzw. gib `?hist` in die Konsole ein.
 
 `@pre_exercise_code`
+
 ```{r}
 library(readr)
 Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
+
 `@sample_code`
+
 ```{r}
 hist(Gummibaerchen$Anzahl_Farben)
 ```
+
 `@solution`
+
 ```{r}
 hist(Gummibaerchen$Anzahl_Farben,main="Histogramm Anzahl Gummibaerchen",xlab="Anzahl",ylab="Haeufigkeit")
 ```
+
 `@sct`
+
 ```{r}
 test_error()
 test_output_contains("hist(Gummibaerchen$Anzahl_Farben,main='Histogramm Anzahl Gummibaerchen',xlab='Anzahl',ylab='Haeufigkeit')",incorrect_msg="Nicht ganz")
 success_msg("Geschafft!")
 ```
+
 ---
 
 ## Streudiagramm
@@ -159,20 +177,32 @@ Lasse dir das Streudiagramm für die Variablen `Anzahl_Farben` und `Anzahl_Baere
 `plot` benötigt mindestens zwei Argumente. In diesem Fall die beiden Variablen
 
 `@pre_exercise_code`
+
 ```{r}
 library(readr)
 Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
+
 ```{r}
 plot(Gummibaerchen$Anzahl_Baeren,Gummibaerchen$Anzahl_Farben)
 ```
+
 `@sct`
+
 ```{r}
 test_error()
-test_function("plot",incorrect_msg="Dieser Weg ist falsch.")
 success_msg("Sehr gut!")
 ```
+
 ---
 
 ## Streudiagramm-Ansicht
@@ -197,15 +227,19 @@ Auch hier kannst du mit `xlab` und `ylab` die Achsen ordentlich beschriften und 
 Du kannst die Grafik mit dem Button 'Zoom' vergrößern.
 
 `@pre_exercise_code`
+
 ```{r}
 library(readr)
 Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 plot(Gummibaerchen$Anzahl_Baeren,Gummibaerchen$Anzahl_Farben)
 ```
+
 `@sct`
+
 ```{r}
 test_mc(3,feedback_msgs = c("Nein, alles korrekt.","Doch, das hat geklappt","Das ist der Grund!","R passt die Skalierung in der Regel automatisch an."))
 ```
+
 ---
 
 ## Streudiagramm Interpretation
@@ -255,6 +289,7 @@ Du siehst ein Kreisdiagramm. Es eignet sich, um die Zusammensetzung von etwas au
 Es gibt einen Punkt, den man aufgrund der Daten nicht verändern kann, weil der davon abhängig ist.
 
 `@pre_exercise_code`
+
 ```{r}
 library(readr)
 Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
@@ -270,12 +305,15 @@ Farben_Mean <- Gummibaerchen[,2:7] %>% colMeans()  %>%
 baeren_colors <- c("#8B0000", "#ff0000", "#ff9900","#ffd700","#32cd32","#ffffff")
 source("https://assets.datacamp.com/production/repositories/3196/datasets/801e4015d0381e190aaccd014017fb702389287b/gummibaeren_verteilung_kreis.R")
 ```
+
 `@sct`
+
 ```{r}
 test_mc(2,feedback_msgs = c("Nein","Diese Art der Grafik ist ungünstig, weil wir sehr viele Kategorien haben, die 
   alle ähnlich groß sind. Es ist mit dem Auge schwer zu sehen, ob nun die grünen oder die 
   roten Gummibärchen im Mittel häufiger vorkommen.","Nein","Nein"))
 ```
+
 ---
 
 ## Balkendiagramm
@@ -291,6 +329,7 @@ Diese Art der Grafik ist ungünstig, weil wir sehr viele Kategorien haben, die a
 
 
 `@pre_exercise_code`
+
 ```{r}
 library(readr)
 Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
@@ -302,6 +341,7 @@ Farben_Mean <- Gummibaerchen[,2:7] %>% colMeans()  %>%
   melt() %>% 
   rownames_to_column()
 ```
+
 ***
 
 
@@ -330,15 +370,19 @@ Erstelle mit denselben Daten, die auch für das Kreisdiagramm verwendet wurden, 
 
 
 `@solution`
+
 ```{r}
 barplot(Farben_Mean$value)
 ```
+
 `@sct`
+
 ```{r}
 test_error()
 test_function("barplot")
 success_msg("Toll gemacht!")
 ```
+
 
 ***
 
@@ -368,9 +412,11 @@ Die einzelnen Balken zeigen nun die Höhe der einzelnen Mittelwerte der verschie
 
 
 `@solution`
+
 ```{r}
 barplot(Farben_Mean$value, names.arg=Farben_Mean$rowname)
 ```
+
 `@sct`
 
 ```{r}
@@ -441,9 +487,11 @@ Einmal Pfeiltaste nach oben und du erhältst das zuvor eingegebenen Kommando. Nu
 
 
 `@solution`
+
 ```{r}
 barplot(Farben_Mean$value, names.arg=Farben_Mean$rowname, col=baeren_colors)
 ```
+
 `@sct`
 
 ```{r}
@@ -474,15 +522,20 @@ den Boxplot. Er gibt ebenso Auskunft über die Verteilung und Lage von Variablen
 Teste den Befehl `boxplot` mit einer Variablen aus dem Datenset `Gummibaerchen`.
 
 `@pre_exercise_code`
+
 ```{r}
 library(readr)
 Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
+
 `@solution`
+
 ```{r}
 boxplot(Gummibaerchen$Anzahl_Baeren)
 ```
+
 `@sct`
+
 ```{r}
 test_error()
 test_function("boxplot")
