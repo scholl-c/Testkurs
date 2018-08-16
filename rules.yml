@@ -4,7 +4,7 @@ rules:
         max: 14
     course_num_exercises:
         min: 1
-        max: 100
+        max: 150
     chapter_num_exercises_chapter_1:
         min: 1
         max: 12
