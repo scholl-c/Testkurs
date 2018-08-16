@@ -1,5 +1,5 @@
 ---
-title: 'Besondere Tests'
+  title: "Besondere Tests"
 ---
 
 ## Interrater-Reliabilität
@@ -23,14 +23,18 @@ _Hinweis: Bei Cohens Kappa auf Nominalskalenniveau schreiben wir 'unweighted'_
 Wie übereinstimmend haben die Studenten bewertet? Berechne den gewichteten Cohens Kappa  mit `kappa2(interrater[,c(2,3)],'equal')`. Für `kappa2` wurde das Paket `irr` geladen.
 
 `@pre_exercise_code`
+
 ```{r}
 library(irr)
 interrater <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/32fe40c479aa377d8af347dd26bcd1d7ed5d636e/interrater.csv")
 ```
+
 `@solution`
+
 ```{r}
 kappa2(interrater[,c(2,3)],'equal')
 ```
+
 ---
 
 ## Cohens Kappa
@@ -49,14 +53,18 @@ Nun berechne den Cohens Kappa analog zum vorherigen Beispiel für die Übereinst
 Berechne den Cohens Kappa, verwende `kappa2`.
 
 `@pre_exercise_code`
+
 ```{r}
 library(irr)
 interrater <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/32fe40c479aa377d8af347dd26bcd1d7ed5d636e/interrater.csv")
 ```
+
 `@solution`
+
 ```{r}
 kappa2(interrater[,c(4,5)],'equal')
 ```
+
 ---
 
 ## Interpretation Cohens Kappa
@@ -108,7 +116,7 @@ Ab ca. 0.7 oder 0.8 (je nach Auslegung) kann man von einer akzeptablen oder gute
 - eine gute interne Konsistenz
 
 `@feedbacks`
-- Genau!
+- Genau
 - Nein
 
 ---
@@ -132,11 +140,14 @@ Messe mit der Funktion `cronbach.alpha()` aus dem Paket `ltm` die interne Konsis
 Verwende die Funktion cronbach.alpha() und übergib den Datensatz 'cronbach'
 
 `@pre_exercise_code`
+
 ```{r}
 cronbach <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/3c6d7fd41b65af514dadf8ae0a06cad868e463d2/cronbach.csv")
 library(ltm)
 ```
+
 `@solution`
+
 ```{r}
 cronbach.alpha(cronbach)
 ```
