@@ -1,6 +1,6 @@
 ---
-title: 'Test auf Unterschiede'
-description: "Es geht jetzt darum, Gruppen zu vergleichen. Man möchte wissen, ob sich z.B. Gruppen von \n  Versuchsteilnehmern oder Gruppen unterteilt nach Geschlecht in bestimmter Hinsicht voneinander \n  unterscheiden. Mit den folgenden Tests vergleichen wir die Lagemaße (Mittelwerte etc.) der \n  Gruppen auf signifikante Unterschiede."
+  title: "Test auf Unterschiede"
+  description: "Es geht jetzt darum, Gruppen zu vergleichen. Man möchte wissen, ob sich z.B. Gruppen von \n  Versuchsteilnehmern oder Gruppen unterteilt nach Geschlecht in bestimmter Hinsicht voneinander \n  unterscheiden. Mit den folgenden Tests vergleichen wir die Lagemaße (Mittelwerte etc.) der \n  Gruppen auf signifikante Unterschiede."
 ---
 
 ## Lagemaße
@@ -148,9 +148,11 @@ Welches davon ist die abhängige Variable?
 Die abhängige Variable ist jene Größe, die sich verändert durch Einflussnahme durch die unabhängige Variable auf das Experiment.
 
 `@sct`
+
 ```{r}
 test_mc(3,feedback_msgs = c("Nein","Nein","Ja"))
 ```
+
 ---
 
 ## Testvoraussetzung
@@ -201,7 +203,7 @@ Wir haben bisher nur geprüft, ob das Skalenniveau ausreicht.
 `@feedbacks`
 - Falsch
 - Falsch
-- Richtig, das wissen wir noch nicht.
+- Richtig das wissen wir noch nicht
 
 ---
 
@@ -224,10 +226,12 @@ Prüfe zunächst, ob die Stichprobe für Gruppe 1 (erstes Schlafmittel) normalve
 Bilde ein subset, wähle die Spalte 'extra' aus und wende darauf shapiro.test an.
 
 `@solution`
+
 ```{r}
 shapiro.test(subset(sleep,group==1)$extra)
 shapiro.test(subset(sleep,group==2)$extra)
 ```
+
 ---
 
 ## Normalverteilung
@@ -275,13 +279,17 @@ Auf den Hilfeseiten hast du vielleicht schon mal gelesen, dass man eine '**formu
 Kleiner Tipp: die Formel ist `extra~group`
 
 `@pre_exercise_code`
+
 ```{r}
 library(car)
 ```
+
 `@solution`
+
 ```{r}
 leveneTest(extra~group,sleep)
 ```
+
 ---
 
 ## t-Test var.equal
@@ -326,13 +334,17 @@ Rechne den Test.
 Die formula entspricht der formula aus dem Levene-Test.
 
 `@pre_exercise_code`
+
 ```{r}
 library(car)
 ```
+
 `@solution`
+
 ```{r}
 t.test(extra~group,sleep,paired=TRUE)
 ```
+
 ---
 
 ## t-Test Interpretation
