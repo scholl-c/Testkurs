@@ -1,6 +1,6 @@
 ---
-title: Grundlagen
-description: "In dieser Lektion geht es um grundlegende Begriffe,\nstatistische Messgrößen, andere Kennzahlen und\nden Umgang mit Datensätzen. Dies ist also der Einstieg\nin die deskriptive Statistik."
+  title: "Grundlagen"
+  description: "In dieser Lektion geht es um grundlegende Begriffe,\nstatistische Messgrößen, andere Kennzahlen und\nden Umgang mit Datensätzen. Dies ist also der Einstieg\nin die deskriptive Statistik."
 ---
 
 ## Erhebungsart
@@ -59,13 +59,17 @@ Das Minimum einer Datenreihe kannst du mit der Funktion ``min`` und das Maximum 
 Du brauchst die Funktionen min() und max(). Du solltest wissen, dass man auf Spalten in einem Dataframe mit einem $ zugreifen kann.
 
 `@pre_exercise_code`
+
 ```{r}
 Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/f7c3df4f7a167efcf7ff74b306b8045a10f83365/Studierendenzaehlung.csv",sep=";")
 ```
+
 `@sct`
+
 ```{r}
 test_mc(3, feedback_msgs = c("Falsch, achte auf die Fragestellung", "Falsch, achte auf die Fragestellung", "Ja, genau den kann man nicht verwenden", "Falsch, achte auf die Fragestellung"))
 ```
+
 ---
 
 ## Minimum und Maximum (2)
@@ -116,19 +120,25 @@ Prof. Ratistikus ist stets sehr bedacht und akribisch genau. Er weist Bob darauf
 Mit [1] kannst du auf den ersten Wert in einem Objekt zugreifen.
 
 `@pre_exercise_code`
+
 ```{r}
 Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/f7c3df4f7a167efcf7ff74b306b8045a10f83365/Studierendenzaehlung.csv",sep=";")
 ```
+
 `@solution`
+
 ```{r}
 colnames(Studis)[1] <- "Veranstaltung"
 ```
+
 `@sct`
+
 ```{r}
 test_error()
 test_student_typed("colnames(Studis)[1] <- 'Veranstaltung'", not_typed_msg = "Das war leider noch nicht ganz richtig.")
 success_msg("Toll gemacht!")
 ```
+
 ---
 
 ## Skalenniveau (1)
@@ -179,20 +189,26 @@ Füge die Spalte an das Dataframe an. Benutze ``cbind``. Weitere Hilfe findest d
 Benutze die Funktion ``cbind()``
 
 `@pre_exercise_code`
+
 ```{r}
 Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/f7c3df4f7a167efcf7ff74b306b8045a10f83365/Studierendenzaehlung.csv",sep=";")
 v_typ <- as.factor(c("Vorlesung","Aufbauseminar","Vorlesung","Vorlesung","Seminar","Vorlesung","Seminar","Vorlesung","Seminar","Seminar"))
 ```
+
 `@solution`
+
 ```{r}
 Studis <- cbind(Studis,v_typ)
 ```
+
 `@sct`
+
 ```{r}
 test_error()
 test_object("Studis")
 success_msg("Jaa! Volltreffer!")
 ```
+
 ---
 
 ## Datensätze zusammenführen (1)
@@ -270,19 +286,25 @@ Hilf Bob, die Datensätze in ``Studis`` zusammenzuführen. Gib den dazu nötigen
 Benutze den Befehl ``merge()``
 
 `@pre_exercise_code`
+
 ```{r}
 Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/f7c3df4f7a167efcf7ff74b306b8045a10f83365/Studierendenzaehlung.csv",sep=";")
 Raeume <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/29d7ffd1e2d96f6b8b94ce9904d6ad5ba5f2644e/Raeume.csv")
 ```
+
 `@solution`
+
 ```{r}
 Studis <- merge(Studis,Raeume)
 ```
+
 `@sct`
+
 ```{r}
 test_error()
 success_msg("Herzlichen Glückwunsch! Das hat geklappt!")
 ```
+
 ---
 
 ## Differenz zweier Spalten
@@ -306,15 +328,19 @@ Prof. Ratistikus möchte wissen, wie sehr er sich bei der Raumplanung verschätz
 ``abs()`` gibt den Betrag an, ``diff()`` und das Minus haben hier denselben Effekt
 
 `@pre_exercise_code`
+
 ```{r}
 Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/f7c3df4f7a167efcf7ff74b306b8045a10f83365/Studierendenzaehlung.csv",sep=";")
 Raeume <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/29d7ffd1e2d96f6b8b94ce9904d6ad5ba5f2644e/Raeume.csv")
 Studis <- merge(Studis,Raeume)
 ```
+
 `@sct`
+
 ```{r}
 test_mc(3, feedback_msgs = c("Falsch, achte auf die Fragestellung", "Falsch, achte auf die Fragestellung", "Ja, genau den kann man nicht verwenden"))
 ```
+
 ---
 
 ## Skalenniveau (2)
@@ -339,7 +365,7 @@ Kann man die Werte in ``Raum`` ordnen? Gibt es einen Nullpunkt?
 - verhältnisskaliert
 
 `@feedbacks`
-- Ja!
+- Ja
 - Nein
 - Nein
 - Nein
@@ -367,15 +393,19 @@ Prof. Ratistikus und Bob laufen gerade den Flur der Verwaltung entlang, als ihne
 Das Komma ist nicht bedeutungslos.
 
 `@pre_exercise_code`
+
 ```{r}
 Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/f7c3df4f7a167efcf7ff74b306b8045a10f83365/Studierendenzaehlung.csv",sep=";")
 Raeume <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/29d7ffd1e2d96f6b8b94ce9904d6ad5ba5f2644e/Raeume.csv")
 Studis <- merge(Studis,Raeume)
 ```
+
 `@sct`
+
 ```{r}
 test_mc(3, feedback_msgs = c("Falsch, achte auf die Fragestellung", "Falsch, achte auf die Fragestellung", "Ja, genau den kann man nicht verwenden"))
 ```
+
 ---
 
 ## Length und Unique
@@ -403,15 +433,19 @@ Wie ist das Ergebnis dieses Befehls zu interpetieren?
 Probiere den Befehl in der Konsole aus.
 
 `@pre_exercise_code`
+
 ```{r}
 Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/f7c3df4f7a167efcf7ff74b306b8045a10f83365/Studierendenzaehlung.csv",sep=";")
 Raeume <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/29d7ffd1e2d96f6b8b94ce9904d6ad5ba5f2644e/Raeume.csv")
 Studis <- merge(Studis,Raeume)
 ```
+
 `@sct`
+
 ```{r}
 test_mc(4, feedback_msgs = c("Falsch","Falsch","Falsch","Richtig"))
 ```
+
 ---
 
 ## Mittelwert
@@ -435,15 +469,19 @@ arithmetischen Mittelwert von der Variable ``Anwesend`` bilden?
 Überlege, wie die Variable skaliert ist.
 
 `@pre_exercise_code`
+
 ```{r}
 Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/f7c3df4f7a167efcf7ff74b306b8045a10f83365/Studierendenzaehlung.csv",sep=";")
 Raeume <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/29d7ffd1e2d96f6b8b94ce9904d6ad5ba5f2644e/Raeume.csv")
 Studis <- merge(Studis,Raeume)
 ```
+
 `@sct`
+
 ```{r}
 test_mc(1, feedback_msgs = c("Richtig","Falsch"))
 ```
+
 ---
 
 ## Mittelwerte für Gruppen
@@ -467,16 +505,21 @@ Tipp: Benutze ``aggregate``
 Tippe ``help(aggregate)`` in die Konsole ein.
 
 `@pre_exercise_code`
+
 ```{r}
 Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/f7c3df4f7a167efcf7ff74b306b8045a10f83365/Studierendenzaehlung.csv",sep=";")
 Raeume <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/29d7ffd1e2d96f6b8b94ce9904d6ad5ba5f2644e/Raeume.csv")
 Studis <- merge(Studis,Raeume)
 ```
+
 `@solution`
+
 ```{r}
 anwesend_nach_sprache <- aggregate(Studis$Angemeldet ~ Studis$Sprache,FUN=mean)
 ```
+
 `@sct`
+
 ```{r}
 test_error()
 test_object("anwesend_nach_sprache")
