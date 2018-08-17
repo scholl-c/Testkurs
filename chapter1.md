@@ -1,6 +1,6 @@
 ---
-title: Syntax
-description: 'Einfache Rechenoperationen und Zuweisungen'
+  title: "Syntax"
+  description: "Einfache Rechenoperationen und Zuweisungen"
 ---
 
 ## Arithmetische Operationen
@@ -28,16 +28,33 @@ Errechne die Sekunden, die der leitende Oberarzt bei einer 2-stündigen OP im OP
 `@hint`
 Eine Stunde hat 60 Minuten, eine Minute besteht aus 60 Sekunden.
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
+
 ```{r}
 2*60*60
 ```
+
 `@sct`
+
 ```{r}
-test_error()
-test_output_contains("7200",incorrect_msg="falsch")
+ex() %>% check_error() %>% check_output_expr(.,"7200") %>% check_operator(.,c("*","+")) %>% check_result() %>% check_equal()
 success_msg("Super!")
 ```
+
 ---
 
 ## Zuweisungen
@@ -67,6 +84,7 @@ Speichere zunächst die errechnete OP-Dauer (7200) in Sekunden, indem du sie der
 Benutze den Zuweisungspfeil wie im Beispiel.
 
 `@sample_code`
+
 ```{r}
 # Erstellt Variable mit Inhalt
 mein_name <- "Hans"
@@ -74,16 +92,21 @@ mein_name <- "Hans"
 # Zeigt Inhalt an
 mein_name
 ```
+
 `@solution`
+
 ```{r}
 id <- 7200
 ```
+
 `@sct`
+
 ```{r}
 test_error()
 test_student_typed("id <- 7200")
 success_msg("Toll!")
 ```
+
 ---
 
 ## Variablen
@@ -112,20 +135,26 @@ Ziehe diese 1000 Sekunden von der bisher errechneten und in ``id`` gespeicherten
 Benutze nur die Variable zum errechnen des neuen Wertes und nicht den konkreten Wert, d.h. die 7200 Sekunden. Überschreibe die Variable, indem du den Zuweisungspfeil benutzt.
 
 `@pre_exercise_code`
+
 ```{r}
 id <- 7200
 ```
+
 `@solution`
+
 ```{r}
 id <- id-1000
 ```
+
 `@sct`
+
 ```{r}
 test_error()
 test_object("id",incorrect_msg="Nein, das stimmt leider nicht.")
 test_student_typed("id <- id-1000",not_typed_msg="Rechne mit R, nicht im Kopf!")
 success_msg("Supi!")
 ```
+
 ---
 
 ## Valide Variablennamen
@@ -176,17 +205,21 @@ Speichere seinen Namen in ``name`` ab und seine Lieblingsfarbe in ``farbe``. Wie
 Vergiss nicht den Zuweisungspfeil und vergiss nicht, die Anführungszeichen zu setzen. Die Variablennamen werden hier klein geschrieben (siehe Aufgabenstellung).
 
 `@solution`
+
 ```{r}
 name <- "Günther"
 farbe <- "Blau"
 ```
+
 `@sct`
+
 ```{r}
 test_error()
 test_object("name",incorrect_msg="Nein, so nicht. Vielleicht ein Tippfehler?")
 test_object("farbe", incorrect_msg="Nein, so nicht. Vielleicht ein Tippfehler?")
 success_msg("Gut gemacht!")
 ```
+
 ---
 
 ## Funktionen
@@ -211,21 +244,27 @@ Generiere die vollständige Identifikationsnummer, die sich aus den Variablen ``
 Überschreibe die Variable ``id`` (du weißt, das funktioniert wie eine Zuweisung) mit der generierten Identifikationsnummer.
 
 `@pre_exercise_code`
+
 ```{r}
 name <- "Günther"
 farbe <- "Blau"
 id <- 6200
 ```
+
 `@solution`
+
 ```{r}
 id <- paste0(name,id,farbe)
 ```
+
 `@sct`
+
 ```{r}
 test_error()
 test_object("id")
 success_msg("Herzlichen Glückwunsch!")
 ```
+
 ---
 
 ## Funktion anwenden
@@ -244,22 +283,28 @@ Nun ist noch wichtig, dass die komplette Identifikationsnummer groß geschrieben
 Wende diese Funktion auf ``id`` an und überschreibe ``id``.
 
 `@pre_exercise_code`
+
 ```{r}
 name <- "Günther"
 farbe <- "Blau"
 id <- 6200
 id <- paste0(name,id,farbe)
 ```
+
 `@solution`
+
 ```{r}
 id <- toupper(id)
 ```
+
 `@sct`
+
 ```{r}
 test_error()
 test_object("id")
 success_msg("So ist es richtig!")
 ```
+
 ---
 
 ## Datensätze
@@ -285,19 +330,25 @@ Wenn du die Gründe nachschlagen möchtest, musst du auf die zweite Spalte bzw. 
 Halte dich an die beiden im Text beschriebenen Art und Weisen die Spalte auszugeben. Referenziere auf die Spalte mit ``grund``
 
 `@pre_exercise_code`
+
 ```{r}
 patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
 ```
+
 `@solution`
+
 ```{r}
 patienten$grund
 ```
+
 `@sct`
+
 ```{r}
 test_error()
 test_output_contains("patienten$grund",incorrect_msg="Nein, das ist falsch.")
 success_msg("Super!")
 ```
+
 ---
 
 ## Zellen auswählen
@@ -319,19 +370,25 @@ Zeige den Inhalt der Zelle (in ``patienten``) in der zweiten Reihe und der dritt
 Gib in die eckigen Klammern (direkt hinter ``patienten``) die Position der Zelle an. Achte auf die richtige Reihenfolge der Positionsangaben.
 
 `@pre_exercise_code`
+
 ```{r}
 patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
 ```
+
 `@solution`
+
 ```{r}
 patienten[2,3]
 ```
+
 `@sct`
+
 ```{r}
 test_error()
 test_output_contains("patienten[2,3]",incorrect_msg="Nein, das ist falsch.")
 success_msg("Super!")
 ```
+
 ---
 
 ## Zeilen auswählen
@@ -353,19 +410,25 @@ Zeige den Inhalt der vierten Zeile an.
 Vergiss das Komma nicht!
 
 `@pre_exercise_code`
+
 ```{r}
 patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
 ```
+
 `@solution`
+
 ```{r}
 patienten[4,]
 ```
+
 `@sct`
+
 ```{r}
 test_error()
 test_output_contains("patienten[4,]",incorrect_msg="Nein, das ist falsch.")
 success_msg("Super!")
 ```
+
 ---
 
 ## Daten bearbeiten
@@ -381,10 +444,12 @@ Genauso kannst du auch Spalten, Zeilen, und Zellen umbenennen.  Das könnte so �
 
 
 `@pre_exercise_code`
+
 ```{r}
 patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
 neue_ids <- c("BILL0001", "WILMA0002", "URMEL0003", "IDA0004", "ÖLF0005")
 ```
+
 ***
 
 
@@ -406,15 +471,19 @@ Das Bauchweh bei Patient Nr. 3 hat sich konkretisiert. Es handelt sich um eine B
 Halte dich an das Beispiel. Zeile ist 3, Spalte ist 2.
 
 `@solution`
+
 ```{r}
 patienten[3,2]<-"Bauchfellentzündung"
 ```
+
 `@sct`
+
 ```{r}
 test_error()
 test_object("patienten",incorrect_msg="Nein, so nicht.")
 success_msg("Super gemacht!")
 ```
+
 
 ***
 
@@ -439,15 +508,19 @@ Nun müssen wir natürlich nicht jede einzelne Zelle umbenennen, sondern können
 Die Reihenfolge der IDs ist wichtig.
 
 `@solution`
+
 ```{r}
 neue_ids <- c("BILL0001", "WILMA0002", "URMEL0003", "IDA0004", "ÖLF0005")
 ```
+
 `@sct`
+
 ```{r}
 test_error()
 test_object("neue_ids",incorrect_msg="Nein, das klappt so nicht.")
 success_msg("Super!")
 ```
+
 
 ***
 
@@ -470,15 +543,19 @@ key: 231b3f294a
 Wähle die Spalte aus und weise ihr neue_ids zu.
 
 `@solution`
+
 ```{r}
 patienten$id <- neue_ids
 ```
+
 `@sct`
+
 ```{r}
 test_error()
 #test_object("patienten$id",incorrect_msg="Nein, das hat nicht geklappt.")
 success_msg("Genial!")
 ```
+
 
 ***
 
@@ -501,15 +578,19 @@ In der Klinik wird ein neues Programm eingesetzt, das das Alter von Menschen erk
 Wähle die Spalte aus und überschreibe sie mit der gleichen Spalte minus 1.
 
 `@solution`
+
 ```{r}
 patienten$alter <- patienten$alter-1
 ```
+
 `@sct`
+
 ```{r}
 test_error()
 #test_object("patienten$alter",incorrect_msg="Das funktioniert so nicht.")
 success_msg("Toll gemacht!")
 ```
+
 
 ---
 
@@ -534,12 +615,15 @@ Konstruiere analog zu dem Beispiel ein neues Beispiel, bei dem die Spalte ``alte
 Halte dich an das Beispiel. Ändere bei der zweiten Anweisung den Spaltennamen zu ``alter`` und ändere die dritte Anweisung aus dem (kleinen) Tipp.
 
 `@pre_exercise_code`
+
 ```{r}
 library(magrittr)
 patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
 patienten$grund <- as.character(patienten$grund)
 ```
+
 `@sample_code`
+
 ```{r}
 # Binde das Paket magrittr ein
 library(magrittr)
@@ -547,11 +631,15 @@ library(magrittr)
 # Beispiel
 patienten %>% extract("grund") %>% toupper()
 ```
+
 `@solution`
+
 ```{r}
 patienten %>% extract("alter") %>% "+"(1)
 ```
+
 `@sct`
+
 ```{r}
 test_error()
 success_msg("Du bist ein Genie!")
