@@ -15,7 +15,8 @@ key: 2401a95bb9
 Wir befinden uns im OP-Saal. Der Patient ist erst vor Kurzem eingeliefert worden. Die OP wird voraussichtlich 2 Stunden dauern. Wie viele Sekunden sind das bloß? In so einer Notsituation darf kein Fehler passieren und der Assistenzarzt weiß nicht wo ihm der Kopf steht, deshalb verlässt er sich auf R.
 
 Du kannst arithmetische Befehle - wie vielleicht aus anderen Programmiersprachen oder von dem Taschenrechner gewohnt - benutzen, d.h. das Pluszeichen, Minuszeichen, Sternchen und den Schrägstrich für die arithmetischen Grundoperationen. 
-Beispiel: 
+Beispiel:   
+
 ``2+2``  
 ``40-2``  
 ``3*4``  
