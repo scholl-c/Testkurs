@@ -53,11 +53,10 @@ Eine Stunde hat 60 Minuten, eine Minute besteht aus 60 Sekunden.
 
 ```{r}
 ex() %>% check_error() %>% check_or(
-  check_operator(.,"*",not_called_msg="Hast du auch Operatoren verwendet?") %>% check_result() %>% check_equal(),
-  check_operator(.,"+",not_called_msg="Hast du auch Operatoren verwendet?")%>% check_result() %>% check_equal(),
-  check_operator(.,"-",not_called_msg="Hast du auch Operatoren verwendet?")%>% check_result() %>% check_equal(),
-  check_operator(.,"/",not_called_msg="Hast du auch Operatoren verwendet?")%>% check_result() %>% check_equal()
-) 
+  check_operator(.,"*",not_called_msg="Hast du auch Operatoren verwendet?"),
+  check_operator(.,"+",not_called_msg="Hast du auch Operatoren verwendet?"),
+  check_operator(.,"-",not_called_msg="Hast du auch Operatoren verwendet?"),
+  check_operator(.,"/",not_called_msg="Hast du auch Operatoren verwendet?")) %>% check_result() %>% check_equal()
 
 success_msg("Super!")
 ```
