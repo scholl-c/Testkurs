@@ -152,7 +152,6 @@ hist(Gummibaerchen$Anzahl_Farben,main="Histogramm Anzahl Gummibaerchen",xlab="An
 
 ```{r}
 test_error()
-test_output_contains("hist(Gummibaerchen$Anzahl_Farben,main='Histogramm Anzahl Gummibaerchen',xlab='Anzahl',ylab='Haeufigkeit')",incorrect_msg="Nicht ganz")
 success_msg("Geschafft!")
 ```
 
