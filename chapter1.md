@@ -55,7 +55,7 @@ ex() %>% check_error() %>% check_correct(
 check_output_expr(.,"7200",missing_msg="Da hast du dich verrechnet") %>% check_equal(),
   {
     check_error(.)
-    check_operator(.,c("*","+"),not_called_msg="Hast du auch Operatoren verwendet?") %>% check_equal()
+    check_operator(.,c("*","+"),not_called_msg="Hast du auch Operatoren verwendet?") %>% check_result() %>% check_equal()
    }
 )
 success_msg("Super!")
