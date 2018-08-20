@@ -470,6 +470,13 @@ Vergiss das Komma nicht!
 patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
 ```
 
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
@@ -479,8 +486,7 @@ patienten[4,]
 `@sct`
 
 ```{r}
-test_error()
-test_output_contains("patienten[4,]",incorrect_msg="Nein, das ist falsch.")
+ex() %>% check_output_expr("patienten[4,]")
 success_msg("Super!")
 ```
 
