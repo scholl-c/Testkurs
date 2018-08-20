@@ -241,7 +241,7 @@ farbe <- "Blau"
 `@sct`
 
 ```{r}
-ex() %>% check_object("name") %>% check_object("farbe") %>% check_equal()
+ex() %>% check_object("name",undefined_msg="Der Inhalt der Variable ``name`` ist nicht korrekt.") %>% check_object("farbe",undefined_msg="Der Inhalt der Variable ``farbe`` ist nicht korrekt.") %>% check_equal()
 success_msg("Gut gemacht!")
 ```
 
