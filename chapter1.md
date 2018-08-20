@@ -164,7 +164,7 @@ id <- id-1000
 `@sct`
 
 ```{r}
-ex() %>% check_object("id") %>% check_operator(.,"-") %>% check_result() %>% check_equal()
+ex() %>% check_object("id") %>% check_operator(.,"-","Nicht im Kopf rechnen, bitte!") %>% check_result() %>% check_equal()
 success_msg("Supi!")
 ```
 
