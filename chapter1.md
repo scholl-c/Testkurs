@@ -61,7 +61,7 @@ check_or(
   check_operator(.,"*",2,not_called_msg="Hast du auch Operatoren verwendet?"),
   check_operator(.,"+",2,not_called_msg="Hast du auch Operatoren verwendet?"),
   check_operator(.,"-",2,not_called_msg="Hast du auch Operatoren verwendet?"),
-  check_operator(.,"/",2,not_called_msg="Hast du auch Operatoren verwendet?"))
+  check_operator(.,"/",2,not_called_msg="Hast du auch Operatoren verwendet?")) %>%
 check_result() %>% check_equal()
 
 success_msg("Super!")
