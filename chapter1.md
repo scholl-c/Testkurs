@@ -540,7 +540,7 @@ patienten[3,2]<-"Bauchfellentzündung"
 `@sct`
 
 ```{r}
-ex() %>% check_object("patienten",incorrect_msg="Nein, so nicht.")
+ex() %>% check_object("patienten")
 success_msg("Super gemacht!")
 ```
 
