@@ -241,7 +241,7 @@ farbe <- "Blau"
 `@sct`
 
 ```{r}
-ex() %>% check_object("name","Nein, so nicht. Vielleicht ein Tippfehler?") %>% check_object("farbe","Nein, so nicht. Vielleicht ein Tippfehler?") %>% check_equal()
+ex() %>% check_object("name") %>% check_object("farbe") %>% check_equal()
 success_msg("Gut gemacht!")
 ```
 
