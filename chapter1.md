@@ -698,6 +698,6 @@ patienten %>% extract("alter") %>% "+"(1)
 `@sct`
 
 ```{r}
-ex() %>% check_output_expr("patienten %>% extract("alter") %>% "+"(1)") %>% check_code("%>%",times=2,fixed=TRUE) %>% check_equal()
+ex() %>% check_output_expr("patienten %>% extract("alter") %>% "+"(1)")
 success_msg("Du bist ein Genie!")
 ```
