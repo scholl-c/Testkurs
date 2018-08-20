@@ -52,7 +52,7 @@ Eine Stunde hat 60 Minuten, eine Minute besteht aus 60 Sekunden.
 `@sct`
 
 ```{r}
-ex() %>% check_expr("7200") %>% check_operator(.,"*",1) %>% check_result() %>% check_equal()
+ex() %>% check_expr("7200") %>% check_result() %>% check_equal()
 
 success_msg("Super!")
 ```
