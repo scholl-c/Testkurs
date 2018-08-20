@@ -85,6 +85,13 @@ Speichere zunächst die errechnete OP-Dauer (7200) in Sekunden, indem du sie der
 `@hint`
 Benutze den Zuweisungspfeil wie im Beispiel.
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -104,8 +111,7 @@ id <- 7200
 `@sct`
 
 ```{r}
-test_error()
-test_student_typed("id <- 7200")
+ex() %>% check_object("id") %>% check_equal()
 success_msg("Toll!")
 ```
 
