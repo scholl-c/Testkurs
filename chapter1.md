@@ -394,7 +394,7 @@ patienten$grund
 `@sct`
 
 ```{r}
-ex() %>% test_object("patienten") %>% check_output_expression("patienten$grund") %>% check_result() %>% check_equal()
+ex() %>% test_object("patienten") %>% check_output_expression("patienten$grund")
 success_msg("Super!")
 ```
 
