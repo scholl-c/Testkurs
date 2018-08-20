@@ -610,7 +610,7 @@ patienten$id <- neue_ids
 `@sct`
 
 ```{r}
-test_error()
+ex() %>% check_object("patienten") %>% check_equal()
 #test_object("patienten$id",incorrect_msg="Nein, das hat nicht geklappt.")
 success_msg("Genial!")
 ```
