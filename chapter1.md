@@ -217,6 +217,20 @@ Speichere seinen Namen in ``name`` ab und seine Lieblingsfarbe in ``farbe``. Wie
 `@hint`
 Vergiss nicht den Zuweisungspfeil und vergiss nicht, die Anführungszeichen zu setzen. Die Variablennamen werden hier klein geschrieben (siehe Aufgabenstellung).
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
@@ -227,9 +241,7 @@ farbe <- "Blau"
 `@sct`
 
 ```{r}
-test_error()
-test_object("name",incorrect_msg="Nein, so nicht. Vielleicht ein Tippfehler?")
-test_object("farbe", incorrect_msg="Nein, so nicht. Vielleicht ein Tippfehler?")
+ex() %>% test_object("name","Nein, so nicht. Vielleicht ein Tippfehler?") %>% test_object("farbe","Nein, so nicht. Vielleicht ein Tippfehler?") %>% check_equal()
 success_msg("Gut gemacht!")
 ```
 
