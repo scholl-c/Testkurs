@@ -148,6 +148,13 @@ Benutze nur die Variable zum errechnen des neuen Wertes und nicht den konkreten 
 id <- 7200
 ```
 
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
@@ -157,9 +164,7 @@ id <- id-1000
 `@sct`
 
 ```{r}
-test_error()
-test_object("id",incorrect_msg="Nein, das stimmt leider nicht.")
-test_student_typed("id <- id-1000",not_typed_msg="Rechne mit R, nicht im Kopf!")
+ex() %>% check_object("id") %>% check_operator(.,"-") %>% check_result() %>% check_equal()
 success_msg("Supi!")
 ```
 
