@@ -611,7 +611,6 @@ patienten$id <- neue_ids
 
 ```{r}
 ex() %>% check_object("patienten") %>% check_equal()
-#test_object("patienten$id",incorrect_msg="Nein, das hat nicht geklappt.")
 success_msg("Genial!")
 ```
 
@@ -645,8 +644,7 @@ patienten$alter <- patienten$alter-1
 `@sct`
 
 ```{r}
-test_error()
-#test_object("patienten$alter",incorrect_msg="Das funktioniert so nicht.")
+ex() %>% check_object("patienten") %>% check_equal()
 success_msg("Toll gemacht!")
 ```
 
