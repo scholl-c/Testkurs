@@ -644,7 +644,7 @@ patienten$alter <- patienten$alter-1
 `@sct`
 
 ```{r}
-ex() %>% check_object("patienten") %>% check_equal()
+ex() %>% check_operator("-") %>% check_object("patienten") %>% check_equal()
 success_msg("Toll gemacht!")
 ```
 
