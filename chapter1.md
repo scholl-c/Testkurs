@@ -316,6 +316,9 @@ Nun ist noch wichtig, dass die komplette Identifikationsnummer groß geschrieben
 `@instructions`
 Wende diese Funktion auf ``id`` an und überschreibe ``id``.
 
+`@hint`
+
+
 `@pre_exercise_code`
 
 ```{r}
@@ -324,6 +327,13 @@ farbe <- "Blau"
 id <- 6200
 id <- paste0(name,id,farbe)
 ```
+
+`@sample_code`
+
+```{r}
+
+```
+
 
 `@solution`
 
@@ -334,8 +344,7 @@ id <- toupper(id)
 `@sct`
 
 ```{r}
-test_error()
-test_object("id")
+ex() %>% check_object("id") %>% check_function("toupper") %>% check_result() %>% check_equal()
 success_msg("So ist es richtig!")
 ```
 
