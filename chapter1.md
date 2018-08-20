@@ -268,6 +268,9 @@ Mit der Funktion ``paste0()`` kannst du eine Zeichenkette aus mehreren Zeichenke
 Generiere die vollständige Identifikationsnummer, die sich aus den Variablen ``name``, ``id`` (die OP-Dauer) und ``farbe`` genau in dieser Reihenfolge zusammensetzt. Benutze dafür die Funktion ``paste0``.
 Überschreibe die Variable ``id`` (du weißt, das funktioniert wie eine Zuweisung) mit der generierten Identifikationsnummer.
 
+`@hint`
+
+
 `@pre_exercise_code`
 
 ```{r}
@@ -275,6 +278,13 @@ name <- "Günther"
 farbe <- "Blau"
 id <- 6200
 ```
+
+`@sample_code`
+
+```{r}
+
+```
+
 
 `@solution`
 
@@ -285,8 +295,7 @@ id <- paste0(name,id,farbe)
 `@sct`
 
 ```{r}
-test_error()
-test_object("id")
+ex() %>% check_object("id") %>% check_equal()
 success_msg("Herzlichen Glückwunsch!")
 ```
 
