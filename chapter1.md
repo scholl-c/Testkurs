@@ -164,7 +164,7 @@ id <- id-1000
 `@sct`
 
 ```{r}
-ex() %>% check_operator(.,"-") %>% check_object("id") %>% check_code("<-id",TRUE) %>% check_equal()
+ex() %>% check_operator(.,"-",append=FALSE) %>% check_object("id") %>% check_code("<-id",TRUE,missing_msg="Überschreibe die Variable",append=FALSE) %>% check_equal()
 success_msg("Supi!")
 ```
 
