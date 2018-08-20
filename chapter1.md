@@ -576,7 +576,7 @@ neue_ids <- c("BILL0001", "WILMA0002", "URMEL0003", "IDA0004", "ÖLF0005")
 `@sct`
 
 ```{r}
-ex() %>% check_object("neue_ids",incorrect_msg="Nein, das klappt so nicht.") %>% check_equal()
+ex() %>% check_object("neue_ids") %>% check_equal()
 success_msg("Super!")
 ```
 
