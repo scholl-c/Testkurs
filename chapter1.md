@@ -295,7 +295,7 @@ id <- paste0(name,id,farbe)
 `@sct`
 
 ```{r}
-ex() %>% check_object("id") %>% check_function("paste0") %>% check_equal()
+ex() %>% check_object("id") %>% check_function("paste0") %>% check_result() %>% check_equal()
 success_msg("Herzlichen Glückwunsch!")
 ```
 
