@@ -414,9 +414,8 @@ Farben_Mean["farben"] <- rownames(Farben_Mean)
 `@sct`
 
 ```{r}
-
+ex() %>% check_function("rownames") %>% check_object("Farben_Mean") %>% {check_column(.,"farben") %>% check_equal()} %>% check_equal()
 ```
-
 
 
 ***
