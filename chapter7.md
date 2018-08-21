@@ -579,7 +579,7 @@ leveneTest(extra~group,sleep)
 `@sct`
 
 ```{r}
-ex() %>% check_function("leveneTest") %>% check_arg("y") %>% check_result() %>% check_equal()
+ex() %>% check_function("leveneTest") %>% check_arg("y") %>% check_equal()
 ```
 
 
@@ -690,7 +690,7 @@ t.test(extra~group,sleep,paired=TRUE)
 `@sct`
 
 ```{r}
-ex() %>% check_function("t.test") %>% check_arg("paired") %>% check_result() %>% check_equal()
+ex() %>% check_function("t.test") %>% check_arg("paired") %>% check_equal()
 ```
 
 
