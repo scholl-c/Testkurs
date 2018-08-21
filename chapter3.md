@@ -284,7 +284,7 @@ sum(zahlen)
 `@sct`
 
 ```{r}
-ex() %>% check_function("sum") %>% check_results() %>% check_equal()
+ex() %>% check_function("sum") %>% check_result() %>% check_equal()
 success_msg("Super gemacht!")
 ```
 
@@ -325,8 +325,7 @@ zahlen <- as.double(zahlen)
 `@sct`
 
 ```{r}
-test_error()
-#test_object("zahlen")
+ex() %>% check_function("as.double") %>% check_object("zahlen") %>% check_equal()
 success_msg("Toll!")
 ```
 
@@ -367,8 +366,7 @@ sum(zahlen)
 `@sct`
 
 ```{r}
-test_error()
-#test_output_contains("sum(zahlen)",incorrect_msg="Falsch!")
+ex() %>% check_function("sum")
 success_msg("Super gemacht!")
 ```
 
