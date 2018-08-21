@@ -624,9 +624,11 @@ p.cluster <- kmeans(agriculture,3)
 `@sct`
 
 ```{r}
-
+ex() %>% check_function("kmeans") %>% {
+  check_arg(.,"x") %>% check_equal(eval=FALSE)
+  check_arg(.,"centers") %>% check_equal(eval=FALSE)
+} %>% check_object("p.cluster")
 ```
-
 
 
 ***
