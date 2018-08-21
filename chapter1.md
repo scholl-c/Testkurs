@@ -29,20 +29,6 @@ Errechne die Sekunden, die der leitende Oberarzt bei einer 2-stündigen OP im OP
 `@hint`
 Eine Stunde hat 60 Minuten, eine Minute besteht aus 60 Sekunden.
 
-`@pre_exercise_code`
-
-```{r}
-
-```
-
-
-`@sample_code`
-
-```{r}
-
-```
-
-
 `@solution`
 
 ```{r}
@@ -84,13 +70,6 @@ Speichere zunächst die errechnete OP-Dauer (7200) in Sekunden, indem du sie der
 
 `@hint`
 Benutze den Zuweisungspfeil wie im Beispiel.
-
-`@pre_exercise_code`
-
-```{r}
-
-```
-
 
 `@sample_code`
 
@@ -147,13 +126,6 @@ Benutze nur die Variable zum errechnen des neuen Wertes und nicht den konkreten 
 ```{r}
 id <- 7200
 ```
-
-`@sample_code`
-
-```{r}
-
-```
-
 
 `@solution`
 
@@ -217,20 +189,6 @@ Speichere seinen Namen in ``name`` ab und seine Lieblingsfarbe in ``farbe``. Wie
 `@hint`
 Vergiss nicht den Zuweisungspfeil und vergiss nicht, die Anführungszeichen zu setzen. Die Variablennamen werden hier klein geschrieben (siehe Aufgabenstellung).
 
-`@pre_exercise_code`
-
-```{r}
-
-```
-
-
-`@sample_code`
-
-```{r}
-
-```
-
-
 `@solution`
 
 ```{r}
@@ -268,9 +226,6 @@ Mit der Funktion ``paste0()`` kannst du eine Zeichenkette aus mehreren Zeichenke
 Generiere die vollständige Identifikationsnummer, die sich aus den Variablen ``name``, ``id`` (die OP-Dauer) und ``farbe`` genau in dieser Reihenfolge zusammensetzt. Benutze dafür die Funktion ``paste0``.
 Überschreibe die Variable ``id`` (du weißt, das funktioniert wie eine Zuweisung) mit der generierten Identifikationsnummer.
 
-`@hint`
-
-
 `@pre_exercise_code`
 
 ```{r}
@@ -278,13 +233,6 @@ name <- "Günther"
 farbe <- "Blau"
 id <- 6200
 ```
-
-`@sample_code`
-
-```{r}
-
-```
-
 
 `@solution`
 
@@ -316,9 +264,6 @@ Nun ist noch wichtig, dass die komplette Identifikationsnummer groß geschrieben
 `@instructions`
 Wende diese Funktion auf ``id`` an und überschreibe ``id``.
 
-`@hint`
-
-
 `@pre_exercise_code`
 
 ```{r}
@@ -327,13 +272,6 @@ farbe <- "Blau"
 id <- 6200
 id <- paste0(name,id,farbe)
 ```
-
-`@sample_code`
-
-```{r}
-
-```
-
 
 `@solution`
 
@@ -378,13 +316,6 @@ Halte dich an die beiden im Text beschriebenen Art und Weisen die Spalte auszuge
 patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
 ```
 
-`@sample_code`
-
-```{r}
-
-```
-
-
 `@solution`
 
 ```{r}
@@ -424,13 +355,6 @@ Gib in die eckigen Klammern (direkt hinter ``patienten``) die Position der Zelle
 patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
 ```
 
-`@sample_code`
-
-```{r}
-
-```
-
-
 `@solution`
 
 ```{r}
@@ -469,13 +393,6 @@ Vergiss das Komma nicht!
 ```{r}
 patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
 ```
-
-`@sample_code`
-
-```{r}
-
-```
-
 
 `@solution`
 
@@ -698,6 +615,6 @@ patienten %>% extract("alter") %>% "+"(1)
 `@sct`
 
 ```{r}
-ex() %>% check_output_expr("patienten %>% extract('alter') %>% '+'(1)") %>% check_code("%>%",times=2,fixed=TRUE)
+ex() %>% check_output_expr("patienten %>% extract('alter') %>% '+'(1)") %>% check_code("%>%",times=2,fixed=TRUE,missing_msg="Benutze das Pipe-Symbol")
 success_msg("Du bist ein Genie!")
 ```
