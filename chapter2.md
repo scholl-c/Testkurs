@@ -201,6 +201,13 @@ Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/dat
 v_typ <- as.factor(c("Vorlesung","Aufbauseminar","Vorlesung","Vorlesung","Seminar","Vorlesung","Seminar","Vorlesung","Seminar","Seminar"))
 ```
 
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
@@ -210,8 +217,7 @@ Studis <- cbind(Studis,v_typ)
 `@sct`
 
 ```{r}
-test_error()
-test_object("Studis")
+ex() %>% check_function("cbind") %>% check_object("Studis") %>% check_equal()
 success_msg("Jaa! Volltreffer!")
 ```
 
@@ -298,6 +304,13 @@ Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/dat
 Raeume <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/29d7ffd1e2d96f6b8b94ce9904d6ad5ba5f2644e/Raeume.csv")
 ```
 
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
@@ -307,7 +320,7 @@ Studis <- merge(Studis,Raeume)
 `@sct`
 
 ```{r}
-test_error()
+ex() %>% check_function("merge") %>% check_object("Studis") %>% check_equal()
 success_msg("Herzlichen Glückwunsch! Das hat geklappt!")
 ```
 
