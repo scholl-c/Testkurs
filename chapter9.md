@@ -362,9 +362,8 @@ lapply(cars,normalverteilt)
 `@sct`
 
 ```{r}
-
+ex() %>% check_function("lapply") %>% check_result() %>% check_equal()
 ```
-
 
 
 ---
