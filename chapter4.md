@@ -646,10 +646,7 @@ barplot(Farben_Mean$value, names.arg=Farben_Mean$rowname)
 `@sct`
 
 ```{r}
-ex() %>% check_function("barplot") %>% {
-  check_arg("height")
-  check_arg("names.arg")
-}
+ex() %>% check_function("barplot")
 ```
 
 
