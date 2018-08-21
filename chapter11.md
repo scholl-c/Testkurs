@@ -667,7 +667,7 @@ p.cluster$cluster <- as.factor(p.cluster$cluster)
 `@sct`
 
 ```{r}
-ex() %>% check_function("as.factor") %>% check_object("p.cluster") %>% check_equal()
+ex() %>% check_object("p.cluster") %>% check_equal()
 ```
 
 
