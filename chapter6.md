@@ -492,9 +492,8 @@ unique(ds$Alter)
 `@sct`
 
 ```{r}
-
+ex() %>% check_function("unique") %>% check_result() %>% check_equal()
 ```
-
 
 
 ***
@@ -535,9 +534,11 @@ subset(ds,Alter!="")
 `@sct`
 
 ```{r}
-
+ex() %>% check_function("subset") %>% {
+  check_arg(.,"x") %>% check_result() 
+  check_arg(.,"subset") %>% check_result()
+}
 ```
-
 
 
 ***
@@ -576,9 +577,11 @@ na_if(ds$Alter,"")
 `@sct`
 
 ```{r}
-
+ex() %>% check_function("na_if") %>% {
+  check_arg(.,"x") %>% check_result() 
+  check_arg(.,"y") %>% check_result()
+}
 ```
-
 
 
 ---
@@ -628,6 +631,9 @@ key: 6c73942d08
 `@instructions`
 Benutze `as.integer()` und parse damit das Alter als Integer-Werte. Folglich wirst du sehen, dass jetzt die leeren Felder zu _NA_ geworden sind. Du musst also in dieser Spalte keine leeren Felder mehr berücksichtigen.
 
+`@hint`
+
+
 `@pre_exercise_code`
 
 ```{r}
@@ -635,10 +641,23 @@ library(readr)
 ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
 
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
 ds$Alter <- as.integer(ds$Alter)
+```
+
+`@sct`
+
+```{r}
+ex() %>% check_function("as.integer") %>% check_object("ds") %>% check_equal()
 ```
 
 ---
@@ -699,9 +718,8 @@ boxplot(ds$Alter)
 `@sct`
 
 ```{r}
-
+ex() %>% check_function("boxplot") %>% check_result() %>% check_equal()
 ```
-
 
 
 ***
@@ -740,9 +758,8 @@ shapiro.test(ds$Alter)
 `@sct`
 
 ```{r}
-
+ex() %>% check_function("shapiro.test") %>% check_result() %>% check_equal()
 ```
-
 
 
 ***
@@ -811,9 +828,8 @@ mean(ds$Alter)+4*sd(ds$Alter)
 `@sct`
 
 ```{r}
-
+ex() %>% check_operator("+",1) %>% check_operator("*",2) %>% check_function("mean") %>% check_function("sd") %>% check_result() %>% check_equal()
 ```
-
 
 
 ***
@@ -852,9 +868,8 @@ mean(ds$Alter)-4*sd(ds$Alter)
 `@sct`
 
 ```{r}
-
+ex() %>% check_operator("-",1) %>% check_operator("*",2) %>% check_function("mean") %>% check_function("sd") %>% check_result() %>% check_equal()
 ```
-
 
 
 ***
@@ -893,9 +908,8 @@ ds_bereinigt <- subset(ds,Alter>68)
 `@sct`
 
 ```{r}
-
+ex() %>% check_object("ds_bereinigt") %>% check_equal()
 ```
-
 
 
 ---
@@ -931,6 +945,13 @@ library(readr)
 ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
 
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
@@ -940,6 +961,7 @@ ds$Sprachauswahl <- recode_factor(ds$Sprachauswahl,"eng"=1,"ger"=0)
 `@sct`
 
 ```{r}
+ex() %>% check_function("recode_factor") %>% check_object("ds") %>% check_equal()
 success_msg("Wie immer, wenn du die Original-Werte nicht verlieren möchtest, kannst du eine neue 
   Spalte erstellen. Im Folgenden werden wir eine neue Spalte erstellen. Außerdem gibt es ähnliche Funktionen wie revalue oder mapvalues.")
 ```
@@ -975,11 +997,24 @@ library(readr)
 ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
 
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
 ds$Altersgruppe[ds$Alter>11 & ds$Alter<19] <- "Teenager"
 ds$Altersgruppe[ds$Alter>55] <- "Senioren"
+```
+
+`@sct`
+
+```{r}
+ex() %>% check_object("ds") %>% check_column("Altersgruppe") %>% check_equal()
 ```
 
 ---

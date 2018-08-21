@@ -1,5 +1,5 @@
 ---
-title: 'Test auf Zusammenhänge'
+  title: "Test auf Zusammenhänge"
 ---
 
 ## Skalenniveau der Variablen
@@ -26,13 +26,17 @@ Erfüllen beide Variablen die Voraussetzung der Intervallskaliertheit?
 Auf welchem Skalenniveau sind die Anzahl an verspeisten Schokoladentafel und der Intelligenzquotient?
 
 `@pre_exercise_code`
+
 ```{r}
 choco <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8fabac37c6b40b6274b29eba130b53d8c7e70b8/choco.csv")
 ```
+
 `@sct`
+
 ```{r}
-test_mc(1,feedback_msgs = c("Ja, richtig, sie sind sind intervallskaliert.","Nein"))
+ex() %>% check_mc(1,feedback_msgs = c("Ja, richtig, sie sind sind intervallskaliert.","Nein"))
 ```
+
 ---
 
 ## Korrelationen
@@ -48,9 +52,11 @@ Die Zusammenhänge (**Korrelationen**), die wir im Folgenden berechnen, beziehen
 
 
 `@pre_exercise_code`
+
 ```{r}
 choco <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8fabac37c6b40b6274b29eba130b53d8c7e70b8/choco.csv")
 ```
+
 ***
 
 
@@ -79,13 +85,18 @@ Die beiden Variablen 'Tafeln' und 'IQ' müssen der Funktion plot() übergeben we
 
 
 `@solution`
+
 ```{r}
 plot(choco$Tafeln,choco$IQ)
 ```
+
 `@sct`
+
 ```{r}
+ex() %>% check_function("plot") %>% check_arg("x") %>% check_arg("y") %>% check_result() %>% check_equal()
 success_msg("Super!")
 ```
+
 
 ***
 
@@ -109,9 +120,11 @@ key: a89391793a
 
 
 `@sct`
+
 ```{r}
-test_mc(1,feedback_msgs=c("Ja","Nein"))
+ex() %>% check_mc(1,feedback_msgs=c("Ja","Nein"))
 ```
+
 
 ---
 
@@ -134,14 +147,32 @@ Bevor wir die Korrelation rechnen dürfen, müssen wir prüfen, ob die Variablen
 Verwende `shapiro.test()`
 
 `@pre_exercise_code`
+
 ```{r}
 choco <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8fabac37c6b40b6274b29eba130b53d8c7e70b8/choco.csv")
 ```
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
+
 ```{r}
 shapiro.test(choco$Tafeln)
 shapiro.test(choco$IQ)
 ```
+
+`@sct`
+
+```{r}
+ex() %>% check_function("shapiro.test",index=1) %>% check_arg("x") %>% check_equal()
+ex() %>% check_function("shapiro.test",index=2) %>% check_arg("x") %>% check_equal()
+```
+
 ---
 
 ## Welcher Korrelationskoeffizient?
@@ -182,9 +213,11 @@ Wir berechnen die Korrelation und interpretieren ihre Ergebnisse.
 
 
 `@pre_exercise_code`
+
 ```{r}
 choco <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8fabac37c6b40b6274b29eba130b53d8c7e70b8/choco.csv")
 ```
+
 ***
 
 
@@ -213,13 +246,18 @@ Mit `cor.test()` können wir eine Korrelation berechnen. Wir übergeben dazu uns
 
 
 `@solution`
+
 ```{r}
 cor.test(choco$Tafeln,choco$IQ)
 ```
+
 `@sct`
+
 ```{r}
+ex() %>% check_function("cor.test") %>% check_result() %>% check_equal()
 success_msg("Gut gemacht!")
 ```
+
 
 ***
 
@@ -243,9 +281,11 @@ key: bd4fd1e4b3
 
 
 `@sct`
+
 ```{r}
-test_mc(1,feedback_msgs=c("Ja","Nein"))
+ex() %>% check_mc(1,feedback_msgs=c("Ja","Nein"))
 ```
+
 
 ***
 
@@ -355,14 +395,34 @@ Die Spearman-Rangkorrelation kann mit der gleichen Funktion berechnet werden, nu
 `@instructions`
 Berechne als Übung die Spearman-Rangkorrelation.
 
+`@hint`
+
+
 `@pre_exercise_code`
+
 ```{r}
 choco <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8fabac37c6b40b6274b29eba130b53d8c7e70b8/choco.csv")
 ```
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
+
 ```{r}
 cor.test(choco$Tafeln,choco$IQ,method="spearman")
 ```
+
+`@sct`
+
+```{r}
+ex() %>% check_function("cor.test") %>% check_arg("method") %>% check_result() %>% check_equal()
+```
+
 ---
 
 ## Korrelationsmatrix
@@ -382,14 +442,34 @@ Die Matrix ist an der Diagonalen gespiegelt, weil es keine Rolle spielt, ob du d
 `@instructions`
 Berechne die Korrelationsmatrix für unseren Datensatz mit `cor()`.
 
+`@hint`
+
+
 `@pre_exercise_code`
+
 ```{r}
 choco <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8fabac37c6b40b6274b29eba130b53d8c7e70b8/choco.csv")
 ```
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
+
 ```{r}
 cor(choco)
 ```
+
+`@sct`
+
+```{r}
+ex() %>% check_function("cor") %>% check_result() %>% check_equal()
+```
+
 ---
 
 ## Regressionsanalyse
@@ -407,9 +487,11 @@ Wir können mit `lm()` (lm steht für _linear model_) eine Gerade berechnen lass
 
 
 `@pre_exercise_code`
+
 ```{r}
 choco <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8fabac37c6b40b6274b29eba130b53d8c7e70b8/choco.csv")
 ```
+
 ***
 
 
@@ -438,15 +520,16 @@ Benutze `plot()` für das Streudiagramm. Verwende die Dollar-Schreibweise.
 
 
 `@solution`
+
 ```{r}
 plot(choco$Tafeln~choco$IQ)
 ```
+
 `@sct`
 
 ```{r}
-
+ex() %>% check_function("plot") %>% check_result() %>% check_equal()
 ```
-
 
 
 ***
@@ -479,10 +562,15 @@ Nun lege mit `abline(lm(formula))` die berechnete Gerade über das Streudiagramm
 
 
 `@solution`
+
 ```{r}
 abline(lm(choco$Tafeln~choco$IQ))
 ```
+
 `@sct`
+
 ```{r}
+ex() %>% check_function("abline") %>% check_function("lm") %>% check_result() %>% check_equal()
 success_msg("Du kannst nun Zusammenhänge überprüfen und lineare Regressionsmodelle zeichnen. Andere Formen, wie z.B. polynomiale Regression oder logistische Regression, werden wir in dieser Lektion nicht behandeln.")
 ```
+

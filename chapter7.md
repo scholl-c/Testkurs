@@ -57,7 +57,7 @@ Bilde den Satz - 'Ich möchte untersuchen, ob [x] von [y] abhängt.' Dabei ist [
 
 `@feedbacks`
 - Nein
-- Genau, das ist die abhängige Variable!
+- Genau das ist die abhängige Variable!
 
 ---
 
@@ -147,10 +147,17 @@ Welches davon ist die abhängige Variable?
 `@hint`
 Die abhängige Variable ist jene Größe, die sich verändert durch Einflussnahme durch die unabhängige Variable auf das Experiment.
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sct`
 
 ```{r}
-test_mc(3,feedback_msgs = c("Nein","Nein","Ja"))
+ex() %>% check_mc(3,feedback_msgs = c("Nein","Nein","Ja"))
 ```
 
 ---
@@ -225,11 +232,32 @@ Prüfe zunächst, ob die Stichprobe für Gruppe 1 (erstes Schlafmittel) normalve
 `@hint`
 Bilde ein subset, wähle die Spalte 'extra' aus und wende darauf shapiro.test an.
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
 shapiro.test(subset(sleep,group==1)$extra)
 shapiro.test(subset(sleep,group==2)$extra)
+```
+
+`@sct`
+
+```{r}
+ex() %>% check_function("shapiro.test",index=1) %>% check_arg("x") %>% check_equal()
+ex() %>% check_function("shapiro.test",index=2) %>% check_arg("x") %>% check_equal()
 ```
 
 ---
@@ -284,10 +312,23 @@ Kleiner Tipp: die Formel ist `extra~group`
 library(car)
 ```
 
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
 leveneTest(extra~group,sleep)
+```
+
+`@sct`
+
+```{r}
+ex() %>% check_function("leveneTest") %>% check_arg("y") %>% check_result() %>% check_equal()
 ```
 
 ---
@@ -339,10 +380,23 @@ Die formula entspricht der formula aus dem Levene-Test.
 library(car)
 ```
 
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
 t.test(extra~group,sleep,paired=TRUE)
+```
+
+`@sct`
+
+```{r}
+ex() %>% check_function("t.test") %>% check_arg("paired") %>% check_result() %>% check_equal()
 ```
 
 ---

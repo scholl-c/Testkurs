@@ -1,5 +1,5 @@
 ---
-title: 'Funktionen und Schleifen'
+  title: "Funktionen und Schleifen"
 ---
 
 ## Durchschnitt aller Spalten
@@ -21,13 +21,30 @@ Berechne die Durchschnittswerte, in dem du den Datensatz an `colMeans()` übergi
 Da du den Durchschnitt der einzigen beiden Spalten berechnen möchtest, musst du keine Spalten extra spezifieren, sondern übergibst den Datensatz als solches.
 
 `@pre_exercise_code`
+
 ```{r}
 library(datasets)
 ```
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
+
 ```{r}
 colMeans(cars)
 ```
+
+`@sct`
+
+```{r}
+ex() %>% check_function("colMeans") %>% check_result() %>% check_equal()
+```
+
 ---
 
 ## Summe aller Spalten
@@ -49,17 +66,31 @@ In diesem Beispiel macht das wenig Sinn, aber wir machen das trotzdem mal. Benut
 Benutze `colSums()` wie du im vorherigen Beispiel `colMeans()` benutzt hast
 
 `@pre_exercise_code`
+
 ```{r}
 library(datasets)
 ```
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
+
 ```{r}
 colSums(cars)
 ```
+
 `@sct`
+
 ```{r}
+ex() %>% check_function("colSums") %>% check_result() %>% check_equal()
 success_msg("Damit hast du jetzt zwei sehr einfache Funktionen kennengelernt, die dir sehr viel Arbeit ersparen können. Es gibt auch die Möglichkeit, das auf Zeilen auszuführen, siehe dazu rowMeans() und rowSums().")
 ```
+
 ---
 
 ## Modus
@@ -110,6 +141,7 @@ Berechne damit den Modus für alle Spalten in `cars`. Die Funktion namens `Mode`
 Du musst keine Spalten spezifizieren und verwende unsere Funktion namens `Mode`
 
 `@pre_exercise_code`
+
 ```{r}
 library(datasets)
 Mode <- function(x) {
@@ -117,10 +149,26 @@ Mode <- function(x) {
   ux[which.max(tabulate(match(x, ux)))]
 }
 ```
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
+
 ```{r}
 lapply(cars,Mode)
 ```
+
+`@sct`
+
+```{r}
+ex() %>% check_function("lapply") %>% check_object(cars) %>% check_equal()
+```
+
 ---
 
 ## Alternative sapply
@@ -138,7 +186,11 @@ Alternativ kannst du auch `sapply()` nutzen. Der einzige Unterschied liegt in de
 `@instructions`
 Sieh dir das an, in dem du analog zum vorherigen Beispiel statt `lapply()` `sapply()` anwendest.
 
+`@hint`
+
+
 `@pre_exercise_code`
+
 ```{r}
 library(datasets)
 Mode <- function(x) {
@@ -146,10 +198,26 @@ Mode <- function(x) {
   ux[which.max(tabulate(match(x, ux)))]
 }
 ```
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
+
 ```{r}
 sapply(cars,Mode)
 ```
+
+`@sct`
+
+```{r}
+ex() %>% check_function("sapply") %>% check_object("cars") %>% check_equal()
+```
+
 ---
 
 ## Eigene Funktionen schreiben
@@ -169,10 +237,13 @@ Wir stellen uns nun vor, wir haben ein größeres Datenset und möchten auf Norm
 
 
 `@pre_exercise_code`
+
 ```{r}
 library(datasets)
 ```
+
 `@sample_code`
+
 ```{r}
 # Ergänze diese Funktion, sodass...
 # aufgrund von dem Testergebnis (p-Wert) von dem Shapiro-Wilk-Test
@@ -189,6 +260,7 @@ normalverteilt <- function(x) {
   }
 }
 ```
+
 ***
 
 
@@ -217,6 +289,7 @@ Schreibe die Funktion, die entweder 'normalverteilt' oder 'nicht normalverteilt'
 
 
 `@solution`
+
 ```{r}
 # Ergänze diese Funktion, sodass...
 # aufgrund von dem Testergebnis (p-Wert) von dem Shapiro-Wilk-Test
@@ -232,12 +305,26 @@ normalverteilt <- function(x) {
   }
 }
 ```
+
 `@sct`
+
 ```{r}
-test_error()
-#test_function("normalverteilt",incorrect_msg="Nicht ganz")
+ex() %>% check_fun_def("normalverteilt") %>% {
+  check_arguments(.)
+  check_call(.,c(34,55,12,1,2,98,66,40)) %>% check_result() %>% check_equal()
+  check_call(.,c(1,4,5,3,2,5,4,4,4,4,2,5,4,1,4,3,3)) %>% check_result() %>% check_equal()
+  check_body(.) %>% {
+  	check_function(.,"shapiro.test")
+  	check_object("p")
+  	check_if_else() %>% {
+      check_cond(.) %>% check_code("p>0.05")
+      check_if(.) %>% check_function("print") %>% check_equal()
+      check_else(.) %>% check_function("print") %>% check_equal()
+   }
+}
 success_msg("Super gemacht!")
 ```
+
 
 ***
 
@@ -267,9 +354,11 @@ Das Prinzip ist das gleiche wie unserer Modus-Berechnung.
 
 
 `@solution`
+
 ```{r}
 lapply(cars,normalverteilt)
 ```
+
 `@sct`
 
 ```{r}
@@ -297,10 +386,12 @@ Lass uns nun mal ein einfaches Beispiel einer Vektorrechnung betrachten. Klar, k
 
 
 `@pre_exercise_code`
+
 ```{r}
 v1 <- c(51,402,537)
 v2 <- c(24,309,54)
 ```
+
 ***
 
 
@@ -329,15 +420,16 @@ Erstelle einen Vektor mit der Verkettungsfunktion `c()`. Gib `v1 <- c(51,402,537
 
 
 `@solution`
+
 ```{r}
 v1 <- c(51,402,537)
 ```
+
 `@sct`
 
 ```{r}
-
+ex() %>% check_function("c") %>% check_object("v1") %>% check_equal()
 ```
-
 
 
 ***
@@ -368,15 +460,16 @@ Gib nun den Vektor v2 mit `v2 <- c(24,309,54)` ein.
 
 
 `@solution`
+
 ```{r}
 v2 <- c(24,309,54)
 ```
+
 `@sct`
 
 ```{r}
-
+ex() %>% check_function("c") %>% check_object("v2") %>% check_equal()
 ```
-
 
 
 ***
@@ -407,13 +500,14 @@ Addiere die Vektoren und speichere das Ergebnis in `v3`.
 
 
 `@solution`
+
 ```{r}
 v3 <- v1+v2
 ```
+
 `@sct`
 
 ```{r}
-
+ex() %>% check_operator("+") %>% check_object("v3") %>% check_equal()
 ```
-
 
