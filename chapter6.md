@@ -325,7 +325,7 @@ ds <- ds[-which(duplicated(ds)),]
 `@sct`
 
 ```{r}
-ex() %>% check_object("ds")
+ex() %>% check_object("ds") %>% check_equal()
 ```
 
 
@@ -726,7 +726,7 @@ unique(ds$Alter)
 `@sct`
 
 ```{r}
-ex() %>% check_function("unique") %>% check_result() %>% check_equal()
+ex() %>% check_function("unique") %>% check_arg("x") %>% check_equal()
 ```
 
 
