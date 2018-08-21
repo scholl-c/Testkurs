@@ -1,6 +1,6 @@
 ---
-  title: "Test auf Unterschiede"
-  description: "Es geht jetzt darum, Gruppen zu vergleichen. Man möchte wissen, ob sich z.B. Gruppen von \n  Versuchsteilnehmern oder Gruppen unterteilt nach Geschlecht in bestimmter Hinsicht voneinander \n  unterscheiden. Mit den folgenden Tests vergleichen wir die Lagemaße (Mittelwerte etc.) der \n  Gruppen auf signifikante Unterschiede."
+title: 'Test auf Unterschiede'
+description: "Es geht jetzt darum, Gruppen zu vergleichen. Man möchte wissen, ob sich z.B. Gruppen von \n  Versuchsteilnehmern oder Gruppen unterteilt nach Geschlecht in bestimmter Hinsicht voneinander \n  unterscheiden. Mit den folgenden Tests vergleichen wir die Lagemaße (Mittelwerte etc.) der \n  Gruppen auf signifikante Unterschiede."
 ---
 
 ## Lagemaße
@@ -15,8 +15,39 @@ key: 6d69125797
 Mit welcher Diagrammart können wir die Lagemaße, wie z.B. Mittelwerte und Quantile, vergleichen?
 
 
+`@instructions`
+
+
 `@hint`
 Bei welchem Diagramm kannst du Mittelwerte auf einen Blick erkennen?
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
 
 `@possible_answers`
 - [Boxplot]
@@ -24,7 +55,7 @@ Bei welchem Diagramm kannst du Mittelwerte auf einen Blick erkennen?
 - Histogramm
 - Streudiagramm
 
-`@feedbacks`
+`@feedback`
 - Genau!
 - Nein
 - Nein
@@ -48,14 +79,45 @@ Es gibt verschiedene Tests. Mehrere Faktoren bestimmen, welchen Test man rechnen
 Wir fragen 50 Teilnehmer, die Hälfte ist weiblich, die andere männlich, nach ihrer Körpergröße und möchten wissen, ob es einen signifikanten Unterschied gibt. Wir haben also zwei Variablen - das Geschlecht (m,w) und die Körpergröße. Welches davon ist die abhängige Variable?
 
 
+`@instructions`
+
+
 `@hint`
 Bilde den Satz - 'Ich möchte untersuchen, ob [x] von [y] abhängt.' Dabei ist [x] die abhängige Variable und [y] die unabhängige Variable. Die unabhängige Variable ist jene Variable, die du im Experiment manipulierst d.h. die du veränderst und bestimmst.
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
 
 `@possible_answers`
 - Geschlecht (m,w)
 - [Körpergröße (in cm)]
 
-`@feedbacks`
+`@feedback`
 - Nein
 - Genau das ist die abhängige Variable!
 
@@ -87,11 +149,45 @@ Nun wollen wir anhand eines Beispiels durchgehen, wie man die zentralen Tendenze
   zweier Gruppen vergleicht.
 
 
+`@instructions`
+
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
+
 `@possible_answers`
 - [eine verbundene Stichprobe]
 - eine unverbundene Stichprobe
 
-`@feedbacks`
+`@feedback`
 - Genau!
 - Nein, das ist es nicht.
 
@@ -109,14 +205,45 @@ key: 4bd33db4d3
 Demnach müssten wir ...
 
 
+`@instructions`
+
+
 `@hint`
 paired bedeutet hier nichts anderes als 'verbunden'
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
 
 `@possible_answers`
 - [`paired=TRUE` angeben]
 - `paired=FALSE` angeben
 
-`@feedbacks`
+`@feedback`
 - Ja, genau!
 - Nein, denk nochmal nach.
 
@@ -154,11 +281,32 @@ Die abhängige Variable ist jene Größe, die sich verändert durch Einflussnahm
 ```
 
 
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
 `@sct`
 
 ```{r}
 ex() %>% check_mc(3,feedback_msgs = c("Nein","Nein","Ja"))
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -174,14 +322,45 @@ key: 49a83afe17
 Ist die abhängige Variable auf Intervall- oder Verhältnisskalenniveau?
 
 
+`@instructions`
+
+
 `@hint`
 Welche Rechenoperationen kann man mit Angaben in 'Stunden' durchführen?
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
 
 `@possible_answers`
 - [Ja]
 - Nein
 
-`@feedbacks`
+`@feedback`
 - Richtig
 - Falsch
 
@@ -199,15 +378,46 @@ key: 08ff55df0f
 Dürfen wir nun prinzipiell die Funktion t.test() benutzen?
 
 
+`@instructions`
+
+
 `@hint`
 Wir haben bisher nur geprüft, ob das Skalenniveau ausreicht.
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
 
 `@possible_answers`
 - Ja
 - Nein
 - [Weiß nicht]
 
-`@feedbacks`
+`@feedback`
 - Falsch
 - Falsch
 - Richtig das wissen wir noch nicht
@@ -253,12 +463,20 @@ shapiro.test(subset(sleep,group==1)$extra)
 shapiro.test(subset(sleep,group==2)$extra)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("shapiro.test",index=1) %>% check_arg("x") %>% check_equal()
 ex() %>% check_function("shapiro.test",index=2) %>% check_arg("x") %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -274,14 +492,45 @@ key: 0e65ae44fa
 Beide p-Werte sind größer als 0,05. Dürfen wir also Normalverteilung annehmen?
 
 
+`@instructions`
+
+
 `@hint`
 Die Nullhypothese nimmt an, dass eine Normalverteilung vorliegt. Sie wird nur abgelehnt, wenn p kleiner als 0,05 ist.
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
 
 `@possible_answers`
 - [Ja]
 - Nein
 
-`@feedbacks`
+`@feedback`
 - Richtig
 - Falsch
 
@@ -312,6 +561,7 @@ Kleiner Tipp: die Formel ist `extra~group`
 library(car)
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -325,11 +575,19 @@ library(car)
 leveneTest(extra~group,sleep)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("leveneTest") %>% check_arg("y") %>% check_result() %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -345,11 +603,45 @@ key: 7921f81915
 Wir haben einen p-Wert größer als 0.05. Dürfen wir `var.equal=TRUE` setzen?
 
 
+`@instructions`
+
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
+
 `@possible_answers`
 - [Ja]
 - Nein
 
-`@feedbacks`
+`@feedback`
 - Genau!
 - Falsch
 
@@ -380,6 +672,7 @@ Die formula entspricht der formula aus dem Levene-Test.
 library(car)
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -393,11 +686,19 @@ library(car)
 t.test(extra~group,sleep,paired=TRUE)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("t.test") %>% check_arg("paired") %>% check_result() %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -413,13 +714,44 @@ key: f1c2521138
 Können wir nun einen Unterschied in der Wirkung der beiden Schlafmittel auf die Anzahl der Schlafstunden finden?
 
 
+`@instructions`
+
+
 `@hint`
 Ist der p-Wert kleiner als 0.05, so haben wir einen signifikanten Unterschied gefunden.
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
 
 `@possible_answers`
 - [Ja]
 - Nein
 
-`@feedbacks`
+`@feedback`
 - Richtig! Wenn Voraussetzung nicht gegeben sind, z.B. deine abhängige Variable nur ordinalskaliert ist, oder deine Daten nicht normalverteilt sind, sind **non-parametrische** oder auch verteilungsfreie Tests zu rechnen. Rechne dann z.B. den **Mann-Whitney-U-Test** für unverbundene Stichproben mit wilcox.test(). Wenn deine unabhängige Variable mehr als zwei Ausprägungen hat bzw. du mehr als zwei Gruppen vergleichen möchtest, kannst du dir **ANOVA**s (bei intervallskalierter Variable) und den **Kruskal Wallis Test** (bei ordinalskalierter Variable) anschauen.
 - Falsch

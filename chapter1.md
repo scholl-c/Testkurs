@@ -1,6 +1,6 @@
 ---
-  title: "Syntax"
-  description: "Einfache Rechenoperationen und Zuweisungen"
+title: Syntax
+description: 'Einfache Rechenoperationen und Zuweisungen'
 ---
 
 ## Arithmetische Operationen
@@ -29,11 +29,26 @@ Errechne die Sekunden, die der leitende Oberarzt bei einer 2-stündigen OP im OP
 `@hint`
 Eine Stunde hat 60 Minuten, eine Minute besteht aus 60 Sekunden.
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
 2*60*60
 ```
+
 
 `@sct`
 
@@ -42,6 +57,13 @@ ex() %>% check_expr("7200") %>% check_result() %>% check_equal()
 
 success_msg("Super!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -71,6 +93,13 @@ Speichere zunächst die errechnete OP-Dauer (7200) in Sekunden, indem du sie der
 `@hint`
 Benutze den Zuweisungspfeil wie im Beispiel.
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -81,11 +110,13 @@ mein_name <- "Hans"
 mein_name
 ```
 
+
 `@solution`
 
 ```{r}
 id <- 7200
 ```
+
 
 `@sct`
 
@@ -93,6 +124,13 @@ id <- 7200
 ex() %>% check_object("id") %>% check_equal()
 success_msg("Toll!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -127,11 +165,20 @@ Benutze nur die Variable zum errechnen des neuen Wertes und nicht den konkreten 
 id <- 7200
 ```
 
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
 id <- id-1000
 ```
+
 
 `@sct`
 
@@ -139,6 +186,13 @@ id <- id-1000
 ex() %>% check_operator(.,"-",append=FALSE,not_called_msg="Errechne die Variable mit Hilfe von R") %>% check_object("id","Der Inhalt der Variable ``id`` ist nicht korrekt.") %>% check_code("<-id",TRUE,missing_msg="Überschreibe die Variable",append=FALSE) %>% check_equal("Leider falsch",append=FALSE)
 success_msg("Supi!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -154,14 +208,45 @@ key: 13ebf18169
 Ist ``.4aabb`` ein valider Name für eine Variable?
 
 
+`@instructions`
+
+
 `@hint`
 Eine Variable darf mit einem Punkt beginnen, danach darf aber keine Zahl folgen.
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
 
 `@possible_answers`
 - Ja
 - [Nein]
 
-`@feedbacks`
+`@feedback`
 - Genau.
 - Nein, das ist kein valider Variablenname.
 
@@ -189,6 +274,20 @@ Speichere seinen Namen in ``name`` ab und seine Lieblingsfarbe in ``farbe``. Wie
 `@hint`
 Vergiss nicht den Zuweisungspfeil und vergiss nicht, die Anführungszeichen zu setzen. Die Variablennamen werden hier klein geschrieben (siehe Aufgabenstellung).
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
@@ -196,12 +295,20 @@ name <- "Günther"
 farbe <- "Blau"
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_object("name",undefined_msg="Der Inhalt der Variable ``name`` ist nicht korrekt.") %>% check_object("farbe",undefined_msg="Der Inhalt der Variable ``farbe`` ist nicht korrekt.") %>% check_equal()
 success_msg("Gut gemacht!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -226,6 +333,9 @@ Mit der Funktion ``paste0()`` kannst du eine Zeichenkette aus mehreren Zeichenke
 Generiere die vollständige Identifikationsnummer, die sich aus den Variablen ``name``, ``id`` (die OP-Dauer) und ``farbe`` genau in dieser Reihenfolge zusammensetzt. Benutze dafür die Funktion ``paste0``.
 Überschreibe die Variable ``id`` (du weißt, das funktioniert wie eine Zuweisung) mit der generierten Identifikationsnummer.
 
+`@hint`
+
+
 `@pre_exercise_code`
 
 ```{r}
@@ -234,11 +344,20 @@ farbe <- "Blau"
 id <- 6200
 ```
 
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
 id <- paste0(name,id,farbe)
 ```
+
 
 `@sct`
 
@@ -246,6 +365,13 @@ id <- paste0(name,id,farbe)
 ex() %>% check_object("id") %>% check_function("paste0") %>% check_result() %>% check_equal()
 success_msg("Herzlichen Glückwunsch!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -264,6 +390,9 @@ Nun ist noch wichtig, dass die komplette Identifikationsnummer groß geschrieben
 `@instructions`
 Wende diese Funktion auf ``id`` an und überschreibe ``id``.
 
+`@hint`
+
+
 `@pre_exercise_code`
 
 ```{r}
@@ -273,11 +402,20 @@ id <- 6200
 id <- paste0(name,id,farbe)
 ```
 
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
 id <- toupper(id)
 ```
+
 
 `@sct`
 
@@ -285,6 +423,13 @@ id <- toupper(id)
 ex() %>% check_object("id") %>% check_function("toupper") %>% check_result() %>% check_equal()
 success_msg("So ist es richtig!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -316,11 +461,20 @@ Halte dich an die beiden im Text beschriebenen Art und Weisen die Spalte auszuge
 patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
 ```
 
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
 patienten$grund
 ```
+
 
 `@sct`
 
@@ -328,6 +482,13 @@ patienten$grund
 ex() %>% check_output_expr("patienten$grund")
 success_msg("Super!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -355,11 +516,20 @@ Gib in die eckigen Klammern (direkt hinter ``patienten``) die Position der Zelle
 patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
 ```
 
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
 patienten[2,3]
 ```
+
 
 `@sct`
 
@@ -367,6 +537,13 @@ patienten[2,3]
 ex() %>% check_output_expr("patienten[2,3]")
 success_msg("Super!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -394,11 +571,20 @@ Vergiss das Komma nicht!
 patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
 ```
 
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
 patienten[4,]
 ```
+
 
 `@sct`
 
@@ -406,6 +592,13 @@ patienten[4,]
 ex() %>% check_output_expr("patienten[4,]")
 success_msg("Super!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -421,12 +614,46 @@ key: cbb2cdcdee
 Genauso kannst du auch Spalten, Zeilen, und Zellen umbenennen.  Das könnte so ähnlich aussehen ``datensatz[zeile,spalte] <- 'neuer Wert'`` und hilft dir hoffentlich, diese Aufgabe zu lösen.
 
 
+`@instructions`
+
+
+`@hint`
+
+
 `@pre_exercise_code`
 
 ```{r}
 patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/repositories/3196/datasets/463119d13a9c6fec4a6bd0791de3a9d5a36a8c4d/patienten.csv")
 neue_ids <- c("BILL0001", "WILMA0002", "URMEL0003", "IDA0004", "ÖLF0005")
 ```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ***
 
@@ -448,11 +675,26 @@ Das Bauchweh bei Patient Nr. 3 hat sich konkretisiert. Es handelt sich um eine B
 `@hint`
 Halte dich an das Beispiel. Zeile ist 3, Spalte ist 2.
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
 patienten[3,2]<-"Bauchfellentzündung"
 ```
+
 
 `@sct`
 
@@ -460,6 +702,13 @@ patienten[3,2]<-"Bauchfellentzündung"
 ex() %>% check_object("patienten")
 success_msg("Super gemacht!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -484,11 +733,26 @@ Nun müssen wir natürlich nicht jede einzelne Zelle umbenennen, sondern können
 `@hint`
 Die Reihenfolge der IDs ist wichtig.
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
 neue_ids <- c("BILL0001", "WILMA0002", "URMEL0003", "IDA0004", "ÖLF0005")
 ```
+
 
 `@sct`
 
@@ -496,6 +760,13 @@ neue_ids <- c("BILL0001", "WILMA0002", "URMEL0003", "IDA0004", "ÖLF0005")
 ex() %>% check_object("neue_ids") %>% check_equal()
 success_msg("Super!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -518,11 +789,26 @@ key: 231b3f294a
 `@hint`
 Wähle die Spalte aus und weise ihr neue_ids zu.
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
 patienten$id <- neue_ids
 ```
+
 
 `@sct`
 
@@ -530,6 +816,13 @@ patienten$id <- neue_ids
 ex() %>% check_object("patienten") %>% check_equal()
 success_msg("Genial!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -552,11 +845,26 @@ In der Klinik wird ein neues Programm eingesetzt, das das Alter von Menschen erk
 `@hint`
 Wähle die Spalte aus und überschreibe sie mit der gleichen Spalte minus 1.
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
 patienten$alter <- patienten$alter-1
 ```
+
 
 `@sct`
 
@@ -564,6 +872,13 @@ patienten$alter <- patienten$alter-1
 ex() %>% check_operator("-") %>% check_object("patienten") %>% check_equal()
 success_msg("Toll gemacht!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ---
@@ -596,6 +911,7 @@ patienten <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/re
 patienten$grund <- as.character(patienten$grund)
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -606,11 +922,13 @@ library(magrittr)
 patienten %>% extract("grund") %>% toupper()
 ```
 
+
 `@solution`
 
 ```{r}
 patienten %>% extract("alter") %>% "+"(1)
 ```
+
 
 `@sct`
 
@@ -618,3 +936,10 @@ patienten %>% extract("alter") %>% "+"(1)
 ex() %>% check_output_expr("patienten %>% extract('alter') %>% '+'(1)") %>% check_code("%>%",times=2,fixed=TRUE,missing_msg="Benutze das Pipe-Symbol")
 success_msg("Du bist ein Genie!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+

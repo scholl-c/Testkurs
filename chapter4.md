@@ -1,6 +1,6 @@
 ---
-  title: "Grafiken"
-  description: "In dieser Ausgabe\ndreht sich alles um 'Wie zeige ich meinen Lesern, was ich sagen will?'.\nIn Zeitungen, Wissensschaftsmagazinen oder in anderen\n(populär-)wissenschaftlichen Publikationen findest du\noft unterstützende Grafiken. Wir zeigen dir heute, welche Möglichkeiten R\ndazu bietet und wie du selbst überzeugende Grafiken erstellst.\nIm ersten Teil dieser Lektion erfährst du, wie du deine Daten\nmit Hilfe von Plots besser verstehen kannst. Im zweiten Teil werden wir Grafiken mit der\nBibliothek ggplot2 erstellen. Los geht es mit dem ersten Teil"
+title: Grafiken
+description: "In dieser Ausgabe\ndreht sich alles um 'Wie zeige ich meinen Lesern, was ich sagen will?'.\nIn Zeitungen, Wissensschaftsmagazinen oder in anderen\n(populär-)wissenschaftlichen Publikationen findest du\noft unterstützende Grafiken. Wir zeigen dir heute, welche Möglichkeiten R\ndazu bietet und wie du selbst überzeugende Grafiken erstellst.\nIm ersten Teil dieser Lektion erfährst du, wie du deine Daten\nmit Hilfe von Plots besser verstehen kannst. Im zweiten Teil werden wir Grafiken mit der\nBibliothek ggplot2 erstellen. Los geht es mit dem ersten Teil"
 ---
 
 ## Histogramm
@@ -30,6 +30,7 @@ library(readr)
 Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -43,12 +44,20 @@ Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3
 hist(Gummibaerchen$Anzahl_Farben)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("hist") %>% check_result() %>% check_equal()
 success_msg("Richtig so!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -80,11 +89,33 @@ Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3
 hist(Gummibaerchen$Anzahl_Farben)
 ```
 
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
 `@sct`
 
 ```{r}
 ex() %>% check_mc(2,feedback_msgs = c("Nein","Ja","Nein"))
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -100,14 +131,45 @@ key: 8aff2152fd
 Kannst du mit `hist()` auch die Häufigkeiten einer nominalskalierten Variable plotten? Zum Beispiel hast du eine Umfrage erstellt und möchtest die Häufigkeiten der jeweiligen Geschlechter plotten.
 
 
+`@instructions`
+
+
 `@hint`
 Die Skalierung der x-Achse erfolgt in Intervallen und erfordert eine Reihenfolge.
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
 
 `@possible_answers`
 - Ja
 - [Nein]
 
-`@feedbacks`
+`@feedback`
 - Falsch
 - Richtig
 
@@ -142,17 +204,20 @@ library(readr)
 Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
 
+
 `@sample_code`
 
 ```{r}
 hist(Gummibaerchen$Anzahl_Farben)
 ```
 
+
 `@solution`
 
 ```{r}
 hist(Gummibaerchen$Anzahl_Farben,main="Histogramm Anzahl Gummibaerchen",xlab="Anzahl",ylab="Haeufigkeit")
 ```
+
 
 `@sct`
 
@@ -165,6 +230,13 @@ ex() %>% check_function("hist") %>% {
 } 
 success_msg("Geschafft!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -193,6 +265,7 @@ library(readr)
 Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -206,6 +279,7 @@ Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3
 plot(Gummibaerchen$Anzahl_Baeren,Gummibaerchen$Anzahl_Farben)
 ```
 
+
 `@sct`
 
 ```{r}
@@ -215,6 +289,13 @@ check_function("plot") %>% {
 }
 success_msg("Sehr gut!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -247,11 +328,33 @@ Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3
 plot(Gummibaerchen$Anzahl_Baeren,Gummibaerchen$Anzahl_Farben)
 ```
 
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
 `@sct`
 
 ```{r}
 ex() %>% check_mc(3,feedback_msgs = c("Nein, alles korrekt.","Doch, das hat geklappt","Das ist der Grund!","R passt die Skalierung in der Regel automatisch an."))
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -267,14 +370,45 @@ key: c22157ee7b
 Bei diesen wenigen Datenpunkten braucht man eine größere Stichprobe, um einen Zusammenhang zu bestätigen oder zu widerlegen. Wir werden später auf Zusammenhänge d.h. Korrelationen zurückkommen. Einfache positive oder negative Zusammenhänge könnte man mit 'Je mehr, desto mehr' oder 'Je mehr, desto weniger' beschreiben. Wenn ein Zusammenhang in Frage käme, dann wäre das welcher?
 
 
+`@instructions`
+
+
 `@hint`
 Stelle dir eine angenäherte Gerade durch die Mitte der Punkte vor. In welche Richtung zeigt sie? Eher nach oben, in die positive Richtung, oder eher nach unten, in die negative Richtung?
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
 
 `@possible_answers`
 - [Je mehr, desto mehr]
 - Je mehr, desto weniger
 
-`@feedbacks`
+`@feedback`
 - Ja, richtig, die Vermutung liegt nahe, dass wir bei mehr Bären in der Packung auch eine größere Vielfalt an Farben vorfinden.
 - Nein, genau anders herum.
 
@@ -319,6 +453,21 @@ baeren_colors <- c("#8B0000", "#ff0000", "#ff9900","#ffd700","#32cd32","#ffffff"
 source("https://assets.datacamp.com/production/repositories/3196/datasets/801e4015d0381e190aaccd014017fb702389287b/gummibaeren_verteilung_kreis.R")
 ```
 
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
 `@sct`
 
 ```{r}
@@ -326,6 +475,13 @@ ex() %>% check_mc(2,feedback_msgs = c("Nein","Diese Art der Grafik ist ungünsti
   alle ähnlich groß sind. Es ist mit dem Auge schwer zu sehen, ob nun die grünen oder die 
   roten Gummibärchen im Mittel häufiger vorkommen.","Nein","Nein"))
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -341,6 +497,12 @@ key: c2727a0fc7
 Diese Art der Grafik ist ungünstig, weil wir sehr viele Kategorien haben, die alle ähnlich groß sind. Es ist mit dem Auge schwer zu sehen, ob nun die grünen oder die roten Gummibärchen im Mittel häufiger vorkommen. Kreisdiagramme sind nur in wenigen Fällen wirklich sinnvoll. Sie eignen sich bei wenigen Ausprägungen einer Variable wie z.B. bei Geschlecht. Wenn du ein einfaches Kreisdiagramm erstellen möchtest, schau dir die Funktion `pie()` an. Besser eignet sich hier ein Balkendiagramm.
 
 
+`@instructions`
+
+
+`@hint`
+
+
 `@pre_exercise_code`
 
 ```{r}
@@ -354,6 +516,34 @@ Farben_Mean <- Gummibaerchen[,2:7] %>% colMeans()  %>%
   melt() %>% 
   rownames_to_column()
 ```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ***
 
@@ -375,6 +565,13 @@ Erstelle mit denselben Daten, die auch für das Kreisdiagramm verwendet wurden, 
 `@hint`
 
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -388,12 +585,20 @@ Erstelle mit denselben Daten, die auch für das Kreisdiagramm verwendet wurden, 
 barplot(Farben_Mean$value)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("barplot") %>% check_result %>% check_equal()
 success_msg("Toll gemacht!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -416,6 +621,13 @@ Die einzelnen Balken zeigen nun die Höhe der einzelnen Mittelwerte der verschie
 `@hint`
 
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -429,6 +641,7 @@ Die einzelnen Balken zeigen nun die Höhe der einzelnen Mittelwerte der verschie
 barplot(Farben_Mean$value, names.arg=Farben_Mean$rowname)
 ```
 
+
 `@sct`
 
 ```{r}
@@ -437,6 +650,13 @@ ex() %>% check_function("barplot") %>% {
   check_arg("names.arg") %>% check_equal()
 }
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -465,11 +685,38 @@ Mit diesem Balkendiagramm kannst du nun schön vergleichen, welche Farbe im Mitt
 
 In welcher Maßeinheit ist die y-Achse?
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
 `@sct`
 
 ```{r}
 
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
 
 
 
@@ -493,6 +740,13 @@ Ein wenig Farbe wäre sinnvoll, um den Inhalt des Balkendiagramms schneller erfa
 `@hint`
 Einmal Pfeiltaste nach oben und du erhältst das zuvor eingegebenen Kommando. Nun füge das Attribut, wie in der Frage beschrieben ans Ende dazu.
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -506,11 +760,18 @@ Einmal Pfeiltaste nach oben und du erhältst das zuvor eingegebenen Kommando. Nu
 barplot(Farben_Mean$value, names.arg=Farben_Mean$rowname, col=baeren_colors)
 ```
 
+
 `@sct`
 
 ```{r}
 
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
 
 
 
@@ -545,6 +806,7 @@ library(readr)
 Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -558,6 +820,7 @@ Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3
 boxplot(Gummibaerchen$Anzahl_Baeren)
 ```
 
+
 `@sct`
 
 ```{r}
@@ -565,3 +828,10 @@ ex() %>% check_function("boxplot")
 success_msg("Mit einer Variablen nutzen wir noch nicht die ganze Funktion von boxplot. 
   Wir werden später nochmal auf den Boxplot zurückkommen. Teste gerne die gezeigten Funktionen nochmal selbst!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+

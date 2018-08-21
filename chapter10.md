@@ -1,6 +1,6 @@
 ---
-  title: "Grafiken mit ggplot2"
-  description: "Im ersten Teil hast du gelernt, wie du einfache Plots erstellen kannst. In diesem zweiten Teil wirst du lernen, wie du mit der Bibliothek ggplot2 Grafiken erstellst. Dies ist eine Bibliothek mit mehr Möglichkeiten in einfacher Art und Weise die Daten darzustellen."
+title: 'Grafiken mit ggplot2'
+description: 'Im ersten Teil hast du gelernt, wie du einfache Plots erstellen kannst. In diesem zweiten Teil wirst du lernen, wie du mit der Bibliothek ggplot2 Grafiken erstellst. Dies ist eine Bibliothek mit mehr Möglichkeiten in einfacher Art und Weise die Daten darzustellen.'
 ---
 
 ## Paket laden
@@ -41,12 +41,20 @@ Gib `?library` ein.
 library(ggplot2)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_library("ggplot2",incorrect_msg="Nicht ganz",not_called_msg="Lies dir nochmal die Aufgabenstellung durch.")
 success_msg("Sehr gut!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -62,8 +70,39 @@ key: b54e584970
 Auch mit `ggplot2` können wir ein Histogramm plotten. Ein Histogramm veranschaulicht die/den ... von Daten?
 
 
+`@instructions`
+
+
 `@hint`
 Was wird in der Regel auf der y-Achse eines Histogramms gemessen?
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
 
 `@possible_answers`
 - [Verteilung]
@@ -71,7 +110,7 @@ Was wird in der Regel auf der y-Achse eines Histogramms gemessen?
 - Zusammensetzung
 - Vergleich
 
-`@feedbacks`
+`@feedback`
 - Genau!
 - Nein
 - Nein
@@ -112,6 +151,7 @@ library(readr)
 Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -125,6 +165,7 @@ Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3
 ggplot(Gummibaerchen,aes(Anzahl_Farben))+geom_histogram(binwidth=1)
 ```
 
+
 `@sct`
 
 ```{r}
@@ -134,6 +175,13 @@ ex() %>% {
   check_function(.,"geom_histogram") %>% check_arg(.,"binwidth") %>% check_equal(eval=FALSE)
 }
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -149,15 +197,46 @@ key: d32a267b1a
 Was können wir gut durch ein Streudiagramm darstellen?
 
 
+`@instructions`
+
+
 `@hint`
 Denke auch hier daran, wie die Achsen belegt sein werden.
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
 
 `@possible_answers`
 - Verteilung einer Variable
 - [Verteilung zweier Variablen]
 - Zusammensetzung einer Variablen
 
-`@feedbacks`
+`@feedback`
 - Nein
 - Richtig!
 - Nein
@@ -190,6 +269,7 @@ library(readr)
 Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -203,6 +283,7 @@ Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3
 ggplot(Gummibaerchen,aes(x=Anzahl_Farben,y=Anzahl_Baeren))+geom_point()
 ```
 
+
 `@sct`
 
 ```{r}
@@ -215,6 +296,13 @@ ex() %>% {
   check_function(.,"geom_point")
 }
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -244,6 +332,7 @@ library(readr)
 Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -256,6 +345,7 @@ Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3
 ```{r}
 ggplot(Gummibaerchen,aes(x=Anzahl_Farben,y=Anzahl_Baeren))+geom_point()+xlab("Anzahl Farben")+ylab("Anzahl Bären")+ggtitle("Mein erstes Streudiagramm")
 ```
+
 
 `@sct`
 
@@ -273,6 +363,13 @@ ex() %>% {
 }
 ```
 
+
+`@possible_answers`
+
+
+`@feedback`
+
+
 ---
 
 ## Balkendiagramm mit ggplot
@@ -287,6 +384,12 @@ key: 957510df6b
 Wir erstellen nun ein Balkendiagramm mit `ggplot`. Wir möchten den Mittelwert der einzelnen Farben pro Tütchen plotten. Dafür sind einige Schritte Vorverarbeitung nötig.
 
 
+`@instructions`
+
+
+`@hint`
+
+
 `@pre_exercise_code`
 
 ```{r}
@@ -297,6 +400,34 @@ Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3
 Farben_Mean <- colMeans(Gummibaerchen[,2:7])
 baeren_colors <- c("#8B0000", "#ffd700", "#32cd32","#ff0000","#ff9900","#ffffff")
 ```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ***
 
@@ -318,6 +449,13 @@ Wir wissen für jede Farbe, wie oft sie jeweils in den zwanzig einzelnen Tütche
 `@hint`
 Wähle alle Spalten von 2 bis 7 aus. Das geht über [,2:7]
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -331,11 +469,19 @@ Wähle alle Spalten von 2 bis 7 aus. Das geht über [,2:7]
 Farben_Mean <- colMeans(Gummibaerchen[,2:7])
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("colMeans") %>% check_object("Farben_Mean") %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -358,6 +504,13 @@ key: e5abaf015b
 `@hint`
 
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -371,11 +524,19 @@ key: e5abaf015b
 Farben_Mean <- melt(Farben_Mean)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("melt") %>% check_object("Farben_Mean") %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -398,6 +559,13 @@ Es ist nun notwendig, dass wir die Namen der Zeilen, also z.B. 'dunkelrot' als e
 `@hint`
 Eine Variable erstellen kannst auf dem gleichen Weg, wie du eine auswählen kannst, d.h. über eckige Klammern.
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -411,11 +579,19 @@ Eine Variable erstellen kannst auf dem gleichen Weg, wie du eine auswählen kann
 Farben_Mean["farben"] <- rownames(Farben_Mean)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_object("Farben_Mean") %>% {check_column(.,"farben") %>% check_equal()} %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -438,6 +614,13 @@ Nun haben wir alle Vorbereitungen abgeschlossen und können das erste Balkendiag
 `@hint`
 Ersetze _dataframe_, _variable1_ und _variable2_.
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -451,6 +634,7 @@ Ersetze _dataframe_, _variable1_ und _variable2_.
 ggplot(Farben_Mean,aes(x=farben,y=value))+geom_col()
 ```
 
+
 `@sct`
 
 ```{r}
@@ -463,6 +647,13 @@ ex() %>% {
   check_function(.,"geom_col")
 }
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -485,6 +676,13 @@ Nun sind `ggplot`-Grafiken nicht immer schwarz-weiß, sondern in schönen Farben
 `@hint`
 Momentan sind in `geom_col()` noch keine Parameter angegeben. Füge `fill=baeren_colors` hinzu.
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -497,6 +695,7 @@ Momentan sind in `geom_col()` noch keine Parameter angegeben. Füge `fill=baeren
 ```{r}
 ggplot(Farben_Mean,aes(x=farben,y=value))+geom_col(fill=baeren_colors)
 ```
+
 
 `@sct`
 
@@ -511,4 +710,11 @@ ex() %>% {
 }
 success_msg("Du hast nun noch längst nicht alles gesehen. Auch einen Boxplot kannst du mit geom_boxplot() erstellen, oder Linienplot mit geom_line().")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 

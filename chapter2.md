@@ -1,6 +1,6 @@
 ---
-  title: "Grundlagen"
-  description: "In dieser Lektion geht es um grundlegende Begriffe,\nstatistische Messgrößen, andere Kennzahlen und\nden Umgang mit Datensätzen. Dies ist also der Einstieg\nin die deskriptive Statistik."
+title: Grundlagen
+description: "In dieser Lektion geht es um grundlegende Begriffe,\nstatistische Messgrößen, andere Kennzahlen und\nden Umgang mit Datensätzen. Dies ist also der Einstieg\nin die deskriptive Statistik."
 ---
 
 ## Erhebungsart
@@ -15,15 +15,46 @@ key: 910001d0a4
 Bob ist ein ganz gewöhnlicher Student. Das neue Semester hat begonnen und heute ist sein erster Tag als Hilfskraft von Herrn Professor Ratistikus. "Was für eine langweilige Aufgabe!", denkt Bob, als er seine erste Aufgabe des Tages erfährt. Der Professor hat ihn gebeten die Teilnehmer seiner Seminare zu zählen. Um welche Erhebungsart handelt es sich dabei?
 
 
+`@instructions`
+
+
 `@hint`
 Bob sieht in jedem Raum nach und zählt die Studierenden. Ein Experiment findet nur bei zwei verschiedenen Bedingungen statt.
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
 
 `@possible_answers`
 - Experiment
 - Befragung
 - [Beobachtung]
 
-`@feedbacks`
+`@feedback`
 - Das ist leider nicht richtig.
 - Das ist leider nicht richtig.
 - Herzlichen Glückwunsch!
@@ -64,11 +95,33 @@ Du brauchst die Funktionen min() und max(). Du solltest wissen, dass man auf Spa
 Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/f7c3df4f7a167efcf7ff74b306b8045a10f83365/Studierendenzaehlung.csv",sep=";")
 ```
 
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
 `@sct`
 
 ```{r}
 test_mc(3, feedback_msgs = c("Falsch, achte auf die Fragestellung", "Falsch, achte auf die Fragestellung", "Ja, genau den kann man nicht verwenden", "Falsch, achte auf die Fragestellung"))
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -84,8 +137,39 @@ key: 14e20e1505
 Wenn ich die Differenz zwischen den maximalen und minimalen anwesenden Studierenden berechne, bezeichnet man das als ... ?
 
 
+`@instructions`
+
+
 `@hint`
 Es handelt sich um ein einfaches Maß für die Streuung.
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
 
 `@possible_answers`
 - Differenzbreite
@@ -93,7 +177,7 @@ Es handelt sich um ein einfaches Maß für die Streuung.
 - Dehnungswert
 - Abstandshöhe
 
-`@feedbacks`
+`@feedback`
 - Nein, falsch
 - Ja, richtig!
 - Nein, falsch
@@ -125,6 +209,7 @@ Mit [1] kannst du auf den ersten Wert in einem Objekt zugreifen.
 Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/f7c3df4f7a167efcf7ff74b306b8045a10f83365/Studierendenzaehlung.csv",sep=";")
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -138,12 +223,20 @@ Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/dat
 colnames(Studis)[1] <- "Veranstaltung"
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("colnames") %>% check_object("Studis") %>% check_equal()
 success_msg("Toll gemacht!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -159,8 +252,39 @@ key: 43ea0a6499
 Nachdem Bob jetzt mit deiner Hilfe die Spalte zu ``Veranstaltung`` umbenannt hat, schaut er im Veranstaltungsverzeichnis nach, welche Veranstaltung nun ein Seminar oder eine Vorlesung ist. Welchem Skalenniveau entspricht das?
 
 
+`@instructions`
+
+
 `@hint`
 Seminar, Vorlesung, etc. sind Kategorien, die man in keine Rangfolge bringen kann.
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
 
 `@possible_answers`
 - [Nominalskala]
@@ -168,7 +292,7 @@ Seminar, Vorlesung, etc. sind Kategorien, die man in keine Rangfolge bringen kan
 - Verhältniskala
 - Intervallskala
 
-`@feedbacks`
+`@feedback`
 - Das ist richtig!
 - Falsch
 - Falsch
@@ -201,6 +325,7 @@ Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/dat
 v_typ <- as.factor(c("Vorlesung","Aufbauseminar","Vorlesung","Vorlesung","Seminar","Vorlesung","Seminar","Vorlesung","Seminar","Seminar"))
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -214,12 +339,20 @@ v_typ <- as.factor(c("Vorlesung","Aufbauseminar","Vorlesung","Vorlesung","Semina
 Studis <- cbind(Studis,v_typ)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("cbind") %>% check_object("Studis") %>% check_equal()
 success_msg("Jaa! Volltreffer!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -235,8 +368,39 @@ key: 3bccbd14d6
 Prof. Ratistikus hat für ihn noch mehr Informationen bereitgestellt. Er hat für Bob die Räume der Veranstaltungen und ihre Kapazität notiert. Bob steht vor der Herausforderung, die beiden Datensätze zusammenzuführen. Welche Funktion kann er dafür nutzen?
 
 
+`@instructions`
+
+
 `@hint`
 ``summary()`` kennst du bereits. Weißt du noch wofür wir das benutzen konnten? Mit ``mean()`` errechnest du den Mittelwert. Bleiben noch ``tapply`` oder ``merge``. Nimm dir hierfür die Dokumentation zur Hilfe. Du kannst die Funktionen auch auf einer lokalen Installation von R ausprobieren.
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
 
 `@possible_answers`
 - mean()
@@ -244,7 +408,7 @@ Prof. Ratistikus hat für ihn noch mehr Informationen bereitgestellt. Er hat fü
 - [merge()]
 - tapply()
 
-`@feedbacks`
+`@feedback`
 - Nee!
 - Falsch
 - Richtig!
@@ -266,14 +430,45 @@ Prof. Ratistikus hat für ihn noch mehr Informationen bereitgestellt. Er hat fü
 Muss Bob vor dem Zusammenführen der Datensätze mit ``merge()`` seine Daten ebenfalls nach der alphabetischen Reihenfolge der Seminare notieren?
 
 
+`@instructions`
+
+
 `@hint`
 ``merge()`` führt die Datensätze nach den Seminartiteln zusammen; diese müssen also übereinstimmen.
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
 
 `@possible_answers`
 - Ja
 - [Nein]
 
-`@feedbacks`
+`@feedback`
 - Nein, das muss Bob nicht.
 - Ja, richtig! Er muss sie nicht sortieren.
 
@@ -304,6 +499,7 @@ Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/dat
 Raeume <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/29d7ffd1e2d96f6b8b94ce9904d6ad5ba5f2644e/Raeume.csv")
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -317,12 +513,20 @@ Raeume <- read.csv("https://assets.datacamp.com/production/repositories/3196/dat
 Studis <- merge(Studis,Raeume)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("merge") %>% check_object("Studis") %>% check_equal()
 success_msg("Herzlichen Glückwunsch! Das hat geklappt!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -354,11 +558,33 @@ Raeume <- read.csv("https://assets.datacamp.com/production/repositories/3196/dat
 Studis <- merge(Studis,Raeume)
 ```
 
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
 `@sct`
 
 ```{r}
 ex() %>% check_mc(3, feedback_msgs = c("Falsch, achte auf die Fragestellung", "Falsch, achte auf die Fragestellung", "Ja, genau den kann man nicht verwenden"))
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -374,8 +600,39 @@ key: 1cff02cfb2
 Wie ist die Variable 'Raum' skaliert?
 
 
+`@instructions`
+
+
 `@hint`
 Kann man die Werte in ``Raum`` ordnen? Gibt es einen Nullpunkt?
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
 
 `@possible_answers`
 - [nominalskaliert]
@@ -383,7 +640,7 @@ Kann man die Werte in ``Raum`` ordnen? Gibt es einen Nullpunkt?
 - intervallskaliert
 - verhältnisskaliert
 
-`@feedbacks`
+`@feedback`
 - Ja
 - Nein
 - Nein
@@ -419,11 +676,33 @@ Raeume <- read.csv("https://assets.datacamp.com/production/repositories/3196/dat
 Studis <- merge(Studis,Raeume)
 ```
 
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
 `@sct`
 
 ```{r}
 ex() %>% check_mc(3, feedback_msgs = c("Falsch, achte auf die Fragestellung", "Falsch, achte auf die Fragestellung", "Ja, genau den kann man nicht verwenden"))
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -459,11 +738,33 @@ Raeume <- read.csv("https://assets.datacamp.com/production/repositories/3196/dat
 Studis <- merge(Studis,Raeume)
 ```
 
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
 `@sct`
 
 ```{r}
 ex() %>% check_mc(4, feedback_msgs = c("Falsch","Falsch","Falsch","Richtig"))
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -495,11 +796,33 @@ Raeume <- read.csv("https://assets.datacamp.com/production/repositories/3196/dat
 Studis <- merge(Studis,Raeume)
 ```
 
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
 `@sct`
 
 ```{r}
 ex() %>% check_mc(1, feedback_msgs = c("Richtig","Falsch"))
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -531,6 +854,7 @@ Raeume <- read.csv("https://assets.datacamp.com/production/repositories/3196/dat
 Studis <- merge(Studis,Raeume)
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -544,6 +868,7 @@ Studis <- merge(Studis,Raeume)
 anwesend_nach_sprache <- aggregate(Studis$Angemeldet ~ Studis$Sprache,FUN=mean)
 ```
 
+
 `@sct`
 
 ```{r}
@@ -553,3 +878,10 @@ ex() %>% check_function("aggregate") %>% {
 } %>% check_object("anwesend_nach_sprache") %>% check_equal()
 success_msg("Bob ist sehr zufrieden und bedankt sich für deine Hilfe.")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+

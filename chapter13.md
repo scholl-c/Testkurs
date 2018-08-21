@@ -1,5 +1,5 @@
 ---
-  title: "Umfragen analysieren"
+title: 'Umfragen analysieren'
 ---
 
 ## Forschungsfrage
@@ -14,8 +14,39 @@ key: ffc25f3e03
 Wir haben bisher immer mit Daten begonnen, aber eigentlich beginnt die Reise in die Statistik mit einer Forschungsfrage. An welcher Eigenschaft erkennst du eine Forschungsfrage?
 
 
+`@instructions`
+
+
 `@hint`
 Man kann Forschungsfragen auch mehrmals bearbeiten z.B. bezogen auf verschiedene Stichproben. Sie muss ergebnisoffen sein, es ist also nicht von Anfang an klar, wie sie beantwortet werden muss.
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
 
 `@possible_answers`
 - [Sie ist mit wissenschaftlichen Methoden überprüfbar]
@@ -23,7 +54,7 @@ Man kann Forschungsfragen auch mehrmals bearbeiten z.B. bezogen auf verschiedene
 - Niemand hat sich diese Frage bisher gestellt
 - Sie kann nicht widerlegt werden
 
-`@feedbacks`
+`@feedback`
 - Genau!
 - Hoffentlich nicht!
 - Das ist kein ausreichendes Kriterium
@@ -47,13 +78,47 @@ Wenn man dann die Daten vorliegen hat, kann angefangen werden, auszuwerten. Wir 
 Nun haben wir unsere Daten eingelesen und wie geht es weiter?
 
 
+`@instructions`
+
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
+
 `@possible_answers`
 - Statistische Kennwerte ausgeben lassen
 - Skalenniveau bestimmen
 - Häufigkeiten berechnen
 - [Daten bereinigen]
 
-`@feedbacks`
+`@feedback`
 - Ja auch, aber nicht als nächster Schritt
 - Gute Idee, aber die sollte man bereits vor der Erhebung wissen
 - Ja auch, aber nicht als nächster Schritt
@@ -87,11 +152,33 @@ library(readr)
 Umfragedaten <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
 ```
 
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
 `@sct`
 
 ```{r}
 ex() %>% check_mc(2,feedback_msgs=c("Falsch","Richtig, wir schließen so zu viele Personen aus. Auch wenn die Personen nur einen Teil der Angaben gemacht haben, können wir sie in den entsprechenden Analysen noch einbeziehen."))
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -120,6 +207,7 @@ library(readr)
 Umfragedaten <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -133,11 +221,19 @@ Umfragedaten <- read_csv("https://assets.datacamp.com/production/repositories/31
 table(Umfragedaten$GESCHL)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("table") %>% check_result() %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -166,6 +262,7 @@ library(readr)
 Umfragedaten <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -179,11 +276,19 @@ Umfragedaten <- read_csv("https://assets.datacamp.com/production/repositories/31
 table(Umfragedaten$BERUFSTAETIG,Umfragedaten$GESCHL)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("table") %>% check_result() %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -212,6 +317,7 @@ library(readr)
 Umfragedaten <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -225,11 +331,19 @@ Umfragedaten <- read_csv("https://assets.datacamp.com/production/repositories/31
 barplot(table(Umfragedaten$GESCHL))
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("barplot") %>% check_function("table") %>% check_result() %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -245,12 +359,46 @@ key: 287bec7e85
 
 
 
+`@instructions`
+
+
+`@hint`
+
+
 `@pre_exercise_code`
 
 ```{r}
 library(readr)
 Umfragedaten <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
 ```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ***
 
@@ -274,6 +422,13 @@ Möchtest du dasselbe mit dem Paket ggplot2 plotten, so wandle stattdessen zunä
 `@hint`
 
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -287,11 +442,19 @@ Möchtest du dasselbe mit dem Paket ggplot2 plotten, so wandle stattdessen zunä
 geschl <- as.data.frame(table(Umfragedaten$GESCHL))
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("as.data.frame") %>% check_function("table") %>% check_object("geschl") %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -315,6 +478,13 @@ Nun kannst du den Plot erstellen. Benutze +geom_col() und den eben erstellten Da
 `@hint`
 
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -328,6 +498,7 @@ Nun kannst du den Plot erstellen. Benutze +geom_col() und den eben erstellten Da
 ggplot(geschl,aes(x=Var1,y=Freq))+geom_col()
 ```
 
+
 `@sct`
 
 ```{r}
@@ -339,6 +510,13 @@ ex() %>% check_function("ggplot") %>% check_arg("data") %>% check_equal() %>% {
   check_function(.,"geom_col")
 }
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ---
@@ -368,6 +546,7 @@ library(readr)
 Umfragedaten <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -381,11 +560,19 @@ Umfragedaten <- read_csv("https://assets.datacamp.com/production/repositories/31
 prop.table(table(Umfragedaten$BERUFSTAETIG))
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("prop.table") %>% check_function("table") %>% check_result() %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -403,12 +590,46 @@ Nun kennst du zwei Möglichkeiten, die Häufigkeiten nominalskalierter Daten zu 
 Egal, ob man nun einer Forschungsfrage nachgeht, oder einen statistischen Report schreibt, die Tests und Grafiken ergeben sich anhand des Skalenniveaus der entsprechenden Variablen und der Fragen, die man stellt.
 
 
+`@instructions`
+
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
+
 `@possible_answers`
 - [um Daten zu gruppieren]
 - um eine Übersicht über die Daten zu bekommen
 - um mehr über die Stichprobe bzw. Zusammensetzung der Teilnehmer zu erfahkeinren
 
-`@feedbacks`
+`@feedback`
 - Richtig
 - Falsch
 - Falsch
@@ -427,12 +648,46 @@ key: 5079f7a520
 Die Frage '_Hängt die (subjektive) Zufriedenheit mit einer Berufstätigkeit zusammen?_' resultiert in einer ...
 
 
+`@instructions`
+
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
+
 `@possible_answers`
 - Analyse der Unterschiede in den zentralen Tendenzen
 - [Zusammenhangsanalyse]
 - Clusteranalyse
 
-`@feedbacks`
+`@feedback`
 - Nein
 - Ja!
 - Nein
@@ -451,7 +706,38 @@ key: f68c9d5675
 Möchte ich die durchschnittlichen Arbeitsstunden bezogen auf den Schulabschluss (Hauptschule, mittlere Reife, Hochschulreife) darstellen, so bietet sich ein ... an.
 
 
+`@instructions`
+
+
 `@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
 
 
 `@possible_answers`
@@ -460,7 +746,7 @@ Möchte ich die durchschnittlichen Arbeitsstunden bezogen auf den Schulabschluss
 - Histogramm
 - [Balkendiagramm]
 
-`@feedbacks`
+`@feedback`
 - Nein leider ist das meist ungeeignet und schlecht lesbar
 - Nein die Schulabschlüsse haben keine Verbindung und sind zum Beispiel keine chronologische Sortierung
 - Nein das Histogramm gäbe dir lediglich die Häufigkeiten der Arbeitsstunden aus, funktioniert nicht für nominalskalierte Variablen
@@ -480,7 +766,38 @@ key: 33189a448e
 Beim Diagramm muss man besonders auf ... achten.
 
 
+`@instructions`
+
+
 `@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
 
 
 `@possible_answers`
@@ -488,7 +805,7 @@ Beim Diagramm muss man besonders auf ... achten.
 - Harmonische Farben und Verzierungen
 - die Platzierung der Legende
 
-`@feedbacks`
+`@feedback`
 - Genau!
 - Naja Verzierungen lenken eher ab und wirken unseriös
 - Das funktioniert in der Regel ganz gut mit den Standardeinstellungen
@@ -507,12 +824,46 @@ key: db719f222c
 Für manche Grafiken oder Auswertungen musst du die Daten umstrukturieren. Welcher Befehl passt nicht zu diesem Arbeitsschritt?
 
 
+`@instructions`
+
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
+
 `@possible_answers`
 - `melt()`
 - `aggregate()`
 - [`na.omit()`]
 
-`@feedbacks`
+`@feedback`
 - Falsch
 - Falsch
 - Richtig der passt nicht!
@@ -531,12 +882,46 @@ key: 9628aa86be
 Nachdem wir aussagekräftige Grafiken und Testergebnisse vorliegen haben, werden die Ergebnisse zusammengefasst und berichtet. Welche Art der Darstellung der Ergebnisse eignet sich besonders bei vielen statistischen Kennwerten?
 
 
+`@instructions`
+
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
+
 `@possible_answers`
 - [Tabellen]
 - Fließtext
 - Diagramme
 
-`@feedbacks`
+`@feedback`
 - Genau! Vielen Dank für deine Teilnahme an diesem Kurs.
 - Nein
 - Nein

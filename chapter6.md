@@ -1,5 +1,5 @@
 ---
-  title: "Datenvorverarbeitung"
+title: Datenvorverarbeitung
 ---
 
 ## Dubletten
@@ -33,6 +33,7 @@ library(readr)
 ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -46,11 +47,19 @@ ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/dataset
 duplicated(ds)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("duplicated")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -66,12 +75,46 @@ key: 49953a103c
 Wir möchten nun Duplikate finden, überprüfen und ausschließen.
 
 
+`@instructions`
+
+
+`@hint`
+
+
 `@pre_exercise_code`
 
 ```{r}
 library(readr)
 ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ***
 
@@ -93,6 +136,13 @@ Du siehst, dass es nun einen Fall mit TRUE gibt. Mit `table(duplicated(ds))` kan
 `@hint`
 
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -106,11 +156,19 @@ Du siehst, dass es nun einen Fall mit TRUE gibt. Mit `table(duplicated(ds))` kan
 table(duplicated(ds))
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("table") %>% check_function("duplicated")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -133,6 +191,13 @@ Okay, du hast nichts übersehen, es gibt genau ein Duplikat. In welcher Zeile st
 `@hint`
 Ersetze `table` mit `which` in `table(duplicated(ds))`
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -146,11 +211,19 @@ Ersetze `table` mit `which` in `table(duplicated(ds))`
 which(duplicated(ds))
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("which") %>% check_function("duplicated")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -173,6 +246,13 @@ Aber welche Einträge hat das Duplikat? Welches Alter hat die Person? Das kannst
 `@hint`
 Die Zeilenauswahl funktioniert über `datensatz[zeile,]`
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -186,11 +266,19 @@ Die Zeilenauswahl funktioniert über `datensatz[zeile,]`
 ds[which(duplicated(ds)),]
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_result() %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -213,6 +301,13 @@ Das Duplikat soll weg! Möchtest du bestimmte Zeilen ausschließen, kannst du da
 `@hint`
 Benutze den Befehl aus der vorherigen Aufgabe. Füge vor die Zeilenauswahl, aber dennoch in den eckigen Klammern das Minus und vergiss nicht, das Datenset zu überschreiben.
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -226,11 +321,19 @@ Benutze den Befehl aus der vorherigen Aufgabe. Füge vor die Zeilenauswahl, aber
 ds <- ds[-which(duplicated(ds)),]
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_object("ds")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ---
@@ -247,8 +350,39 @@ key: c77998474a
 Du hast das Alter und das Geschlecht von 50 Personen erhoben und keine Person zweimal nach ihrem Alter und Geschlecht gefragt. Du findest darunter trotzdem 2 Duplikate. Was ist passiert?
 
 
+`@instructions`
+
+
 `@hint`
 Denk mal scharf nach! ;)
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
 
 `@possible_answers`
 - Die Funktion duplicated() funktioniert nicht
@@ -256,7 +390,7 @@ Denk mal scharf nach! ;)
 - Die Funktion duplicated() ist nicht fehlerresistent
 - Es gibt doch immer irgendwie Duplikate
 
-`@feedbacks`
+`@feedback`
 - Doch, auch in diesem Fall funktioniert duplicated() wie es soll
 - Ja, genau! 
 - Die Funktion duplicated() funktioniert einwandfrei
@@ -276,15 +410,46 @@ key: 49a3054785
 Genau, zwei Personen hatten zufällig das gleiche Alter und das gleiche Geschlecht. Du möchtest die Personen also eigentlich nicht ausschließen. Auf was musst du daher achten, wenn du Duplikate entfernst?
 
 
+`@instructions`
+
+
 `@hint`
 Selbst wenn du andere Merkmale hinzufügst, kannst du nicht sicher sein, ob es nicht doch Personen gibt, die sich in den abgefragten Merkmalen gleichen.
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
 
 `@possible_answers`
 - [Dass ich einen eindeutige Referenz für jede Zeile habe (z.B. eine fortlaufende Nummer)]
 - Dass ich meine Stichprobengröße richtig wähle
 - Dass ich andere Merkmale hinzufüge, in denen sich die Personen unterscheiden
 
-`@feedbacks`
+`@feedback`
 - Richtig
 - Nein, das alleine reicht nicht
 - Nein, das könnte auch schief gehen
@@ -318,6 +483,7 @@ library(readr)
 ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -331,11 +497,19 @@ ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/dataset
 mean(ds$Alter)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("mean") %>% check_result() %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -370,6 +544,7 @@ library(readr)
 ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -383,11 +558,19 @@ ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/dataset
 mean(ds$Alter,na.rm=TRUE)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("mean") %>% check_arg("na.rm") %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -416,6 +599,7 @@ library(readr)
 ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -429,11 +613,19 @@ ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/dataset
 unique(ds$Sprachauswahl)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("unique")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -449,12 +641,46 @@ key: 1b327584fb
 Puh! Soweit scheint alles gut zu sein!
 
 
+`@instructions`
+
+
+`@hint`
+
+
 `@pre_exercise_code`
 
 ```{r}
 library(readr)
 ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ***
 
@@ -476,6 +702,13 @@ key: 00ac756676
 `@hint`
 Innerhalb von `unique()` muss die Spalte `Alter` ausgewählt werden.
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -489,11 +722,19 @@ Innerhalb von `unique()` muss die Spalte `Alter` ausgewählt werden.
 unique(ds$Alter)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("unique") %>% check_result() %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -518,6 +759,13 @@ Du möchtest die Zeilen auswählen, die keine leere Angabe enthalten. Benutze da
 `@hint`
 Benutze `Alter!=""` als Bedingung
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -531,6 +779,7 @@ Benutze `Alter!=""` als Bedingung
 subset(ds,Alter!="")
 ```
 
+
 `@sct`
 
 ```{r}
@@ -539,6 +788,13 @@ ex() %>% check_function("subset") %>% {
   check_arg(.,"subset") %>% check_result()
 }
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -561,6 +817,13 @@ Wenn du alternativ `na.omit()` nutzen möchtest, wandle die leeren Angaben in _N
 `@hint`
 Benutze als erstes Argument `ds$Alter`, als zweites Argument `""` und trenne die Argumente mit Komma.
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -574,6 +837,7 @@ Benutze als erstes Argument `ds$Alter`, als zweites Argument `""` und trenne die
 na_if(ds$Alter,"")
 ```
 
+
 `@sct`
 
 ```{r}
@@ -582,6 +846,13 @@ ex() %>% check_function("na_if") %>% {
   check_arg(.,"y") %>% check_result()
 }
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ---
@@ -598,15 +869,46 @@ key: 6ff897ead8
 Du hast eine Umfrage erstellt und dabei verschiedene **optionale**, wie auch **obligatorische** Fragen gestellt. Insgesamt haben 500 Teilnehmer an deiner Umfrage teilgenommen und diese abgeschlossen. Deine Daten hast du so aufbereitet, dass jeder Teilnehmer einer Zeile, und jede Frage einer Spalte entspricht. Wenn optionale Fragen nicht beantwortet wurden, enthalten diese Zellen ein _NA_. Wie solltest du `na.omit()` nutzen?
 
 
+`@instructions`
+
+
 `@hint`
 Wenn du `na.omit()` auf dem ganzen Datensatz anwendest, löschst du alle Teilnehmer, die auch nur eine optionale Frage nicht beantwortet haben.
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
 
 `@possible_answers`
 - Ich kann `na.omit()` hier gar nicht nutzen
 - [Ich sollte `na.omit()` nur auf einem subset anwenden]
 - Ich sollte `na.omit()` auf den ganzen Datensatz anwenden
 
-`@feedbacks`
+`@feedback`
 - Falsch
 - Richtig
 - Falsch
@@ -641,6 +943,7 @@ library(readr)
 ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -654,11 +957,19 @@ ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/dataset
 ds$Alter <- as.integer(ds$Alter)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("as.integer") %>% check_object("ds") %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -674,6 +985,12 @@ key: 3a275d53c6
 
 
 
+`@instructions`
+
+
+`@hint`
+
+
 `@pre_exercise_code`
 
 ```{r}
@@ -681,6 +998,34 @@ library(readr)
 ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ds$Alter <- as.integer(ds$Alter)
 ```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ***
 
@@ -702,6 +1047,13 @@ Lasse dir den Boxplot über die Altersverteilung ausgeben.
 `@hint`
 Nutze die Funktion `boxplot()`
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -715,11 +1067,19 @@ Nutze die Funktion `boxplot()`
 boxplot(ds$Alter)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("boxplot") %>% check_result() %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -742,6 +1102,13 @@ Für die folgenden Analysen musst du wissen, ob das Alter hier normalverteilt is
 `@hint`
 Nutze `shapiro.test()`
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -755,11 +1122,19 @@ Nutze `shapiro.test()`
 shapiro.test(ds$Alter)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("shapiro.test") %>% check_result() %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -782,11 +1157,38 @@ Können wir hier für das Alter nach dem Shapiro-Wilk-Test eine Normalverteilung
 `@hint`
 
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
 `@sct`
 
 ```{r}
 
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
 
 
 
@@ -812,6 +1214,13 @@ Berechne die Obergrenze des Intervalls um den Mittelwert und die 4-fache Standar
 `@hint`
 Es geht immer noch um die Altersverteilung
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -825,11 +1234,19 @@ Es geht immer noch um die Altersverteilung
 mean(ds$Alter)+4*sd(ds$Alter)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_operator("+",1) %>% check_operator("*",2) %>% check_function("mean") %>% check_function("sd") %>% check_result() %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -852,6 +1269,13 @@ Berechne ebenso die Untergrenze.
 `@hint`
 
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -865,11 +1289,19 @@ Berechne ebenso die Untergrenze.
 mean(ds$Alter)-4*sd(ds$Alter)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_operator("-",1) %>% check_operator("*",2) %>% check_function("mean") %>% check_function("sd") %>% check_result() %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -892,6 +1324,13 @@ Nicht immer macht es Sinn, die Untergrenze bzw. Obergrenze zu berechnen, z.B. we
 `@hint`
 Benutze `subset()`
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -905,11 +1344,19 @@ Benutze `subset()`
 ds_bereinigt <- subset(ds,Alter>68)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_object("ds_bereinigt") %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ---
@@ -945,6 +1392,7 @@ library(readr)
 ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -958,6 +1406,7 @@ ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/dataset
 ds$Sprachauswahl <- recode_factor(ds$Sprachauswahl,"eng"=1,"ger"=0)
 ```
 
+
 `@sct`
 
 ```{r}
@@ -965,6 +1414,13 @@ ex() %>% check_function("recode_factor") %>% check_object("ds") %>% check_equal(
 success_msg("Wie immer, wenn du die Original-Werte nicht verlieren möchtest, kannst du eine neue 
   Spalte erstellen. Im Folgenden werden wir eine neue Spalte erstellen. Außerdem gibt es ähnliche Funktionen wie revalue oder mapvalues.")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -997,6 +1453,7 @@ library(readr)
 ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -1011,11 +1468,19 @@ ds$Altersgruppe[ds$Alter>11 & ds$Alter<19] <- "Teenager"
 ds$Altersgruppe[ds$Alter>55] <- "Senioren"
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_object("ds") %>% check_column("Altersgruppe") %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -1031,13 +1496,47 @@ key: 3e806ad53d
 Wozu ist Rekodieren **nicht** nützlich?
 
 
+`@instructions`
+
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
+
 `@possible_answers`
 - Für eine bessere statistische Auswertung
 - [Um nominalskalierte Variablen in ordinal- oder intervallskaliert umzuwandeln]
 - Umdrehen der Antworten auf einer 5er Likert-Skala
 - Wertebereiche zusammenzufassen und Gruppen zu bilden bzw. zu klassifizieren
 
-`@feedbacks`
+`@feedback`
 - Falsch, für die Auswertung ist das nützlich
 - Richtig, das geht mit Rekodieren leider nicht! Du hast nun alles vorbereitet und deine Analysen können starten. Viel Erfolg!
 - Falsch, das geht

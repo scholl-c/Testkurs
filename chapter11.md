@@ -1,6 +1,6 @@
 ---
-  title: "Gruppen vergleichen"
-  description: "In vielen Experimenten geht es darum, Gruppen zu vergleichen. In der folgenden Lektion lernst du, wie du die Daten entsprechend auswerten und passende Diagramme erstellen kannst."
+title: 'Gruppen vergleichen'
+description: 'In vielen Experimenten geht es darum, Gruppen zu vergleichen. In der folgenden Lektion lernst du, wie du die Daten entsprechend auswerten und passende Diagramme erstellen kannst.'
 ---
 
 ## Boxplot mit zwei Variablen
@@ -36,11 +36,33 @@ library(readr)
 mathetest <- read_delim("https://assets.datacamp.com/production/repositories/3196/datasets/ade54dc40604e210c38ef19defcf24a3e6d92717/mathetest.csv", "\t", escape_double = FALSE, trim_ws = TRUE)
 ```
 
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
 `@sct`
 
 ```{r}
 ex() %>% check_mc(1,feedback_msgs=c("Super erkannt!","Nein","Falsch","Falsch"))
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -77,6 +99,7 @@ mathetest <- read_delim("https://assets.datacamp.com/production/repositories/319
 library(ggplot2)
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -90,6 +113,7 @@ library(ggplot2)
 rauchertest1 <- aggregate(Test1~Raucher,mathetest,mean)
 ```
 
+
 `@sct`
 
 ```{r}
@@ -100,6 +124,13 @@ ex() %>% check_function("aggregate") %>% {
 }  %>%
 check_object("rauchertest1") %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -130,6 +161,7 @@ rauchertest1 <- aggregate(Test1~Raucher,mathetest,mean)
 library(ggplot2)
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -143,6 +175,7 @@ library(ggplot2)
 ggplot(rauchertest1,aes(x=Raucher,y=Test1))+geom_col()
 ```
 
+
 `@sct`
 
 ```{r}
@@ -155,6 +188,13 @@ ex() %>% {
   check_function(.,"geom_col")
 }
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -189,11 +229,33 @@ mathetest <- read_delim("https://assets.datacamp.com/production/repositories/319
 library(ggplot2)
 ```
 
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
 `@sct`
 
 ```{r}
 ex() %>% check_mc(2,feedback_msgs = c("Überlege nochmal","Ja genau!"))
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -209,6 +271,12 @@ key: 37025434e0
 Nun haben wir das Problem, dass Test1, Test2 und Test3 verschiedene Spalten sind. Wir müssen ggplot allerdings eine Variable mit genau diesen Ausprägungen geben, wenn wir x festlegen. Es gibt dafür eine einfache Lösung. Und zwar wandeln wir das Format um, sodass Test1, Test2 und Test3 als Ausprägung in einer Spalte stehen. Wenn du das jetzt noch nicht verstehst, du wirst gleich sehen, wie es funktioniert.
 
 
+`@instructions`
+
+
+`@hint`
+
+
 `@pre_exercise_code`
 
 ```{r}
@@ -220,11 +288,32 @@ melted <- melt(mathetest)
 raucheralletests <- aggregate(value~Raucher+variable,melted,mean)
 ```
 
+
 `@sample_code`
 
 ```{r}
 
 ```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
+
+`@possible_answers`
+
+
+`@feedback`
 
 
 ***
@@ -247,6 +336,13 @@ Die Funktion heißt `melt()` und stammt aus dem `reshape2`-Paket. Diese wandelt 
 `@hint`
 
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -260,11 +356,19 @@ Die Funktion heißt `melt()` und stammt aus dem `reshape2`-Paket. Diese wandelt 
 melted <- melt(mathetest)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("melt") %>% check_object("melted") %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -287,6 +391,13 @@ Der Informationsgehalt von `melted` ist identisch zum ursprünglichen Datensatz,
 `@hint`
 
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -300,11 +411,19 @@ Der Informationsgehalt von `melted` ist identisch zum ursprünglichen Datensatz,
 head(melted)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("head") %>% check_arg(.,"x") %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -327,6 +446,13 @@ Nun müssen wir wieder aggregieren, denn wir möchten einen Vergleich der Durchs
 `@hint`
 Benutze die Funktion `aggregate()` und übergib die richtige Formel, den Datensatz `melted` und die Funktion `mean` als Parameter.
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -340,6 +466,7 @@ Benutze die Funktion `aggregate()` und übergib die richtige Formel, den Datensa
 raucheralletests <- aggregate(value~Raucher+variable,melted,mean)
 ```
 
+
 `@sct`
 
 ```{r}
@@ -350,6 +477,13 @@ ex() %>% check_function("aggregate") %>% {
 }  %>%
 check_object("raucheralletests") %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -372,6 +506,13 @@ Nun haben wir die Daten so aufbereitet, dass sie sich als gruppiertes Balkendiag
 `@hint`
 
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -384,6 +525,7 @@ Nun haben wir die Daten so aufbereitet, dass sie sich als gruppiertes Balkendiag
 ```{r}
 ggplot(raucheralletests,aes(x=variable,y=value,fill=Raucher))+geom_bar(stat="identity",position="dodge")
 ```
+
 
 `@sct`
 
@@ -401,6 +543,13 @@ ex() %>% {
   }
 }
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -423,11 +572,38 @@ Haben die Raucher immer durchschnittlich besser abgeschnitten?
 `@hint`
 
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
 `@sct`
 
 ```{r}
 
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
 
 
 
@@ -446,6 +622,12 @@ Wenn zwei, drei große Gruppen hinsichtlich mehrerer verschiedener Aspekte vergl
 Letzendlich handelt es sich dabei nur um eine weitere Möglichkeit Gruppen in Diagrammen darzustellen. Um dies einmal auszuprobieren, haben wir das Dataset `mathetest` zweimal umstrukturiert mit `melt()` und danach einmal aggregiert. Wir erhalten das Datenset `grouped`. Nun werden wir die Daten nutzen.
 
 
+`@instructions`
+
+
+`@hint`
+
+
 `@pre_exercise_code`
 
 ```{r}
@@ -453,6 +635,34 @@ library(readr)
 grouped <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c10445a54acbf03ddab878c0e17978e75e5fe6b6/grouped.csv")
 library(ggplot2)
 ```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ***
 
@@ -474,6 +684,13 @@ Konstruiere ein Balkendiagramm, das je Test die durchschnittlichen Ergebnisse de
 `@hint`
 Benutze das Datenset `grouped`. Gib erst `+geom_bar()` an und dann `+facet_wrap()`.
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -486,6 +703,7 @@ Benutze das Datenset `grouped`. Gib erst `+geom_bar()` an und dann `+facet_wrap(
 ```{r}
 ggplot(grouped,aes(x=variable2,y=value,fill=value2))+geom_bar(stat="identity",position="dodge")+facet_wrap(~variable)
 ```
+
 
 `@sct`
 
@@ -504,6 +722,13 @@ ex() %>% {
   check_function(.,"facet_wrap") %>% check_arg("facets") %>% check_equal()
 }
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -528,11 +753,38 @@ Wenn du davon ausgehst, dass Langschläfer weniger gut mit Tests zu früher Stun
 `@hint`
 
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
 `@sct`
 
 ```{r}
 
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
 
 
 
@@ -557,11 +809,38 @@ Könnte dieser Unterschied zwischen Langschläfern und Frühaufstehern auch
 `@hint`
 
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
 `@sct`
 
 ```{r}
 
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
 
 
 
@@ -581,12 +860,46 @@ Bisher waren uns die Gruppen bekannt und wir konnten die Daten nach den Variable
 Ein Algorithmus dafür nennt sich _k-means_. Eine entsprechende Funktion namens `kmeans` findet sich im Paket `cluster`. Das Paket haben wir bereits geladen, die Funktion steht zur Verfügung. Der Datensatz `agriculture` stammt ebenfalls aus dem Paket und besteht aus dem Bruttosozialprodukt pro Kopf (x) und dem Anteil der in der Landwirtschaft arbeitenden Bevölkerung (y) verschiedener Länder in Europa. Wir versuchen nun, die Länder zu gruppieren.
 
 
+`@instructions`
+
+
+`@hint`
+
+
 `@pre_exercise_code`
 
 ```{r}
 library(cluster)
 library(ggplot2)
 ```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ***
 
@@ -608,6 +921,13 @@ Wende den kmeans-Algorithmus auf diesen Datensatz an. `kmeans()` verlangt zwei P
 `@hint`
 Der erste Parameter ist `agriculture`, der zweite Parameter ist `3`
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -621,6 +941,7 @@ Der erste Parameter ist `agriculture`, der zweite Parameter ist `3`
 p.cluster <- kmeans(agriculture,3)
 ```
 
+
 `@sct`
 
 ```{r}
@@ -629,6 +950,13 @@ ex() %>% check_function("kmeans") %>% {
   check_arg(.,"centers") %>% check_equal(eval=FALSE)
 } %>% check_object("p.cluster")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -651,6 +979,13 @@ Wir möchten die Cluster in einer Grafik darstellen. Dazu müssen wir zunächst 
 `@hint`
 Überschreibe `p.cluster$cluster` mit den in Faktoren umgewandelten `p.clluster$cluster`
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -664,11 +999,19 @@ Wir möchten die Cluster in einer Grafik darstellen. Dazu müssen wir zunächst 
 p.cluster$cluster <- as.factor(p.cluster$cluster)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_object("p.cluster") %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -691,6 +1034,13 @@ Nun kann eine Grafik erstellt werden, die die Zugehörigkeit zu den Gruppen visu
 `@hint`
 
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -699,6 +1049,7 @@ ggplot(agriculture, aes(x, y, label = rownames(agriculture))) +
   geom_label(aes(fill = p.cluster$cluster), colour = "white", 
              fontface = "bold", size=2)
 ```
+
 
 `@solution`
 
@@ -709,11 +1060,19 @@ ggplot(agriculture, aes(x, y, label = rownames(agriculture))) +
              fontface = "bold", size=2)
 ```
 
+
 `@sct`
 
 ```{r}
 success_msg("So soll es sein")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -736,10 +1095,37 @@ Welche Länder wurden nicht derselben Gruppe zugeordnet? Du weißt nun, wie du m
 `@hint`
 
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
 `@sct`
 
 ```{r}
 
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
 
 

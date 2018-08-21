@@ -1,5 +1,5 @@
 ---
-  title: "Besondere Tests"
+title: 'Besondere Tests'
 ---
 
 ## Interrater-Reliabilität
@@ -32,6 +32,7 @@ library(irr)
 interrater <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/32fe40c479aa377d8af347dd26bcd1d7ed5d636e/interrater.csv")
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -45,6 +46,7 @@ interrater <- read.csv("https://assets.datacamp.com/production/repositories/3196
 kappa2(interrater[,c(2,3)],'equal')
 ```
 
+
 `@sct`
 
 ```{r}
@@ -53,6 +55,13 @@ ex() %>% check_function("kappa2") %>% {
   check_arg(.,"weight") %>% check_equal()
 }
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -81,6 +90,7 @@ library(irr)
 interrater <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/32fe40c479aa377d8af347dd26bcd1d7ed5d636e/interrater.csv")
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -94,6 +104,7 @@ interrater <- read.csv("https://assets.datacamp.com/production/repositories/3196
 kappa2(interrater[,c(4,5)],'equal')
 ```
 
+
 `@sct`
 
 ```{r}
@@ -102,6 +113,13 @@ ex() %>% check_function("kappa2") %>% {
   check_arg(.,"weight") %>% check_equal()
 }
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -117,14 +135,45 @@ key: 2874b910e2
 Welche Gruppe hatte eine größere Übereinstimmung in der Bewertung nach Cohens Kappa?
 
 
+`@instructions`
+
+
 `@hint`
 Der Wert für Kappa misst in Prozent die Übereinstimmung der Ratings. Ab etwa 0.4 aufwärts ist der Wert befriedigend, ab 0.6 ist er gut.
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
 
 `@possible_answers`
 - Die beiden Studenten
 - [Die beiden Professoren]
 
-`@feedbacks`
+`@feedback`
 - Nein die waren sich nicht so einig.
 - Ja!
 
@@ -146,14 +195,45 @@ Ein Anwendungsfall sind Persönlichkeitstest: Es sollen mehrere Dimensionen eine
 Cronbachs Alpha liegt zwischen 0 und 1. Was bedeutet hier ein Wert von zum Beispiel 0.4?
 
 
+`@instructions`
+
+
 `@hint`
 Ab ca. 0.7 oder 0.8 (je nach Auslegung) kann man von einer akzeptablen oder guten Genauigkeit sprechen.
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
 
 `@possible_answers`
 - [eine schlechte interne Konsistenz]
 - eine gute interne Konsistenz
 
-`@feedbacks`
+`@feedback`
 - Genau
 - Nein
 
@@ -184,6 +264,7 @@ cronbach <- read.csv("https://assets.datacamp.com/production/repositories/3196/d
 library(ltm)
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -197,8 +278,16 @@ library(ltm)
 cronbach.alpha(cronbach)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("cronbach.alpha") %>% check_arg("data") %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+

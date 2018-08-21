@@ -1,5 +1,5 @@
 ---
-  title: "Funktionen und Schleifen"
+title: 'Funktionen und Schleifen'
 ---
 
 ## Durchschnitt aller Spalten
@@ -26,6 +26,7 @@ Da du den Durchschnitt der einzigen beiden Spalten berechnen möchtest, musst du
 library(datasets)
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -39,11 +40,19 @@ library(datasets)
 colMeans(cars)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("colMeans") %>% check_result() %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -71,6 +80,7 @@ Benutze `colSums()` wie du im vorherigen Beispiel `colMeans()` benutzt hast
 library(datasets)
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -84,12 +94,20 @@ library(datasets)
 colSums(cars)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("colSums") %>% check_result() %>% check_equal()
 success_msg("Damit hast du jetzt zwei sehr einfache Funktionen kennengelernt, die dir sehr viel Arbeit ersparen können. Es gibt auch die Möglichkeit, das auf Zeilen auszuführen, siehe dazu rowMeans() und rowSums().")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -105,15 +123,46 @@ key: 62397fee04
 Was berechnet der Modus?
 
 
+`@instructions`
+
+
 `@hint`
 Was vermutest du aufgrund des Ergebnisses in der vorherigen Frage? Welche Antwortmöglichkeit kannst du dadurch ausschließen?
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
 
 `@possible_answers`
 - [Den häufigsten Wert einer Zahlenreihe]
 - Den mittleren Wert einer sortierten Zahlenreihe
 - Den größten Wert einer Zahlenreihe
 
-`@feedbacks`
+`@feedback`
 - Ja!
 - Nein
 - Nein
@@ -150,6 +199,7 @@ Mode <- function(x) {
 }
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -163,11 +213,19 @@ Mode <- function(x) {
 lapply(cars,Mode)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("lapply") %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -199,6 +257,7 @@ Mode <- function(x) {
 }
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -212,11 +271,19 @@ Mode <- function(x) {
 sapply(cars,Mode)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("sapply") %>% check_result() %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -236,11 +303,18 @@ Manchmal ist das aber nicht ganz das, was du brauchst. Für Individualisten gibt
 Wir stellen uns nun vor, wir haben ein größeres Datenset und möchten auf Normalverteilung prüfen. Wir möchten, dass wir ausgegeben bekommen 'normalverteilt', wenn die jeweilige Spalte normalverteilt ist und 'nicht normalverteilt' wenn sie es nicht ist. Wir schreiben dazu zuerst eine Funktion, die uns je nach Testergebnis von dem Shapiro-Wilk-Test ausgibt, ob es normalverteilt ist oder nicht und dann wenden wir diese Funktion mit `lapply` auf alle Spalten an.
 
 
+`@instructions`
+
+
+`@hint`
+
+
 `@pre_exercise_code`
 
 ```{r}
 library(datasets)
 ```
+
 
 `@sample_code`
 
@@ -261,6 +335,27 @@ normalverteilt <- function(x) {
 }
 ```
 
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
+
 ***
 
 
@@ -279,6 +374,13 @@ key: e742790a65
 Schreibe die Funktion, die entweder 'normalverteilt' oder 'nicht normalverteilt' ausgibt, je nachdem wie der Shapiro-Wilk-Test ausfällt. Ergänze, wie im Kommentar beschrieben, die beiden Zeilen. Der p-Wert ist bereits in einer Variablen gespeichert, sodass du ihn mit den 0.05 vergleichen kannst.
 
 `@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+
+```
 
 
 `@sample_code`
@@ -306,6 +408,7 @@ normalverteilt <- function(x) {
 }
 ```
 
+
 `@sct`
 
 ```{r}
@@ -325,6 +428,13 @@ ex() %>% check_fun_def("normalverteilt") %>% {
 }
 success_msg("Super gemacht!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -347,6 +457,13 @@ Nun wenden wir unsere Funktion auf die Spalten von `cars` an. Benutze dazu den B
 `@hint`
 Das Prinzip ist das gleiche wie unserer Modus-Berechnung.
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -360,11 +477,19 @@ Das Prinzip ist das gleiche wie unserer Modus-Berechnung.
 lapply(cars,normalverteilt)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("lapply") %>% check_result() %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ---
@@ -385,12 +510,46 @@ Sowohl Wiederholungen zu vermeiden als auch deinen Code schneller machen, kann d
 Lass uns nun mal ein einfaches Beispiel einer Vektorrechnung betrachten. Klar, könnte man in diesem Mini-Beispiel alle drei Rechnungen auch separat durchführen, aber es gibt sehr viele Beispiele, da lohnt es sich Vektorisierung einzubauen.
 
 
+`@instructions`
+
+
+`@hint`
+
+
 `@pre_exercise_code`
 
 ```{r}
 v1 <- c(51,402,537)
 v2 <- c(24,309,54)
 ```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ***
 
@@ -412,6 +571,13 @@ Erstelle einen Vektor mit der Verkettungsfunktion `c()`. Gib `v1 <- c(51,402,537
 `@hint`
 
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -425,11 +591,19 @@ Erstelle einen Vektor mit der Verkettungsfunktion `c()`. Gib `v1 <- c(51,402,537
 v1 <- c(51,402,537)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_object("v1") %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -452,6 +626,13 @@ Gib nun den Vektor v2 mit `v2 <- c(24,309,54)` ein.
 `@hint`
 
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -465,11 +646,19 @@ Gib nun den Vektor v2 mit `v2 <- c(24,309,54)` ein.
 v2 <- c(24,309,54)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_object("v2") %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -492,6 +681,13 @@ Addiere die Vektoren und speichere das Ergebnis in `v3`.
 `@hint`
 
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -505,9 +701,17 @@ Addiere die Vektoren und speichere das Ergebnis in `v3`.
 v3 <- v1+v2
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_operator("+") %>% check_object("v3") %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 

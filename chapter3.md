@@ -1,6 +1,6 @@
 ---
-  title: "Datenstrukturen"
-  description: "In dieser Lektion geht es um Persönlichkeitstypen... äääh.. Datentypen.  Da gibt es die pünktlichen, gewissenhaften oder die mit der Einstellung 'wir nehmen's wie es kommt'. Und nicht nur im echten Leben entwickelt man ein Gespür, wie mit verschiedenen Persönlichkeitstypen... äh Datentypen umzugehen ist. Eine große Quelle von Missverständnissen ist schon das Kennenlernen. Beim Einlesen von Daten legt die Funktion, die zum Einlesen benutzt wird, die Datentypen erstmal automatisch fest. Da können schon mal Vorurteile entstehen."
+title: Datenstrukturen
+description: 'In dieser Lektion geht es um Persönlichkeitstypen... äääh.. Datentypen.  Da gibt es die pünktlichen, gewissenhaften oder die mit der Einstellung ''wir nehmen''s wie es kommt''. Und nicht nur im echten Leben entwickelt man ein Gespür, wie mit verschiedenen Persönlichkeitstypen... äh Datentypen umzugehen ist. Eine große Quelle von Missverständnissen ist schon das Kennenlernen. Beim Einlesen von Daten legt die Funktion, die zum Einlesen benutzt wird, die Datentypen erstmal automatisch fest. Da können schon mal Vorurteile entstehen.'
 ---
 
 ## Datentypen anzeigen
@@ -43,12 +43,20 @@ Referenziere mit dem Dollarzeichen auf die Spalte ``speed``.
 typeof(cars$speed)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("typeof") %>% {check_arg(.,"x") %>% check_equal()}
 success_msg("Ja, genau!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -64,8 +72,39 @@ key: f127fa1af0
 Welchen Datentyp gibt es nicht?
 
 
+`@instructions`
+
+
 `@hint`
 Schaue dir andere Datensätze an und bestimme mit ``typeof()`` ihre Datentypen.
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
 
 `@possible_answers`
 - double
@@ -74,7 +113,7 @@ Schaue dir andere Datensätze an und bestimme mit ``typeof()`` ihre Datentypen.
 - complex
 - [easy]
 
-`@feedbacks`
+`@feedback`
 - Nein, den gibt es.
 - Nein, den gibt es.
 - Nein, den gibt es.
@@ -97,11 +136,45 @@ Nachdem man nun andere besser kennengelernt hat, sortiert man sie gerne mal in a
 Exkurs: Falls du mal mit Zeitinverallen, der Dauer o.ä. umgehen musst, schaue dir das Paket namens ``lubridate`` an.
 
 
+`@instructions`
+
+
+`@hint`
+
+
 `@pre_exercise_code`
 
 ```{r}
 daten <- c("04.03.1999","12.06.1973","22.01.2018","09.05.2013")
 ```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ***
 
@@ -123,6 +196,13 @@ Bestimme den Datentyp von ``daten`` mit ``typeof()``.
 `@hint`
 Benutze die Funktion ``typeof()`` und wende sie auf ``daten`` an.
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -136,12 +216,20 @@ Benutze die Funktion ``typeof()`` und wende sie auf ``daten`` an.
 typeof(daten)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("typeof") %>% {check_arg(.,"x") %>% check_equal()}
 success_msg("Super!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -164,6 +252,13 @@ Das sind also Zeichenketten _(character)_. Wenn du dir ``daten`` ausgeben lässt
 `@hint`
 Benutze ``as.Date()``. Übergib der Funktion als erstes unser Objekt ``daten`` und als zweites das Format.
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -177,12 +272,20 @@ Benutze ``as.Date()``. Übergib der Funktion als erstes unser Objekt ``daten`` u
 daten <- as.Date(daten,"%d.%m.%Y")
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("as.Date") %>% check_object("daten") %>% check_equal()
 success_msg("Das hat gut geklappt!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -207,11 +310,19 @@ Die Funktion ``weekdays()`` gibt dir jetzt die Wochentage der Daten an. Wende di
 `@hint`
 Benutze die Funktion ``weekdays()``
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
 daten <- as.Date(daten,"%d.%m.%Y")
 ```
+
 
 `@solution`
 
@@ -220,12 +331,20 @@ daten <- as.Date(daten,"%d.%m.%Y")
 weekdays(daten)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("weekdays")
 success_msg("Sehr gut!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ---
@@ -242,11 +361,45 @@ key: d3d561c9b0
 Der Datentyp ``character``, d.h. Zeichenkette, ist nach der Art 'Wir nehmen's wie's kommt', weil man alle möglichen Zeichen darin speichern kann. Auch Zahlen. Aber man kann, selbst wenn man nur Zahlen gespeichert hat, nicht damit rechnen.
 
 
+`@instructions`
+
+
+`@hint`
+
+
 `@pre_exercise_code`
 
 ```{r}
 zahlen <- c("4","5.6","12","29","4.4")
 ```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ***
 
@@ -268,6 +421,13 @@ Versuche mit dem Objekt ``zahlen`` zu rechnen, in dem du die Summe berechnest mi
 `@hint`
 Berechne die Summe von ``zahlen`` mit ``sum()``
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -281,12 +441,20 @@ Berechne die Summe von ``zahlen`` mit ``sum()``
 sum(zahlen)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("sum")
 success_msg("Super gemacht!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -309,6 +477,13 @@ Du erhältst den Fehler, dass es sich um einen ungültigen Typ handelt. Um mit d
 `@hint`
 Überschreibe ``zahlen`` und wandle ``zahlen`` in einen Double-Datentyp mit ``as.double()`` um.
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -322,12 +497,20 @@ Du erhältst den Fehler, dass es sich um einen ungültigen Typ handelt. Um mit d
 zahlen <- as.double(zahlen)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("as.double") %>% check_object("zahlen") %>% check_equal()
 success_msg("Toll!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -350,11 +533,19 @@ Nun kannst du nochmal versuchen, die Summe zu berechnen.
 `@hint`
 Berechne die Summe von ``zahlen`` mit ``sum()``
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
 zahlen <- as.double(zahlen)
 ```
+
 
 `@solution`
 
@@ -363,12 +554,20 @@ zahlen <- as.double(zahlen)
 sum(zahlen)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("sum") %>% check_result() %>% check_equal()
 success_msg("Super gemacht!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ---
@@ -397,6 +596,7 @@ Benutze die Funktion ``class()`` und übergib der Funktion ``geschlecht``.
 geschlecht <- factor(c("m", "m", "w", "m", "w", "w", "w", "w", "w", "w", "m", "w"))
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -410,12 +610,20 @@ geschlecht <- factor(c("m", "m", "w", "m", "w", "w", "w", "w", "w", "w", "m", "w
 class(geschlecht)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("class") %>% check_result() %>% check_equal()
 success_msg("Juhhuu!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -445,6 +653,7 @@ Benutze ``as.vector()`` und übergib der Funktion ``geschlecht``.
 geschlecht <- factor(c("m", "m", "w", "m", "w", "w", "w", "w", "w", "w", "m", "w"))
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -458,9 +667,17 @@ geschlecht <- factor(c("m", "m", "w", "m", "w", "w", "w", "w", "w", "w", "m", "w
 geschlecht <- as.vector(geschlecht)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("as.vector") %>% check_object("geschlecht") %>% check_equal()
 success_msg("Sehr gut! Du weißt jetzt, wie du mit den Datentypen umgehen kannst.")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+

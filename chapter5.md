@@ -1,5 +1,5 @@
 ---
-  title: "Voraussetzungen für statistische Tests"
+title: 'Voraussetzungen für statistische Tests'
 ---
 
 ## Normalverteilung
@@ -17,11 +17,45 @@ Für statistische Tests gibt es Voraussetzungen. Das ist in etwa so, wie wenn je
 Eine sehr wichtige Voraussetzung ist oft die Normalverteilung. Dies kann man mit dem **Shapiro-Wilk-Test** überprüfen. Ist der p-Wert (p-value) größer als 0.05 sind die Daten normalverteilt.
 
 
+`@instructions`
+
+
+`@hint`
+
+
 `@pre_exercise_code`
 
 ```{r}
 nv <- rnorm(200,30)
 ```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ***
 
@@ -43,11 +77,26 @@ Mit `rnorm()` kannst du dir eine Reihe von Werten erzeugen, die normalverteilt s
 `@hint`
 
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
 nv <- rnorm(200,30)
 ```
+
 
 `@sct`
 
@@ -55,6 +104,13 @@ nv <- rnorm(200,30)
 ex() %>% check_function("rnorm") %>% check_object("nv") %>% check_equal()
 success_msg("Guter Anfang!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -77,11 +133,26 @@ Das Histogramm stellt die Verteilung graphisch dar. Zeichne das Histogramm von d
 `@hint`
 Benutze `hist()`
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
 hist(nv)
 ```
+
 
 `@sct`
 
@@ -89,6 +160,13 @@ hist(nv)
 ex() %>% check_function("hist") %>% check_result() %>% check_equal()
 success_msg("Genau so sieht das Histogramm aus!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -111,6 +189,13 @@ Du siehst, dass das Histogramm symmetrisch ausschaut. Das Histogramm kann allerd
 `@hint`
 Benutze `shapiro.test()` und übergib der Funktion unsere Normalverteilung `nv`
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -124,12 +209,20 @@ Benutze `shapiro.test()` und übergib der Funktion unsere Normalverteilung `nv`
 shapiro.test(nv)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("shapiro.test") %>% check_result() %>% check_equal()
 success_msg("Es handelt sich, wie vermutet, um eine Normalverteilung.")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ---
@@ -152,11 +245,39 @@ Prüfe diese Daten auf Normalverteilung.
 `@hint`
 Benutze `shapiro.test()` wie zuvor auch
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
 shapiro.test(sunspots)
 ```
+
+
+`@sct`
+
+```{r}
+
+```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -172,14 +293,45 @@ key: 044d736c05
 Der p-Wert liegt bei 2.2*10^-16 und das bedeutet ...
 
 
+`@instructions`
+
+
 `@hint`
 *10^-16 bedeutet, dass das Komma um 16 Stellen nach links verschoben wird. Wir erhalten eine seeehr kleine Zahl.
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
 
 `@possible_answers`
 - ...es liegt eine Normalverteilung vor
 - [...es liegt keine Normalverteilung vor]
 
-`@feedbacks`
+`@feedback`
 - Nein
 - Richtig, wir haben keine Normalverteilung vorliegen
 
@@ -211,6 +363,7 @@ Berechne beispielhaft die Schiefe von `sunspots` mit `skewness()`.
 library(moments)
 ```
 
+
 `@sample_code`
 
 ```{r}
@@ -224,11 +377,19 @@ library(moments)
 skewness(sunspots)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("skewness") %>% check_result() %>% check_equal()
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -244,15 +405,46 @@ key: b55032df18
 Die Verteilung von `sunspots` ist ...
 
 
+`@instructions`
+
+
 `@hint`
 Für linksschiefe Verteilungen liefert `skewness` einen Wert kleiner Null, für rechtsschiefe Verteilungen einen Wert größer Null. Der Wert von `skewness(sunspots)` ist 1.1003
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
 
 `@possible_answers`
 - linksschief
 - normalverteilt
 - [rechtsschief]
 
-`@feedbacks`
+`@feedback`
 - Nein
 - Nein
 - Wenn wir keine Normalverteilung vorliegen haben, können wir verteilungsfreie bzw. non-parametrische Tests nutzen. Alternativ kann man versuchen, die Daten in eine annähernde Normalverteilung zu transformieren. Man kann das z.B. mit dem Logarithmus (log) oder der Wurzel (sqrt) versuchen. Erreicht man eine Normalverteilung (mit Test überprüfen!) darf man mit diesen transformierten Daten parametrische Tests rechnen.
@@ -273,11 +465,45 @@ Die Varianzhomogenität ist ebenfalls eine wichtige Voraussetzung, ohne diese ma
 Da die Varianzhomogenität jetzt Varianzen aus verschiedenen Gruppen vergleicht und wir keine Eigenschaften einer Verteilung untersuchen, kann man den Levene-Test nicht auf der Messreihe der `sunspots` anwenden! Wir benutzen nun den Datensatz `InsectSprays`. Es wurde die Anzahl von Insekten auf Versuchsfeldern gemessen, die jeweils mit verschiedenen Insektiziden behandelt wurden. Die Spalte `spray` indiziert, welches Spray (A-F) genutzt wurde und die Spalte `count` enthält die Anzahl der Insekten.
 
 
+`@instructions`
+
+
+`@hint`
+
+
 `@pre_exercise_code`
 
 ```{r}
 library(car)
 ```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ***
 
@@ -299,6 +525,13 @@ Berechne die Homogenität der Varianzen der verschiedenen Spray-Gruppen. Benutze
 `@hint`
 
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -312,12 +545,20 @@ Berechne die Homogenität der Varianzen der verschiedenen Spray-Gruppen. Benutze
 leveneTest(InsectSprays$count,InsectSprays$spray)
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_function("leveneTest") %>% check_result() %>% check_equal()
 success_msg("Super!")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 
 ***
@@ -341,9 +582,37 @@ key: faf6c8771b
 `@hint`
 Ist der Wert p-Wert (hier Pr(>F)) größer als 0.05, dann nehmen wir Varianzhomogenität an.
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
 `@sct`
 
 ```{r}
 ex() %>% check_mc(1,feedback_msgs=c("keine Ahnung","keine Ahnung"))
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
