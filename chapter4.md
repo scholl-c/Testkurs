@@ -283,10 +283,7 @@ plot(Gummibaerchen$Anzahl_Baeren,Gummibaerchen$Anzahl_Farben)
 `@sct`
 
 ```{r}
-check_function("plot") %>% {
-  check_arg(.,"x")
-  check_arg(.,"y")
-}
+check_function("plot") %>% check_arg("x") %>% check_arg("y")
 success_msg("Sehr gut!")
 ```
 
