@@ -129,7 +129,7 @@ ggplot(Gummibaerchen,aes(Anzahl_Farben))+geom_histogram(binwidth=1)
 
 ```{r}
 ex() %>% {
-  check_function(.,"ggplot") %>% check_arg("data") %>% check_equal()
+  check_function(.,"ggplot") %>% check_arg("data") %>% check_equal(incorrect_msg="Nicht ganz")
   check_function(.,"aes") %>% check_arg(.,"x") %>% check_equal(eval=FALSE)
   check_function(.,"geom_histogram") %>% check_arg(.,"binwidth") %>% check_equal(eval=FALSE)
 }
