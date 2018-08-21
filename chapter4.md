@@ -30,6 +30,13 @@ library(readr)
 Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
 
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
@@ -39,8 +46,7 @@ hist(Gummibaerchen$Anzahl_Farben)
 `@sct`
 
 ```{r}
-test_error()
-test_student_typed("hist(Gummibaerchen$Anzahl_Farben)",not_typed_msg="Nein, so nicht.")
+ex() %>% check_function("hist") %>% check_result() %>% check_equal()
 success_msg("Richtig so!")
 ```
 
@@ -181,13 +187,6 @@ Lasse dir das Streudiagramm für die Variablen `Anzahl_Farben` und `Anzahl_Baere
 library(readr)
 Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
-
-`@sample_code`
-
-```{r}
-
-```
-
 
 `@solution`
 
