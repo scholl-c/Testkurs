@@ -71,6 +71,9 @@ Nun berechne den Cohens Kappa analog zum vorherigen Beispiel für die Übereinst
 `@instructions`
 Berechne den Cohens Kappa, verwende `kappa2`.
 
+`@hint`
+
+
 `@pre_exercise_code`
 
 ```{r}
@@ -78,10 +81,26 @@ library(irr)
 interrater <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/32fe40c479aa377d8af347dd26bcd1d7ed5d636e/interrater.csv")
 ```
 
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
 kappa2(interrater[,c(4,5)],'equal')
+```
+
+`@sct`
+
+```{r}
+ex() %>% check_function("kappa2") %>% {
+  check_arg(.,"ratings") %>% check_equal()
+  check_arg(.,"weight") %>% check_equal()
+}
 ```
 
 ---
@@ -106,7 +125,7 @@ Der Wert für Kappa misst in Prozent die Übereinstimmung der Ratings. Ab etwa 0
 - [Die beiden Professoren]
 
 `@feedbacks`
-- Nein, die waren sich nicht so einig.
+- Nein die waren sich nicht so einig.
 - Ja!
 
 ---
@@ -165,8 +184,21 @@ cronbach <- read.csv("https://assets.datacamp.com/production/repositories/3196/d
 library(ltm)
 ```
 
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
 cronbach.alpha(cronbach)
+```
+
+`@sct`
+
+```{r}
+ex() %>% check_function("cronbach.alpha") %>% check_arg("data") %>% check_equal()
 ```
