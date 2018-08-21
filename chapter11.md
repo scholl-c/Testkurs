@@ -294,7 +294,7 @@ head(melted)
 `@sct`
 
 ```{r}
-ex() %>% check_function("head") %>% check_arg(.,"x")
+ex() %>% check_function("head")
 ```
 
 
