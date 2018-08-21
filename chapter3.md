@@ -366,7 +366,7 @@ sum(zahlen)
 `@sct`
 
 ```{r}
-ex() %>% check_function("sum")
+ex() %>% check_function("sum") %>% check_result() %>% check_equal()
 success_msg("Super gemacht!")
 ```
 
