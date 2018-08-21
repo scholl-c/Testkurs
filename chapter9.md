@@ -428,7 +428,7 @@ v1 <- c(51,402,537)
 `@sct`
 
 ```{r}
-ex() %>% check_function("c") %>% check_object("v1") %>% check_equal()
+ex() %>% check_object("v1") %>% check_equal()
 ```
 
 
@@ -468,7 +468,7 @@ v2 <- c(24,309,54)
 `@sct`
 
 ```{r}
-ex() %>% check_function("c") %>% check_object("v2") %>% check_equal()
+ex() %>% check_object("v2") %>% check_equal()
 ```
 
 
