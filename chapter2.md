@@ -125,6 +125,13 @@ Mit [1] kannst du auf den ersten Wert in einem Objekt zugreifen.
 Studis <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/f7c3df4f7a167efcf7ff74b306b8045a10f83365/Studierendenzaehlung.csv",sep=";")
 ```
 
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
@@ -134,8 +141,7 @@ colnames(Studis)[1] <- "Veranstaltung"
 `@sct`
 
 ```{r}
-test_error()
-test_student_typed("colnames(Studis)[1] <- 'Veranstaltung'", not_typed_msg = "Das war leider noch nicht ganz richtig.")
+ex() %>% check_function("colnames") %>% check_object("Studis") %>% check_equal()
 success_msg("Toll gemacht!")
 ```
 
