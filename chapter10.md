@@ -473,7 +473,7 @@ Farben_Mean <- colMeans(Gummibaerchen[,2:7])
 `@sct`
 
 ```{r}
-ex() %>% check_function("colMeans") %>% check_object("Farben_Mean") %>% check_equal()
+ex() %>% check_object("Farben_Mean") %>% check_equal()
 ```
 
 
