@@ -1,6 +1,6 @@
 ---
-title: 'Grafiken mit ggplot2'
-description: 'Im ersten Teil hast du gelernt, wie du einfache Plots erstellen kannst. In diesem zweiten Teil wirst du lernen, wie du mit der Bibliothek ggplot2 Grafiken erstellst. Dies ist eine Bibliothek mit mehr Möglichkeiten in einfacher Art und Weise die Daten darzustellen.'
+  title: "Grafiken mit ggplot2"
+  description: "Im ersten Teil hast du gelernt, wie du einfache Plots erstellen kannst. In diesem zweiten Teil wirst du lernen, wie du mit der Bibliothek ggplot2 Grafiken erstellst. Dies ist eine Bibliothek mit mehr Möglichkeiten in einfacher Art und Weise die Daten darzustellen."
 ---
 
 ## Paket laden
@@ -20,6 +20,33 @@ Lade das Paket `ggplot2`.
 
 `@hint`
 Gib `?library` ein.
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+library(ggplot2)
+```
+
+`@sct`
+
+```{r}
+ex() %>% check_library("ggplot2")
+success_msg("Sehr gut!")
+```
 
 ---
 
@@ -78,15 +105,19 @@ Wir möchten wieder wissen, wie häufig einzelne Farben in verschiedenen Packung
 Bei der Vorlage ersetzt du `dataframe`, `variable` und `20` durch die im Text angegebenen Daten.
 
 `@pre_exercise_code`
+
 ```{r}
 library(ggplot2)
 library(readr)
 Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
+
 `@solution`
+
 ```{r}
 ggplot(Gummibaerchen,aes(Anzahl_Farben))+geom_histogram(binwidth=1)
 ```
+
 ---
 
 ## Streudiagramm mit ggplot2
@@ -135,15 +166,19 @@ Plotte das Streudiagramm. Auch für diesen Fall gebe ich dir eine Vorlage... `gg
 Ersetze _dataframe_, _variable1_ und _variable2_. Achte auf die richtige Zuweisung der Variablen zur x und y-Achse.
 
 `@pre_exercise_code`
+
 ```{r}
 library(ggplot2)
 library(readr)
 Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
+
 `@solution`
+
 ```{r}
 ggplot(Gummibaerchen,aes(x=Anzahl_Farben,y=Anzahl_Baeren))+geom_point()
 ```
+
 ---
 
 ## Achsenbeschriftung in ggplot2
@@ -165,15 +200,19 @@ Lass uns dem Streudiagramm Achsenbezeichnungen und einen Titel geben! Nenne die 
 Es ist alles gesagt. Lies genau.
 
 `@pre_exercise_code`
+
 ```{r}
 library(ggplot2)
 library(readr)
 Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
+
 `@solution`
+
 ```{r}
 ggplot(Gummibaerchen,aes(x=Anzahl_Farben,y=Anzahl_Baeren))+geom_point()+xlab("Anzahl Farben")+ylab("Anzahl Bären")+ggtitle("Mein erstes Streudiagramm")
 ```
+
 ---
 
 ## Balkendiagramm mit ggplot
@@ -189,6 +228,7 @@ Wir erstellen nun ein Balkendiagramm mit `ggplot`. Wir möchten den Mittelwert d
 
 
 `@pre_exercise_code`
+
 ```{r}
 library(ggplot2)
 library(reshape2)
@@ -197,6 +237,7 @@ Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3
 Farben_Mean <- colMeans(Gummibaerchen[,2:7])
 baeren_colors <- c("#8B0000", "#ffd700", "#32cd32","#ff0000","#ff9900","#ffffff")
 ```
+
 ***
 
 
@@ -225,9 +266,11 @@ Wähle alle Spalten von 2 bis 7 aus. Das geht über [,2:7]
 
 
 `@solution`
+
 ```{r}
 Farben_Mean <- colMeans(Gummibaerchen[,2:7])
 ```
+
 `@sct`
 
 ```{r}
@@ -264,9 +307,11 @@ key: e5abaf015b
 
 
 `@solution`
+
 ```{r}
 Farben_Mean <- melt(Farben_Mean)
 ```
+
 `@sct`
 
 ```{r}
@@ -303,9 +348,11 @@ Eine Variable erstellen kannst auf dem gleichen Weg, wie du eine auswählen kann
 
 
 `@solution`
+
 ```{r}
 Farben_Mean["farben"] <- rownames(Farben_Mean)
 ```
+
 `@sct`
 
 ```{r}
@@ -342,9 +389,11 @@ Ersetze _dataframe_, _variable1_ und _variable2_.
 
 
 `@solution`
+
 ```{r}
 ggplot(Farben_Mean,aes(x=farben,y=value))+geom_col()
 ```
+
 `@sct`
 
 ```{r}
@@ -381,10 +430,14 @@ Momentan sind in `geom_col()` noch keine Parameter angegeben. Füge `fill=baeren
 
 
 `@solution`
+
 ```{r}
 ggplot(Farben_Mean,aes(x=farben,y=value))+geom_col(fill=baeren_colors)
 ```
+
 `@sct`
+
 ```{r}
 success_msg("Du hast nun noch längst nicht alles gesehen. Auch einen Boxplot kannst du mit geom_boxplot() erstellen, oder Linienplot mit geom_line().")
 ```
+
