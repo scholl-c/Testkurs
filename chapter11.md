@@ -871,6 +871,7 @@ Ein Algorithmus dafür nennt sich _k-means_. Eine entsprechende Funktion namens 
 ```{r}
 library(cluster)
 library(ggplot2)
+p.cluster <- kmeans(agriculture,3)
 ```
 
 
