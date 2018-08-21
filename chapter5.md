@@ -1,5 +1,5 @@
 ---
-title: 'Voraussetzungen für statistische Tests'
+  title: "Voraussetzungen für statistische Tests"
 ---
 
 ## Normalverteilung
@@ -18,9 +18,11 @@ Eine sehr wichtige Voraussetzung ist oft die Normalverteilung. Dies kann man mit
 
 
 `@pre_exercise_code`
+
 ```{r}
 nv <- rnorm(200,30)
 ```
+
 ***
 
 
@@ -42,15 +44,18 @@ Mit `rnorm()` kannst du dir eine Reihe von Werten erzeugen, die normalverteilt s
 
 
 `@solution`
+
 ```{r}
 nv <- rnorm(200,30)
 ```
+
 `@sct`
+
 ```{r}
-test_error()
-test_object("nv")
+ex() %>% check_function("rnorm") %>% check_object("nv") %>% check_equal()
 success_msg("Guter Anfang!")
 ```
+
 
 ***
 
@@ -73,15 +78,18 @@ Das Histogramm stellt die Verteilung graphisch dar. Zeichne das Histogramm von d
 Benutze `hist()`
 
 `@solution`
+
 ```{r}
 hist(nv)
 ```
+
 `@sct`
+
 ```{r}
-test_error()
-test_student_typed("hist(nv)",not_typed_msg="Nicht ganz.")
+ex() %>% check_function("hist") %>% check_result() %>% check_equal()
 success_msg("Genau so sieht das Histogramm aus!")
 ```
+
 
 ***
 
@@ -111,13 +119,18 @@ Benutze `shapiro.test()` und übergib der Funktion unsere Normalverteilung `nv`
 
 
 `@solution`
+
 ```{r}
 shapiro.test(nv)
 ```
+
 `@sct`
+
 ```{r}
+ex() %>% check_function("shapiro.test") %>% check_result() %>% check_equal()
 success_msg("Es handelt sich, wie vermutet, um eine Normalverteilung.")
 ```
+
 
 ---
 
@@ -140,9 +153,11 @@ Prüfe diese Daten auf Normalverteilung.
 Benutze `shapiro.test()` wie zuvor auch
 
 `@solution`
+
 ```{r}
 shapiro.test(sunspots)
 ```
+
 ---
 
 ## Normalverteilt oder nicht?
@@ -187,14 +202,34 @@ Normalverteilte Daten bzw. symmetrische Verteilungen haben eine Schiefe um die 0
 `@instructions`
 Berechne beispielhaft die Schiefe von `sunspots` mit `skewness()`.
 
+`@hint`
+
+
 `@pre_exercise_code`
+
 ```{r}
 library(moments)
 ```
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
+
 ```{r}
 skewness(sunspots)
 ```
+
+`@sct`
+
+```{r}
+ex() %>% check_function("skewness") %>% check_result() %>% check_equal()
+```
+
 ---
 
 ## Schiefe von sunspots
@@ -239,9 +274,11 @@ Da die Varianzhomogenität jetzt Varianzen aus verschiedenen Gruppen vergleicht 
 
 
 `@pre_exercise_code`
+
 ```{r}
 library(car)
 ```
+
 ***
 
 
@@ -270,15 +307,18 @@ Berechne die Homogenität der Varianzen der verschiedenen Spray-Gruppen. Benutze
 
 
 `@solution`
+
 ```{r}
 leveneTest(InsectSprays$count,InsectSprays$spray)
 ```
+
 `@sct`
+
 ```{r}
-test_error()
-test_output_contains("leveneTest(InsectSprays$count,InsectSprays$spray)",incorrect_msg="Leider falsch")
+ex() %>% check_function("leveneTest") %>% check_result() %>% check_equal()
 success_msg("Super!")
 ```
+
 
 ***
 
@@ -302,6 +342,8 @@ key: faf6c8771b
 Ist der Wert p-Wert (hier Pr(>F)) größer als 0.05, dann nehmen wir Varianzhomogenität an.
 
 `@sct`
+
 ```{r}
-test_mc(1,feedback_msgs=c("keine Ahnung","keine Ahnung"))
+ex() %>% check_mc(1,feedback_msgs=c("keine Ahnung","keine Ahnung"))
 ```
+
