@@ -313,6 +313,14 @@ Wir stellen uns nun vor, wir haben ein größeres Datenset und möchten auf Norm
 
 ```{r}
 library(datasets)
+normalverteilt <- function(x) {
+  p <- shapiro.test(x)["p.value"]
+  if (p > 0.05) {
+    print("normalverteilt")
+  } else {
+    print("nicht normalverteilt")
+  }
+}
 ```
 
 
