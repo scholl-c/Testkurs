@@ -190,10 +190,30 @@ library(readr)
 Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
 
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
 ggplot(Gummibaerchen,aes(x=Anzahl_Farben,y=Anzahl_Baeren))+geom_point()
+```
+
+`@sct`
+
+```{r}
+ex() %>% {
+  check_function(.,"ggplot") %>% check_arg("data") %>% check_equal()
+  check_function(.,"aes") %>% {
+    check_arg(.,"x") %>% check_equal(eval=FALSE)
+    check_arg(.,"y") %>% check_equal(eval=FALSE)
+  }
+  check_function(.,"geom_point")
+}
 ```
 
 ---
