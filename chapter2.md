@@ -548,8 +548,8 @@ anwesend_nach_sprache <- aggregate(Studis$Angemeldet ~ Studis$Sprache,FUN=mean)
 
 ```{r}
 ex() %>% check_function("aggregate") %>% {
-  check_arg("formula") %>% check_equal()
-  check_arg("FUN") %>% check_equal()
+  check_arg(.,"formula") %>% check_equal()
+  check_arg(.,"FUN") %>% check_equal()
 } %>% check_object("anwesend_nach_sprache") %>% check_equal()
 success_msg("Bob ist sehr zufrieden und bedankt sich für deine Hilfe.")
 ```
