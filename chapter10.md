@@ -44,7 +44,7 @@ library(ggplot2)
 `@sct`
 
 ```{r}
-ex() %>% check_library("ggplot2")
+ex() %>% check_library("ggplot2",incorrect_msg="Nicht ganz",not_called_msg="Lies dir nochmal die Aufgabenstellung durch.")
 success_msg("Sehr gut!")
 ```
 
