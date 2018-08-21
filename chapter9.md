@@ -166,7 +166,7 @@ lapply(cars,Mode)
 `@sct`
 
 ```{r}
-ex() %>% check_function("lapply") %>% check_object(cars) %>% check_equal()
+ex() %>% check_function("lapply") %>% check_equal()
 ```
 
 ---
