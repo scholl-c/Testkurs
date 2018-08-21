@@ -935,6 +935,7 @@ Nun lege mit `abline(lm(formula))` die berechnete Gerade über das Streudiagramm
 `@solution`
 
 ```{r}
+plot(choco$Tafeln~choco$IQ)
 abline(lm(choco$Tafeln~choco$IQ))
 ```
 
