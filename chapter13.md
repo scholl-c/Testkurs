@@ -369,6 +369,7 @@ key: 287bec7e85
 
 ```{r}
 library(readr)
+library(ggplot2)
 Umfragedaten <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
 ```
 
