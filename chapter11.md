@@ -712,9 +712,8 @@ ggplot(agriculture, aes(x, y, label = rownames(agriculture))) +
 `@sct`
 
 ```{r}
-
+success_msg("So soll es sein")
 ```
-
 
 
 ***
