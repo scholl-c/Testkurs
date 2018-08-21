@@ -254,7 +254,7 @@ melted <- melt(mathetest)
 `@sct`
 
 ```{r}
-ex() %>% check_function("melt") %>% check_object("melted") %>% check_equal()
+ex() %>% check_function("melt")
 ```
 
 
