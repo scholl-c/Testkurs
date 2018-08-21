@@ -447,7 +447,7 @@ geschl <- as.data.frame(table(Umfragedaten$GESCHL))
 `@sct`
 
 ```{r}
-ex() %>% check_object("geschl")
+ex() %>% check_object("geschl") %>% check_equal()
 ```
 
 
@@ -503,7 +503,8 @@ ggplot(geschl,aes(x=Var1,y=Freq))+geom_col()
 `@sct`
 
 ```{r}
-ex() %>% check_function("ggplot") %>% check_arg("data") %>% check_equal() %>% {
+ex() %>% {
+  check_function(.,"ggplot") %>% check_arg("data") %>% check_equal()
   check_function(.,"aes") %>% {
     check_arg(.,"x") %>% check_equal(eval=FALSE)
     check_arg(.,"y") %>% check_equal(eval=FALSE)
