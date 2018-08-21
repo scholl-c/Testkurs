@@ -83,7 +83,7 @@ hist(Gummibaerchen$Anzahl_Farben)
 `@sct`
 
 ```{r}
-test_mc(2,feedback_msgs = c("Nein","Ja","Nein"))
+ex() %>% check_mc(2,feedback_msgs = c("Nein","Ja","Nein"))
 ```
 
 ---
@@ -157,7 +157,12 @@ hist(Gummibaerchen$Anzahl_Farben,main="Histogramm Anzahl Gummibaerchen",xlab="An
 `@sct`
 
 ```{r}
-test_error()
+ex() %>% check_function("hist") %>% {
+  check_arg(.,"x") %>% check_equal()
+  check_arg(.,"main") %>% check_equal()
+  check_arg(.,"xlab") %>% check_equal()
+  check_arg(.,"ylab") %>% check_equal()
+} 
 success_msg("Geschafft!")
 ```
 
@@ -188,6 +193,13 @@ library(readr)
 Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
 
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
@@ -197,7 +209,10 @@ plot(Gummibaerchen$Anzahl_Baeren,Gummibaerchen$Anzahl_Farben)
 `@sct`
 
 ```{r}
-test_error()
+check_function("plot") %>% {
+  check_arg(.,"x")
+  check_arg(.,"y")
+}
 success_msg("Sehr gut!")
 ```
 
@@ -235,7 +250,7 @@ plot(Gummibaerchen$Anzahl_Baeren,Gummibaerchen$Anzahl_Farben)
 `@sct`
 
 ```{r}
-test_mc(3,feedback_msgs = c("Nein, alles korrekt.","Doch, das hat geklappt","Das ist der Grund!","R passt die Skalierung in der Regel automatisch an."))
+ex() %>% check_mc(3,feedback_msgs = c("Nein, alles korrekt.","Doch, das hat geklappt","Das ist der Grund!","R passt die Skalierung in der Regel automatisch an."))
 ```
 
 ---
@@ -307,7 +322,7 @@ source("https://assets.datacamp.com/production/repositories/3196/datasets/801e40
 `@sct`
 
 ```{r}
-test_mc(2,feedback_msgs = c("Nein","Diese Art der Grafik ist ungünstig, weil wir sehr viele Kategorien haben, die 
+ex() %>% check_mc(2,feedback_msgs = c("Nein","Diese Art der Grafik ist ungünstig, weil wir sehr viele Kategorien haben, die 
   alle ähnlich groß sind. Es ist mit dem Auge schwer zu sehen, ob nun die grünen oder die 
   roten Gummibärchen im Mittel häufiger vorkommen.","Nein","Nein"))
 ```
@@ -376,8 +391,7 @@ barplot(Farben_Mean$value)
 `@sct`
 
 ```{r}
-test_error()
-test_function("barplot")
+ex() %>% check_function("barplot") %>% check_result %>% check_equal()
 success_msg("Toll gemacht!")
 ```
 
@@ -418,9 +432,11 @@ barplot(Farben_Mean$value, names.arg=Farben_Mean$rowname)
 `@sct`
 
 ```{r}
-
+ex() %>% check_function("barplot") %>% {
+  check_arg("height") %>% check_equal()
+  check_arg("names.arg") %>% check_equal()
+}
 ```
-
 
 
 ***
