@@ -357,7 +357,7 @@ Studis <- merge(Studis,Raeume)
 `@sct`
 
 ```{r}
-test_mc(3, feedback_msgs = c("Falsch, achte auf die Fragestellung", "Falsch, achte auf die Fragestellung", "Ja, genau den kann man nicht verwenden"))
+ex() %>% check_mc(3, feedback_msgs = c("Falsch, achte auf die Fragestellung", "Falsch, achte auf die Fragestellung", "Ja, genau den kann man nicht verwenden"))
 ```
 
 ---
@@ -422,7 +422,7 @@ Studis <- merge(Studis,Raeume)
 `@sct`
 
 ```{r}
-test_mc(3, feedback_msgs = c("Falsch, achte auf die Fragestellung", "Falsch, achte auf die Fragestellung", "Ja, genau den kann man nicht verwenden"))
+ex() %>% check_mc(3, feedback_msgs = c("Falsch, achte auf die Fragestellung", "Falsch, achte auf die Fragestellung", "Ja, genau den kann man nicht verwenden"))
 ```
 
 ---
@@ -462,7 +462,7 @@ Studis <- merge(Studis,Raeume)
 `@sct`
 
 ```{r}
-test_mc(4, feedback_msgs = c("Falsch","Falsch","Falsch","Richtig"))
+ex() %>% check_mc(4, feedback_msgs = c("Falsch","Falsch","Falsch","Richtig"))
 ```
 
 ---
@@ -498,7 +498,7 @@ Studis <- merge(Studis,Raeume)
 `@sct`
 
 ```{r}
-test_mc(1, feedback_msgs = c("Richtig","Falsch"))
+ex() %>% check_mc(1, feedback_msgs = c("Richtig","Falsch"))
 ```
 
 ---
@@ -531,6 +531,13 @@ Raeume <- read.csv("https://assets.datacamp.com/production/repositories/3196/dat
 Studis <- merge(Studis,Raeume)
 ```
 
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
@@ -540,7 +547,9 @@ anwesend_nach_sprache <- aggregate(Studis$Angemeldet ~ Studis$Sprache,FUN=mean)
 `@sct`
 
 ```{r}
-test_error()
-test_object("anwesend_nach_sprache")
+ex() %>% check_function("aggregate") %>% {
+  check_arg("formula") %>% check_equal()
+  check_arg("FUN") %>% check_equal()
+} %>% check_object("anwesend_nach_sprache") %>% check_equal()
 success_msg("Bob ist sehr zufrieden und bedankt sich für deine Hilfe.")
 ```
