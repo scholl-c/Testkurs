@@ -77,10 +77,28 @@ mathetest <- read_delim("https://assets.datacamp.com/production/repositories/319
 library(ggplot2)
 ```
 
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
 rauchertest1 <- aggregate(Test1~Raucher,mathetest,mean)
+```
+
+`@sct`
+
+```{r}
+ex() %>% check_function("aggregate") %>% {
+  check_arg(.,"formula") %>% check_equal(eval=FALSE)
+  check_arg(.,"data") %>% check_equal(eval=FALSE)
+  check_arg(.,"FUN") %>% check_equal(eval=FALSE)
+}  %>%
+check_object("rauchertest1") %>% check_equal()
 ```
 
 ---
