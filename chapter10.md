@@ -528,7 +528,7 @@ Farben_Mean <- melt(Farben_Mean)
 `@sct`
 
 ```{r}
-ex() %>% check_function("melt") %>% check_object("Farben_Mean") %>% check_equal()
+ex() %>% check_object("Farben_Mean") %>% check_equal()
 ```
 
 
