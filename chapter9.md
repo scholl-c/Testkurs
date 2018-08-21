@@ -420,8 +420,8 @@ ex() %>% check_fun_def("normalverteilt") %>% {
   	check_function(.,"shapiro.test")
   	check_if_else(.) %>% {
       check_cond(.)
-      check_if(.) %>% check_function("print") %>% check_equal()
-      check_else(.) %>% check_function("print") %>% check_equal()
+      check_if(.)
+      check_else(.)
    }
   }
 }
