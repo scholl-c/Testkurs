@@ -397,6 +397,13 @@ Benutze die Funktion ``class()`` und übergib der Funktion ``geschlecht``.
 geschlecht <- factor(c("m", "m", "w", "m", "w", "w", "w", "w", "w", "w", "m", "w"))
 ```
 
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
@@ -406,8 +413,7 @@ class(geschlecht)
 `@sct`
 
 ```{r}
-test_error()
-#test_output_contains("class(geschlecht)",incorrect_msg="Falsch")
+ex() %>% check_function("class") %>% check_result() %>% check_equal()
 success_msg("Juhhuu!")
 ```
 
@@ -439,6 +445,13 @@ Benutze ``as.vector()`` und übergib der Funktion ``geschlecht``.
 geschlecht <- factor(c("m", "m", "w", "m", "w", "w", "w", "w", "w", "w", "m", "w"))
 ```
 
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
@@ -448,7 +461,6 @@ geschlecht <- as.vector(geschlecht)
 `@sct`
 
 ```{r}
-test_error()
-test_object("geschlecht")
+ex() %>% check_function("as.vector") %>% check_object("geschlecht") %>% check_equal()
 success_msg("Sehr gut! Du weißt jetzt, wie du mit den Datentypen umgehen kannst.")
 ```
