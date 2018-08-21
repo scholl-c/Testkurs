@@ -885,7 +885,7 @@ plot(choco$Tafeln~choco$IQ)
 `@sct`
 
 ```{r}
-ex() %>% check_function("plot")
+ex() %>% check_function("plot") %>% check_result() %>% check_equal()
 ```
 
 
@@ -942,7 +942,7 @@ abline(lm(choco$Tafeln~choco$IQ))
 `@sct`
 
 ```{r}
-ex() %>% check_function("abline") %>% check_function("lm")
+ex() %>% check_function("abline") %>% check_function("lm") %>% check_result() %>% check_equal()
 success_msg("Du kannst nun Zusammenhänge überprüfen und lineare Regressionsmodelle zeichnen. Andere Formen, wie z.B. polynomiale Regression oder logistische Regression, werden wir in dieser Lektion nicht behandeln.")
 ```
 
