@@ -1,6 +1,6 @@
 ---
-title: 'Gruppen vergleichen'
-description: 'In vielen Experimenten geht es darum, Gruppen zu vergleichen. In der folgenden Lektion lernst du, wie du die Daten entsprechend auswerten und passende Diagramme erstellen kannst.'
+  title: "Gruppen vergleichen"
+  description: "In vielen Experimenten geht es darum, Gruppen zu vergleichen. In der folgenden Lektion lernst du, wie du die Daten entsprechend auswerten und passende Diagramme erstellen kannst."
 ---
 
 ## Boxplot mit zwei Variablen
@@ -30,14 +30,18 @@ Die vorliegenden Daten findest du in `mathetest`. Die Namen der Studenten sind d
 Bedenke, dass die Tilde impliziert, dass wir eine abhängige und eine unabhängige Variable haben. Die Gruppierungsvariable bzw. die abhängige Variable steht auf der rechten Seite der Tilde.
 
 `@pre_exercise_code`
+
 ```{r}
 library(readr)
 mathetest <- read_delim("https://assets.datacamp.com/production/repositories/3196/datasets/ade54dc40604e210c38ef19defcf24a3e6d92717/mathetest.csv", "\t", escape_double = FALSE, trim_ws = TRUE)
 ```
+
 `@sct`
+
 ```{r}
-test_mc(1,feedback_msgs=c("Super erkannt!","Nein","Falsch","Falsch"))
+ex() %>% check_mc(1,feedback_msgs=c("Super erkannt!","Nein","Falsch","Falsch"))
 ```
+
 ---
 
 ## Aggregieren
@@ -66,15 +70,19 @@ Wende `aggregate()` so an, dass du den Mittelwert (_mean_) im Ergebnis des erste
 Denke daran, dass die formula der des Boxplots entspricht.
 
 `@pre_exercise_code`
+
 ```{r}
 library(readr)
 mathetest <- read_delim("https://assets.datacamp.com/production/repositories/3196/datasets/ade54dc40604e210c38ef19defcf24a3e6d92717/mathetest.csv", "\t", escape_double = FALSE, trim_ws = TRUE)
 library(ggplot2)
 ```
+
 `@solution`
+
 ```{r}
 rauchertest1 <- aggregate(Test1~Raucher,mathetest,mean)
 ```
+
 ---
 
 ## Balkendiagramm mit zwei Gruppen
@@ -96,16 +104,20 @@ Erstelle das Balkendiagramm, denke an `+geom_col()`
 Nutze das eben erstellte aggregierte Datenset.
 
 `@pre_exercise_code`
+
 ```{r}
 library(readr)
 mathetest <- read_delim("https://assets.datacamp.com/production/repositories/3196/datasets/ade54dc40604e210c38ef19defcf24a3e6d92717/mathetest.csv", "\t", escape_double = FALSE, trim_ws = TRUE)
 rauchertest1 <- aggregate(Test1~Raucher,mathetest,mean)
 library(ggplot2)
 ```
+
 `@solution`
+
 ```{r}
 ggplot(rauchertest1,aes(x=Raucher,y=Test1))+geom_col()
 ```
+
 ---
 
 ## Gruppiertes Balkendiagramm
@@ -132,15 +144,19 @@ Welche Ausprägung der x-Achse wäre hier am Sinnvollsten?
 Du möchtest die Raucher mit den Nicht-Rauchern gut vergleichen können.
 
 `@pre_exercise_code`
+
 ```{r}
 library(readr)
 mathetest <- read_delim("https://assets.datacamp.com/production/repositories/3196/datasets/ade54dc40604e210c38ef19defcf24a3e6d92717/mathetest.csv", "\t", escape_double = FALSE, trim_ws = TRUE)
 library(ggplot2)
 ```
+
 `@sct`
+
 ```{r}
 test_mc(2,feedback_msgs = c("Überlege nochmal","Ja genau!"))
 ```
+
 ---
 
 ## Gruppiertes Balkendiagramm mit ggplot2
@@ -156,12 +172,14 @@ Nun haben wir das Problem, dass Test1, Test2 und Test3 verschiedene Spalten sind
 
 
 `@pre_exercise_code`
+
 ```{r}
 library(ggplot2)
 library(reshape2)
 library(readr)
 mathetest <- read_delim("https://assets.datacamp.com/production/repositories/3196/datasets/ade54dc40604e210c38ef19defcf24a3e6d92717/mathetest.csv", "\t", escape_double = FALSE, trim_ws = TRUE)
 ```
+
 ***
 
 
@@ -190,9 +208,11 @@ Die Funktion heißt `melt()` und stammt aus dem `reshape2`-Paket. Diese wandelt 
 
 
 `@solution`
+
 ```{r}
 melted <- melt(mathetest)
 ```
+
 `@sct`
 
 ```{r}
@@ -229,9 +249,11 @@ Der Informationsgehalt von `melted` ist identisch zum ursprünglichen Datensatz,
 
 
 `@solution`
+
 ```{r}
 head(melted)
 ```
+
 `@sct`
 
 ```{r}
@@ -268,9 +290,11 @@ Benutze die Funktion `aggregate()` und übergib die richtige Formel, den Datensa
 
 
 `@solution`
+
 ```{r}
 raucheralletests <- aggregate(value~Raucher+variable,melted,mean)
 ```
+
 `@sct`
 
 ```{r}
@@ -307,9 +331,11 @@ Nun haben wir die Daten so aufbereitet, dass sie sich als gruppiertes Balkendiag
 
 
 `@solution`
+
 ```{r}
 ggplot(raucheralletests,aes(x=variable,y=value,fill=Raucher))+geom_bar(stat="identity",position="dodge")
 ```
+
 `@sct`
 
 ```{r}
@@ -362,11 +388,13 @@ Letzendlich handelt es sich dabei nur um eine weitere Möglichkeit Gruppen in Di
 
 
 `@pre_exercise_code`
+
 ```{r}
 library(readr)
 grouped <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c10445a54acbf03ddab878c0e17978e75e5fe6b6/grouped.csv")
 library(ggplot2)
 ```
+
 ***
 
 
@@ -395,9 +423,11 @@ Benutze das Datenset `grouped`. Gib erst `+geom_bar()` an und dann `+facet_wrap(
 
 
 `@solution`
+
 ```{r}
 ggplot(grouped,aes(x=variable2,y=value,fill=value2))+geom_bar(stat="identity",position="dodge")+facet_wrap(~variable)
 ```
+
 `@sct`
 
 ```{r}
@@ -482,10 +512,12 @@ Ein Algorithmus dafür nennt sich _k-means_. Eine entsprechende Funktion namens 
 
 
 `@pre_exercise_code`
+
 ```{r}
 library(cluster)
 library(ggplot2)
 ```
+
 ***
 
 
@@ -514,9 +546,11 @@ Der erste Parameter ist `agriculture`, der zweite Parameter ist `3`
 
 
 `@solution`
+
 ```{r}
 p.cluster <- kmeans(agriculture,3)
 ```
+
 `@sct`
 
 ```{r}
@@ -553,9 +587,11 @@ Wir möchten die Cluster in einer Grafik darstellen. Dazu müssen wir zunächst 
 
 
 `@solution`
+
 ```{r}
 p.cluster$cluster <- as.factor(p.cluster$cluster)
 ```
+
 `@sct`
 
 ```{r}
@@ -585,19 +621,23 @@ Nun kann eine Grafik erstellt werden, die die Zugehörigkeit zu den Gruppen visu
 
 
 `@sample_code`
+
 ```{r}
 ggplot(agriculture, aes(x, y, label = rownames(agriculture))) + 
   scale_fill_discrete(name = "Cluster") +
   geom_label(aes(fill = p.cluster$cluster), colour = "white", 
              fontface = "bold", size=2)
 ```
+
 `@solution`
+
 ```{r}
 ggplot(agriculture, aes(x, y, label = rownames(agriculture))) + 
   scale_fill_discrete(name = "Cluster") +
   geom_label(aes(fill = p.cluster$cluster), colour = "white", 
              fontface = "bold", size=2)
 ```
+
 `@sct`
 
 ```{r}
