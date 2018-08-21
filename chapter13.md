@@ -452,6 +452,9 @@ key: f68c9d5675
 Möchte ich die durchschnittlichen Arbeitsstunden bezogen auf den Schulabschluss (Hauptschule, mittlere Reife, Hochschulreife) darstellen, so bietet sich ein ... an.
 
 
+`@hint`
+
+
 `@possible_answers`
 - Kreisdiagramm
 - Liniendiagramm
@@ -459,9 +462,9 @@ Möchte ich die durchschnittlichen Arbeitsstunden bezogen auf den Schulabschluss
 - [Balkendiagramm]
 
 `@feedbacks`
-- Nein, leider ist das meist ungeeignet und schlecht lesbar
-- Nein, die Schulabschlüsse haben keine Verbindung und sind zum Beispiel keine chronologische Sortierung
-- Nein, das Histogramm gäbe dir lediglich die Häufigkeiten der Arbeitsstunden aus, funktioniert nicht für nominalskalierte Variablen
+- Nein leider ist das meist ungeeignet und schlecht lesbar
+- Nein die Schulabschlüsse haben keine Verbindung und sind zum Beispiel keine chronologische Sortierung
+- Nein das Histogramm gäbe dir lediglich die Häufigkeiten der Arbeitsstunden aus, funktioniert nicht für nominalskalierte Variablen
 - Genau!
 
 ---
@@ -478,6 +481,9 @@ key: 33189a448e
 Beim Diagramm muss man besonders auf ... achten.
 
 
+`@hint`
+
+
 `@possible_answers`
 - [Achsenbeschriftungen und einen aussagekräftigen Titel]
 - Harmonische Farben und Verzierungen
@@ -485,7 +491,7 @@ Beim Diagramm muss man besonders auf ... achten.
 
 `@feedbacks`
 - Genau!
-- Naja, Verzierungen lenken eher ab und wirken unseriös
+- Naja Verzierungen lenken eher ab und wirken unseriös
 - Das funktioniert in der Regel ganz gut mit den Standardeinstellungen
 
 ---
