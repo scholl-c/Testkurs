@@ -331,9 +331,15 @@ ggplot(geschl,aes(x=Var1,y=Freq))+geom_col()
 `@sct`
 
 ```{r}
-
+ex() %>% {
+  check_function(.,"ggplot") %>% check_arg("data") %>% check_equal()
+  check_function(.,"aes") %>% {
+    check_arg(.,"x") %>% check_equal(eval=FALSE)
+    check_arg(.,"y") %>% check_equal(eval=FALSE)
+  }
+  check_function(.,"geom_col")
+}
 ```
-
 
 
 ---
@@ -353,6 +359,9 @@ Es gibt noch die Variante `prop.table()` zu benutzen. Damit können direkt die p
 `@instructions`
 Mache das mal für die Variable `BERUFSTAETIG`.
 
+`@hint`
+
+
 `@pre_exercise_code`
 
 ```{r}
@@ -360,10 +369,23 @@ library(readr)
 Umfragedaten <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
 ```
 
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
 prop.table(table(Umfragedaten$BERUFSTAETIG))
+```
+
+`@sct`
+
+```{r}
+ex() %>% check_function("prop.table") %>% check_function("table") %>% check_result() %>% check_equal()
 ```
 
 ---
