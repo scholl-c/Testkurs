@@ -419,9 +419,9 @@ ex() %>% check_fun_def("normalverteilt") %>% {
   check_body(.) %>% {
   	check_function(.,"shapiro.test")
   	check_if_else(.) %>% {
-      check_cond(.) %>% check_code(.,"p*\\s*>*\\s*0.05")
-      check_if(.)
-      check_else(.)
+      check_cond(.) %>% check_code(.,"p > 0.05")
+      check_if(.) %>% check_function(.,"print") %>% check_equal()
+      check_else(.) %>% check_function(.,"print") %>% check_equal()
    }
   }
 }
