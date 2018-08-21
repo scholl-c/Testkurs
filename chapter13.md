@@ -156,6 +156,9 @@ key: 07a7abf75f
 `@instructions`
 Übergib `table()` als ersten Paramter die Variable `BERUFSTAETIG` und als zweite Variable `GESCHL`. Verwende auch hier die Dollarschreibweise. Du siehst nun, getrennt nach Männern bzw. Frauen in welcher Art sie berufstätig sind.
 
+`@hint`
+
+
 `@pre_exercise_code`
 
 ```{r}
@@ -163,10 +166,23 @@ library(readr)
 Umfragedaten <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
 ```
 
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
 table(Umfragedaten$BERUFSTAETIG,Umfragedaten$GESCHL)
+```
+
+`@sct`
+
+```{r}
+ex() %>% check_function("table") %>% check_result() %>% check_equal()
 ```
 
 ---
@@ -186,6 +202,9 @@ Wenn wir diese Häufigkeiten, d.h. Häufigkeiten nominalskalierte Daten veransch
 `@instructions`
 Probiere das für die Variable Geschlecht nun aus.
 
+`@hint`
+
+
 `@pre_exercise_code`
 
 ```{r}
@@ -193,10 +212,23 @@ library(readr)
 Umfragedaten <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
 ```
 
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
 barplot(table(Umfragedaten$GESCHL))
+```
+
+`@sct`
+
+```{r}
+ex() %>% check_function("barplot") %>% check_function("table") %>% check_result() %>% check_equal()
 ```
 
 ---
