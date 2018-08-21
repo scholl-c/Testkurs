@@ -447,7 +447,7 @@ geschl <- as.data.frame(table(Umfragedaten$GESCHL))
 `@sct`
 
 ```{r}
-ex() %>% check_function("as.data.frame") %>% check_function("table") %>% check_object("geschl") %>% check_equal()
+ex() %>% check_object("geschl") %>% check_equal()
 ```
 
 
