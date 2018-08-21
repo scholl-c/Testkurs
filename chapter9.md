@@ -418,11 +418,12 @@ ex() %>% check_fun_def("normalverteilt") %>% {
   check_call(.,c(1,4,5,3,2,5,4,4,4,4,2,5,4,1,4,3,3)) %>% check_result() %>% check_equal()
   check_body(.) %>% {
   	check_function(.,"shapiro.test")
-  	check_object(.,"p")
-  	
-
+  	check_if_else() %>% {
+      check_cond(.) %>% check_code("p>0.05")
+      check_if(.) %>% check_function("print") %>% check_equal()
+      check_else(.) %>% check_function("print") %>% check_equal()
+   }
   }
-
 }
 success_msg("Super gemacht!")
 ```
