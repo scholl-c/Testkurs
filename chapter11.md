@@ -216,7 +216,16 @@ library(ggplot2)
 library(reshape2)
 library(readr)
 mathetest <- read_delim("https://assets.datacamp.com/production/repositories/3196/datasets/ade54dc40604e210c38ef19defcf24a3e6d92717/mathetest.csv", "\t", escape_double = FALSE, trim_ws = TRUE)
+melted <- melt(mathetest)
+raucheralletests <- aggregate(value~Raucher+variable,melted,mean)
 ```
+
+`@sample_code`
+
+```{r}
+
+```
+
 
 ***
 
@@ -254,7 +263,7 @@ melted <- melt(mathetest)
 `@sct`
 
 ```{r}
-ex() %>% check_function("melt")
+ex() %>% check_function("melt") %>% check_object("melted") %>% check_equal()
 ```
 
 
@@ -294,7 +303,7 @@ head(melted)
 `@sct`
 
 ```{r}
-ex() %>% check_function("head")
+ex() %>% check_function("head") %>% check_arg(.,"x") %>% check_equal()
 ```
 
 
@@ -334,9 +343,13 @@ raucheralletests <- aggregate(value~Raucher+variable,melted,mean)
 `@sct`
 
 ```{r}
-
+ex() %>% check_function("aggregate") %>% {
+  check_arg(.,"formula") %>% check_equal(eval=FALSE)
+  check_arg(.,"data") %>% check_equal(eval=FALSE)
+  check_arg(.,"FUN") %>% check_equal(eval=FALSE)
+}  %>%
+check_object("raucheralletests") %>% check_equal()
 ```
-
 
 
 ***
@@ -375,9 +388,19 @@ ggplot(raucheralletests,aes(x=variable,y=value,fill=Raucher))+geom_bar(stat="ide
 `@sct`
 
 ```{r}
-
+ex() %>% {
+  check_function(.,"ggplot") %>% check_arg("data") %>% check_equal()
+  check_function(.,"aes") %>% {
+    check_arg(.,"x") %>% check_equal(eval=FALSE)
+    check_arg(.,"y") %>% check_equal(eval=FALSE)
+    check_arg(.,"fill") %>% check_equal(eval=FALSE)
+  }
+  check_function(.,"geom_bar") %>% {
+    check_arg(.,"stat") %>% check_equal(eval=FALSE)
+    check_arg(.,"position") %>% check_equal(eval=FALSE)
+  }
+}
 ```
-
 
 
 ***
