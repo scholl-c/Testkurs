@@ -321,6 +321,7 @@ ex() %>% check_fun_def("normalverteilt") %>% {
       check_if(.) %>% check_function("print") %>% check_equal()
       check_else(.) %>% check_function("print") %>% check_equal()
    }
+  }
 }
 success_msg("Super gemacht!")
 ```
