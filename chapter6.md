@@ -270,7 +270,7 @@ ds[which(duplicated(ds)),]
 `@sct`
 
 ```{r}
-ex() %>% check_result() %>% check_equal()
+ex() %>% check_output_expr("ds[which(duplicated(ds)),]",missing_msg="Nein, das ist leider falsch.")
 ```
 
 
