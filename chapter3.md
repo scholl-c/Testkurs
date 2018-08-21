@@ -223,8 +223,7 @@ weekdays(daten)
 `@sct`
 
 ```{r}
-test_error()
-#test_output_contains("weekdays(daten)",incorrect_msg="nee")
+ex() %>% check_function("weekdays")
 success_msg("Sehr gut!")
 ```
 
