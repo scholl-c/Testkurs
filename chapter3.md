@@ -1,6 +1,6 @@
 ---
-title: Datenstrukturen
-description: 'In dieser Lektion geht es um Persönlichkeitstypen... äääh.. Datentypen.  Da gibt es die pünktlichen, gewissenhaften oder die mit der Einstellung ''wir nehmen''s wie es kommt''. Und nicht nur im echten Leben entwickelt man ein Gespür, wie mit verschiedenen Persönlichkeitstypen... äh Datentypen umzugehen ist. Eine große Quelle von Missverständnissen ist schon das Kennenlernen. Beim Einlesen von Daten legt die Funktion, die zum Einlesen benutzt wird, die Datentypen erstmal automatisch fest. Da können schon mal Vorurteile entstehen.'
+  title: "Datenstrukturen"
+  description: "In dieser Lektion geht es um Persönlichkeitstypen... äääh.. Datentypen.  Da gibt es die pünktlichen, gewissenhaften oder die mit der Einstellung 'wir nehmen's wie es kommt'. Und nicht nur im echten Leben entwickelt man ein Gespür, wie mit verschiedenen Persönlichkeitstypen... äh Datentypen umzugehen ist. Eine große Quelle von Missverständnissen ist schon das Kennenlernen. Beim Einlesen von Daten legt die Funktion, die zum Einlesen benutzt wird, die Datentypen erstmal automatisch fest. Da können schon mal Vorurteile entstehen."
 ---
 
 ## Datentypen anzeigen
@@ -23,16 +23,33 @@ Lasse dir den Datentyp von der Spalte ``speed`` von dem Datensatz ``cars`` anzei
 `@hint`
 Referenziere mit dem Dollarzeichen auf die Spalte ``speed``.
 
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
+
 ```{r}
 typeof(cars$speed)
 ```
+
 `@sct`
+
 ```{r}
-test_error()
-test_function("typeof",incorrect_msg="Leider falsch!")
+ex() %>% check_function("typeof") %>% {check_arg(.,"x") %>% check_equal()}
 success_msg("Ja, genau!")
 ```
+
 ---
 
 ## Verschiedene Datentypen
@@ -81,9 +98,11 @@ Exkurs: Falls du mal mit Zeitinverallen, der Dauer o.ä. umgehen musst, schaue d
 
 
 `@pre_exercise_code`
+
 ```{r}
 daten <- c("04.03.1999","12.06.1973","22.01.2018","09.05.2013")
 ```
+
 ***
 
 
@@ -112,15 +131,18 @@ Benutze die Funktion ``typeof()`` und wende sie auf ``daten`` an.
 
 
 `@solution`
+
 ```{r}
 typeof(daten)
 ```
+
 `@sct`
+
 ```{r}
-test_error()
-#test_student_typed("typeof(daten)",not_typed_msg="Das war leider falsch.")
+ex() %>% check_function("typeof") %>% {check_arg(.,"x") %>% check_equal()}
 success_msg("Super!")
 ```
+
 
 ***
 
@@ -150,15 +172,18 @@ Benutze ``as.Date()``. Übergib der Funktion als erstes unser Objekt ``daten`` u
 
 
 `@solution`
+
 ```{r}
 daten <- as.Date(daten,"%d.%m.%Y")
 ```
+
 `@sct`
+
 ```{r}
-test_error()
-#test_object("daten",incorrect_msg="Nee")
+ex() %>% check_function("as.Date") %>% check_object("daten") %>% check_equal()
 success_msg("Das hat gut geklappt!")
 ```
+
 
 ***
 
@@ -183,20 +208,26 @@ Die Funktion ``weekdays()`` gibt dir jetzt die Wochentage der Daten an. Wende di
 Benutze die Funktion ``weekdays()``
 
 `@sample_code`
+
 ```{r}
 daten <- as.Date(daten,"%d.%m.%Y")
 ```
+
 `@solution`
+
 ```{r}
 daten <- as.Date(daten,"%d.%m.%Y")
 weekdays(daten)
 ```
+
 `@sct`
+
 ```{r}
 test_error()
 #test_output_contains("weekdays(daten)",incorrect_msg="nee")
 success_msg("Sehr gut!")
 ```
+
 
 ---
 
@@ -213,9 +244,11 @@ Der Datentyp ``character``, d.h. Zeichenkette, ist nach der Art 'Wir nehmen's wi
 
 
 `@pre_exercise_code`
+
 ```{r}
 zahlen <- c("4","5.6","12","29","4.4")
 ```
+
 ***
 
 
@@ -244,15 +277,19 @@ Berechne die Summe von ``zahlen`` mit ``sum()``
 
 
 `@solution`
+
 ```{r}
 #sum(zahlen)
 ```
+
 `@sct`
+
 ```{r}
 #test_error()
 #test_student_typed("sum(zahlen)",not_typed_msg="Leider falsch")
 success_msg("Super gemacht!")
 ```
+
 
 ***
 
@@ -282,15 +319,19 @@ Du erhältst den Fehler, dass es sich um einen ungültigen Typ handelt. Um mit d
 
 
 `@solution`
+
 ```{r}
 zahlen <- as.double(zahlen)
 ```
+
 `@sct`
+
 ```{r}
 test_error()
 #test_object("zahlen")
 success_msg("Toll!")
 ```
+
 
 ***
 
@@ -313,20 +354,26 @@ Nun kannst du nochmal versuchen, die Summe zu berechnen.
 Berechne die Summe von ``zahlen`` mit ``sum()``
 
 `@sample_code`
+
 ```{r}
 zahlen <- as.double(zahlen)
 ```
+
 `@solution`
+
 ```{r}
 zahlen <- as.double(zahlen)
 sum(zahlen)
 ```
+
 `@sct`
+
 ```{r}
 test_error()
 #test_output_contains("sum(zahlen)",incorrect_msg="Falsch!")
 success_msg("Super gemacht!")
 ```
+
 
 ---
 
@@ -349,19 +396,25 @@ Wende die Funktion auf ``geschlecht`` an.
 Benutze die Funktion ``class()`` und übergib der Funktion ``geschlecht``.
 
 `@pre_exercise_code`
+
 ```{r}
 geschlecht <- factor(c("m", "m", "w", "m", "w", "w", "w", "w", "w", "w", "m", "w"))
 ```
+
 `@solution`
+
 ```{r}
 class(geschlecht)
 ```
+
 `@sct`
+
 ```{r}
 test_error()
 #test_output_contains("class(geschlecht)",incorrect_msg="Falsch")
 success_msg("Juhhuu!")
 ```
+
 ---
 
 ## Faktoren
@@ -385,14 +438,19 @@ Wandle ``geschlecht`` in einen Vektor um und überschreibe ``geschlecht``.
 Benutze ``as.vector()`` und übergib der Funktion ``geschlecht``.
 
 `@pre_exercise_code`
+
 ```{r}
 geschlecht <- factor(c("m", "m", "w", "m", "w", "w", "w", "w", "w", "w", "m", "w"))
 ```
+
 `@solution`
+
 ```{r}
 geschlecht <- as.vector(geschlecht)
 ```
+
 `@sct`
+
 ```{r}
 test_error()
 test_object("geschlecht")
