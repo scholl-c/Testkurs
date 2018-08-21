@@ -885,7 +885,7 @@ plot(choco$Tafeln~choco$IQ)
 `@sct`
 
 ```{r}
-ex() %>% check_function("plot") %>% check_equal()
+ex() %>% check_function("plot")
 ```
 
 
