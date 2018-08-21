@@ -839,7 +839,7 @@ na_if(ds$Alter,"")
 `@sct`
 
 ```{r}
-ex() %>% check_function("na_if") %>% check_output_expr("na_if(ds$Alter,"")",missing_msg="Noch nicht ganz richtig")
+ex() %>% check_function("na_if") %>% check_output_expr("na_if(ds$Alter,'')",missing_msg="Noch nicht ganz richtig")
 ```
 
 
