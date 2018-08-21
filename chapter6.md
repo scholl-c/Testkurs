@@ -783,10 +783,7 @@ subset(ds,Alter!="")
 `@sct`
 
 ```{r}
-ex() %>% check_function("subset") %>% {
-  check_arg(.,"x") %>% check_result() 
-  
-}
+ex() %>% check_function("subset") 
 ```
 
 
