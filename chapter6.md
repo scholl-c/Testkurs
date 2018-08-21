@@ -783,7 +783,7 @@ subset(ds,Alter!="")
 `@sct`
 
 ```{r}
-ex() %>% check_function("subset") 
+ex() %>% check_function("subset") %>% check_output_expr("subset(ds,Alter!='')", missing_msg="Da stimmt noch etwas nicht.")
 ```
 
 
