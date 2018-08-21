@@ -91,8 +91,8 @@ key: 7d6d299a32
 Nun werden wir dieses Histogramm plotten mit `ggplot2`. In der vorherigen Lektion hast du gelernt, wie wir das mit dem einfachen Befehl `hist()` schon können. In `ggplot2` besteht ein einfacher Befehl aus drei Dingen. 
 
 - Erstens, der Angabe mit welchem Datensatz du arbeitest. 
-- Zweitens, welche Variablen geplottet werden sollen. Bei mehreren Variablen wird auch die Angabe auf welche 
-  Achse jeweils welche Variable gelegt wird benötigt. 
+- Zweitens, welche Variablen geplottet werden sollen. Bei mehreren Variablen wird auch die Angabe, auf welche 
+  Achse jeweils welche Variable gelegt wird, benötigt. 
 - Drittens, **wie** die Daten geplottet werden sollen, also z.B. als Histogramm, als Balken, als Linien oder als Punkte. 
 
 Für unser Histogramm reicht die Angabe eines Datensatzes und einer Variablen. Denn bei der Form eines Histogramms ist festgelegt, dass die y-Achse die Häufigkeit der Vorkommen der einzelnen Ausprägungen angibt. Zusätzlich geben wir `geom_histogram()` als dritten Bestandteil an.
@@ -112,10 +112,27 @@ library(readr)
 Gummibaerchen <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/a8099a16ced9996e5bc9112d62c8bd47c97ae6bd/Gummibaerchen.csv")
 ```
 
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
 ggplot(Gummibaerchen,aes(Anzahl_Farben))+geom_histogram(binwidth=1)
+```
+
+`@sct`
+
+```{r}
+ex() %>% {
+  check_function(.,"ggplot") %>% check_arg("data") %>% check_equal()
+  check_function(.,"aes") %>% check_arg(.,"x") %>% check_equal(eval=FALSE)
+  check_function(.,"geom_histogram") %>% check_arg(.,"binwidth") %>% check_equal(eval=FALSE)
+}
 ```
 
 ---
