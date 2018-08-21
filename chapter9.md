@@ -215,7 +215,7 @@ sapply(cars,Mode)
 `@sct`
 
 ```{r}
-ex() %>% check_function("sapply") %>% check_object("cars") %>% check_equal()
+ex() %>% check_function("sapply") %>% check_result() %>% check_equal()
 ```
 
 ---
