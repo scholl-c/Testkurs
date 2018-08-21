@@ -157,7 +157,7 @@ plot(choco$Tafeln,choco$IQ)
 `@sct`
 
 ```{r}
-ex() %>% check_function("plot") %>% check_arg("x") %>% check_arg("y") %>% check_result() %>% check_equal()
+ex() %>% check_function("plot") %>% check_arg("x") %>% check_arg("y") %>% check_equal()
 success_msg("Super!")
 ```
 
@@ -719,7 +719,7 @@ cor.test(choco$Tafeln,choco$IQ,method="spearman")
 `@sct`
 
 ```{r}
-ex() %>% check_function("cor.test") %>% check_arg("method") %>% check_result() %>% check_equal()
+ex() %>% check_function("cor.test") %>% check_arg("method") %>% check_equal()
 ```
 
 
