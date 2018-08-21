@@ -278,14 +278,13 @@ Berechne die Summe von ``zahlen`` mit ``sum()``
 `@solution`
 
 ```{r}
-#sum(zahlen)
+sum(zahlen)
 ```
 
 `@sct`
 
 ```{r}
-#test_error()
-#test_student_typed("sum(zahlen)",not_typed_msg="Leider falsch")
+ex() %>% check_function("sum") %>% check_results() %>% check_equal()
 success_msg("Super gemacht!")
 ```
 
