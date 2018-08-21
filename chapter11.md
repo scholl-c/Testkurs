@@ -130,10 +130,30 @@ rauchertest1 <- aggregate(Test1~Raucher,mathetest,mean)
 library(ggplot2)
 ```
 
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
 ggplot(rauchertest1,aes(x=Raucher,y=Test1))+geom_col()
+```
+
+`@sct`
+
+```{r}
+ex() %>% {
+  check_function(.,"ggplot") %>% check_arg("data") %>% check_equal()
+  check_function(.,"aes") %>% {
+    check_arg(.,"x") %>% check_equal(eval=FALSE)
+    check_arg(.,"y") %>% check_equal(eval=FALSE)
+  }
+  check_function(.,"geom_col")
+}
 ```
 
 ---
@@ -172,7 +192,7 @@ library(ggplot2)
 `@sct`
 
 ```{r}
-test_mc(2,feedback_msgs = c("Überlege nochmal","Ja genau!"))
+ex() %>% check_mc(2,feedback_msgs = c("Überlege nochmal","Ja genau!"))
 ```
 
 ---
