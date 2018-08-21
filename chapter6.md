@@ -993,6 +993,7 @@ key: 3a275d53c6
 
 ```{r}
 library(readr)
+library(dplyr)
 ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ds$Alter <- as.integer(ds$Alter)
 ds$Alter <- na_if(ds$Alter,"")
