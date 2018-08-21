@@ -501,6 +501,14 @@ ggplot(Farben_Mean,aes(x=farben,y=value))+geom_col(fill=baeren_colors)
 `@sct`
 
 ```{r}
+ex() %>% {
+  check_function(.,"ggplot") %>% check_arg("data") %>% check_equal()
+  check_function(.,"aes") %>% {
+    check_arg(.,"x") %>% check_equal(eval=FALSE)
+    check_arg(.,"y") %>% check_equal(eval=FALSE)
+  }
+  check_function(.,"geom_col") %>% check_arg("fill") %>% check_equal()
+}
 success_msg("Du hast nun noch längst nicht alles gesehen. Auch einen Boxplot kannst du mit geom_boxplot() erstellen, oder Linienplot mit geom_line().")
 ```
 
