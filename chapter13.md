@@ -1,5 +1,5 @@
 ---
-title: 'Umfragen analysieren'
+  title: "Umfragen analysieren"
 ---
 
 ## Forschungsfrage
@@ -77,15 +77,22 @@ Schau dir die erhobenen Daten in `Umfragedaten` an. Ist `na.omit(Umfragedaten)` 
 - Ja
 - [Nein]
 
+`@hint`
+
+
 `@pre_exercise_code`
+
 ```{r}
 library(readr)
 Umfragedaten <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
 ```
+
 `@sct`
+
 ```{r}
-test_mc(2,feedback_msgs=c("Falsch","Richtig, wir schließen so zu viele Personen aus. Auch wenn die Personen nur einen Teil der Angaben gemacht haben, können wir sie in den entsprechenden Analysen noch einbeziehen."))
+ex() %>% check_mc(2,feedback_msgs=c("Falsch","Richtig, wir schließen so zu viele Personen aus. Auch wenn die Personen nur einen Teil der Angaben gemacht haben, können wir sie in den entsprechenden Analysen noch einbeziehen."))
 ```
+
 ---
 
 ## Häufigkeiten
@@ -103,15 +110,35 @@ Um uns einen Überblick über die Daten zu verschaffen, hast du ja bereits den B
 `@instructions`
 Benutze `table()` um dir anzuzeigen, wie viele männliche und wie viele weibliche Personen mitgemacht haben. Die entsprechende Variable heißt `GESCHL`. Übergib `table()` diese Variable, vergiss nicht, das Datenset zu spezifizieren. Benutze die Dollar-Schreibweise.
 
+`@hint`
+
+
 `@pre_exercise_code`
+
 ```{r}
 library(readr)
 Umfragedaten <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
 ```
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
+
 ```{r}
 table(Umfragedaten$GESCHL)
 ```
+
+`@sct`
+
+```{r}
+ex() %>% check_function("table") %>% check_result() %>% check_equal()
+```
+
 ---
 
 ## Kreuztabellen
@@ -130,14 +157,18 @@ key: 07a7abf75f
 Übergib `table()` als ersten Paramter die Variable `BERUFSTAETIG` und als zweite Variable `GESCHL`. Verwende auch hier die Dollarschreibweise. Du siehst nun, getrennt nach Männern bzw. Frauen in welcher Art sie berufstätig sind.
 
 `@pre_exercise_code`
+
 ```{r}
 library(readr)
 Umfragedaten <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
 ```
+
 `@solution`
+
 ```{r}
 table(Umfragedaten$BERUFSTAETIG,Umfragedaten$GESCHL)
 ```
+
 ---
 
 ## Nominalskalierte Daten plotten
@@ -156,14 +187,18 @@ Wenn wir diese Häufigkeiten, d.h. Häufigkeiten nominalskalierte Daten veransch
 Probiere das für die Variable Geschlecht nun aus.
 
 `@pre_exercise_code`
+
 ```{r}
 library(readr)
 Umfragedaten <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
 ```
+
 `@solution`
+
 ```{r}
 barplot(table(Umfragedaten$GESCHL))
 ```
+
 ---
 
 ## Nominalskalierte Daten plotten mit ggplot2
@@ -179,10 +214,12 @@ key: 287bec7e85
 
 
 `@pre_exercise_code`
+
 ```{r}
 library(readr)
 Umfragedaten <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
 ```
+
 ***
 
 
@@ -213,9 +250,11 @@ Möchtest du dasselbe mit dem Paket ggplot2 plotten, so wandle stattdessen zunä
 
 
 `@solution`
+
 ```{r}
 geschl <- as.data.frame(table(Umfragedaten$GESCHL))
 ```
+
 `@sct`
 
 ```{r}
@@ -253,9 +292,11 @@ Nun kannst du den Plot erstellen. Benutze +geom_col() und den eben erstellten Da
 
 
 `@solution`
+
 ```{r}
 ggplot(geschl,aes(x=Var1,y=Freq))+geom_col()
 ```
+
 `@sct`
 
 ```{r}
@@ -282,14 +323,18 @@ Es gibt noch die Variante `prop.table()` zu benutzen. Damit können direkt die p
 Mache das mal für die Variable `BERUFSTAETIG`.
 
 `@pre_exercise_code`
+
 ```{r}
 library(readr)
 Umfragedaten <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
 ```
+
 `@solution`
+
 ```{r}
 prop.table(table(Umfragedaten$BERUFSTAETIG))
 ```
+
 ---
 
 ## Grafiken und Tests
