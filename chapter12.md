@@ -22,6 +22,9 @@ _Hinweis: Bei Cohens Kappa auf Nominalskalenniveau schreiben wir 'unweighted'_
 `@instructions`
 Wie übereinstimmend haben die Studenten bewertet? Berechne den gewichteten Cohens Kappa  mit `kappa2(interrater[,c(2,3)],'equal')`. Für `kappa2` wurde das Paket `irr` geladen.
 
+`@hint`
+
+
 `@pre_exercise_code`
 
 ```{r}
@@ -29,10 +32,26 @@ library(irr)
 interrater <- read.csv("https://assets.datacamp.com/production/repositories/3196/datasets/32fe40c479aa377d8af347dd26bcd1d7ed5d636e/interrater.csv")
 ```
 
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
 
 ```{r}
 kappa2(interrater[,c(2,3)],'equal')
+```
+
+`@sct`
+
+```{r}
+ex() %>% check_function("kappa2") %>% {
+  check_arg(.,"ratings") %>% check_equal()
+  check_arg(.,"weight") %>% check_equal()
+}
 ```
 
 ---
