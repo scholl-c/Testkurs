@@ -490,9 +490,20 @@ ggplot(grouped,aes(x=variable2,y=value,fill=value2))+geom_bar(stat="identity",po
 `@sct`
 
 ```{r}
-
+ex() %>% {
+  check_function(.,"ggplot") %>% check_arg("data") %>% check_equal()
+  check_function(.,"aes") %>% {
+    check_arg(.,"x") %>% check_equal(eval=FALSE)
+    check_arg(.,"y") %>% check_equal(eval=FALSE)
+    check_arg(.,"fill") %>% check_equal(eval=FALSE)
+  }
+  check_function(.,"geom_bar") %>% {
+    check_arg(.,"stat") %>% check_equal(eval=FALSE)
+    check_arg(.,"position") %>% check_equal(eval=FALSE)
+  }
+  check_function(.,"facet_wrap") %>% check_arg("facets") %>% check_equal()
+}
 ```
-
 
 
 ***
