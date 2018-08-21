@@ -1,5 +1,5 @@
 ---
-title: Datenvorverarbeitung
+  title: "Datenvorverarbeitung"
 ---
 
 ## Dubletten
@@ -27,14 +27,31 @@ Mit der Funktion `duplicated()` kannst du doppelte Einträge finden. Die Funktio
 Innerhalb der runden Klammern von `duplicated()` muss der Name deines Datensatzes.
 
 `@pre_exercise_code`
+
 ```{r}
 library(readr)
 ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
+
 ```{r}
 duplicated(ds)
 ```
+
+`@sct`
+
+```{r}
+ex() %>% check_function("duplicated")
+```
+
 ---
 
 ## Duplikate entfernen
@@ -50,10 +67,12 @@ Wir möchten nun Duplikate finden, überprüfen und ausschließen.
 
 
 `@pre_exercise_code`
+
 ```{r}
 library(readr)
 ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
+
 ***
 
 
@@ -82,15 +101,16 @@ Du siehst, dass es nun einen Fall mit TRUE gibt. Mit `table(duplicated(ds))` kan
 
 
 `@solution`
+
 ```{r}
 table(duplicated(ds))
 ```
+
 `@sct`
 
 ```{r}
-
+ex() %>% check_function("table") %>% check_function("duplicated")
 ```
-
 
 
 ***
@@ -121,15 +141,16 @@ Ersetze `table` mit `which` in `table(duplicated(ds))`
 
 
 `@solution`
+
 ```{r}
 which(duplicated(ds))
 ```
+
 `@sct`
 
 ```{r}
-
+ex() %>% check_function("which") %>% check_function("duplicated")
 ```
-
 
 
 ***
@@ -160,15 +181,16 @@ Die Zeilenauswahl funktioniert über `datensatz[zeile,]`
 
 
 `@solution`
+
 ```{r}
 ds[which(duplicated(ds)),]
 ```
+
 `@sct`
 
 ```{r}
-
+ex() %>% check_result() %>% check_equal()
 ```
-
 
 
 ***
@@ -199,15 +221,16 @@ Benutze den Befehl aus der vorherigen Aufgabe. Füge vor die Zeilenauswahl, aber
 
 
 `@solution`
+
 ```{r}
 ds <- ds[-which(duplicated(ds)),]
 ```
+
 `@sct`
 
 ```{r}
-
+ex() %>% check_object("ds")
 ```
-
 
 
 ---
@@ -289,14 +312,31 @@ Berechne den Altersdurchschnitt mit der Funktion `mean()`
 Auf die Spalte `Alter` greifst du mit `ds$Alter` zu.
 
 `@pre_exercise_code`
+
 ```{r}
 library(readr)
 ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
+
 ```{r}
 mean(ds$Alter)
 ```
+
+`@sct`
+
+```{r}
+ex() %>% check_function("mean") %>% check_result() %>% check_equal()
+```
+
 ---
 
 ## NA
@@ -324,14 +364,31 @@ Versuche nochmal den Durchschnitt zu berechnen, setze aber `na.rm` auf TRUE.
 Gib zusätzlich zur vorherigen Berechnung noch `na.rm=TRUE` an.
 
 `@pre_exercise_code`
+
 ```{r}
 library(readr)
 ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
+
 ```{r}
 mean(ds$Alter,na.rm=TRUE)
 ```
+
+`@sct`
+
+```{r}
+ex() %>% check_function("mean") %>% check_arg("na.rm") %>% check_equal()
+```
+
 ---
 
 ## Manipulationen aufdecken
@@ -353,14 +410,31 @@ Du möchtest nun überprüfen, ob keiner deine Umfrage manipuliert hat und nur d
 Innerhalb von unique() muss die Spalte 'Sprachauswahl' ausgewählt werden.
 
 `@pre_exercise_code`
+
 ```{r}
 library(readr)
 ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
+
+`@sample_code`
+
+```{r}
+
+```
+
+
 `@solution`
+
 ```{r}
 unique(ds$Sprachauswahl)
 ```
+
+`@sct`
+
+```{r}
+ex() %>% check_function("unique")
+```
+
 ---
 
 ## Leere Angaben
@@ -376,10 +450,12 @@ Puh! Soweit scheint alles gut zu sein!
 
 
 `@pre_exercise_code`
+
 ```{r}
 library(readr)
 ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
+
 ***
 
 
@@ -408,9 +484,11 @@ Innerhalb von `unique()` muss die Spalte `Alter` ausgewählt werden.
 
 
 `@solution`
+
 ```{r}
 unique(ds$Alter)
 ```
+
 `@sct`
 
 ```{r}
@@ -449,9 +527,11 @@ Benutze `Alter!=""` als Bedingung
 
 
 `@solution`
+
 ```{r}
 subset(ds,Alter!="")
 ```
+
 `@sct`
 
 ```{r}
@@ -488,9 +568,11 @@ Benutze als erstes Argument `ds$Alter`, als zweites Argument `""` und trenne die
 
 
 `@solution`
+
 ```{r}
 na_if(ds$Alter,"")
 ```
+
 `@sct`
 
 ```{r}
@@ -547,14 +629,18 @@ key: 6c73942d08
 Benutze `as.integer()` und parse damit das Alter als Integer-Werte. Folglich wirst du sehen, dass jetzt die leeren Felder zu _NA_ geworden sind. Du musst also in dieser Spalte keine leeren Felder mehr berücksichtigen.
 
 `@pre_exercise_code`
+
 ```{r}
 library(readr)
 ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
+
 `@solution`
+
 ```{r}
 ds$Alter <- as.integer(ds$Alter)
 ```
+
 ---
 
 ## Ausreißer ausschließen
@@ -570,11 +656,13 @@ key: 3a275d53c6
 
 
 `@pre_exercise_code`
+
 ```{r}
 library(readr)
 ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ds$Alter <- as.integer(ds$Alter)
 ```
+
 ***
 
 
@@ -603,9 +691,11 @@ Nutze die Funktion `boxplot()`
 
 
 `@solution`
+
 ```{r}
 boxplot(ds$Alter)
 ```
+
 `@sct`
 
 ```{r}
@@ -642,9 +732,11 @@ Nutze `shapiro.test()`
 
 
 `@solution`
+
 ```{r}
 shapiro.test(ds$Alter)
 ```
+
 `@sct`
 
 ```{r}
@@ -711,9 +803,11 @@ Es geht immer noch um die Altersverteilung
 
 
 `@solution`
+
 ```{r}
 mean(ds$Alter)+4*sd(ds$Alter)
 ```
+
 `@sct`
 
 ```{r}
@@ -750,9 +844,11 @@ Berechne ebenso die Untergrenze.
 
 
 `@solution`
+
 ```{r}
 mean(ds$Alter)-4*sd(ds$Alter)
 ```
+
 `@sct`
 
 ```{r}
@@ -789,9 +885,11 @@ Benutze `subset()`
 
 
 `@solution`
+
 ```{r}
 ds_bereinigt <- subset(ds,Alter>68)
 ```
+
 `@sct`
 
 ```{r}
@@ -826,20 +924,26 @@ Rekodiere die Sprachauswahl neu, wobei 'ger' zu 0 und 'eng' zu 1 wird. Benutze d
 Vergiss nicht, die Spalte mit den neuen Werten zu überschreiben.
 
 `@pre_exercise_code`
+
 ```{r}
 library(dplyr)
 library(readr)
 ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
+
 `@solution`
+
 ```{r}
 ds$Sprachauswahl <- recode_factor(ds$Sprachauswahl,"eng"=1,"ger"=0)
 ```
+
 `@sct`
+
 ```{r}
 success_msg("Wie immer, wenn du die Original-Werte nicht verlieren möchtest, kannst du eine neue 
   Spalte erstellen. Im Folgenden werden wir eine neue Spalte erstellen. Außerdem gibt es ähnliche Funktionen wie revalue oder mapvalues.")
 ```
+
 ---
 
 ## Rekodieren
@@ -865,15 +969,19 @@ Halte dich an die Vorlage. Bedenke, dass das Alter von 18 (und 12) in der Alters
 Bei den Senioren brauchst du nur eine Bedingung d.h. keine verknüpfte Bedingung.
 
 `@pre_exercise_code`
+
 ```{r}
 library(readr)
 ds <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/c55e85e8c8049dccc84c8b882f7fc7c4c0d80b53/ds.csv")
 ```
+
 `@solution`
+
 ```{r}
 ds$Altersgruppe[ds$Alter>11 & ds$Alter<19] <- "Teenager"
 ds$Altersgruppe[ds$Alter>55] <- "Senioren"
 ```
+
 ---
 
 ## Warum Rekodieren?
