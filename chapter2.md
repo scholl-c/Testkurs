@@ -141,7 +141,7 @@ colnames(Studis)[1] <- "Veranstaltung"
 `@sct`
 
 ```{r}
-ex() %>% check_function("colnames") %>% check_object("Studis") %>% check_column(.,"1") %>% check_equal()
+ex() %>% check_function("colnames") %>% check_object("Studis") %>% check_equal()
 success_msg("Toll gemacht!")
 ```
 
