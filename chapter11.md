@@ -743,13 +743,16 @@ key: bf57b500a7
 ```
 
 
-
-
-
-`@instructions`
 Wenn du davon ausgehst, dass Langschläfer weniger gut mit Tests zu früher Stunde 
   umgehen können und daher schlechter abschneiden als die Frühaufsteher, was kannst du dann 
   über den dritten Test im Vergleich zu dem ersten Test sagen? (rein spekulativ)
+
+
+`@instructions`
+- der dritte Test war möglicherweise zu früher Stunde
+- der erste Test war möglicherweise zu früher Stunde
+- Langschläfer haben immer besser abgeschnitten
+- Frühaufsteher haben immer besser abgeschnitten
 
 `@hint`
 
@@ -778,7 +781,7 @@ Wenn du davon ausgehst, dass Langschläfer weniger gut mit Tests zu früher Stun
 `@sct`
 
 ```{r}
-
+ex() %>% check_mc(1,feedback_msgs=c("Richtig!","Schau nochmal nach","Wirklich?","Wirklich?"))
 ```
 
 
@@ -800,15 +803,16 @@ key: 6d52f0e0dd
 ```
 
 
-
-
-
-`@instructions`
 Könnte dieser Unterschied zwischen Langschläfern und Frühaufstehern auch 
   rein zufällig zustande gekommen sein?
 
-`@hint`
 
+`@instructions`
+- Ja
+- Nein
+
+`@hint`
+Ob es ein signifikanter Unterschied ist, findest du nur durch entsprechende Tests heraus.
 
 `@pre_exercise_code`
 
@@ -834,7 +838,7 @@ Könnte dieser Unterschied zwischen Langschläfern und Frühaufstehern auch
 `@sct`
 
 ```{r}
-
+ex() %>% check_mc(1,feedback_msgs=c("Genau, könnte es!","Wieso schließt du das aus?"))
 ```
 
 
@@ -1089,13 +1093,16 @@ key: 24484f91fc
 
 
 
-
-
-`@instructions`
 Welche Länder wurden nicht derselben Gruppe zugeordnet? Du weißt nun, wie du mit Gruppen in statistischen Erhebungen umgehen kannst.
 
-`@hint`
+`@instructions`
+- Niederlande und Spanien
+- Portugal und Griechenland
+- Frankreich und Deutschland
+- Irland und Spanien
 
+`@hint`
+Die Farben kennzeichnen die Gruppen. Alternativ kannst du auch in p.cluster nachschauen.
 
 `@pre_exercise_code`
 
@@ -1121,7 +1128,7 @@ Welche Länder wurden nicht derselben Gruppe zugeordnet? Du weißt nun, wie du m
 `@sct`
 
 ```{r}
-
+ex() %>% check_mc(1,feedback_msgs=c("Richtig!","Nein, das war es nicht.","Nein, das war es nicht.","Nein, das war es nicht."))
 ```
 
 
