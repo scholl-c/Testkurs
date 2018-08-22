@@ -1146,13 +1146,14 @@ key: 9558e8d289
 
 
 
-
-
-`@instructions`
 Können wir hier für das Alter nach dem Shapiro-Wilk-Test eine Normalverteilung annehmen?
 
-`@hint`
+`@instructions`
+- Ja
+- Nein
 
+`@hint`
+Ist p größer als 0.05?
 
 `@pre_exercise_code`
 
@@ -1178,7 +1179,7 @@ Können wir hier für das Alter nach dem Shapiro-Wilk-Test eine Normalverteilung
 `@sct`
 
 ```{r}
-
+ex() %>% check_mc(2,feedback_msgs=c("Falsch","Richtig!"))
 ```
 
 
