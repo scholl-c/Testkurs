@@ -3,17 +3,17 @@ description: Herzlich Willkommen zum Kurs Statistik mit R!
 programming_language: r
 from: r-base-prod:v1.0.0
 datasets:
-  Gummibaerchen.csv: Gummibaerchen
-  README.md: Readme
-  Raeume.csv: Raeume
-  Studierendenzaehlung.csv: Studierendenzaehlung
+  Gummibaerchen.csv: Gummibärchenzählung
+  README.md: __IGNORE__
+  Raeume.csv: Räume
+  Studierendenzaehlung.csv: Studierendenzählung
   Umfragedaten.csv: Umfragedaten
-  choco.csv: Choco
-  cronbach.csv: Cronbach
-  ds.csv: Ds
-  grouped.csv: Grouped
-  gummibaeren_verteilung_kreis.R: Gummibaeren verteilung kreis
-  histogramm.R: Histogramm
-  interrater.csv: Interrater
+  choco.csv: Schokolade und IQ
+  cronbach.csv: Cronbachs Alpha Daten
+  ds.csv: Datensatz
+  grouped.csv: Daten für Gruppierung
+  gummibaeren_verteilung_kreis.R: __IGNORE__
+  histogramm.R: __IGNORE__
+  interrater.csv: Interrater Daten
   mathetest.csv: Mathetest
   patienten.csv: Patienten
