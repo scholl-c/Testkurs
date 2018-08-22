@@ -564,10 +564,11 @@ key: 06981c74ef
 
 
 
-
+Haben die Raucher immer durchschnittlich besser abgeschnitten?
 
 `@instructions`
-Haben die Raucher immer durchschnittlich besser abgeschnitten?
+- Ja
+- Nein
 
 `@hint`
 
@@ -596,7 +597,7 @@ Haben die Raucher immer durchschnittlich besser abgeschnitten?
 `@sct`
 
 ```{r}
-
+ex() %>% check_mc(2,feedback_msgs=c("Leider falsch","Ja, genau!"))
 ```
 
 
