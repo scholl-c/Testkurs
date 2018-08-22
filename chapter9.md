@@ -1,5 +1,6 @@
 ---
 title: 'Funktionen und Schleifen'
+description: "Es gibt Funktionen, die möchtest du z.B. auf jede Spalte anwenden. Manch einer arbeitet dann mit Copy & Paste. Wie schön, dass R dir Funktionen anbietet, die das besser können."
 ---
 
 ## Durchschnitt aller Spalten

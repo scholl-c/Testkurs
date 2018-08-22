@@ -1,6 +1,6 @@
 ---
 title: Syntax
-description: 'Einfache Rechenoperationen und Zuweisungen'
+description: 'In dieser Lektion lernst du, wie einfache Rechenoperationen und Zuweisungen in R funktionieren. Das ist die Grundlage für das Arbeiten mit R.'
 ---
 
 ## Arithmetische Operationen

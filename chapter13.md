@@ -1,5 +1,6 @@
 ---
 title: 'Umfragen analysieren'
+description: "Wie ein Handwerker, hast du nun einen gefüllten Werkzeugkasten. Aber was machst du, wenn du vor einem Problem stehst? Woher weißt du, welchen Hammer, welcher Bohrer, welche Schrauben du benutzen musst? Diese Lektion wiederholt nicht die Kenntnisse aus anderen Lektionen, sondern ergänzt diese Werkzeuge und versucht sie zu verknüpfen."
 ---
 
 ## Forschungsfrage

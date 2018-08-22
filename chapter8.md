@@ -1,5 +1,6 @@
 ---
 title: 'Test auf Zusammenhänge'
+description: "In einer anderen Lektion haben wir Unterschiede in den zentralen Tendenzen zweier Stichproben untersucht. Nun möchten wir Zusammenhänge zweier (oder mehrerer) Variablen untersuchen."
 ---
 
 ## Skalenniveau der Variablen

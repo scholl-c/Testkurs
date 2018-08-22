@@ -1,6 +1,6 @@
 ---
 title: 'Grafiken mit ggplot2'
-description: 'Im ersten Teil hast du gelernt, wie du einfache Plots erstellen kannst. In diesem zweiten Teil wirst du lernen, wie du mit der Bibliothek ggplot2 Grafiken erstellst. Dies ist eine Bibliothek mit mehr Möglichkeiten in einfacher Art und Weise die Daten darzustellen.'
+description: 'Im ersten Teil zu Grafiken hast du gelernt, wie du einfache Plots erstellen kannst. In diesem zweiten Teil wirst du lernen, wie du mit der Bibliothek ggplot2 Grafiken erstellst. Dies ist eine Bibliothek mit mehr Möglichkeiten in einfacher Art und Weise die Daten darzustellen.'
 ---
 
 ## Paket laden

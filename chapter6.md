@@ -1,5 +1,6 @@
 ---
 title: Datenvorverarbeitung
+description: "In dieser Lektion lernst du, wie du Rohdaten für weitere Analysen vorbereitest und auch bereinigst."
 ---
 
 ## Dubletten

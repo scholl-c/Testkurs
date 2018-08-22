@@ -1,5 +1,6 @@
 ---
 title: 'Besondere Tests'
+description: "Du lernst zwei besondere, nützliche Tests kennen: die Interrater-Reliabilität und Cronbachs Alpha."
 ---
 
 ## Interrater-Reliabilität

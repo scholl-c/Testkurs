@@ -1,5 +1,6 @@
 ---
 title: 'Voraussetzungen für statistische Tests'
+description: "Du lernst, Daten zu untersuchen hinsichtlich ihrer Eignung für bestimmte statistische Tests."
 ---
 
 ## Normalverteilung
