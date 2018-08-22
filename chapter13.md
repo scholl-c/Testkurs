@@ -417,8 +417,8 @@ key: 08e719b191
 
 `@instructions`
 Möchtest du dasselbe mit dem Paket ggplot2 plotten, so wandle stattdessen zunächst 
-  das Ergebnis von table() mit as.data.frame() in ein Dataframe um und speichere es. Mach das 
-  mal mit der Variable Geschlecht und speichere es unter 'geschl'.
+  das Ergebnis von ``table()`` mit ``as.data.frame()`` in ein Dataframe um und speichere es. Mach das 
+  mal mit der Variable Geschlecht (Hinweis: Das Dataframe heißt ``Umfragedaten``) und speichere es unter 'geschl'.
 
 `@hint`
 
@@ -473,7 +473,7 @@ key: c4c62dddd6
 
 
 `@instructions`
-Nun kannst du den Plot erstellen. Benutze +geom_col() und den eben erstellten Datensatz. 
+Nun kannst du den Plot erstellen. Benutze ``+geom_col()`` und den eben erstellten Datensatz. 
   Gib als x 'Var1' und als y 'Freq' an.
 
 `@hint`
