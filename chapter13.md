@@ -371,6 +371,7 @@ key: 287bec7e85
 library(readr)
 library(ggplot2)
 Umfragedaten <- read_csv("https://assets.datacamp.com/production/repositories/3196/datasets/326619bab6bb5d58bead12aa4403a2103f2cddcf/Umfragedaten.csv")
+geschl <- as.data.frame(table(Umfragedaten$GESCHL))
 ```
 
 
@@ -447,7 +448,7 @@ geschl <- as.data.frame(table(Umfragedaten$GESCHL))
 `@sct`
 
 ```{r}
-#ex() %>% check_object("geschl")
+ex() %>% check_object("geschl")
 success_msg("Herzlichen Glückwunsch! Mach genauso weiter!")
 ```
 
