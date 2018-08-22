@@ -1236,7 +1236,7 @@ mean(ds$Alter)+4*sd(ds$Alter)
 `@sct`
 
 ```{r}
-ex() %>% check_operator("+",index=1) %>% check_operator("*",index=2) %>% check_function("mean") %>% check_function("sd") %>% check_result() %>% check_equal()
+ex() %>% check_operator("+") %>% check_operator("*") %>% check_function("mean") %>% check_function("sd") %>% check_result() %>% check_equal()
 ```
 
 
@@ -1291,7 +1291,7 @@ mean(ds$Alter)-4*sd(ds$Alter)
 `@sct`
 
 ```{r}
-ex() %>% check_operator("-",index=1) %>% check_operator("*",index=2) %>% check_function("mean") %>% check_function("sd") %>% check_result() %>% check_equal()
+ex() %>% check_operator("-") %>% check_operator("*") %>% check_function("mean") %>% check_function("sd") %>% check_result() %>% check_equal()
 ```
 
 
