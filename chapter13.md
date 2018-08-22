@@ -476,7 +476,7 @@ key: c4c62dddd6
 
 `@instructions`
 Nun kannst du den Plot erstellen. Benutze ``+geom_col()`` und den eben erstellten Datensatz. 
-  Gib als x 'Var1' und als y 'Freq' an.
+  Gib als ``x`` 'Var1' und als ``y`` 'Freq' an.
 
 `@hint`
 
