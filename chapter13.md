@@ -447,7 +447,8 @@ geschl <- as.data.frame(table(Umfragedaten$GESCHL))
 `@sct`
 
 ```{r}
-ex() %>% check_object("geschl")
+#ex() %>% check_object("geschl")
+success_msg("Herzlichen Glückwunsch! Mach genauso weiter!")
 ```
 
 
