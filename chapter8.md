@@ -458,7 +458,7 @@ key: bd4fd1e4b3
 ```
 
 
-
+Liegt eine Korrelation vor?
 
 
 `@instructions`
@@ -466,6 +466,7 @@ key: bd4fd1e4b3
 - Nein
 
 `@hint`
+Eine Korrelation liegt vor, wenn der cor-Wert über 0.3 oder unter -0.3 liegt.
 
 
 `@pre_exercise_code`
@@ -514,15 +515,20 @@ key: 7652c3139a
 ```
 
 
-
+Wie stark oder schwach ist die Korrelation und liegt eine positive oder negative Korrelation vor?
 
 
 `@instructions`
-Wie stark oder schwach ist die Korrelation und liegt eine positive oder 
-  negative Korrelation vor?
+- perfekt positiv
+- stark positiv
+- schwach positiv
+- schwach negativ
+- stark negativ
+- perfekt negativ
+
 
 `@hint`
-
+Beispielsweise zwischen 0.3 und 0.6 ist schwach positiv, zwischen 0.6 und 1 ist stark positiv, bei 1 perfekt positiv
 
 `@pre_exercise_code`
 
@@ -548,7 +554,7 @@ Wie stark oder schwach ist die Korrelation und liegt eine positive oder
 `@sct`
 
 ```{r}
-
+ex() %>% check_mc(2,feedback_msgs=c("Nicht ganz","Ja, genau!","Nicht ganz","Nicht ganz","Nicht ganz","Nicht ganz"))
 ```
 
 
@@ -570,15 +576,15 @@ key: b63e9d42cb
 ```
 
 
-
+Es kann sein, dass eine Korrelation vorliegt, das Ergebnis aber nicht signifikant ist, das heißt, es auch zufällig zustande gekommen sein kann. Ist diese Korrelation signifikant?
 
 
 `@instructions`
-Es kann sein, dass eine Korrelation vorliegt, das Ergebnis aber nicht signifikant ist, das 
-  heißt, es auch zufällig zustande gekommen sein kann. Ist diese Korrelation signifikant?
+- Ja
+- Nein
 
 `@hint`
-
+Beachte den p-Wert
 
 `@pre_exercise_code`
 
@@ -604,7 +610,7 @@ Es kann sein, dass eine Korrelation vorliegt, das Ergebnis aber nicht signifikan
 `@sct`
 
 ```{r}
-
+ex() %>% check_mc(1,feedback_msgs=c("Genau!","Nein, das war es nicht."))
 ```
 
 
@@ -626,12 +632,14 @@ key: 42e7571b42
 ```
 
 
-
+Wir haben also eine stark positive Korrelation zwischen Schokoladentafelkonsum und dem IQ bei unseren Testpersonen gefunden. Was können wir sagen?
 
 
 `@instructions`
-Wir haben also eine stark positive Korrelation zwischen Schokoladentafelkonsum und 
-  dem IQ bei unseren Testpersonen gefunden. Was können wir sagen?
+- Schokolade essen macht schlauer
+- Intelligentere Menschen brauchen mehr Schokolade um ihre Denkleistung anzukurbeln
+- Schokoladenkonsum hängt mit der Intelligenz zusammen
+- Nichts davon
 
 `@hint`
 
@@ -660,7 +668,7 @@ Wir haben also eine stark positive Korrelation zwischen Schokoladentafelkonsum u
 `@sct`
 
 ```{r}
-
+ex() %>% check_mc(3,feedback_msgs=c("Pass auf mit Kausalitäten (es könnte auch anders herum sein d.h. wer schlauer ist, isst mehr Schokolade)","Wir kennen keine Begründungen für dieses Ergebnis, das ist nur eine Mutmaßung","Genau, das können wir sagen","Wir haben doch einen positiven Zusammenhang gefunden? Oder zweifelst du etwa dieses Ergebnis an?"))
 ```
 
 
@@ -668,6 +676,7 @@ Wir haben also eine stark positive Korrelation zwischen Schokoladentafelkonsum u
 
 
 `@feedback`
+
 
 
 
