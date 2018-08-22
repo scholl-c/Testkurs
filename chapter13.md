@@ -566,7 +566,7 @@ prop.table(table(Umfragedaten$BERUFSTAETIG))
 `@sct`
 
 ```{r}
-ex() %>% check_function("prop.table") %>% check_function("table") %>% check_result() %>% check_equal()
+ex() %>% check_function("prop.table") %>% check_function("table") %>% check_output_expr("prop.table(table(Umfragedaten$BERUFSTAETIG))")
 ```
 
 
